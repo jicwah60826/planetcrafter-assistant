@@ -1,0 +1,44 @@
+﻿@using PlanetCrafterAssistant.Models
+@model (Recipe Recipe, List<Recipe> AllRecipes)
+
+@{
+    ViewData["Title"] = Model.Recipe.Name;
+
+    // Recursive helper: resolves an ingredient into its sub-recipe if one exists
+    void RenderTree(string name, int quantity, List<Recipe> allRecipes, string prefix, bool isLast)
+    {
+        var connector = isLast ? "└──" : "├──";
+        var subRecipe = allRecipes.FirstOrDefault(r => r.Name == name);
+
+        <div class="tree-node">
+            <span class="tree-prefix">@prefix@connector</span>
+            <span class="tree-name">@name</span>
+            <span class="tree-qty">x@quantity</span>
+        </div>
+
+        if (subRecipe != null)
+        {
+            var childPrefix = prefix + (isLast ? "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" : "│&nbsp;&nbsp;&nbsp;&nbsp;");
+            for (int i = 0; i < subRecipe.Ingredients.Count; i++)
+            {
+                var child = subRecipe.Ingredients[i];
+                var childIsLast = i == subRecipe.Ingredients.Count - 1;
+                RenderTree(child.Name, child.Quantity * quantity, allRecipes, childPrefix, childIsLast);
+            }
+        }
+    }
+}
+
+<h2>@Model.Recipe.Name</h2>
+<p>Crafting dependency tree:</p>
+
+<div class="tree">
+    @for (int i = 0; i < Model.Recipe.Ingredients.Count; i++)
+    {
+        var ingredient = Model.Recipe.Ingredients[i];
+        var isLast = i == Model.Recipe.Ingredients.Count - 1;
+        RenderTree(ingredient.Name, ingredient.Quantity, Model.AllRecipes, "", isLast);
+    }
+</div>
+
+<a href="/Home/Recipes">← Back to Recipes</a>

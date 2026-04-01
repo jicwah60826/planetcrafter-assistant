@@ -1,0 +1,17 @@
+@model List<PlanetCrafterAssistant.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Crafting Recipes";
+}
+
+<h2>Crafting Recipes</h2>
+
+<div class="card-container">
+    @foreach (var recipe in Model)
+    {
+        <div class="card" onclick="location.href='/Home/RecipeDetails/@recipe.Name'">
+            <h3>@recipe.Name</h3>
+            <p>@recipe.Ingredients.Count ingredient(s)</p>
+        </div>
+    }
+</div>
