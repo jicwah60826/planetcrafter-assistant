@@ -36,7 +36,13 @@ namespace PlanetCrafterAssistant.Controllers
 
         public IActionResult Dashboard()
         {
-            return View();
+            var resources = new List<Resource>
+            {
+                new Resource { Name = "Ice", Quantity = 5 },
+                new Resource { Name = "Iron", Quantity = 12 }
+            };
+
+            return View(resources);
         }
     }
 }

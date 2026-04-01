@@ -1,6 +1,10 @@
-﻿@{
-    ViewData["Title"] = "Dashboard";
-}
+﻿@model List<Resource>
 
-<h2>Dashboard</h2>
-<p>This will show Planet Crafter data later.</p>
+<h2>Resources</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Name - @item.Quantity</li>
+    }
+</ul>
