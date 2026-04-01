@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <Target Name="KillBeforeBuild" BeforeTargets="Build">
+    <Exec Command="taskkill /F /IM PlanetCrafterAssistant.exe" ContinueOnError="true" />
+  </Target>
+
 </Project>

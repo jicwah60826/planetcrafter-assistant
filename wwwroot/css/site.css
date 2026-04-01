@@ -63,3 +63,7 @@ body {
     padding: 10px;
     border-radius: 10px;
 }
+
+.bottom-nav a.active {
+    color: #00d4ff;
+}
