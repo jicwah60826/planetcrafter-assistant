@@ -2,9 +2,12 @@
 
 <h2>Resources</h2>
 
-<ul>
+<div class="card-container">
     @foreach (var item in Model)
     {
-        <li>@item.Name - @item.Quantity</li>
+        <div class="card">
+            <h3>@item.Name</h3>
+            <p>Quantity: @item.Quantity</p>
+        </div>
     }
-</ul>
+</div>

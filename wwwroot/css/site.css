@@ -51,3 +51,15 @@ body {
     color: white;
     text-decoration: none;
 }
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 10px;
+}
