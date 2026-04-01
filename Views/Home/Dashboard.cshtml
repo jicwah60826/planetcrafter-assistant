@@ -5,7 +5,7 @@
 <div class="card-container">
     @foreach (var item in Model)
     {
-        <div class="card">
+        <div class="card" onclick="location.href='/Home/Details/@item.Name'">
             <h3>@item.Name</h3>
             <p>Quantity: @item.Quantity</p>
         </div>

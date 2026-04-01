@@ -44,5 +44,11 @@ namespace PlanetCrafterAssistant.Controllers
 
             return View(resources);
         }
+
+        public IActionResult Details(string id)
+        {
+            var resource = new Resource { Name = id, Quantity = 10 };
+            return View(resource);
+        }
     }
 }
