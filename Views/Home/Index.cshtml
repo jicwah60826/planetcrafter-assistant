@@ -1,8 +1,17 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Planet Crafter Assistant";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Planet Crafter Assistant</h1>
+
+<p>Welcome! This is your companion app for Planet Crafter.</p>
+
+<button onclick="testClick()">Test Button</button>
+
+<p id="result"></p>
+
+<script>
+    function testClick() {
+        document.getElementById("result").innerText = "App is working!";
+    }
+</script>
