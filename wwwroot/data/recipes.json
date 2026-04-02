@@ -1,126 +1,1012 @@
 [
-  {
-    "name": "Iron",
-    "category": "Raw",
-    "description": "A basic raw ore found on the planet surface.",
-    "ingredients": []
-  },
-  {
-    "name": "Magnesium",
-    "category": "Raw",
-    "description": "A light metallic raw element.",
-    "ingredients": []
-  },
-  {
-    "name": "Silicon",
-    "category": "Raw",
-    "description": "A raw semiconducting material.",
-    "ingredients": []
-  },
-  {
-    "name": "Cobalt",
-    "category": "Raw",
-    "description": "A raw blue metallic element.",
-    "ingredients": []
-  },
-  {
-    "name": "Titanium",
-    "category": "Raw",
-    "description": "A strong, lightweight raw metal.",
-    "ingredients": []
-  },
-  {
-    "name": "Aluminum",
-    "category": "Raw",
-    "description": "A common lightweight raw raw metal.",
-    "ingredients": []
-  },
-  {
-    "name": "Iridium",
-    "category": "Raw",
-    "description": "A rare, dense raw metal.",
-    "ingredients": []
-  },
-  {
-    "name": "Uranium",
-    "category": "Raw",
-    "description": "A radioactive raw element.",
-    "ingredients": []
-  },
-  {
-    "name": "Nitrogen",
-    "category": "Raw",
-    "description": "A raw atmospheric gas.",
-    "ingredients": []
-  },
-  {
-    "name": "Obsidian",
-    "category": "Raw",
-    "description": "A raw volcanic glass material.",
-    "ingredients": []
-  },
-  {
-    "name": "Tungsten",
-    "category": "Raw",
-    "description": "A raw metal with a very high melting point.",
-    "ingredients": []
-  },
-  {
-    "name": "Circuit Board",
-    "category": "Resource",
-    "description": "An electronic component used in advanced crafting.",
-    "ingredients": [
-      { "name": "Silicon", "quantity": 2 },
-      { "name": "Cobalt", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "Super Alloy",
-    "category": "Resource",
-    "description": "A high-tier material made from a mix of all basic Raws.",
-    "ingredients": [
-      { "name": "Iron", "quantity": 1 },
-      { "name": "Magnesium", "quantity": 1 },
-      { "name": "Silicon", "quantity": 1 },
-      { "name": "Cobalt", "quantity": 1 },
-      { "name": "Titanium", "quantity": 1 },
-      { "name": "Aluminum", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "Super Alloy Rod",
-    "category": "Resource",
-    "description": "A refined rod crafted from Super Alloy.",
-    "ingredients": [
-      { "name": "Super Alloy", "quantity": 2 }
-    ]
-  },
-  {
-    "name": "Toxic Goo",
-    "category": "Toxicity",
-    "description": "A hazardous byproduct used in specialized recipes.",
-    "ingredients": [
-      { "name": "Uranium", "quantity": 1 },
-      { "name": "Nitrogen", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "Pristine Purifying Balm",
-    "category": "Toxicity",
-    "description": "Neutralizes toxicity in the environment.",
-    "ingredients": [
-      { "name": "Toxic Goo", "quantity": 1 },
-      { "name": "Obsidian", "quantity": 2 }
-    ]
-  },
-  {
-    "name": "Fusion Generator",
-    "category": "Machine",
-    "description": "Generates power through fusion reactions.",
-    "ingredients": [
-      { "name": "Super Alloy", "quantity": 3 },
-      { "name": "Iridium", "quantity": 2 },
-      { "name": "Circuit Board", "quantity": 2 }
-    ]
-  }
+    {
+        "name": "Iron",
+        "category": "Raw",
+        "description": "A basic raw ore found on the planet surface.",
+        "ingredients": []
+    },
+    {
+        "name": "Magnesium",
+        "category": "Raw",
+        "description": "A light metallic raw element.",
+        "ingredients": []
+    },
+    {
+        "name": "Silicon",
+        "category": "Raw",
+        "description": "A raw semiconducting material.",
+        "ingredients": []
+    },
+    {
+        "name": "Cobalt",
+        "category": "Raw",
+        "description": "A raw blue metallic element.",
+        "ingredients": []
+    },
+    {
+        "name": "Titanium",
+        "category": "Raw",
+        "description": "A strong, lightweight raw metal.",
+        "ingredients": []
+    },
+    {
+        "name": "Aluminum",
+        "category": "Raw",
+        "description": "A common lightweight raw metal.",
+        "ingredients": []
+    },
+    {
+        "name": "Iridium",
+        "category": "Raw",
+        "description": "A rare, dense raw metal.",
+        "ingredients": []
+    },
+    {
+        "name": "Uranium",
+        "category": "Raw",
+        "description": "A radioactive raw element used in high-tier crafting.",
+        "ingredients": []
+    },
+    {
+        "name": "Nitrogen",
+        "category": "Raw",
+        "description": "A raw atmospheric gas.",
+        "ingredients": []
+    },
+    {
+        "name": "Obsidian",
+        "category": "Raw",
+        "description": "A raw volcanic glass material.",
+        "ingredients": []
+    },
+    {
+        "name": "Tungsten",
+        "category": "Raw",
+        "description": "A raw metal with a very high melting point.",
+        "ingredients": []
+    },
+    {
+        "name": "Sulfur",
+        "category": "Raw",
+        "description": "A yellow raw mineral found near volcanic areas.",
+        "ingredients": []
+    },
+    {
+        "name": "Zeolite",
+        "category": "Raw",
+        "description": "A porous mineral used in atmospheric and crafting processes.",
+        "ingredients": []
+    },
+    {
+        "name": "Osmium",
+        "category": "Raw",
+        "description": "An extremely dense raw metal used in late-game recipes.",
+        "ingredients": []
+    },
+    {
+        "name": "Pulsar Quartz",
+        "category": "Raw",
+        "description": "A rare crystalline ore that emits a faint energy pulse.",
+        "ingredients": []
+    },
+    {
+        "name": "Astrofossil",
+        "category": "Raw",
+        "description": "Ancient fossilized remains with unique material properties.",
+        "ingredients": []
+    },
+    {
+        "name": "Ice",
+        "category": "Raw",
+        "description": "Frozen water found on the planet surface, used in terraforming.",
+        "ingredients": []
+    },
+    {
+        "name": "Lirma Seed",
+        "category": "Raw",
+        "description": "A rare seed used for growing plants in the terraformed environment.",
+        "ingredients": []
+    },
+    {
+        "name": "Phytoplankton A",
+        "category": "Raw",
+        "description": "Microscopic aquatic organisms used in oxygen generation.",
+        "ingredients": []
+    },
+    {
+        "name": "Phytoplankton B",
+        "category": "Raw",
+        "description": "A secondary strain of phytoplankton for advanced bioreactors.",
+        "ingredients": []
+    },
+    {
+        "name": "Circuit Board",
+        "category": "Resource",
+        "description": "An electronic component used in advanced crafting.",
+        "ingredients": [
+            {
+                "name": "Silicon",
+                "quantity": 2
+            },
+            {
+                "name": "Cobalt",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Super Alloy",
+        "category": "Resource",
+        "description": "A high-tier material made from a mix of all basic raw ores.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 1
+            },
+            {
+                "name": "Magnesium",
+                "quantity": 1
+            },
+            {
+                "name": "Silicon",
+                "quantity": 1
+            },
+            {
+                "name": "Cobalt",
+                "quantity": 1
+            },
+            {
+                "name": "Titanium",
+                "quantity": 1
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Super Alloy Rod",
+        "category": "Resource",
+        "description": "A refined rod crafted from Super Alloy.",
+        "ingredients": [
+            {
+                "name": "Super Alloy",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Osmium Rod",
+        "category": "Resource",
+        "description": "A dense rod crafted from Osmium, used in late-game machines.",
+        "ingredients": [
+            {
+                "name": "Osmium",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Explosive Powder",
+        "category": "Resource",
+        "description": "A volatile compound used in mining charges and demolition.",
+        "ingredients": [
+            {
+                "name": "Sulfur",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Fertilizer",
+        "category": "Resource",
+        "description": "An organic compound used to grow plants and accelerate biomes.",
+        "ingredients": [
+            {
+                "name": "Magnesium",
+                "quantity": 1
+            },
+            {
+                "name": "Nitrogen",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Bacteria Sample",
+        "category": "Resource",
+        "description": "A cultivated bacterial culture used in bioreactors.",
+        "ingredients": [
+            {
+                "name": "Fertilizer",
+                "quantity": 1
+            },
+            {
+                "name": "Phytoplankton A",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Water Filter",
+        "category": "Resource",
+        "description": "Filters impurities from water for use in life support systems.",
+        "ingredients": [
+            {
+                "name": "Zeolite",
+                "quantity": 2
+            },
+            {
+                "name": "Silicon",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Rocket Engine",
+        "category": "Resource",
+        "description": "A propulsion component used in atmospheric rockets.",
+        "ingredients": [
+            {
+                "name": "Titanium",
+                "quantity": 3
+            },
+            {
+                "name": "Iridium",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Toilet",
+        "category": "Resource",
+        "description": "An essential life support fixture. Comfort improves survival.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Toxic Goo",
+        "category": "Toxicity",
+        "description": "A hazardous byproduct used in specialized recipes.",
+        "ingredients": [
+            {
+                "name": "Uranium",
+                "quantity": 1
+            },
+            {
+                "name": "Nitrogen",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Pristine Purifying Balm",
+        "category": "Toxicity",
+        "description": "Neutralizes toxicity in the surrounding environment.",
+        "ingredients": [
+            {
+                "name": "Toxic Goo",
+                "quantity": 1
+            },
+            {
+                "name": "Obsidian",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Fusion Generator",
+        "category": "Machine",
+        "description": "Generates substantial power through fusion reactions.",
+        "ingredients": [
+            {
+                "name": "Super Alloy",
+                "quantity": 3
+            },
+            {
+                "name": "Iridium",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Ore Extractor T1",
+        "category": "Machine",
+        "description": "Automatically extracts raw ores from the ground over time.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 3
+            },
+            {
+                "name": "Silicon",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Ore Extractor T2",
+        "category": "Machine",
+        "description": "An improved ore extractor with faster extraction rates.",
+        "ingredients": [
+            {
+                "name": "Super Alloy",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            },
+            {
+                "name": "Titanium",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Ore Extractor T3",
+        "category": "Machine",
+        "description": "A high-efficiency extractor capable of reaching deep ore veins.",
+        "ingredients": [
+            {
+                "name": "Osmium Rod",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 2
+            },
+            {
+                "name": "Super Alloy",
+                "quantity": 3
+            }
+        ]
+    },
+    {
+        "name": "Drill T1",
+        "category": "Machine",
+        "description": "A basic drill used to break open rock deposits.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Cobalt",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Gas Extractor",
+        "category": "Machine",
+        "description": "Extracts atmospheric gases such as Nitrogen for use in crafting.",
+        "ingredients": [
+            {
+                "name": "Aluminum",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            },
+            {
+                "name": "Silicon",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Water Collector",
+        "category": "Machine",
+        "description": "Collects water from the atmosphere as terraforming progresses.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Magnesium",
+                "quantity": 1
+            },
+            {
+                "name": "Silicon",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Atmosphere Analyser",
+        "category": "Machine",
+        "description": "Monitors and displays the current atmospheric composition.",
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Biodome T1",
+        "category": "Machine",
+        "description": "A sealed dome that supports plant life and boosts oxygen production.",
+        "ingredients": [
+            {
+                "name": "Silicon",
+                "quantity": 4
+            },
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Magnesium",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Bioreactor",
+        "category": "Machine",
+        "description": "Processes organic matter to generate oxygen and biomass.",
+        "ingredients": [
+            {
+                "name": "Bacteria Sample",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Heater T1",
+        "category": "Machine",
+        "description": "Raises the planet's temperature to assist in atmospheric thickening.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Cobalt",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Heater T2",
+        "category": "Machine",
+        "description": "An improved heater with greater thermal output.",
+        "ingredients": [
+            {
+                "name": "Super Alloy",
+                "quantity": 2
+            },
+            {
+                "name": "Magnesium",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Heater T3",
+        "category": "Machine",
+        "description": "A high-output heater used in late-stage terraforming.",
+        "ingredients": [
+            {
+                "name": "Osmium Rod",
+                "quantity": 1
+            },
+            {
+                "name": "Super Alloy",
+                "quantity": 3
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Atmospheric Condenser",
+        "category": "Machine",
+        "description": "Condenses atmospheric gases to accelerate pressure buildup.",
+        "ingredients": [
+            {
+                "name": "Super Alloy",
+                "quantity": 2
+            },
+            {
+                "name": "Zeolite",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Oxygen Generator",
+        "category": "Machine",
+        "description": "Produces oxygen from available resources to raise atmospheric O2.",
+        "ingredients": [
+            {
+                "name": "Magnesium",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Rocket Heat",
+        "category": "Rocket",
+        "description": "A rocket that releases heat particles into the upper atmosphere.",
+        "ingredients": [
+            {
+                "name": "Rocket Engine",
+                "quantity": 1
+            },
+            {
+                "name": "Sulfur",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Rocket Pressure",
+        "category": "Rocket",
+        "description": "Deploys pressurizing agents to thicken the atmosphere.",
+        "ingredients": [
+            {
+                "name": "Rocket Engine",
+                "quantity": 1
+            },
+            {
+                "name": "Nitrogen",
+                "quantity": 2
+            },
+            {
+                "name": "Zeolite",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Rocket Oxygen",
+        "category": "Rocket",
+        "description": "Releases oxygen compounds to enrich the atmosphere.",
+        "ingredients": [
+            {
+                "name": "Rocket Engine",
+                "quantity": 1
+            },
+            {
+                "name": "Magnesium",
+                "quantity": 2
+            },
+            {
+                "name": "Phytoplankton A",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Rocket Biomass",
+        "category": "Rocket",
+        "description": "Seeds the planet with organic compounds to kickstart life.",
+        "ingredients": [
+            {
+                "name": "Rocket Engine",
+                "quantity": 1
+            },
+            {
+                "name": "Bacteria Sample",
+                "quantity": 2
+            },
+            {
+                "name": "Fertilizer",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Rocket Terraformation Boost",
+        "category": "Rocket",
+        "description": "A multipurpose rocket that boosts all terraforming indices simultaneously.",
+        "ingredients": [
+            {
+                "name": "Rocket Engine",
+                "quantity": 2
+            },
+            {
+                "name": "Super Alloy",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 2
+            },
+            {
+                "name": "Explosive Powder",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Solar Panel T1",
+        "category": "Energy",
+        "description": "Converts sunlight into electrical energy.",
+        "ingredients": [
+            {
+                "name": "Silicon",
+                "quantity": 2
+            },
+            {
+                "name": "Cobalt",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Solar Panel T2",
+        "category": "Energy",
+        "description": "An improved solar panel with higher energy yield.",
+        "ingredients": [
+            {
+                "name": "Silicon",
+                "quantity": 3
+            },
+            {
+                "name": "Iridium",
+                "quantity": 1
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Nuclear Reactor",
+        "category": "Energy",
+        "description": "A high-output reactor powered by Uranium rods.",
+        "ingredients": [
+            {
+                "name": "Uranium",
+                "quantity": 3
+            },
+            {
+                "name": "Super Alloy",
+                "quantity": 3
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Wind Turbine",
+        "category": "Energy",
+        "description": "Generates energy from planetary wind. Output scales with atmosphere.",
+        "ingredients": [
+            {
+                "name": "Titanium",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Basic Chest",
+        "category": "Storage",
+        "description": "A simple container for storing items.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 3
+            }
+        ]
+    },
+    {
+        "name": "Standard Chest",
+        "category": "Storage",
+        "description": "A mid-tier storage chest with more capacity than the basic version.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Large Storage Crate",
+        "category": "Storage",
+        "description": "A large crate offering substantial inventory storage.",
+        "ingredients": [
+            {
+                "name": "Super Alloy",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Backpack Upgrade T1",
+        "category": "Equipment",
+        "description": "Increases personal inventory capacity by one row.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Silicon",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Backpack Upgrade T2",
+        "category": "Equipment",
+        "description": "A second tier backpack upgrade for greater carry capacity.",
+        "ingredients": [
+            {
+                "name": "Super Alloy",
+                "quantity": 1
+            },
+            {
+                "name": "Silicon",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Jetpack T1",
+        "category": "Equipment",
+        "description": "Allows short bursts of flight using thruster fuel.",
+        "ingredients": [
+            {
+                "name": "Titanium",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Jetpack T2",
+        "category": "Equipment",
+        "description": "An upgraded jetpack with improved thrust and fuel efficiency.",
+        "ingredients": [
+            {
+                "name": "Super Alloy",
+                "quantity": 2
+            },
+            {
+                "name": "Iridium",
+                "quantity": 1
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Oxygen Tank T1",
+        "category": "Equipment",
+        "description": "Extends breathable oxygen supply for surface exploration.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Magnesium",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Oxygen Tank T2",
+        "category": "Equipment",
+        "description": "A higher capacity oxygen tank for extended expeditions.",
+        "ingredients": [
+            {
+                "name": "Titanium",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Multi-tool",
+        "category": "Equipment",
+        "description": "A versatile handheld tool used for construction and deconstruction.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Cobalt",
+                "quantity": 1
+            },
+            {
+                "name": "Silicon",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Drill T2",
+        "category": "Equipment",
+        "description": "An upgraded drill for faster mining of surface rocks.",
+        "ingredients": [
+            {
+                "name": "Titanium",
+                "quantity": 2
+            },
+            {
+                "name": "Cobalt",
+                "quantity": 2
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Escape Pod",
+        "category": "Structure",
+        "description": "Your starting shelter on the planet. Cannot be crafted — spawn only.",
+        "ingredients": []
+    },
+    {
+        "name": "Base Building Block",
+        "category": "Structure",
+        "description": "A standard rectangular room segment used to expand your base.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 4
+            },
+            {
+                "name": "Silicon",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Base Corridor",
+        "category": "Structure",
+        "description": "A passageway for connecting base modules.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Silicon",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Base Dome",
+        "category": "Structure",
+        "description": "A dome-shaped room that provides a large open interior space.",
+        "ingredients": [
+            {
+                "name": "Silicon",
+                "quantity": 4
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "name": "Airlock",
+        "category": "Structure",
+        "description": "A pressurized door for safely entering and exiting the base.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 3
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Autocrafter",
+        "category": "Automation",
+        "description": "Automatically crafts items from available resources in linked chests.",
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 2
+            },
+            {
+                "name": "Super Alloy",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminum",
+                "quantity": 1
+            }
+        ]
+    }
 ]
