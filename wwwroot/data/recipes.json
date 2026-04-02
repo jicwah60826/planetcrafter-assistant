@@ -3,121 +3,141 @@
         "name": "Iron",
         "category": "Raw",
         "description": "A basic raw ore found on the planet surface.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Magnesium",
         "category": "Raw",
         "description": "A light metallic raw element.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Silicon",
         "category": "Raw",
         "description": "A raw semiconducting material.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Cobalt",
         "category": "Raw",
         "description": "A raw blue metallic element.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Titanium",
         "category": "Raw",
         "description": "A strong, lightweight raw metal.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Aluminum",
         "category": "Raw",
         "description": "A common lightweight raw metal.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Iridium",
         "category": "Raw",
         "description": "A rare, dense raw metal.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Uranium",
         "category": "Raw",
         "description": "A radioactive raw element used in high-tier crafting.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Nitrogen",
         "category": "Raw",
         "description": "A raw atmospheric gas.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Obsidian",
         "category": "Raw",
         "description": "A raw volcanic glass material.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Tungsten",
         "category": "Raw",
         "description": "A raw metal with a very high melting point.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Sulfur",
         "category": "Raw",
         "description": "A yellow raw mineral found near volcanic areas.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Zeolite",
         "category": "Raw",
         "description": "A porous mineral used in atmospheric and crafting processes.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Osmium",
         "category": "Raw",
         "description": "An extremely dense raw metal used in late-game recipes.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Pulsar Quartz",
         "category": "Raw",
         "description": "A rare crystalline ore that emits a faint energy pulse.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Astrofossil",
         "category": "Raw",
         "description": "Ancient fossilized remains with unique material properties.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Ice",
         "category": "Raw",
         "description": "Frozen water found on the planet surface, used in terraforming.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Lirma Seed",
         "category": "Raw",
         "description": "A rare seed used for growing plants in the terraformed environment.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Phytoplankton A",
         "category": "Raw",
         "description": "Microscopic aquatic organisms used in oxygen generation.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Phytoplankton B",
         "category": "Raw",
         "description": "A secondary strain of phytoplankton for advanced bioreactors.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Circuit Board",
@@ -132,7 +152,12 @@
                 "name": "Cobalt",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 0.1,
+            "unit": "nK"
+        }
     },
     {
         "name": "Super Alloy",
@@ -163,7 +188,12 @@
                 "name": "Aluminum",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 45.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Super Alloy Rod",
@@ -174,7 +204,12 @@
                 "name": "Super Alloy",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 85.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Osmium Rod",
@@ -185,7 +220,12 @@
                 "name": "Osmium",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Pressure",
+            "threshold": 5000.0,
+            "unit": "µPa"
+        }
     },
     {
         "name": "Explosive Powder",
@@ -200,7 +240,12 @@
                 "name": "Aluminum",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 35.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Fertilizer",
@@ -215,7 +260,12 @@
                 "name": "Nitrogen",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Oxygen",
+            "threshold": 0.1,
+            "unit": "ppm"
+        }
     },
     {
         "name": "Bacteria Sample",
@@ -230,7 +280,12 @@
                 "name": "Phytoplankton A",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Oxygen",
+            "threshold": 1.0,
+            "unit": "ppm"
+        }
     },
     {
         "name": "Water Filter",
@@ -245,7 +300,12 @@
                 "name": "Silicon",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Pressure",
+            "threshold": 200.0,
+            "unit": "µPa"
+        }
     },
     {
         "name": "Rocket Engine",
@@ -260,7 +320,12 @@
                 "name": "Iridium",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 55.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Toilet",
@@ -275,7 +340,8 @@
                 "name": "Aluminum",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Toxic Goo",
@@ -290,7 +356,12 @@
                 "name": "Nitrogen",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 25.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Pristine Purifying Balm",
@@ -305,7 +376,12 @@
                 "name": "Obsidian",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 65.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Fusion Generator",
@@ -324,7 +400,12 @@
                 "name": "Circuit Board",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 95.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Ore Extractor T1",
@@ -339,7 +420,8 @@
                 "name": "Silicon",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Ore Extractor T2",
@@ -358,7 +440,12 @@
                 "name": "Titanium",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 50.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Ore Extractor T3",
@@ -377,7 +464,12 @@
                 "name": "Super Alloy",
                 "quantity": 3
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Pressure",
+            "threshold": 8000.0,
+            "unit": "µPa"
+        }
     },
     {
         "name": "Drill T1",
@@ -392,7 +484,8 @@
                 "name": "Cobalt",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Gas Extractor",
@@ -411,7 +504,12 @@
                 "name": "Silicon",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Pressure",
+            "threshold": 100.0,
+            "unit": "µPa"
+        }
     },
     {
         "name": "Water Collector",
@@ -430,7 +528,12 @@
                 "name": "Silicon",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Pressure",
+            "threshold": 500.0,
+            "unit": "µPa"
+        }
     },
     {
         "name": "Atmosphere Analyser",
@@ -445,7 +548,12 @@
                 "name": "Aluminum",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 5.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Biodome T1",
@@ -464,7 +572,12 @@
                 "name": "Magnesium",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 100.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Bioreactor",
@@ -483,7 +596,12 @@
                 "name": "Circuit Board",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Oxygen",
+            "threshold": 5.0,
+            "unit": "ppm"
+        }
     },
     {
         "name": "Heater T1",
@@ -498,7 +616,8 @@
                 "name": "Cobalt",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Heater T2",
@@ -517,7 +636,12 @@
                 "name": "Circuit Board",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 45.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Heater T3",
@@ -536,7 +660,12 @@
                 "name": "Circuit Board",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Pressure",
+            "threshold": 6000.0,
+            "unit": "µPa"
+        }
     },
     {
         "name": "Atmospheric Condenser",
@@ -555,7 +684,12 @@
                 "name": "Circuit Board",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Pressure",
+            "threshold": 1000.0,
+            "unit": "µPa"
+        }
     },
     {
         "name": "Oxygen Generator",
@@ -574,7 +708,12 @@
                 "name": "Circuit Board",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 20.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Rocket Heat",
@@ -593,7 +732,12 @@
                 "name": "Aluminum",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 55.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Rocket Pressure",
@@ -612,7 +756,12 @@
                 "name": "Zeolite",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Pressure",
+            "threshold": 150.0,
+            "unit": "µPa"
+        }
     },
     {
         "name": "Rocket Oxygen",
@@ -631,7 +780,12 @@
                 "name": "Phytoplankton A",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Oxygen",
+            "threshold": 2.0,
+            "unit": "ppm"
+        }
     },
     {
         "name": "Rocket Biomass",
@@ -650,7 +804,12 @@
                 "name": "Fertilizer",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Biomass",
+            "threshold": 10.0,
+            "unit": "g"
+        }
     },
     {
         "name": "Rocket Terraformation Boost",
@@ -673,7 +832,12 @@
                 "name": "Explosive Powder",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Pressure",
+            "threshold": 10000.0,
+            "unit": "µPa"
+        }
     },
     {
         "name": "Solar Panel T1",
@@ -688,7 +852,8 @@
                 "name": "Cobalt",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Solar Panel T2",
@@ -707,7 +872,12 @@
                 "name": "Circuit Board",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 30.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Nuclear Reactor",
@@ -726,7 +896,12 @@
                 "name": "Circuit Board",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 75.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Wind Turbine",
@@ -745,7 +920,12 @@
                 "name": "Circuit Board",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Pressure",
+            "threshold": 250.0,
+            "unit": "µPa"
+        }
     },
     {
         "name": "Basic Chest",
@@ -756,7 +936,8 @@
                 "name": "Iron",
                 "quantity": 3
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Standard Chest",
@@ -771,7 +952,12 @@
                 "name": "Aluminum",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 10.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Large Storage Crate",
@@ -786,7 +972,12 @@
                 "name": "Aluminum",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 50.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Backpack Upgrade T1",
@@ -801,7 +992,8 @@
                 "name": "Silicon",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Backpack Upgrade T2",
@@ -820,7 +1012,12 @@
                 "name": "Circuit Board",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 45.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Jetpack T1",
@@ -835,7 +1032,12 @@
                 "name": "Aluminum",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 15.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Jetpack T2",
@@ -854,7 +1056,12 @@
                 "name": "Circuit Board",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 60.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Oxygen Tank T1",
@@ -869,7 +1076,8 @@
                 "name": "Magnesium",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Oxygen Tank T2",
@@ -884,7 +1092,12 @@
                 "name": "Aluminum",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 20.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Multi-tool",
@@ -903,7 +1116,8 @@
                 "name": "Silicon",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Drill T2",
@@ -922,13 +1136,19 @@
                 "name": "Circuit Board",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 40.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Escape Pod",
         "category": "Structure",
         "description": "Your starting shelter on the planet. Cannot be crafted — spawn only.",
-        "ingredients": []
+        "ingredients": [],
+        "unlockCondition": null
     },
     {
         "name": "Base Building Block",
@@ -943,7 +1163,8 @@
                 "name": "Silicon",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Base Corridor",
@@ -958,7 +1179,8 @@
                 "name": "Silicon",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
         "name": "Base Dome",
@@ -973,7 +1195,12 @@
                 "name": "Aluminum",
                 "quantity": 2
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 20.0,
+            "unit": "nK"
+        }
     },
     {
         "name": "Airlock",
@@ -988,10 +1215,11 @@
                 "name": "Aluminum",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": null
     },
     {
-        "name": "Autocrafter",
+        "name": "Autocrafter T1",
         "category": "Automation",
         "description": "Automatically crafts items from available resources in linked chests.",
         "ingredients": [
@@ -1007,6 +1235,31 @@
                 "name": "Aluminum",
                 "quantity": 1
             }
-        ]
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 70.0,
+            "unit": "nK"
+        }
+    },
+    {
+        "name": "Conveyor T1",
+        "category": "Automation",
+        "description": "Moves items between machines and chests automatically.",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 2
+            },
+            {
+                "name": "Silicon",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": {
+            "stage": "Heat",
+            "threshold": 30.0,
+            "unit": "nK"
+        }
     }
 ]

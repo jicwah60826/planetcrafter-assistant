@@ -58,6 +58,33 @@
                 <span style="display:none;font-size:2rem">⚙</span>`;
     }
 
+    const stageIcons = {
+        'Heat':     '🌡️',
+        'Pressure': '💨',
+        'Oxygen':   '🌿',
+        'Biomass':  '🧬',
+        'Plants':   '🌱',
+        'Insects':  '🦋',
+        'Animals':  '🐾'
+    };
+
+    function getUnlockHtml(unlockCondition) {
+        if (!unlockCondition) {
+            return `<div class="pane-unlock pane-unlock--always">
+                        <span class="pane-unlock-icon">🔓</span>
+                        <span>Available from the start</span>
+                    </div>`;
+        }
+        const icon = stageIcons[unlockCondition.stage] || '🔒';
+        return `<div class="pane-unlock">
+                    <span class="pane-unlock-icon">${icon}</span>
+                    <span>
+                        Unlocks when <strong>${unlockCondition.stage}</strong>
+                        reaches <strong>${unlockCondition.threshold} ${unlockCondition.unit}</strong>
+                    </span>
+                </div>`;
+    }
+
     function selectItem(name) {
         const recipe = allRecipes.find(r => r.name === name);
         if (!recipe) return;
@@ -98,6 +125,8 @@
             <div class="pane-icon">${getIconHtml(recipe.name)}</div>
             <h2 class="pane-title">${recipe.name}</h2>
             <p class="pane-description">${recipe.description || ''}</p>
+            <div class="pane-section-title">UNLOCKS</div>
+            ${getUnlockHtml(recipe.unlockCondition)}
             ${requiresHtml}
             ${usedByHtml}
         `;
