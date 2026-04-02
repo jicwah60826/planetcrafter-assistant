@@ -49,6 +49,14 @@
 <script>
     const allRecipes = @Html.Raw(allRecipesJson);
 
+    function isMobile() { return window.innerWidth <= 600; }
+
+    function closeMobilePane() {
+        const pane = document.getElementById('detailsPane');
+        pane.classList.remove('mobile-open');
+        document.querySelectorAll('.item-card').forEach(c => c.classList.remove('active'));
+    }
+
     function getIconHtml(name) {
         const slug = name.toLowerCase().replace(/ /g, '_');
         return `<img src="/icons/${slug}.png"
@@ -140,7 +148,11 @@
                </div>`
             : '';
 
-        document.getElementById('detailsPane').innerHTML = `
+        const backBtnHtml = `<button class="pane-back-btn" onclick="closeMobilePane()">← Back</button>`;
+
+        const pane = document.getElementById('detailsPane');
+        pane.innerHTML = `
+            ${backBtnHtml}
             <div class="pane-icon">${getIconHtml(recipe.name)}</div>
             <h2 class="pane-title">${recipe.name}</h2>
             <p class="pane-description">${recipe.description || ''}</p>
@@ -150,6 +162,8 @@
             ${requiresHtml}
             ${usedByHtml}
         `;
+
+        if (isMobile()) pane.classList.add('mobile-open');
     }
 
     document.querySelectorAll('.tab').forEach(tab => {

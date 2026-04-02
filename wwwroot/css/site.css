@@ -314,3 +314,88 @@
     color: #555;
     font-style: italic;
 }
+
+/* ── Mobile (≤ 600px) ────────────────────────────── */
+@media (max-width: 600px) {
+
+    /* Top bar: stack title above search on narrow screens */
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .top-bar h1 { font-size: 1.1rem; }
+
+    /* Search box fills full width */
+    .search-wrapper { width: 100%; }
+    .search-box { width: 100%; }
+
+    /* Panel layout: single column, full width */
+    .app-layout {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+
+    /* Left panel scrolls naturally in page flow */
+    .panel-left {
+        border-right: none;
+        border-bottom: 1px solid #2a2a2a;
+        overflow-y: visible;
+        padding: 12px;
+    }
+
+    /* Right panel: hidden by default, slides over full screen when active */
+    .panel-right {
+        display: none;
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        min-width: unset;
+        z-index: 200;
+        overflow-y: auto;
+        padding: 16px 14px 80px; /* bottom padding clears the nav bar */
+        background: #151515;
+    }
+
+    .panel-right.mobile-open { display: block; }
+
+    /* Smaller card grid columns so icons aren't clipped */
+    .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+        gap: 6px;
+    }
+
+    .item-card { padding: 10px 4px 6px; }
+
+    .card-icon { height: 36px; }
+
+    .card-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card-icon-fallback { font-size: 20px; }
+
+    .card-label { font-size: 10px; }
+
+    /* Back button shown only on mobile */
+    .pane-back-btn {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: none;
+        border: none;
+        color: #00d4ff;
+        font-size: 13px;
+        cursor: pointer;
+        padding: 0 0 16px;
+    }
+}
+
+/* Hide back button on desktop */
+@media (min-width: 601px) {
+    .pane-back-btn { display: none !important; }
+}
