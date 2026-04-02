@@ -3,7 +3,8 @@
 
 @{
     ViewData["Title"] = "Crafting Recipes";
-    var allRecipesJson = JsonSerializer.Serialize(Model);
+    var jsonOptions = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+    var allRecipesJson = JsonSerializer.Serialize(Model, jsonOptions);
 }
 
 <div class="app-layout">
