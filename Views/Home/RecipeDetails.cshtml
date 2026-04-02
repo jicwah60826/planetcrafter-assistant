@@ -41,4 +41,20 @@
     }
 </div>
 
-<a href="/Home/Recipes">← Back to Recipes</a>
+<div class="content" style="margin-top: 24px; display: flex; gap: 16px; align-items: center;">
+    <a href="/Home/Recipes">← Back to Recipes</a>
+    <a href="/Home/About?item=@Uri.EscapeDataString(Model.Recipe.Name)" class="report-link">⚑ Report an error</a>
+</div>
+
+@section Scripts {
+<script>
+    // Auto-fill the report form item name when arriving from a recipe page
+    (function () {
+        var params = new URLSearchParams(window.location.search);
+        var item = params.get('item');
+        if (!item) return;
+        var input = document.getElementById('reportItemName');
+        if (input) input.value = item;
+    })();
+</script>
+}

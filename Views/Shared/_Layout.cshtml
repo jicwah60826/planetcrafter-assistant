@@ -24,22 +24,22 @@
         @RenderBody()
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <span>Planet Crafter Assistant &mdash; Unofficial fan tool</span>
-        <a href="/Home/About">Legal Disclaimer</a>
-    </footer>
-
-    <!-- Bottom Navigation -->
+    <!-- Bottom Navigation (fixed) -->
     <nav class="bottom-nav">
-        <a href="/">Home</a>
-        <a href="/Home/Recipes">Crafting</a>
-        <a href="/Home/About">About</a>
+        <div class="bottom-nav-footer">
+            <span>Planet Crafter Assistant &mdash; Unofficial fan tool</span>
+            <a href="/Home/About">Legal Disclaimer</a>
+        </div>
+        <div class="bottom-nav-links">
+            <a href="/">Home</a>
+            <a href="/Home/Recipes">Crafting</a>
+            <a href="/Home/About">About</a>
+        </div>
     </nav>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script>
-        document.querySelectorAll('.bottom-nav a').forEach(link => {
+        document.querySelectorAll('.bottom-nav-links a').forEach(link => {
             if (link.href === window.location.href) {
                 link.classList.add('active');
             }

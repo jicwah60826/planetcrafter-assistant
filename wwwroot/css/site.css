@@ -68,26 +68,49 @@
     bottom: 0;
     width: 100%;
     background: #1a1a1a;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
     border-top: 1px solid #2a2a2a;
     z-index: 100;
 }
 
-.bottom-nav a {
+.bottom-nav-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 4px 20px;
+    border-bottom: 1px solid #2a2a2a;
+    font-size: 10px;
+    color: #444;
+    flex-wrap: wrap;
+}
+
+.bottom-nav-footer a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.bottom-nav-footer a:hover { text-decoration: underline; }
+
+.bottom-nav-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.bottom-nav-links a {
     color: #aaa;
     text-decoration: none;
     font-size: 13px;
 }
 
-.bottom-nav a.active,
-.bottom-nav a:hover { color: #00d4ff; }
+.bottom-nav-links a.active,
+.bottom-nav-links a:hover { color: #00d4ff; }
 
 /* ── Two-panel layout ────────────────────────────── */
 .app-layout {
     display: flex;
-    height: calc(100vh - 44px - 41px);
+    height: calc(100vh - 44px - 57px);
     overflow: hidden;
 }
 
@@ -294,7 +317,7 @@
 .card:hover { border-color: #00d4ff; }
 
 /* ── Content wrapper (non-recipe pages) ──────────── */
-.content { padding: 15px; padding-bottom: 70px;}
+.content { padding: 15px; padding-bottom: 90px;}
 
 /* ── Crafted-in station rows ─────────────────────── */
 .pane-row--station {
@@ -469,3 +492,87 @@
 }
 
 .about-link:hover { text-decoration: underline; }
+
+/* ── Database Correction Report form ─────────────── */
+.report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+    border-top: 2px solid #e07b00;
+    padding-top: 16px;
+}
+
+.report-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.report-input,
+.report-select,
+.report-textarea {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: inherit;
+    width: 100%;
+    transition: border-color 0.15s;
+}
+
+.report-input:focus,
+.report-select:focus,
+.report-textarea:focus {
+    outline: none;
+    border-color: #e07b00;
+}
+
+.report-input::placeholder,
+.report-textarea::placeholder { color: #555; }
+
+.report-select option { background: #1a1a1a; }
+
+.report-textarea { resize: vertical; }
+
+.report-form-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.report-submit {
+    background: #e07b00;
+    color: #fff;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.report-submit:hover  { background: #f08c10; }
+.report-submit:active { transform: scale(0.97); }
+.report-submit:disabled { background: #555; cursor: not-allowed; }
+
+.report-status { font-size: 12px; color: #888; }
+.report-status--ok  { color: #80c880; }
+.report-status--err { color: #e07b00; }
+
+.report-link {
+    color: #e07b00;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.report-link:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+    .report-form-row { grid-template-columns: 1fr; }
+}

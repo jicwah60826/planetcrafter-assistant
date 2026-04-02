@@ -24,16 +24,83 @@
     </p>
     <p>
         This project is non-commercial and free to use. No copyright infringement is intended.
-        If you are the copyright holder and wish for any content to be removed, please contact
-        us via the community channels listed below.
+        If you are the copyright holder and wish for any content to be removed, please use the
+        form below.
     </p>
 
     <hr class="about-divider" />
 
-    <h3 class="about-subheading">Contact</h3>
-    <p>
-        Found an issue or want to contribute? Reach out via
-        <a class="about-link" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-        or Discord.
-    </p>
+    <h3 class="about-subheading">Database Correction Report</h3>
+    <p>Notice a discrepancy in the blueprint data? Submit a correction to the archive.</p>
+
+    <form id="contactForm"
+          action="https://formspree.io/f/your-id-here"
+          method="POST"
+          class="report-form"
+          onsubmit="handleFormSubmit(event)">
+
+        <div class="report-form-row">
+            <input type="text"
+                   id="reportItemName"
+                   name="item_name"
+                   placeholder="Item Name (e.g. Pulsar Quartz)"
+                   required
+                   class="report-input" />
+
+            <select name="issue_type" class="report-select">
+                <option value="wrong_recipe">Wrong Recipe</option>
+                <option value="missing_item">Missing Item</option>
+                <option value="wrong_unlock">Unlock Stage Incorrect</option>
+                <option value="other">Other / Suggestion</option>
+            </select>
+        </div>
+
+        <textarea name="message"
+                  rows="4"
+                  placeholder="Describe the correct recipe or missing data..."
+                  required
+                  class="report-textarea"></textarea>
+
+        <div class="report-form-footer">
+            <button type="submit" class="report-submit">Submit Report</button>
+            <span id="reportStatus" class="report-status" aria-live="polite"></span>
+        </div>
+    </form>
 </div>
+
+@section Scripts {
+<script>
+    async function handleFormSubmit(e) {
+        e.preventDefault();
+        var form = e.target;
+        var status = document.getElementById('reportStatus');
+        var btn = form.querySelector('button[type="submit"]');
+
+        btn.disabled = true;
+        status.textContent = 'Sending\u2026';
+        status.className = 'report-status';
+
+        try {
+            var response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                status.textContent = '\u2713 Report submitted. Thank you!';
+                status.className = 'report-status report-status--ok';
+                form.reset();
+            } else {
+                status.textContent = '\u26a0 Submission failed. Please try again.';
+                status.className = 'report-status report-status--err';
+                btn.disabled = false;
+            }
+        } catch {
+            status.textContent = '\u26a0 Network error. Please try again.';
+            status.className = 'report-status report-status--err';
+            btn.disabled = false;
+        }
+    }
+</script>
+}
