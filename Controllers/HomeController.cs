@@ -83,5 +83,10 @@ namespace PlanetCrafterAssistant.Controllers
                 return NotFound();
             return View((recipe, allRecipes));
         }
+
+        public IActionResult About()
+        {
+            return View();
+        }
     }
 }

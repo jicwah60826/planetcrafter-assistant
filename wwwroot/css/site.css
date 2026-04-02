@@ -399,3 +399,73 @@
 @media (min-width: 601px) {
     .pane-back-btn { display: none !important; }
 }
+
+/* ── Footer ──────────────────────────────────────── */
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: #111;
+    border-top: 1px solid #2a2a2a;
+    padding: 8px 20px 52px; /* bottom padding clears the fixed bottom-nav */
+    font-size: 11px;
+    color: #555;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.site-footer a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.site-footer a:hover { text-decoration: underline; }
+
+/* ── About page ──────────────────────────────────── */
+.about-page {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.about-heading {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.about-subheading {
+    font-size: 1rem;
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.about-intro {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.about-divider {
+    border: none;
+    border-top: 1px solid #2a2a2a;
+    margin: 20px 0;
+}
+
+.about-page p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.about-page strong { color: #e0e0e0; }
+
+.about-link {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.about-link:hover { text-decoration: underline; }
