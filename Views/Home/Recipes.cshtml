@@ -11,7 +11,6 @@
 
     <!-- LEFT: Card grid -->
     <div class="panel-left">
-        <!-- Filter tabs -->
         <div class="filter-tabs">
             <button class="tab active" data-filter="all">All Items</button>
             <button class="tab" data-filter="Raw">Raw</button>
@@ -20,7 +19,6 @@
             <button class="tab" data-filter="Machine">Machine</button>
         </div>
 
-        <!-- Card grid -->
         <div class="card-grid" id="cardGrid">
             @foreach (var recipe in Model)
             {
@@ -28,7 +26,12 @@
                      data-name="@recipe.Name"
                      data-category="@recipe.Category"
                      onclick="selectItem('@recipe.Name')">
-                    <div class="card-icon">⚙</div>
+                    <div class="card-icon">
+                        <img src="/icons/@(recipe.IconSlug).png"
+                             alt="@recipe.Name"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+                        <span class="card-icon-fallback" style="display:none">⚙</span>
+                    </div>
                     <div class="card-label">@recipe.Name</div>
                 </div>
             }
@@ -43,52 +46,56 @@
     </div>
 </div>
 
-@section Scripts {
 <script>
     const allRecipes = @Html.Raw(allRecipesJson);
+
+    function getIconHtml(name) {
+        const slug = name.toLowerCase().replace(/ /g, '_');
+        return `<img src="/icons/${slug}.png"
+                     alt="${name}"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"
+                     style="width:48px;height:48px;object-fit:contain" />
+                <span style="display:none;font-size:2rem">⚙</span>`;
+    }
 
     function selectItem(name) {
         const recipe = allRecipes.find(r => r.name === name);
         if (!recipe) return;
 
-        // Highlight active card
         document.querySelectorAll('.item-card').forEach(c => c.classList.remove('active'));
         const activeCard = [...document.querySelectorAll('.item-card')]
             .find(c => c.dataset.name === name);
         if (activeCard) activeCard.classList.add('active');
 
-        // Build "used by" list
         const usedBy = allRecipes.filter(r =>
             r.ingredients && r.ingredients.some(i => i.name === name)
         );
 
-        // Build requires rows
         const requiresHtml = recipe.ingredients && recipe.ingredients.length > 0
             ? `<div class="pane-section-title">REQUIRES (SOURCES)</div>
                <div class="pane-list">
-                 ${recipe.ingredients.map(ing => `
-                   <div class="pane-row clickable" onclick="selectItem('${ing.name}')">
-                     <span class="pane-row-name">${ing.name}</span>
-                     <span class="pane-row-qty">x${ing.quantity}</span>
-                   </div>`).join('')}
+                 ${recipe.ingredients.map(ing =>
+                   `<div class="pane-row clickable" onclick="selectItem('${ing.name}')">
+                      <span class="pane-row-name">${ing.name}</span>
+                      <span class="pane-row-qty">x${ing.quantity}</span>
+                    </div>`).join('')}
                </div>`
             : `<div class="pane-section-title">REQUIRES (SOURCES)</div>
                <div class="pane-list"><div class="pane-empty">No ingredients — raw material</div></div>`;
 
-        // Build used-by rows
         const usedByHtml = usedBy.length > 0
             ? `<div class="pane-section-title">USED BY (DERIVED)</div>
                <div class="pane-list">
-                 ${usedBy.map(r => `
-                   <div class="pane-row clickable" onclick="selectItem('${r.name}')">
-                     <span class="pane-row-name">${r.name}</span>
-                     <span class="pane-row-arrow">→</span>
-                   </div>`).join('')}
+                 ${usedBy.map(r =>
+                   `<div class="pane-row clickable" onclick="selectItem('${r.name}')">
+                      <span class="pane-row-name">${r.name}</span>
+                      <span class="pane-row-arrow">→</span>
+                    </div>`).join('')}
                </div>`
             : '';
 
         document.getElementById('detailsPane').innerHTML = `
-            <div class="pane-icon">⚙</div>
+            <div class="pane-icon">${getIconHtml(recipe.name)}</div>
             <h2 class="pane-title">${recipe.name}</h2>
             <p class="pane-description">${recipe.description || ''}</p>
             ${requiresHtml}
@@ -96,12 +103,10 @@
         `;
     }
 
-    // Filter tabs
     document.querySelectorAll('.tab').forEach(tab => {
         tab.addEventListener('click', () => {
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-
             const filter = tab.dataset.filter;
             document.querySelectorAll('.item-card').forEach(card => {
                 card.style.display =
@@ -110,4 +115,3 @@
         });
     });
 </script>
-}
