@@ -1,0 +1,126 @@
+[
+  {
+    "name": "Iron",
+    "category": "Raw",
+    "description": "A basic raw ore found on the planet surface.",
+    "ingredients": []
+  },
+  {
+    "name": "Magnesium",
+    "category": "Raw",
+    "description": "A light metallic raw element.",
+    "ingredients": []
+  },
+  {
+    "name": "Silicon",
+    "category": "Raw",
+    "description": "A raw semiconducting material.",
+    "ingredients": []
+  },
+  {
+    "name": "Cobalt",
+    "category": "Raw",
+    "description": "A raw blue metallic element.",
+    "ingredients": []
+  },
+  {
+    "name": "Titanium",
+    "category": "Raw",
+    "description": "A strong, lightweight raw metal.",
+    "ingredients": []
+  },
+  {
+    "name": "Aluminum",
+    "category": "Raw",
+    "description": "A common lightweight raw raw metal.",
+    "ingredients": []
+  },
+  {
+    "name": "Iridium",
+    "category": "Raw",
+    "description": "A rare, dense raw metal.",
+    "ingredients": []
+  },
+  {
+    "name": "Uranium",
+    "category": "Raw",
+    "description": "A radioactive raw element.",
+    "ingredients": []
+  },
+  {
+    "name": "Nitrogen",
+    "category": "Raw",
+    "description": "A raw atmospheric gas.",
+    "ingredients": []
+  },
+  {
+    "name": "Obsidian",
+    "category": "Raw",
+    "description": "A raw volcanic glass material.",
+    "ingredients": []
+  },
+  {
+    "name": "Tungsten",
+    "category": "Raw",
+    "description": "A raw metal with a very high melting point.",
+    "ingredients": []
+  },
+  {
+    "name": "Circuit Board",
+    "category": "Resource",
+    "description": "An electronic component used in advanced crafting.",
+    "ingredients": [
+      { "name": "Silicon", "quantity": 2 },
+      { "name": "Cobalt", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "Super Alloy",
+    "category": "Resource",
+    "description": "A high-tier material made from a mix of all basic Raws.",
+    "ingredients": [
+      { "name": "Iron", "quantity": 1 },
+      { "name": "Magnesium", "quantity": 1 },
+      { "name": "Silicon", "quantity": 1 },
+      { "name": "Cobalt", "quantity": 1 },
+      { "name": "Titanium", "quantity": 1 },
+      { "name": "Aluminum", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "Super Alloy Rod",
+    "category": "Resource",
+    "description": "A refined rod crafted from Super Alloy.",
+    "ingredients": [
+      { "name": "Super Alloy", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "Toxic Goo",
+    "category": "Toxicity",
+    "description": "A hazardous byproduct used in specialized recipes.",
+    "ingredients": [
+      { "name": "Uranium", "quantity": 1 },
+      { "name": "Nitrogen", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "Pristine Purifying Balm",
+    "category": "Toxicity",
+    "description": "Neutralizes toxicity in the environment.",
+    "ingredients": [
+      { "name": "Toxic Goo", "quantity": 1 },
+      { "name": "Obsidian", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "Fusion Generator",
+    "category": "Machine",
+    "description": "Generates power through fusion reactions.",
+    "ingredients": [
+      { "name": "Super Alloy", "quantity": 3 },
+      { "name": "Iridium", "quantity": 2 },
+      { "name": "Circuit Board", "quantity": 2 }
+    ]
+  }
+]
