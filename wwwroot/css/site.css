@@ -294,4 +294,23 @@
 .card:hover { border-color: #00d4ff; }
 
 /* ── Content wrapper (non-recipe pages) ──────────── */
-.content { padding: 15px; padding-bottom: 70px; }
+.content { padding: 15px; padding-bottom: 70px;}
+
+/* ── Crafted-in station rows ─────────────────────── */
+.pane-row--station {
+    border-color: #2a3a5a;
+    background: #1a1f2e;
+    color: #90b8ff;
+}
+
+.pane-row--recycle {
+    border-color: #2a4a2a;
+    background: #1a2e1a;
+    color: #80c880;
+}
+
+.pane-row-note {
+    font-size: 11px;
+    color: #555;
+    font-style: italic;
+}

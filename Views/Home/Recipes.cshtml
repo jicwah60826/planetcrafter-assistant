@@ -85,6 +85,25 @@
                 </div>`;
     }
 
+    function getCraftedInHtml(craftedIn, recyclerYields) {
+        if (!craftedIn) return '';
+
+        const recyclerRow = recyclerYields
+            ? `<div class="pane-row pane-row--recycle">
+                   <span class="pane-row-name">♻️ Recycling Machine</span>
+                   <span class="pane-row-note">recovers ingredients</span>
+               </div>`
+            : '';
+
+        return `<div class="pane-section-title">CRAFTED IN</div>
+                <div class="pane-list">
+                    <div class="pane-row pane-row--station">
+                        <span class="pane-row-name">🔧 ${craftedIn}</span>
+                    </div>
+                    ${recyclerRow}
+                </div>`;
+    }
+
     function selectItem(name) {
         const recipe = allRecipes.find(r => r.name === name);
         if (!recipe) return;
@@ -127,6 +146,7 @@
             <p class="pane-description">${recipe.description || ''}</p>
             <div class="pane-section-title">UNLOCKS</div>
             ${getUnlockHtml(recipe.unlockCondition)}
+            ${getCraftedInHtml(recipe.craftedIn, recipe.recyclerYields)}
             ${requiresHtml}
             ${usedByHtml}
         `;

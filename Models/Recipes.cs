@@ -9,6 +9,19 @@
         public UnlockCondition? UnlockCondition { get; set; }
 
         /// <summary>
+        /// The machine in which this item is crafted.
+        /// e.g. "Crafting Table", "Biolab", "DNA Manipulator"
+        /// Null for raw materials that cannot be crafted.
+        /// </summary>
+        public string? CraftedIn { get; set; }
+
+        /// <summary>
+        /// When true, this item's ingredients can be recovered one at a time
+        /// using the in-game Recycling Machine.
+        /// </summary>
+        public bool RecyclerYields { get; set; }
+
+        /// <summary>
         /// Derives the expected icon filename from the item name.
         /// e.g. "Super Alloy" → "super_alloy"
         /// </summary>

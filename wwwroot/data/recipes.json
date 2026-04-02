@@ -4,140 +4,180 @@
         "category": "Raw",
         "description": "A basic raw ore found on the planet surface.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Magnesium",
         "category": "Raw",
         "description": "A light metallic raw element.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Silicon",
         "category": "Raw",
         "description": "A raw semiconducting material.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Cobalt",
         "category": "Raw",
         "description": "A raw blue metallic element.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Titanium",
         "category": "Raw",
         "description": "A strong, lightweight raw metal.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Aluminum",
         "category": "Raw",
         "description": "A common lightweight raw metal.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Iridium",
         "category": "Raw",
         "description": "A rare, dense raw metal.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Uranium",
         "category": "Raw",
         "description": "A radioactive raw element used in high-tier crafting.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Nitrogen",
         "category": "Raw",
         "description": "A raw atmospheric gas.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Obsidian",
         "category": "Raw",
         "description": "A raw volcanic glass material.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Tungsten",
         "category": "Raw",
         "description": "A raw metal with a very high melting point.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Sulfur",
         "category": "Raw",
         "description": "A yellow raw mineral found near volcanic areas.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Zeolite",
         "category": "Raw",
         "description": "A porous mineral used in atmospheric and crafting processes.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Osmium",
         "category": "Raw",
         "description": "An extremely dense raw metal used in late-game recipes.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Pulsar Quartz",
         "category": "Raw",
         "description": "A rare crystalline ore that emits a faint energy pulse.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Astrofossil",
         "category": "Raw",
         "description": "Ancient fossilized remains with unique material properties.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Ice",
         "category": "Raw",
         "description": "Frozen water found on the planet surface, used in terraforming.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Lirma Seed",
         "category": "Raw",
         "description": "A rare seed used for growing plants in the terraformed environment.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Phytoplankton A",
         "category": "Raw",
         "description": "Microscopic aquatic organisms used in oxygen generation.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Phytoplankton B",
         "category": "Raw",
         "description": "A secondary strain of phytoplankton for advanced bioreactors.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Circuit Board",
@@ -157,7 +197,9 @@
             "stage": "Heat",
             "threshold": 0.1,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Super Alloy",
@@ -193,7 +235,9 @@
             "stage": "Heat",
             "threshold": 45.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Super Alloy Rod",
@@ -209,7 +253,9 @@
             "stage": "Heat",
             "threshold": 85.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Osmium Rod",
@@ -225,7 +271,9 @@
             "stage": "Pressure",
             "threshold": 5000.0,
             "unit": "µPa"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Explosive Powder",
@@ -245,7 +293,9 @@
             "stage": "Heat",
             "threshold": 35.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": false
     },
     {
         "name": "Fertilizer",
@@ -265,7 +315,9 @@
             "stage": "Oxygen",
             "threshold": 0.1,
             "unit": "ppm"
-        }
+        },
+        "craftedIn": "Biolab",
+        "recyclerYields": false
     },
     {
         "name": "Bacteria Sample",
@@ -285,7 +337,9 @@
             "stage": "Oxygen",
             "threshold": 1.0,
             "unit": "ppm"
-        }
+        },
+        "craftedIn": "Biolab",
+        "recyclerYields": false
     },
     {
         "name": "Water Filter",
@@ -305,7 +359,9 @@
             "stage": "Pressure",
             "threshold": 200.0,
             "unit": "µPa"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Rocket Engine",
@@ -325,7 +381,9 @@
             "stage": "Heat",
             "threshold": 55.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Toilet",
@@ -341,7 +399,9 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Toxic Goo",
@@ -361,7 +421,9 @@
             "stage": "Heat",
             "threshold": 25.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": false
     },
     {
         "name": "Pristine Purifying Balm",
@@ -381,7 +443,9 @@
             "stage": "Heat",
             "threshold": 65.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": false
     },
     {
         "name": "Fusion Generator",
@@ -405,7 +469,9 @@
             "stage": "Heat",
             "threshold": 95.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Ore Extractor T1",
@@ -421,7 +487,9 @@
                 "quantity": 2
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Ore Extractor T2",
@@ -445,7 +513,9 @@
             "stage": "Heat",
             "threshold": 50.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Ore Extractor T3",
@@ -469,7 +539,9 @@
             "stage": "Pressure",
             "threshold": 8000.0,
             "unit": "µPa"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Drill T1",
@@ -485,7 +557,9 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Gas Extractor",
@@ -509,7 +583,9 @@
             "stage": "Pressure",
             "threshold": 100.0,
             "unit": "µPa"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Water Collector",
@@ -533,7 +609,9 @@
             "stage": "Pressure",
             "threshold": 500.0,
             "unit": "µPa"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Atmosphere Analyser",
@@ -553,7 +631,9 @@
             "stage": "Heat",
             "threshold": 5.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Biodome T1",
@@ -577,7 +657,9 @@
             "stage": "Heat",
             "threshold": 100.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Bioreactor",
@@ -601,7 +683,9 @@
             "stage": "Oxygen",
             "threshold": 5.0,
             "unit": "ppm"
-        }
+        },
+        "craftedIn": "Biolab",
+        "recyclerYields": true
     },
     {
         "name": "Heater T1",
@@ -617,7 +701,9 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Heater T2",
@@ -641,7 +727,9 @@
             "stage": "Heat",
             "threshold": 45.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Heater T3",
@@ -665,7 +753,9 @@
             "stage": "Pressure",
             "threshold": 6000.0,
             "unit": "µPa"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Atmospheric Condenser",
@@ -689,7 +779,9 @@
             "stage": "Pressure",
             "threshold": 1000.0,
             "unit": "µPa"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Oxygen Generator",
@@ -713,7 +805,9 @@
             "stage": "Heat",
             "threshold": 20.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Rocket Heat",
@@ -737,7 +831,9 @@
             "stage": "Heat",
             "threshold": 55.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Rocket Assembly",
+        "recyclerYields": false
     },
     {
         "name": "Rocket Pressure",
@@ -761,7 +857,9 @@
             "stage": "Pressure",
             "threshold": 150.0,
             "unit": "µPa"
-        }
+        },
+        "craftedIn": "Rocket Assembly",
+        "recyclerYields": false
     },
     {
         "name": "Rocket Oxygen",
@@ -785,7 +883,9 @@
             "stage": "Oxygen",
             "threshold": 2.0,
             "unit": "ppm"
-        }
+        },
+        "craftedIn": "Rocket Assembly",
+        "recyclerYields": false
     },
     {
         "name": "Rocket Biomass",
@@ -809,7 +909,9 @@
             "stage": "Biomass",
             "threshold": 10.0,
             "unit": "g"
-        }
+        },
+        "craftedIn": "Rocket Assembly",
+        "recyclerYields": false
     },
     {
         "name": "Rocket Terraformation Boost",
@@ -837,7 +939,9 @@
             "stage": "Pressure",
             "threshold": 10000.0,
             "unit": "µPa"
-        }
+        },
+        "craftedIn": "Rocket Assembly",
+        "recyclerYields": false
     },
     {
         "name": "Solar Panel T1",
@@ -853,7 +957,9 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Solar Panel T2",
@@ -877,7 +983,9 @@
             "stage": "Heat",
             "threshold": 30.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Nuclear Reactor",
@@ -901,7 +1009,9 @@
             "stage": "Heat",
             "threshold": 75.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Wind Turbine",
@@ -925,7 +1035,9 @@
             "stage": "Pressure",
             "threshold": 250.0,
             "unit": "µPa"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Basic Chest",
@@ -937,7 +1049,9 @@
                 "quantity": 3
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Standard Chest",
@@ -957,7 +1071,9 @@
             "stage": "Heat",
             "threshold": 10.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Large Storage Crate",
@@ -977,7 +1093,9 @@
             "stage": "Heat",
             "threshold": 50.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Backpack Upgrade T1",
@@ -993,7 +1111,9 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Backpack Upgrade T2",
@@ -1017,7 +1137,9 @@
             "stage": "Heat",
             "threshold": 45.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Jetpack T1",
@@ -1037,7 +1159,9 @@
             "stage": "Heat",
             "threshold": 15.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Jetpack T2",
@@ -1061,7 +1185,9 @@
             "stage": "Heat",
             "threshold": 60.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Oxygen Tank T1",
@@ -1077,7 +1203,9 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Oxygen Tank T2",
@@ -1097,7 +1225,9 @@
             "stage": "Heat",
             "threshold": 20.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Multi-tool",
@@ -1117,7 +1247,9 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Drill T2",
@@ -1141,14 +1273,18 @@
             "stage": "Heat",
             "threshold": 40.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Escape Pod",
         "category": "Structure",
         "description": "Your starting shelter on the planet. Cannot be crafted — spawn only.",
         "ingredients": [],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
     },
     {
         "name": "Base Building Block",
@@ -1164,7 +1300,9 @@
                 "quantity": 2
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Base Corridor",
@@ -1180,7 +1318,9 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Base Dome",
@@ -1200,7 +1340,9 @@
             "stage": "Heat",
             "threshold": 20.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Airlock",
@@ -1216,7 +1358,9 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Autocrafter T1",
@@ -1240,7 +1384,9 @@
             "stage": "Heat",
             "threshold": 70.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Conveyor T1",
@@ -1260,6 +1406,8 @@
             "stage": "Heat",
             "threshold": 30.0,
             "unit": "nK"
-        }
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     }
 ]
