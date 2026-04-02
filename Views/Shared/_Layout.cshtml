@@ -12,7 +12,11 @@
     <!-- Top Bar -->
     <header class="top-bar">
         <h1>Planet Crafter Assistant</h1>
-        <input type="text" id="searchBox" placeholder="Search..." class="search-box" onkeyup="filterCards()" />
+        <div class="search-wrapper">
+            <input type="text" id="searchBox" placeholder="Search items or categories..."
+                   class="search-box" oninput="filterCards()" />
+            <button id="searchClear" class="search-clear" onclick="clearSearch()" title="Clear search">✕</button>
+        </div>
     </header>
 
     <!-- Main Content -->

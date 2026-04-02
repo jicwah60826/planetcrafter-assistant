@@ -7,10 +7,12 @@ namespace PlanetCrafterAssistant.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IWebHostEnvironment _env;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment env)
         {
             _logger = logger;
+            _env = env;
         }
 
         public IActionResult Index()
@@ -52,7 +54,19 @@ namespace PlanetCrafterAssistant.Controllers
 
         public IActionResult Recipes()
         {
-            return View(GetRecipes());
+            var recipes = GetRecipes();
+
+            // Build a set of slugs that have an icon file on disk
+            var iconsPath = Path.Combine(_env.WebRootPath, "icons");
+            var availableIcons = Directory.Exists(iconsPath)
+                ? Directory
+                    .GetFiles(iconsPath, "*.png")
+                    .Select(f => Path.GetFileNameWithoutExtension(f))
+                    .ToHashSet(StringComparer.OrdinalIgnoreCase)
+                : new HashSet<string>();
+
+            ViewBag.AvailableIcons = availableIcons;
+            return View(recipes);
         }
 
         public IActionResult RecipeDetails(string id)
