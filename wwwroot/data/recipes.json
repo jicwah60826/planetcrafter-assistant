@@ -180,6 +180,59 @@
         "recyclerYields": false
     },
     {
+        "name": "Common Larvae",
+        "category": "Raw",
+        "description": "A frequently found larval organism. Used in basic biological crafting recipes.",
+        "ingredients": [
+            {
+                "name": "T3 Mutagen",
+                "quantity": 1
+            },
+            {
+                "name": "Phytoplankton B",
+                "quantity": 1
+            },
+            {
+                "name": "T2 Fertilizer",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": true
+    },
+    {
+        "name": "Uncommon Larvae",
+        "category": "Raw",
+        "description": "A less frequently encountered larval organism with greater biological potency.",
+        "ingredients": [],
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": false
+    },
+    {
+        "name": "Rare Larvae",
+        "category": "Raw",
+        "description": "An exceptionally rare larval organism used in advanced biological and terraforming recipes.",
+        "ingredients": [
+            {
+                "name": "T4 Mutagen",
+                "quantity": 1
+            },
+            {
+                "name": "Phytoplankton C",
+                "quantity": 1
+            },
+            {
+                "name": "T2 Fertilizer",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": null,
+        "recyclerYields": true
+    },
+    {
         "name": "Circuit Board",
         "category": "Resource",
         "description": "An electronic component used in advanced crafting.",
@@ -270,7 +323,7 @@
         "unlockCondition": {
             "stage": "Pressure",
             "threshold": 5000.0,
-            "unit": "µPa"
+            "unit": "ÂµPa"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -358,7 +411,7 @@
         "unlockCondition": {
             "stage": "Pressure",
             "threshold": 200.0,
-            "unit": "µPa"
+            "unit": "ÂµPa"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -538,7 +591,7 @@
         "unlockCondition": {
             "stage": "Pressure",
             "threshold": 8000.0,
-            "unit": "µPa"
+            "unit": "ÂµPa"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -582,7 +635,7 @@
         "unlockCondition": {
             "stage": "Pressure",
             "threshold": 100.0,
-            "unit": "µPa"
+            "unit": "ÂµPa"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -608,7 +661,7 @@
         "unlockCondition": {
             "stage": "Pressure",
             "threshold": 500.0,
-            "unit": "µPa"
+            "unit": "ÂµPa"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -752,7 +805,7 @@
         "unlockCondition": {
             "stage": "Pressure",
             "threshold": 6000.0,
-            "unit": "µPa"
+            "unit": "ÂµPa"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -778,7 +831,7 @@
         "unlockCondition": {
             "stage": "Pressure",
             "threshold": 1000.0,
-            "unit": "µPa"
+            "unit": "ÂµPa"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -856,7 +909,7 @@
         "unlockCondition": {
             "stage": "Pressure",
             "threshold": 150.0,
-            "unit": "µPa"
+            "unit": "ÂµPa"
         },
         "craftedIn": "Rocket Assembly",
         "recyclerYields": false
@@ -938,7 +991,7 @@
         "unlockCondition": {
             "stage": "Pressure",
             "threshold": 10000.0,
-            "unit": "µPa"
+            "unit": "ÂµPa"
         },
         "craftedIn": "Rocket Assembly",
         "recyclerYields": false
@@ -1034,7 +1087,7 @@
         "unlockCondition": {
             "stage": "Pressure",
             "threshold": 250.0,
-            "unit": "µPa"
+            "unit": "ÂµPa"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -1280,7 +1333,7 @@
     {
         "name": "Escape Pod",
         "category": "Structure",
-        "description": "Your starting shelter on the planet. Cannot be crafted — spawn only.",
+        "description": "Your starting shelter on the planet. Cannot be crafted â€” spawn only.",
         "ingredients": [],
         "unlockCondition": null,
         "craftedIn": null,
