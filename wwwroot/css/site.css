@@ -204,6 +204,59 @@
     line-height: 1.3;
 }
 
+/* ── Larger icons on wider screens ───────────────── */
+@media (min-width: 1280px) {
+    .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 10px;
+    }
+
+    .card-icon {
+        height: 56px;
+    }
+
+    .card-icon img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .card-icon-fallback {
+        font-size: 36px;
+    }
+
+    .card-label {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+    }
+
+    .card-icon {
+        height: 72px;
+    }
+
+    .card-icon img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .card-icon-fallback {
+        font-size: 48px;
+    }
+
+    .card-label {
+        font-size: 13px;
+    }
+
+    .item-card {
+        padding: 16px 8px 10px;
+    }
+}
+
 /* ── Details pane ────────────────────────────────── */
 .details-placeholder {
     color: #555;
