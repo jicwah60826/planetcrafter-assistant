@@ -63,15 +63,14 @@ namespace PlanetCrafterAssistant.Controllers
         {
             var recipes = _recipeService.GetAll();
 
-            var iconsPath = Path.Combine(_env.WebRootPath, "icons");
-            var availableIcons = Directory.Exists(iconsPath)
-                ? Directory
-                    .GetFiles(iconsPath, "*.png")
-                    .Select(f => Path.GetFileNameWithoutExtension(f))
-                    .ToHashSet(StringComparer.OrdinalIgnoreCase)
-                : new HashSet<string>();
+            var categories = recipes
+                .Select(r => r.Category)
+                .Where(c => !string.IsNullOrWhiteSpace(c))
+                .Distinct()
+                .OrderBy(c => c)
+                .ToList();
 
-            ViewBag.AvailableIcons = availableIcons;
+            ViewBag.Categories = categories;
             return View(recipes);
         }
 

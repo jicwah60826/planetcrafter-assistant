@@ -5,6 +5,7 @@
     ViewData["Title"] = "Crafting Recipes";
     var jsonOptions = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
     var allRecipesJson = JsonSerializer.Serialize(Model, jsonOptions);
+    var categories = ViewBag.Categories as List<string> ?? new List<string>();
 }
 
 <div class="app-layout">
@@ -13,10 +14,10 @@
     <div class="panel-left">
         <div class="filter-tabs">
             <button class="tab active" data-filter="all">All Items</button>
-            <button class="tab" data-filter="Raw">Raw</button>
-            <button class="tab" data-filter="Resource">Resource</button>
-            <button class="tab" data-filter="Toxicity">Toxicity</button>
-            <button class="tab" data-filter="Machine">Machine</button>
+            @foreach (var cat in categories)
+            {
+                <button class="tab" data-filter="@cat">@cat</button>
+            }
         </div>
 
         <div class="card-grid" id="cardGrid">
@@ -95,14 +96,12 @@
 
     function getCraftedInHtml(craftedIn, recyclerYields) {
         if (!craftedIn) return '';
-
         const recyclerRow = recyclerYields
             ? `<div class="pane-row pane-row--recycle">
                    <span class="pane-row-name">♻️ Recycling Machine</span>
                    <span class="pane-row-note">recovers ingredients</span>
                </div>`
             : '';
-
         return `<div class="pane-section-title">CRAFTED IN</div>
                 <div class="pane-list">
                     <div class="pane-row pane-row--station">
