@@ -5,7 +5,9 @@ parse_asset_recipes.py
 Reads all Unity MonoBehaviour .asset files exported by AssetRipper v3,
 resolves ingredient GUIDs via .meta sidecar files, and:
 
-  1. Copies ONLY matched PNGs from Texture2D -> wwwroot/images/icons/
+  1. Copies ONLY matched PNGs from Texture2D -> wwwroot/icons/
+     Each PNG is renamed to match the app's IconSlug convention:
+       AnimalFeeder1.png  ->  animal_feeder_t1.png
   2. Writes extracted_recipes.json  (includes _sourceAsset/_iconFile helpers)
   3. Writes wwwroot/data/recipes.json (clean, ready for the app)
 
@@ -32,7 +34,7 @@ EXPORT_ROOT    = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v3\ExportedProject
 TEXTURE2D_DIR  = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v3\ExportedProject\Assets\Texture2D")
 EXTRACTED_FILE = Path(r"D:\PlanetCrafterAssistant\Tools\extracted_recipes.json")
 RECIPES_JSON   = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\data\recipes.json")
-ICON_OUT_DIR   = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\images\icons")
+ICON_OUT_DIR   = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\icons")  # matches /icons/ in the app
 
 # ---------------------------------------------------------------------------
 # Lookup tables
@@ -91,6 +93,16 @@ def pascal_to_display(raw_id: str) -> str:
     name = re.sub(r"(\d+)$", r" T\1", raw_id)
     name = re.sub(r"(?<=[a-z0-9])([A-Z])", r" \1", name)
     return name.strip()
+
+
+def display_to_slug(display_name: str) -> str:
+    """
+    Convert display name to the IconSlug the app uses.
+    Matches C# model: Name.ToLower().Replace(" ", "_")
+      'Animal Feeder T1' -> 'animal_feeder_t1'
+      'Super Alloy'      -> 'super_alloy'
+    """
+    return display_name.lower().replace(" ", "_")
 
 
 def to_clean_recipe(r: dict) -> dict:
@@ -155,9 +167,16 @@ def build_texture_map(texture2d_dir: Path) -> dict:
     if not texture2d_dir.exists():
         print(f"  WARNING: Texture2D folder not found at {texture2d_dir}")
         return stem_to_png
+
     for png in texture2d_dir.rglob("*.png"):
         stem_to_png[png.stem.lower()] = png
+
     print(f"  {len(stem_to_png)} PNGs indexed from Texture2D.")
+
+    # Show a few samples so we can verify the stem format
+    for stem, path in list(stem_to_png.items())[:5]:
+        print(f"    sample: '{stem}' -> {path.name}")
+
     return stem_to_png
 
 
@@ -183,9 +202,10 @@ def find_craftable_assets(mono_root: Path) -> list:
 
 def extract_recipes(craftable: list, guid_to_id: dict,
                     stem_to_png: dict, icon_out_dir: Path) -> list:
-    recipes     = []
-    icons_found = 0
-    icons_miss  = 0
+    recipes      = []
+    icons_found  = 0
+    icons_miss   = 0
+    miss_samples = []
 
     icon_out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -203,17 +223,25 @@ def extract_recipes(craftable: list, guid_to_id: dict,
         group_cat = get_field(text, "groupCategory") or ""
         category  = CATEGORY_MAP.get(group_cat, "Resource")
 
-        # --- Icon: match by stem, copy only if matched ---
-        icon_file = None
-        png_path  = stem_to_png.get(item_id.lower())
+        # --- Icon ---
+        # Match PNG from Texture2D by the asset id stem (e.g. 'autocrafter1')
+        # then copy it renamed to the app's IconSlug format (e.g. 'auto_crafter_t1.png')
+        # so that /icons/{slug}.png in the Razor view resolves correctly.
+        icon_file  = None
+        lookup_key = item_id.lower()
+        png_path   = stem_to_png.get(lookup_key)
+
         if png_path:
-            icon_file = png_path.name
+            slug      = display_to_slug(display_name)   # e.g. 'animal_feeder_t1'
+            icon_file = f"{slug}.png"
             icons_found += 1
             dest = icon_out_dir / icon_file
             if not dest.exists():
                 shutil.copy2(png_path, dest)
         else:
             icons_miss += 1
+            if len(miss_samples) < 10:
+                miss_samples.append(f"'{lookup_key}' (asset: {asset_path.name})")
 
         # --- Ingredients ---
         ingredient_guids = []
@@ -271,6 +299,11 @@ def extract_recipes(craftable: list, guid_to_id: dict,
         })
 
     print(f"  Icons resolved: {icons_found}  |  Icons not found: {icons_miss}")
+    if miss_samples:
+        print(f"  Sample unmatched keys (first {len(miss_samples)}):")
+        for s in miss_samples:
+            print(f"    {s}")
+
     return recipes
 
 
@@ -287,7 +320,7 @@ def main():
     parser.add_argument("--texture2d-dir", default=str(TEXTURE2D_DIR),  help="Path to Texture2D PNG folder")
     parser.add_argument("--extracted",     default=str(EXTRACTED_FILE), help="Output path for extracted_recipes.json")
     parser.add_argument("--recipes-json",  default=str(RECIPES_JSON),   help="Project recipes.json to overwrite")
-    parser.add_argument("--icon-out-dir",  default=str(ICON_OUT_DIR),   help="wwwroot icons folder")
+    parser.add_argument("--icon-out-dir",  default=str(ICON_OUT_DIR),   help="wwwroot/icons folder")
     args = parser.parse_args()
 
     mono_root     = Path(args.mono_root)
@@ -297,12 +330,12 @@ def main():
     recipes_json  = Path(args.recipes_json)
     icon_out_dir  = Path(args.icon_out_dir)
 
-    # Pass 1 - GUID map
+    # Pass 1
     print(f"Pass 1: Building GUID map from {export_root} ...")
     guid_to_id = build_guid_map(export_root)
     print(f"  {len(guid_to_id)} GUID -> id entries indexed.")
 
-    # Pass 1b - Texture2D index
+    # Pass 1b
     print(f"Pass 1b: Indexing PNGs from {texture2d_dir} ...")
     stem_to_png = build_texture_map(texture2d_dir)
 
@@ -311,8 +344,8 @@ def main():
     craftable = find_craftable_assets(mono_root)
     print(f"  {len(craftable)} craftable assets found.")
 
-    # Pass 3 - extract recipes and copy only matched icons
-    print("Pass 3: Extracting recipe data and copying matched icons ...")
+    # Pass 3
+    print(f"Pass 3: Extracting recipes and copying matched icons to {icon_out_dir} ...")
     recipes = extract_recipes(craftable, guid_to_id, stem_to_png, icon_out_dir)
 
     # Write extracted_recipes.json (with helper fields for review)
@@ -331,8 +364,9 @@ def main():
     print(f"\nDone. {len(recipes)} recipes written.")
     print(f"  Icons copied to: {icon_out_dir}")
     print("\nNext steps:")
-    print("  1. Review extracted_recipes.json to verify names and ingredients")
+    print("  1. Check 'Icons not found' count above — 0 is ideal")
     print("  2. Fill in 'description' fields in recipes.json as needed")
+    print("  3. Run the app and verify icons appear on the Recipes page")
 
 
 if __name__ == "__main__":
