@@ -31,7 +31,9 @@
 param(
     [string]$AssetsRoot     = "D:\PlanetCrafterAssistant\AssetRipper\v3\ExportedProject\Assets\MonoBehaviour",
     [string]$OutputFile     = "D:\PlanetCrafterAssistant\Tools\extracted_recipes.json",
-    [string]$IconSearchRoot = "D:\PlanetCrafterAssistant\AssetRipper\v3\ExportedProject\Assets"
+    [string]$IconSearchRoot = "D:\PlanetCrafterAssistant\AssetRipper\v3\ExportedProject\Assets",
+    [string]$IconOutputDir  = "D:\PlanetCrafterAssistant\App\wwwroot\images\icons",
+    [switch]$ExportIcons
 )
 
 Set-StrictMode -Version Latest
@@ -174,8 +176,7 @@ foreach ($assetFile in $craftableAssets) {
 
     # --- Friendly display name: "AnimalFeeder1" → "Animal Feeder T1" ---
     $displayName = $itemId `
-        -replace '([A-Z])', ' $1' `
-        -replace '^\s+', '' `
+        -replace '(?<=[a-z0-9])([A-Z])', ' $1' `
         -replace '\s+(\d+)$', ' T$1'
 
     # --- Category ---
@@ -187,7 +188,20 @@ foreach ($assetFile in $craftableAssets) {
     $iconLine     = ($lines | Where-Object { $_ -match '^\s+icon:' } | Select-Object -First 1)
     $iconGuid     = if ($iconLine) { Get-GuidFromRef $iconLine } else { $null }
     $iconFullPath = Resolve-IconPath $iconGuid $IconSearchRoot
-    $iconFile     = if ($iconFullPath) { Split-Path $iconFullPath -Leaf } else { $null }
+    $iconFile     = $null
+    if ($iconFullPath) {
+        $iconFile = Split-Path $iconFullPath -Leaf
+
+        if ($ExportIcons) {
+            if (-not (Test-Path $IconOutputDir)) {
+                New-Item -ItemType Directory -Path $IconOutputDir | Out-Null
+            }
+            $destPath = Join-Path $IconOutputDir $iconFile
+            if (-not (Test-Path $destPath)) {
+                Copy-Item -Path $iconFullPath -Destination $destPath
+            }
+        }
+    }
 
     # --- Ingredients ---
     $ingredientGuids = [System.Collections.Generic.List[string]]::new()
@@ -212,8 +226,7 @@ foreach ($assetFile in $craftableAssets) {
         if ($resolvedId) {
             $friendlyName = $resolvedId `
                 -replace '\d+$', '' `
-                -replace '([A-Z])', ' $1' `
-                -replace '^\s+', ''
+                -replace '(?<=[a-z0-9])([A-Z])', ' $1'
             [PSCustomObject]@{ name = $friendlyName; quantity = 1 }
         }
     } | Where-Object { $_ -ne $null }
