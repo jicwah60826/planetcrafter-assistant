@@ -576,3 +576,18 @@
 @media (max-width: 600px) {
     .report-form-row { grid-template-columns: 1fr; }
 }
+
+.pane-row-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+.pane-row-name {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}

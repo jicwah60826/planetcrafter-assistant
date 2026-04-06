@@ -128,11 +128,19 @@
         const requiresHtml = recipe.ingredients && recipe.ingredients.length > 0
             ? `<div class="pane-section-title">REQUIRES (SOURCES)</div>
                <div class="pane-list">
-                 ${recipe.ingredients.map(ing =>
-                   `<div class="pane-row clickable" onclick="selectItem('${ing.name}')">
-                      <span class="pane-row-name">${ing.name}</span>
+                 ${recipe.ingredients.map(ing => {
+                   const ingSlug = ing.name.toLowerCase().replace(/ /g, '_');
+                   return `<div class="pane-row clickable" onclick="selectItem('${ing.name}')">
+                      <span class="pane-row-name">
+                        <img src="/icons/${ingSlug}.png"
+                             alt="${ing.name}"
+                             class="pane-row-icon"
+                             onerror="this.style.display='none'" />
+                        ${ing.name}
+                      </span>
                       <span class="pane-row-qty">x${ing.quantity}</span>
-                    </div>`).join('')}
+                    </div>`;
+                 }).join('')}
                </div>`
             : `<div class="pane-section-title">REQUIRES (SOURCES)</div>
                <div class="pane-list"><div class="pane-empty">No ingredients — raw material</div></div>`;
@@ -140,11 +148,19 @@
         const usedByHtml = usedBy.length > 0
             ? `<div class="pane-section-title">USED BY (DERIVED)</div>
                <div class="pane-list">
-                 ${usedBy.map(r =>
-                   `<div class="pane-row clickable" onclick="selectItem('${r.name}')">
-                      <span class="pane-row-name">${r.name}</span>
+                 ${usedBy.map(r => {
+                   const slug = r.name.toLowerCase().replace(/ /g, '_');
+                   return `<div class="pane-row clickable" onclick="selectItem('${r.name}')">
+                      <span class="pane-row-name">
+                        <img src="/icons/${slug}.png"
+                             alt="${r.name}"
+                             class="pane-row-icon"
+                             onerror="this.style.display='none'" />
+                        ${r.name}
+                      </span>
                       <span class="pane-row-arrow">→</span>
-                    </div>`).join('')}
+                    </div>`;
+                 }).join('')}
                </div>`
             : '';
 
