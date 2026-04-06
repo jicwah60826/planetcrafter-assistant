@@ -23,8 +23,16 @@
     Root under which PNG sprite files live (searched recursively).
     Default: D:\PlanetCrafterAssistant\AssetRipper\v3\ExportedProject\Assets
 
+.PARAMETER IconOutputDir
+    Destination folder for copied PNG icons when -ExportIcons is set.
+    Default: D:\PlanetCrafterAssistant\App\wwwroot\images\icons
+
+.PARAMETER ExportIcons
+    When set, copies each resolved icon PNG to IconOutputDir.
+
 .EXAMPLE
     .\Parse-AssetRecipes.ps1
+    .\Parse-AssetRecipes.ps1 -ExportIcons
     .\Parse-AssetRecipes.ps1 -AssetsRoot "C:\MyDump\MonoBehaviour" -OutputFile "C:\out.json"
 #>
 
@@ -46,7 +54,9 @@ $ErrorActionPreference = "Stop"
 function Get-AssetField([string[]]$lines, [string]$field) {
     foreach ($line in $lines) {
         if ($line -match "^\s+${field}:\s*(.+)$") {
-            return $Matches[1].Trim()
+            # Strip null bytes / non-printable chars caused by UTF-16 files
+            # being read without explicit encoding
+            return ($Matches[1].Trim() -replace '[^\x20-\x7E\u00A0-\uFFFF]', '')
         }
     }
     return $null
@@ -62,7 +72,7 @@ function Get-GuidFromRef([string]$refValue) {
 function Build-GuidToFilePath([string]$root) {
     $map = @{}
     Get-ChildItem -Path $root -Filter "*.asset.meta" -Recurse | ForEach-Object {
-        $metaContent = Get-Content $_.FullName -Raw
+        $metaContent = Get-Content $_.FullName -Raw -Encoding UTF8
         if ($metaContent -match 'guid:\s*([0-9a-f]+)') {
             $guid      = $Matches[1]
             $assetPath = $_.FullName -replace '\.meta$', ''
@@ -80,7 +90,8 @@ function Build-GuidToId([hashtable]$guidToPath) {
         $guid = $entry.Key
         $path = $entry.Value
         try {
-            $lines = Get-Content $path
+            # UTF8 encoding prevents null-byte spacing on UTF-16 asset files
+            $lines = Get-Content $path -Encoding UTF8
             $id    = Get-AssetField $lines "id"
             if ($id) { $map[$guid] = $id }
         } catch { <# skip unreadable files #> }
@@ -93,7 +104,7 @@ function Resolve-IconPath([string]$iconGuid, [string]$searchRoot) {
     $hit = Get-ChildItem -Path $searchRoot -Recurse -Include "*.png.meta", "*.png" |
         Where-Object { $_.Name -match '\.meta$' } |
         ForEach-Object {
-            $content = Get-Content $_.FullName -Raw
+            $content = Get-Content $_.FullName -Raw -Encoding UTF8
             if ($content -match 'guid:\s*([0-9a-f]+)') {
                 if ($Matches[1] -eq $iconGuid) {
                     $_.FullName -replace '\.meta$', ''
@@ -157,7 +168,7 @@ Write-Host "  $($guidToPath.Count) asset files indexed."
 
 Write-Host "Pass 2: Scanning for assets with recipeIngredients ..."
 $craftableAssets = Get-ChildItem -Path $AssetsRoot -Filter "*.asset" -Recurse |
-    Where-Object { (Get-Content $_.FullName -Raw) -match 'recipeIngredients:' }
+    Where-Object { (Get-Content $_.FullName -Raw -Encoding UTF8) -match 'recipeIngredients:' }
 Write-Host "  $($craftableAssets.Count) craftable assets found."
 
 # ---------------------------------------------------------------------------
@@ -168,7 +179,7 @@ Write-Host "Pass 3: Extracting recipe data ..."
 $results = [System.Collections.Generic.List[PSCustomObject]]::new()
 
 foreach ($assetFile in $craftableAssets) {
-    $lines = Get-Content $assetFile.FullName
+    $lines = Get-Content $assetFile.FullName -Encoding UTF8
 
     # --- Item identity ---
     $itemId = Get-AssetField $lines "id"
@@ -191,7 +202,6 @@ foreach ($assetFile in $craftableAssets) {
     $iconFile     = $null
     if ($iconFullPath) {
         $iconFile = Split-Path $iconFullPath -Leaf
-
         if ($ExportIcons) {
             if (-not (Test-Path $IconOutputDir)) {
                 New-Item -ItemType Directory -Path $IconOutputDir | Out-Null
