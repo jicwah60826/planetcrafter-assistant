@@ -239,7 +239,14 @@ foreach ($assetFile in $craftableAssets) {
                 -replace '(?<=[a-z0-9])([A-Z])', ' $1'
             [PSCustomObject]@{ name = $friendlyName; quantity = 1 }
         }
-    } | Where-Object { $_ -ne $null }
+    } | Where-Object { $_ -ne $null } |
+        Group-Object -Property name |
+        ForEach-Object {
+            [PSCustomObject]@{
+                name     = $_.Name
+                quantity = ($_.Group | Measure-Object -Property quantity -Sum).Sum
+            }
+        }
 
     if ($null -eq $ingredients) {
         $ingredients = @()
