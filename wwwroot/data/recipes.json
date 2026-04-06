@@ -18,14 +18,10 @@
             },
             {
                 "name": "B i o p l a s t i c",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M e t h a n C a p s u l e",
-                "quantity": 1
-            },
-            {
-                "name": "B i o p l a s t i c",
                 "quantity": 1
             }
         ],
@@ -46,27 +42,15 @@
         "ingredients": [
             {
                 "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P r i s t i n e M u s h r o o m",
                 "quantity": 1
             },
             {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
                 "name": "P u r i f i c a t i o n C a p s u l e",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n C a p s u l e",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n C a p s u l e",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -82,27 +66,11 @@
         "ingredients": [
             {
                 "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 4
             },
             {
                 "name": "P u r i f i c a t i o n G e l",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n G e l",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -117,28 +85,16 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- p l a s t i c",
-                "quantity": 1
+                "name": "R o d-p l a s t i c",
+                "quantity": 2
             },
             {
                 "name": "P u r i f i c a t i o n G e l",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- p l a s t i c",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n G e l",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
+                "name": "M i n a b l e-T u n g s t e n",
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -153,28 +109,16 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- p l a s t i c",
-                "quantity": 1
+                "name": "R o d-p l a s t i c",
+                "quantity": 2
             },
             {
                 "name": "P u r i f i c a t i o n G e l",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- p l a s t i c",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- t u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n G e l",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- t u n g s t e n",
-                "quantity": 1
+                "name": "R o d-t u n g s t e n",
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -252,11 +196,7 @@
         "ingredients": [
             {
                 "name": "B i o p l a s t i c",
-                "quantity": 1
-            },
-            {
-                "name": "B i o p l a s t i c",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F e r t i l i z e r",
@@ -272,11 +212,7 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -672,7 +608,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
@@ -681,15 +617,7 @@
             },
             {
                 "name": "P h y t o p l a n k t o n",
-                "quantity": 1
-            },
-            {
-                "name": "P h y t o p l a n k t o n",
-                "quantity": 1
-            },
-            {
-                "name": "P h y t o p l a n k t o n",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -742,14 +670,10 @@
         "ingredients": [
             {
                 "name": "O s m i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- a l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             }
         ],
@@ -770,11 +694,7 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -826,11 +746,7 @@
             },
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "T i t a n i u m",
@@ -862,15 +778,7 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "T i t a n i u m",
@@ -894,15 +802,7 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "T i t a n i u m",
@@ -962,14 +862,10 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "B a c k p a c k",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
                 "quantity": 1
             },
             {
@@ -986,15 +882,7 @@
             },
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -1010,27 +898,11 @@
         "ingredients": [
             {
                 "name": "A l g a e1 S e e d",
-                "quantity": 1
-            },
-            {
-                "name": "A l g a e1 S e e d",
-                "quantity": 1
-            },
-            {
-                "name": "A l g a e1 S e e d",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "W a t e r B o t t l e",
-                "quantity": 1
-            },
-            {
-                "name": "W a t e r B o t t l e",
-                "quantity": 1
-            },
-            {
-                "name": "W a t e r B o t t l e",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -1046,14 +918,10 @@
         "ingredients": [
             {
                 "name": "S e l e n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "S e l e n i u m",
                 "quantity": 1
             },
             {
@@ -1110,27 +978,7 @@
             },
             {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 6
             }
         ],
         "unlockCondition": {
@@ -1150,27 +998,11 @@
         "ingredients": [
             {
                 "name": "S m a r t F a b r i c",
-                "quantity": 1
+                "quantity": 4
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "S m a r t F a b r i c",
-                "quantity": 1
-            },
-            {
-                "name": "S m a r t F a b r i c",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "S m a r t F a b r i c",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -1190,15 +1022,7 @@
             },
             {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -1315,19 +1139,11 @@
             },
             {
                 "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l u m i n i u m",
@@ -1335,15 +1151,7 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -1363,22 +1171,14 @@
         "ingredients": [
             {
                 "name": "F e r t i l i z e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "B a c t e r i a",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "F e r t i l i z e r",
-                "quantity": 1
-            },
-            {
-                "name": "B a c t e r i a",
                 "quantity": 1
             },
             {
@@ -1403,23 +1203,11 @@
         "ingredients": [
             {
                 "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "A l u m i n i u m",
@@ -1443,11 +1231,7 @@
         "ingredients": [
             {
                 "name": "V e g e t a b l e3 G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "V e g e t a b l e3 G r o w a b l e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S i l i c o n",
@@ -1796,19 +1580,11 @@
         "ingredients": [
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -1828,19 +1604,11 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -1860,11 +1628,7 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "R e d P o w d e r",
@@ -2642,11 +2406,7 @@
         "ingredients": [
             {
                 "name": "F e r t i l i z e r",
-                "quantity": 1
-            },
-            {
-                "name": "F e r t i l i z e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "T r e e R o o t",
@@ -2658,11 +2418,7 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -2722,11 +2478,7 @@
             },
             {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -2798,11 +2550,7 @@
             },
             {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -2822,11 +2570,7 @@
             },
             {
                 "name": "S m a r t F a b r i c",
-                "quantity": 1
-            },
-            {
-                "name": "S m a r t F a b r i c",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -2943,15 +2687,7 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -2971,14 +2707,10 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
                 "quantity": 1
             }
         ],
@@ -3059,39 +2791,15 @@
         "ingredients": [
             {
                 "name": "C o o k C h o c o l a t e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k C h o c o l a t e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k C h o c o l a t e",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "C o o k F l o u r",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k F l o u r",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k F l o u r",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "h o n e y",
-                "quantity": 1
-            },
-            {
-                "name": "h o n e y",
-                "quantity": 1
-            },
-            {
-                "name": "h o n e y",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -3107,27 +2815,7 @@
         "ingredients": [
             {
                 "name": "C o o k C o c o a G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k C o c o a G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k C o c o a G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k C o c o a G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k C o c o a G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k C o c o a G r o w a b l e",
-                "quantity": 1
+                "quantity": 6
             }
         ],
         "unlockCondition": null,
@@ -3169,27 +2857,11 @@
         "ingredients": [
             {
                 "name": "C o o k F l o u r",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k F l o u r",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k F l o u r",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "C o o k C h o c o l a t e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k C h o c o l a t e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k C h o c o l a t e",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -3205,15 +2877,7 @@
         "ingredients": [
             {
                 "name": "C o o k F l o u r",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k F l o u r",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k F l o u r",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -3229,27 +2893,7 @@
         "ingredients": [
             {
                 "name": "C o o k W h e a t G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k W h e a t G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k W h e a t G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k W h e a t G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k W h e a t G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "C o o k W h e a t G r o w a b l e",
-                "quantity": 1
+                "quantity": 6
             }
         ],
         "unlockCondition": null,
@@ -3411,11 +3055,7 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -3431,11 +3071,7 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -3471,15 +3107,7 @@
         "ingredients": [
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "T i t a n i u m",
@@ -3535,7 +3163,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- u r a n i u m",
+                "name": "R o d-u r a n i u m",
                 "quantity": 1
             },
             {
@@ -3543,7 +3171,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- i r i d i u m",
+                "name": "R o d-i r i d i u m",
                 "quantity": 1
             }
         ],
@@ -3560,11 +3188,7 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -3624,26 +3248,18 @@
         "ingredients": [
             {
                 "name": "T i t a n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P r i s t i n e M u s h r o o m",
                 "quantity": 1
             },
             {
-                "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
                 "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "T o x i c S p o r e s",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
                 "quantity": 1
             }
         ],
@@ -3660,27 +3276,15 @@
         "ingredients": [
             {
                 "name": "P u r i f i c a t i o n C a p s u l e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P r i s t i n e M u s h r o o m",
                 "quantity": 1
             },
             {
-                "name": "P u r i f i c a t i o n C a p s u l e",
-                "quantity": 1
-            },
-            {
                 "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -3696,27 +3300,15 @@
         "ingredients": [
             {
                 "name": "P u r i f i c a t i o n G e l",
+                "quantity": 2
+            },
+            {
+                "name": "R o d-p l a s t i c",
                 "quantity": 1
             },
             {
-                "name": "R o d- p l a s t i c",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n G e l",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
+                "name": "M i n a b l e-T u n g s t e n",
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -3793,11 +3385,7 @@
             },
             {
                 "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -3817,27 +3405,15 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -3857,39 +3433,11 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 6
             },
             {
                 "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -3908,15 +3456,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- a l l o y",
-                "quantity": 1
+                "name": "R o d-a l l o y",
+                "quantity": 2
             },
             {
-                "name": "R o d- o s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
+                "name": "R o d-o s m i u m",
                 "quantity": 1
             }
         ],
@@ -4014,7 +3558,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- o s m i u m",
+                "name": "R o d-o s m i u m",
                 "quantity": 1
             },
             {
@@ -4022,20 +3566,12 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -4103,16 +3639,8 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
+                "name": "R o d-i r i d i u m",
+                "quantity": 3
             },
             {
                 "name": "C i r c u i t B o a r d",
@@ -4123,20 +3651,12 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- u r a n i u m",
+                "name": "R o d-u r a n i u m",
                 "quantity": 1
             },
             {
                 "name": "R e d P o w d e r",
-                "quantity": 1
-            },
-            {
-                "name": "R e d P o w d e r",
-                "quantity": 1
-            },
-            {
-                "name": "R e d P o w d e r",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -4172,11 +3692,7 @@
             },
             {
                 "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S i l i c o n",
@@ -4212,11 +3728,7 @@
             },
             {
                 "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l u m i n i u m",
@@ -4240,26 +3752,14 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "W a t e r B o t t l e",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "W a t e r B o t t l e",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- u r a n i u m",
+                "name": "R o d-u r a n i u m",
                 "quantity": 1
             }
         ],
@@ -4280,31 +3780,15 @@
         "ingredients": [
             {
                 "name": "W a t e r B o t t l e",
-                "quantity": 1
-            },
-            {
-                "name": "W a t e r B o t t l e",
-                "quantity": 1
-            },
-            {
-                "name": "W a t e r B o t t l e",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "A l l o y",
                 "quantity": 1
             },
             {
-                "name": "R o d- u r a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- u r a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- u r a n i u m",
-                "quantity": 1
+                "name": "R o d-u r a n i u m",
+                "quantity": 3
             },
             {
                 "name": "R e d P o w d e r",
@@ -4328,39 +3812,11 @@
         "ingredients": [
             {
                 "name": "P u l s a r Q u a r t z",
-                "quantity": 1
+                "quantity": 5
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "P u l s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "P u l s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "P u l s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "P u l s a r Q u a r t z",
-                "quantity": 1
+                "quantity": 4
             }
         ],
         "unlockCondition": {
@@ -4416,11 +3872,7 @@
             },
             {
                 "name": "M a g n e s i u m",
-                "quantity": 1
-            },
-            {
-                "name": "M a g n e s i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l u m i n i u m",
@@ -4444,22 +3896,18 @@
         "ingredients": [
             {
                 "name": "O s m i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "E q u i p m e n t I n c r e a s e",
                 "quantity": 1
             },
             {
-                "name": "O s m i u m",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
-                "name": "R o d- a l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- u r a n i u m",
+                "name": "R o d-u r a n i u m",
                 "quantity": 1
             }
         ],
@@ -4480,14 +3928,10 @@
         "ingredients": [
             {
                 "name": "B a l z a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "E q u i p m e n t I n c r e a s e",
-                "quantity": 1
-            },
-            {
-                "name": "B a l z a r Q u a r t z",
                 "quantity": 1
             },
             {
@@ -4495,7 +3939,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- u r a n i u m",
+                "name": "R o d-u r a n i u m",
                 "quantity": 1
             }
         ],
@@ -4516,14 +3960,10 @@
         "ingredients": [
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "E q u i p m e n t I n c r e a s e",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
                 "quantity": 1
             },
             {
@@ -4531,7 +3971,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- u r a n i u m",
+                "name": "R o d-u r a n i u m",
                 "quantity": 1
             },
             {
@@ -4628,14 +4068,10 @@
         "ingredients": [
             {
                 "name": "R e d P o w d e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "R e d P o w d e r",
                 "quantity": 1
             }
         ],
@@ -4652,11 +4088,7 @@
         "ingredients": [
             {
                 "name": "S i l k",
-                "quantity": 1
-            },
-            {
-                "name": "S i l k",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -4672,11 +4104,7 @@
         "ingredients": [
             {
                 "name": "B e e1 L a r v a e",
-                "quantity": 1
-            },
-            {
-                "name": "B e e1 L a r v a e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "W a t e r B o t t l e",
@@ -4684,11 +4112,7 @@
             },
             {
                 "name": "F e r t i l i z e r",
-                "quantity": 1
-            },
-            {
-                "name": "F e r t i l i z e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
@@ -4708,26 +4132,18 @@
         "ingredients": [
             {
                 "name": "B e e1 L a r v a e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "B i o p l a s t i c",
                 "quantity": 1
             },
             {
-                "name": "B e e1 L a r v a e",
-                "quantity": 1
-            },
-            {
                 "name": "F e r t i l i z e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "F e r t i l i z e r",
                 "quantity": 1
             }
         ],
@@ -4784,15 +4200,7 @@
         "ingredients": [
             {
                 "name": "A l g a e1 S e e d",
-                "quantity": 1
-            },
-            {
-                "name": "A l g a e1 S e e d",
-                "quantity": 1
-            },
-            {
-                "name": "A l g a e1 S e e d",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "S u l f u r",
@@ -4800,11 +4208,7 @@
             },
             {
                 "name": "V e g e t a b l e0 G r o w a b l e",
-                "quantity": 1
-            },
-            {
-                "name": "V e g e t a b l e0 G r o w a b l e",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -4832,11 +4236,7 @@
             },
             {
                 "name": "M e t h a n C a p s u l e",
-                "quantity": 1
-            },
-            {
-                "name": "M e t h a n C a p s u l e",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -4852,14 +4252,10 @@
         "ingredients": [
             {
                 "name": "P h o s p h o r u s",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F e r t i l i z e r",
-                "quantity": 1
-            },
-            {
-                "name": "P h o s p h o r u s",
                 "quantity": 1
             }
         ],
@@ -5435,27 +4831,15 @@
         "ingredients": [
             {
                 "name": "B i o p l a s t i c",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P h y t o p l a n k t o n",
                 "quantity": 1
             },
             {
-                "name": "B i o p l a s t i c",
-                "quantity": 1
-            },
-            {
                 "name": "S i l k",
-                "quantity": 1
-            },
-            {
-                "name": "S i l k",
-                "quantity": 1
-            },
-            {
-                "name": "S i l k",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -5471,26 +4855,18 @@
         "ingredients": [
             {
                 "name": "B i o p l a s t i c",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P h y t o p l a n k t o n",
                 "quantity": 1
             },
             {
-                "name": "B i o p l a s t i c",
-                "quantity": 1
-            },
-            {
                 "name": "S i l k",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F e r t i l i z e r",
-                "quantity": 1
-            },
-            {
-                "name": "S i l k",
                 "quantity": 1
             }
         ],
@@ -5659,11 +5035,7 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -6344,26 +5716,18 @@
         "ingredients": [
             {
                 "name": "G e n e t i c T r a i t",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F u s e C a r t r i d g e",
                 "quantity": 1
             },
             {
-                "name": "G e n e t i c T r a i t",
-                "quantity": 1
-            },
-            {
                 "name": "M u t a g e n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P h o s p h o r u s",
-                "quantity": 1
-            },
-            {
-                "name": "M u t a g e n",
                 "quantity": 1
             },
             {
@@ -6388,14 +5752,10 @@
         "ingredients": [
             {
                 "name": "S o l a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "S o l a r Q u a r t z",
                 "quantity": 1
             }
         ],
@@ -6412,26 +5772,18 @@
         "ingredients": [
             {
                 "name": "P u l s a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F u s e C a r t r i d g e",
                 "quantity": 1
             },
             {
-                "name": "P u l s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
                 "name": "S o l a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C o s m i c Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "S o l a r Q u a r t z",
                 "quantity": 1
             }
         ],
@@ -6448,26 +5800,18 @@
         "ingredients": [
             {
                 "name": "F e r t i l i z e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F u s e C a r t r i d g e",
                 "quantity": 1
             },
             {
-                "name": "F e r t i l i z e r",
-                "quantity": 1
-            },
-            {
                 "name": "S i l k W o r m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "Q u a s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "S i l k W o r m",
                 "quantity": 1
             }
         ],
@@ -6509,15 +5853,7 @@
             },
             {
                 "name": "S e e d",
-                "quantity": 1
-            },
-            {
-                "name": "S e e d",
-                "quantity": 1
-            },
-            {
-                "name": "S e e d",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "B i o p l a s t i c",
@@ -6589,14 +5925,10 @@
         "ingredients": [
             {
                 "name": "P r i s t i n e M u s h r o o m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F u s e C a r t r i d g e",
-                "quantity": 1
-            },
-            {
-                "name": "P r i s t i n e M u s h r o o m",
                 "quantity": 1
             },
             {
@@ -6604,7 +5936,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- p l a s t i c",
+                "name": "R o d-p l a s t i c",
                 "quantity": 1
             },
             {
@@ -6629,26 +5961,18 @@
         "ingredients": [
             {
                 "name": "S e l e n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F u s e C a r t r i d g e",
                 "quantity": 1
             },
             {
-                "name": "S e l e n i u m",
-                "quantity": 1
-            },
-            {
                 "name": "Q u a s a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S o l a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "Q u a s a r Q u a r t z",
                 "quantity": 1
             }
         ],
@@ -6665,26 +5989,14 @@
         "ingredients": [
             {
                 "name": "P u l s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "P u l s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "P u l s a r Q u a r t z",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "O s m i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "O b s i d i a n",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
                 "quantity": 1
             }
         ],
@@ -6705,26 +6017,14 @@
         "ingredients": [
             {
                 "name": "P u l s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "P u l s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "P u l s a r Q u a r t z",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "O s m i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
                 "quantity": 1
             }
         ],
@@ -6741,26 +6041,14 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "Z e o l i t e",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "Z e o l i t e",
+                "name": "R o d-i r i d i u m",
                 "quantity": 1
             }
         ],
@@ -6781,26 +6069,18 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C i r c u i t B o a r d",
                 "quantity": 1
             },
             {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
                 "name": "Z e o l i t e",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "Z e o l i t e",
+                "name": "R o d-i r i d i u m",
                 "quantity": 1
             }
         ],
@@ -6845,7 +6125,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- o s m i u m",
+                "name": "R o d-o s m i u m",
                 "quantity": 1
             },
             {
@@ -6917,7 +6197,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
@@ -7174,11 +6454,7 @@
         "ingredients": [
             {
                 "name": "W a t e r B o t t l e",
-                "quantity": 1
-            },
-            {
-                "name": "W a t e r B o t t l e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M a g n e s i u m",
@@ -7210,27 +6486,15 @@
         "ingredients": [
             {
                 "name": "Q u a s a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- a l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "Q u a s a r Q u a r t z",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
                 "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -7274,11 +6538,7 @@
         "ingredients": [
             {
                 "name": "I r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "I r i d i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S i l i c o n",
@@ -7325,7 +6585,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- i r i d i u m",
+                "name": "R o d-i r i d i u m",
                 "quantity": 1
             }
         ],
@@ -7346,26 +6606,14 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             },
             {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
+                "name": "R o d-i r i d i u m",
+                "quantity": 2
             },
             {
                 "name": "R e d P o w d e r",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- i r i d i u m",
                 "quantity": 1
             }
         ],
@@ -7385,40 +6633,16 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
+                "name": "R o d-i r i d i u m",
+                "quantity": 3
             },
             {
                 "name": "R e d P o w d e r",
-                "quantity": 1
+                "quantity": 3
             },
             {
-                "name": "R e d P o w d e r",
-                "quantity": 1
-            },
-            {
-                "name": "R e d P o w d e r",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
-                "quantity": 1
+                "name": "R o d-a l l o y",
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -7441,7 +6665,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             }
         ],
@@ -7503,11 +6727,7 @@
             },
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -7575,27 +6795,15 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -7615,18 +6823,14 @@
         "ingredients": [
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C o s m i c Q u a r t z",
                 "quantity": 1
             },
             {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
@@ -7634,7 +6838,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- u r a n i u m",
+                "name": "R o d-u r a n i u m",
                 "quantity": 1
             }
         ],
@@ -7667,11 +6871,7 @@
         "ingredients": [
             {
                 "name": "R o c k e t R e a c t o r",
-                "quantity": 1
-            },
-            {
-                "name": "R o c k e t R e a c t o r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "T i t a n i u m",
@@ -7731,19 +6931,11 @@
             },
             {
                 "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "R e d P o w d e r",
-                "quantity": 1
-            },
-            {
-                "name": "R e d P o w d e r",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -7758,7 +6950,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- o s m i u m",
+                "name": "R o d-o s m i u m",
                 "quantity": 1
             },
             {
@@ -7766,19 +6958,15 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- i r i d i u m",
+                "name": "R o d-i r i d i u m",
                 "quantity": 1
             },
             {
                 "name": "B a l z a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "R e d P o w d e r",
-                "quantity": 1
-            },
-            {
-                "name": "B a l z a r Q u a r t z",
                 "quantity": 1
             }
         ],
@@ -7795,39 +6983,23 @@
         "ingredients": [
             {
                 "name": "R o c k e t R e a c t o r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "J e t p a c k",
                 "quantity": 1
             },
             {
-                "name": "R o c k e t R e a c t o r",
-                "quantity": 1
-            },
-            {
                 "name": "R e d P o w d e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C o s m i c Q u a r t z",
                 "quantity": 1
             },
             {
-                "name": "R e d P o w d e r",
-                "quantity": 1
-            },
-            {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -7843,11 +7015,7 @@
         "ingredients": [
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -7863,11 +7031,7 @@
         "ingredients": [
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -7968,39 +7132,15 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -8036,14 +7176,10 @@
         "ingredients": [
             {
                 "name": "S i l i c o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S o l a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "S i l i c o n",
                 "quantity": 1
             }
         ],
@@ -8073,14 +7209,10 @@
         "ingredients": [
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "O b s i d i a n",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
                 "quantity": 1
             }
         ],
@@ -8097,39 +7229,15 @@
         "ingredients": [
             {
                 "name": "B a l z a r Q u a r t z",
-                "quantity": 1
+                "quantity": 4
             },
             {
                 "name": "S e l e n i u m",
-                "quantity": 1
+                "quantity": 3
             },
             {
-                "name": "B a l z a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "S e l e n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "B a l z a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "S e l e n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "B a l z a r Q u a r t z",
-                "quantity": 1
+                "name": "R o d-a l l o y",
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -8220,15 +7328,7 @@
         "ingredients": [
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "I r o n",
@@ -8269,15 +7369,7 @@
         "ingredients": [
             {
                 "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "I r o n",
@@ -8446,7 +7538,7 @@
         "_iconFile": null
     },
     {
-        "name": "M i n a b l e- T u n g s t e n",
+        "name": "M i n a b l e-T u n g s t e n",
         "category": "Resource",
         "description": "",
         "ingredients": [
@@ -8543,26 +7635,18 @@
         "ingredients": [
             {
                 "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M u l t i T o o l C l e a n i n g G o o C h i p",
                 "quantity": 1
             },
             {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
                 "name": "P u r i f i c a t i o n C a p s u l e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P r i s t i n e M u s h r o o m",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n C a p s u l e",
                 "quantity": 1
             }
         ],
@@ -8579,18 +7663,14 @@
         "ingredients": [
             {
                 "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M u l t i T o o l C l e a n i n g G o o C h i p",
                 "quantity": 1
             },
             {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
+                "name": "M i n a b l e-T u n g s t e n",
                 "quantity": 1
             },
             {
@@ -8614,15 +7694,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
+                "name": "M i n a b l e-T u n g s t e n",
+                "quantity": 2
             },
             {
                 "name": "M u l t i T o o l C l e a n i n g G o o C h i p",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
                 "quantity": 1
             },
             {
@@ -8651,19 +7727,11 @@
         "ingredients": [
             {
                 "name": "S i l i c o n",
-                "quantity": 1
-            },
-            {
-                "name": "S i l i c o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M a g n e s i u m",
-                "quantity": 1
-            },
-            {
-                "name": "M a g n e s i u m",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -8751,11 +7819,7 @@
             },
             {
                 "name": "M a g n e s i u m",
-                "quantity": 1
-            },
-            {
-                "name": "M a g n e s i u m",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -8799,14 +7863,10 @@
         "ingredients": [
             {
                 "name": "S o l a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M u l t i T o o l L i g h t",
-                "quantity": 1
-            },
-            {
-                "name": "S o l a r Q u a r t z",
                 "quantity": 1
             }
         ],
@@ -9003,11 +8063,7 @@
         "ingredients": [
             {
                 "name": "M u t a g e n",
-                "quantity": 1
-            },
-            {
-                "name": "M u t a g e n",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -9040,26 +8096,18 @@
         "ingredients": [
             {
                 "name": "R e d P o w d e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- u r a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R e d P o w d e r",
+                "name": "R o d-u r a n i u m",
                 "quantity": 1
             },
             {
                 "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
                 "quantity": 1
             }
         ],
@@ -9080,27 +8128,15 @@
         "ingredients": [
             {
                 "name": "R e d P o w d e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- u r a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R e d P o w d e r",
+                "name": "R o d-u r a n i u m",
                 "quantity": 1
             },
             {
                 "name": "O b s i d i a n",
-                "quantity": 1
-            },
-            {
-                "name": "O b s i d i a n",
-                "quantity": 1
-            },
-            {
-                "name": "O b s i d i a n",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -9120,15 +8156,7 @@
         "ingredients": [
             {
                 "name": "D o l o m i t e",
-                "quantity": 1
-            },
-            {
-                "name": "D o l o m i t e",
-                "quantity": 1
-            },
-            {
-                "name": "D o l o m i t e",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "M a g n e s i u m",
@@ -9156,26 +8184,14 @@
         "ingredients": [
             {
                 "name": "B a u x i t e",
-                "quantity": 1
-            },
-            {
-                "name": "B a u x i t e",
-                "quantity": 1
-            },
-            {
-                "name": "B a u x i t e",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "D o l o m i t e",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
                 "quantity": 1
             }
         ],
@@ -9196,26 +8212,18 @@
         "ingredients": [
             {
                 "name": "B a u x i t e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "U r a n i n i t e",
                 "quantity": 1
             },
             {
-                "name": "B a u x i t e",
-                "quantity": 1
-            },
-            {
                 "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "D o l o m i t e",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
                 "quantity": 1
             }
         ],
@@ -9236,14 +8244,10 @@
         "ingredients": [
             {
                 "name": "O s m i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- i r i d i u m",
+                "name": "R o d-i r i d i u m",
                 "quantity": 1
             },
             {
@@ -9276,27 +8280,15 @@
         "ingredients": [
             {
                 "name": "O s m i u m",
+                "quantity": 3
+            },
+            {
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
+                "name": "R o d-i r i d i u m",
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -9315,28 +8307,20 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- o s m i u m",
+                "name": "R o d-o s m i u m",
                 "quantity": 1
             },
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
+                "name": "R o d-i r i d i u m",
                 "quantity": 1
             },
             {
                 "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -9376,11 +8360,7 @@
         "ingredients": [
             {
                 "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -9396,11 +8376,7 @@
         "ingredients": [
             {
                 "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "I r o n",
@@ -9440,11 +8416,7 @@
             },
             {
                 "name": "M a g n e s i u m",
-                "quantity": 1
-            },
-            {
-                "name": "M a g n e s i u m",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -9504,18 +8476,10 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "O x y g e n T a n k",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
                 "quantity": 1
             },
             {
@@ -9536,39 +8500,23 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "O x y g e n T a n k",
                 "quantity": 1
             },
             {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
                 "name": "Q u a s a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C o s m i c Q u a r t z",
                 "quantity": 1
             },
             {
-                "name": "Q u a s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -9648,14 +8596,10 @@
             },
             {
                 "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M a g n e s i u m",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
                 "quantity": 1
             }
         ],
@@ -9788,14 +8732,10 @@
         "ingredients": [
             {
                 "name": "T o x i n s",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M i c r o P l a s t i c s",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i n s",
                 "quantity": 1
             }
         ],
@@ -9812,11 +8752,7 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "T i t a n i u m",
@@ -9836,35 +8772,15 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -9880,39 +8796,15 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -9928,39 +8820,15 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -9976,39 +8844,15 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "T i t a n i u m",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -10048,14 +8892,10 @@
         "ingredients": [
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S m a r t F a b r i c",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
                 "quantity": 1
             }
         ],
@@ -10072,39 +8912,23 @@
         "ingredients": [
             {
                 "name": "F u s i o n E n e r g y C e l l",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F u s e E n e r g y",
-                "quantity": 1
-            },
-            {
-                "name": "F u s i o n E n e r g y C e l l",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "H u d C o m p a s s",
                 "quantity": 1
             },
             {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "F u s e E n e r g y",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
-                "quantity": 1
+                "name": "R o d-a l l o y",
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -10482,14 +9306,10 @@
         "ingredients": [
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C o s m i c Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
                 "quantity": 1
             },
             {
@@ -10530,15 +9350,7 @@
             },
             {
                 "name": "A l g a e1 S e e d",
-                "quantity": 1
-            },
-            {
-                "name": "A l g a e1 S e e d",
-                "quantity": 1
-            },
-            {
-                "name": "A l g a e1 S e e d",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -10554,23 +9366,11 @@
         "ingredients": [
             {
                 "name": "M u l t i D e c o n s t r u c t",
-                "quantity": 1
-            },
-            {
-                "name": "M u l t i D e c o n s t r u c t",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -10586,26 +9386,18 @@
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "E x p l o s i v e",
                 "quantity": 1
             },
             {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
                 "name": "S e l e n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "S e l e n i u m",
                 "quantity": 1
             }
         ],
@@ -10622,11 +9414,7 @@
         "ingredients": [
             {
                 "name": "S u l f u r",
-                "quantity": 1
-            },
-            {
-                "name": "S u l f u r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "I r i d i u m",
@@ -10649,7 +9437,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- o s m i u m",
+                "name": "R o d-o s m i u m",
                 "quantity": 1
             },
             {
@@ -10658,27 +9446,7 @@
             },
             {
                 "name": "G e n e t i c T r a i t",
-                "quantity": 1
-            },
-            {
-                "name": "G e n e t i c T r a i t",
-                "quantity": 1
-            },
-            {
-                "name": "G e n e t i c T r a i t",
-                "quantity": 1
-            },
-            {
-                "name": "G e n e t i c T r a i t",
-                "quantity": 1
-            },
-            {
-                "name": "G e n e t i c T r a i t",
-                "quantity": 1
-            },
-            {
-                "name": "G e n e t i c T r a i t",
-                "quantity": 1
+                "quantity": 6
             }
         ],
         "unlockCondition": {
@@ -10702,11 +9470,7 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F e r t i l i z e r",
@@ -10750,15 +9514,7 @@
             },
             {
                 "name": "S e e d",
-                "quantity": 1
-            },
-            {
-                "name": "S e e d",
-                "quantity": 1
-            },
-            {
-                "name": "S e e d",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -10773,7 +9529,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
@@ -10781,7 +9537,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- o s m i u m",
+                "name": "R o d-o s m i u m",
                 "quantity": 1
             },
             {
@@ -10810,18 +9566,14 @@
         "ingredients": [
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "R o c k e t R e a c t o r",
                 "quantity": 1
             },
             {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             }
         ],
@@ -10842,23 +9594,11 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
-            },
-            {
-                "name": "C o b a l t",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -10873,40 +9613,24 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
+                "name": "R o d-i r i d i u m",
+                "quantity": 2
             },
             {
                 "name": "R o c k e t R e a c t o r",
                 "quantity": 1
             },
             {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
-            },
-            {
                 "name": "S o l a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F u s e H e a t",
                 "quantity": 1
             },
             {
-                "name": "S o l a r Q u a r t z",
-                "quantity": 1
-            },
-            {
                 "name": "S e l e n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "S e l e n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "S e l e n i u m",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -10930,14 +9654,10 @@
             },
             {
                 "name": "O s m i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             }
         ],
@@ -10961,19 +9681,15 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
                 "name": "Z e o l i t e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "B a l z a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "Z e o l i t e",
                 "quantity": 1
             }
         ],
@@ -10993,7 +9709,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- o s m i u m",
+                "name": "R o d-o s m i u m",
                 "quantity": 1
             },
             {
@@ -11002,15 +9718,7 @@
             },
             {
                 "name": "B e e1 L a r v a e",
-                "quantity": 1
-            },
-            {
-                "name": "B e e1 L a r v a e",
-                "quantity": 1
-            },
-            {
-                "name": "B e e1 L a r v a e",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -11042,27 +9750,15 @@
             },
             {
                 "name": "B e e1 L a r v a e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S i l k W o r m",
                 "quantity": 1
             },
             {
-                "name": "B e e1 L a r v a e",
-                "quantity": 1
-            },
-            {
                 "name": "P h o s p h o r u s",
-                "quantity": 1
-            },
-            {
-                "name": "P h o s p h o r u s",
-                "quantity": 1
-            },
-            {
-                "name": "P h o s p h o r u s",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -11086,11 +9782,7 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -11110,23 +9802,11 @@
             },
             {
                 "name": "H u d C o m p a s s",
-                "quantity": 1
-            },
-            {
-                "name": "H u d C o m p a s s",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -11146,18 +9826,14 @@
             },
             {
                 "name": "H u d C o m p a s s",
-                "quantity": 1
-            },
-            {
-                "name": "H u d C o m p a s s",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "O s m i u m",
                 "quantity": 1
             },
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             }
         ],
@@ -11174,26 +9850,18 @@
         "ingredients": [
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "R o c k e t R e a c t o r",
                 "quantity": 1
             },
             {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
-                "quantity": 1
+                "name": "R o d-a l l o y",
+                "quantity": 2
             },
             {
                 "name": "H u d C o m p a s s",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
                 "quantity": 1
             }
         ],
@@ -11214,11 +9882,7 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "B a c t e r i a",
@@ -11254,23 +9918,11 @@
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S i l i c o n",
-                "quantity": 1
-            },
-            {
-                "name": "S i l i c o n",
-                "quantity": 1
-            },
-            {
-                "name": "S i l i c o n",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -11285,40 +9937,24 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- o s m i u m",
-                "quantity": 1
+                "name": "R o d-o s m i u m",
+                "quantity": 2
             },
             {
                 "name": "R o c k e t R e a c t o r",
                 "quantity": 1
             },
             {
-                "name": "R o d- o s m i u m",
-                "quantity": 1
-            },
-            {
                 "name": "M a g n e t a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F u s e P r e s s u r e",
                 "quantity": 1
             },
             {
-                "name": "M a g n e t a r Q u a r t z",
-                "quantity": 1
-            },
-            {
                 "name": "S e l e n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "S e l e n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "S e l e n i u m",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -11338,22 +9974,14 @@
             },
             {
                 "name": "P u r i f i c a t i o n G e l",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n G e l",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
+                "name": "M i n a b l e-T u n g s t e n",
                 "quantity": 1
             }
         ],
@@ -11369,16 +9997,12 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- i r i d i u m",
+                "name": "R o d-i r i d i u m",
                 "quantity": 1
             },
             {
                 "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "U r a n i m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
@@ -11398,14 +10022,10 @@
         "ingredients": [
             {
                 "name": "R o c k e t R e a c t o r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S o l a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "R o c k e t R e a c t o r",
                 "quantity": 1
             },
             {
@@ -11445,11 +10065,11 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- t u n g s t e n",
+                "name": "R o d-t u n g s t e n",
                 "quantity": 1
             },
             {
-                "name": "R o d- p l a s t i c",
+                "name": "R o d-p l a s t i c",
                 "quantity": 1
             }
         ],
@@ -11465,7 +10085,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
@@ -11473,7 +10093,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- o s m i u m",
+                "name": "R o d-o s m i u m",
                 "quantity": 1
             },
             {
@@ -11490,14 +10110,10 @@
             },
             {
                 "name": "F u s i o n E n e r g y C e l l",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F u s e E n e r g y",
-                "quantity": 1
-            },
-            {
-                "name": "F u s i o n E n e r g y C e l l",
                 "quantity": 1
             }
         ],
@@ -11525,44 +10141,16 @@
         "_iconFile": null
     },
     {
-        "name": "R o d- a l l o y",
+        "name": "R o d-a l l o y",
         "category": "Resource",
         "description": "",
         "ingredients": [
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 8
             },
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
                 "quantity": 1
             }
         ],
@@ -11577,45 +10165,13 @@
         "_iconFile": null
     },
     {
-        "name": "R o d- i r i d i u m",
+        "name": "R o d-i r i d i u m",
         "category": "Resource",
         "description": "",
         "ingredients": [
             {
                 "name": "I r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "I r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "I r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "I r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "I r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "I r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "I r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "I r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "I r i d i u m",
-                "quantity": 1
+                "quantity": 9
             }
         ],
         "unlockCondition": null,
@@ -11625,45 +10181,13 @@
         "_iconFile": null
     },
     {
-        "name": "R o d- o s m i u m",
+        "name": "R o d-o s m i u m",
         "category": "Resource",
         "description": "",
         "ingredients": [
             {
                 "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "O s m i u m",
-                "quantity": 1
+                "quantity": 9
             }
         ],
         "unlockCondition": {
@@ -11677,44 +10201,16 @@
         "_iconFile": null
     },
     {
-        "name": "R o d- p l a s t i c",
+        "name": "R o d-p l a s t i c",
         "category": "Resource",
         "description": "",
         "ingredients": [
             {
                 "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 8
             },
             {
                 "name": "T o x i n s",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
                 "quantity": 1
             }
         ],
@@ -11725,44 +10221,16 @@
         "_iconFile": null
     },
     {
-        "name": "R o d- t u n g s t e n",
+        "name": "R o d-t u n g s t e n",
         "category": "Resource",
         "description": "",
         "ingredients": [
             {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
+                "name": "M i n a b l e-T u n g s t e n",
+                "quantity": 8
             },
             {
                 "name": "T o x i n s",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
-                "name": "M i n a b l e- T u n g s t e n",
                 "quantity": 1
             }
         ],
@@ -11773,45 +10241,13 @@
         "_iconFile": null
     },
     {
-        "name": "R o d- u r a n i u m",
+        "name": "R o d-u r a n i u m",
         "category": "Resource",
         "description": "",
         "ingredients": [
             {
                 "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "U r a n i m",
-                "quantity": 1
+                "quantity": 9
             }
         ],
         "unlockCondition": null,
@@ -11903,11 +10339,7 @@
             },
             {
                 "name": "S i l i c o n",
-                "quantity": 1
-            },
-            {
-                "name": "S i l i c o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M a g n e s i u m",
@@ -12015,11 +10447,7 @@
             },
             {
                 "name": "S i l i c o n",
-                "quantity": 1
-            },
-            {
-                "name": "S i l i c o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C o b a l t",
@@ -12436,15 +10864,7 @@
         "ingredients": [
             {
                 "name": "W a t e r B o t t l e",
-                "quantity": 1
-            },
-            {
-                "name": "W a t e r B o t t l e",
-                "quantity": 1
-            },
-            {
-                "name": "W a t e r B o t t l e",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "A l l o y",
@@ -12476,27 +10896,15 @@
         "ingredients": [
             {
                 "name": "W a t e r B o t t l e",
-                "quantity": 1
-            },
-            {
-                "name": "W a t e r B o t t l e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "F e r t i l i z e r",
-                "quantity": 1
-            },
-            {
-                "name": "F e r t i l i z e r",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -12581,15 +10989,7 @@
         "ingredients": [
             {
                 "name": "S i l k W o r m",
-                "quantity": 1
-            },
-            {
-                "name": "S i l k W o r m",
-                "quantity": 1
-            },
-            {
-                "name": "S i l k W o r m",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "Z e o l i t e",
@@ -12943,7 +11343,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             }
         ],
@@ -12960,14 +11360,10 @@
         "ingredients": [
             {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
                 "quantity": 1
             }
         ],
@@ -12984,14 +11380,10 @@
         "ingredients": [
             {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
                 "quantity": 1
             }
         ],
@@ -13012,11 +11404,7 @@
             },
             {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -13036,11 +11424,7 @@
             },
             {
                 "name": "S m a r t F a b r i c",
-                "quantity": 1
-            },
-            {
-                "name": "S m a r t F a b r i c",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -13056,14 +11440,10 @@
         "ingredients": [
             {
                 "name": "S m a r t F a b r i c",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "S m a r t F a b r i c",
                 "quantity": 1
             }
         ],
@@ -13322,11 +11702,7 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -13401,7 +11777,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
@@ -13414,14 +11790,10 @@
             },
             {
                 "name": "P u l s a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "O b s i d i a n",
-                "quantity": 1
-            },
-            {
-                "name": "P u l s a r Q u a r t z",
                 "quantity": 1
             }
         ],
@@ -13521,7 +11893,7 @@
                 "quantity": 1
             },
             {
-                "name": "M i n a b l e- T u n g s t e n",
+                "name": "M i n a b l e-T u n g s t e n",
                 "quantity": 1
             }
         ],
@@ -13538,39 +11910,7 @@
         "ingredients": [
             {
                 "name": "T o x i c i t y A m m o",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y A m m o",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y A m m o",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y A m m o",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y A m m o",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y A m m o",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y A m m o",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y A m m o",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y A m m o",
-                "quantity": 1
+                "quantity": 9
             }
         ],
         "unlockCondition": null,
@@ -13589,7 +11929,7 @@
                 "quantity": 1
             },
             {
-                "name": "M i n a b l e- T u n g s t e n",
+                "name": "M i n a b l e-T u n g s t e n",
                 "quantity": 1
             },
             {
@@ -13617,7 +11957,7 @@
                 "quantity": 1
             },
             {
-                "name": "M i n a b l e- T u n g s t e n",
+                "name": "M i n a b l e-T u n g s t e n",
                 "quantity": 1
             },
             {
@@ -13662,39 +12002,7 @@
         "ingredients": [
             {
                 "name": "T o x i c i t y M e d e c i n e",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y M e d e c i n e",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y M e d e c i n e",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y M e d e c i n e",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y M e d e c i n e",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y M e d e c i n e",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y M e d e c i n e",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y M e d e c i n e",
-                "quantity": 1
-            },
-            {
-                "name": "T o x i c i t y M e d e c i n e",
-                "quantity": 1
+                "quantity": 9
             }
         ],
         "unlockCondition": null,
@@ -13774,14 +12082,10 @@
         "ingredients": [
             {
                 "name": "M i c r o P l a s t i c s",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P r i s t i n e M u s h r o o m",
-                "quantity": 1
-            },
-            {
-                "name": "M i c r o P l a s t i c s",
                 "quantity": 1
             }
         ],
@@ -13797,7 +12101,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "M i n a b l e- T u n g s t e n",
+                "name": "M i n a b l e-T u n g s t e n",
                 "quantity": 1
             },
             {
@@ -13821,7 +12125,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- t u n g s t e n",
+                "name": "R o d-t u n g s t e n",
                 "quantity": 1
             },
             {
@@ -13829,7 +12133,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- p l a s t i c",
+                "name": "R o d-p l a s t i c",
                 "quantity": 1
             }
         ],
@@ -13846,14 +12150,10 @@
         "ingredients": [
             {
                 "name": "M i c r o P l a s t i c s",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C h l o r i n e C a p s u l e",
-                "quantity": 1
-            },
-            {
-                "name": "M i c r o P l a s t i c s",
                 "quantity": 1
             }
         ],
@@ -13882,15 +12182,7 @@
             },
             {
                 "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -13919,27 +12211,15 @@
         "ingredients": [
             {
                 "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S i l i c o n",
                 "quantity": 1
             },
             {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
                 "name": "P u r i f i c a t i o n C a p s u l e",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n C a p s u l e",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n C a p s u l e",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -13955,26 +12235,18 @@
         "ingredients": [
             {
                 "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "T o x i n s F i l t e r",
                 "quantity": 1
             },
             {
-                "name": "P l a s t i c P o l y m e r",
-                "quantity": 1
-            },
-            {
                 "name": "P u r i f i c a t i o n C a p s u l e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P r i s t i n e M u s h r o o m",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n C a p s u l e",
                 "quantity": 1
             }
         ],
@@ -13990,27 +12262,19 @@
         "description": "",
         "ingredients": [
             {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
+                "name": "M i n a b l e-T u n g s t e n",
+                "quantity": 2
             },
             {
                 "name": "T o x i n s F i l t e r",
                 "quantity": 1
             },
             {
-                "name": "M i n a b l e- T u n g s t e n",
-                "quantity": 1
-            },
-            {
                 "name": "P u r i f i c a t i o n G e l",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- p l a s t i c",
-                "quantity": 1
-            },
-            {
-                "name": "P u r i f i c a t i o n G e l",
+                "name": "R o d-p l a s t i c",
                 "quantity": 1
             }
         ],
@@ -14027,18 +12291,10 @@
         "ingredients": [
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 3
             },
             {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             },
             {
@@ -14046,7 +12302,7 @@
                 "quantity": 1
             },
             {
-                "name": "R o d- u r a n i u m",
+                "name": "R o d-u r a n i u m",
                 "quantity": 1
             }
         ],
@@ -14063,14 +12319,10 @@
         "ingredients": [
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
                 "quantity": 1
             }
         ],
@@ -14163,11 +12415,7 @@
         "ingredients": [
             {
                 "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "U r a n i m",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -14812,11 +13060,7 @@
             },
             {
                 "name": "M u t a g e n",
-                "quantity": 1
-            },
-            {
-                "name": "M u t a g e n",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": {
@@ -14973,11 +13217,7 @@
             },
             {
                 "name": "F e r t i l i z e r",
-                "quantity": 1
-            },
-            {
-                "name": "F e r t i l i z e r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "Z e o l i t e",
@@ -15000,7 +13240,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "R o d- a l l o y",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             }
         ],
@@ -15205,11 +13445,7 @@
             },
             {
                 "name": "i c e",
-                "quantity": 1
-            },
-            {
-                "name": "i c e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M a g n e s i u m",
@@ -15241,11 +13477,7 @@
             },
             {
                 "name": "S i l i c o n",
-                "quantity": 1
-            },
-            {
-                "name": "S i l i c o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M a g n e s i u m",
@@ -15297,26 +13529,14 @@
         "ingredients": [
             {
                 "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l u m i n i u m",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "A l l o y",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- i r i d i u m",
-                "quantity": 1
-            },
-            {
-                "name": "A l l o y",
+                "name": "R o d-i r i d i u m",
                 "quantity": 1
             }
         ],
@@ -15361,14 +13581,10 @@
         "ingredients": [
             {
                 "name": "V e h i c l e E q u i p m e n t S i z e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "O b s i d i a n",
-                "quantity": 1
-            },
-            {
-                "name": "V e h i c l e E q u i p m e n t S i z e",
                 "quantity": 1
             },
             {
@@ -15417,23 +13633,15 @@
         "ingredients": [
             {
                 "name": "V e h i c l e I n v e n t o r y S i z e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "O s m i u m",
                 "quantity": 1
             },
             {
-                "name": "V e h i c l e I n v e n t o r y S i z e",
-                "quantity": 1
-            },
-            {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -15449,27 +13657,15 @@
         "ingredients": [
             {
                 "name": "V e h i c l e I n v e n t o r y S i z e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "M a g n e t a r Q u a r t z",
                 "quantity": 1
             },
             {
-                "name": "V e h i c l e I n v e n t o r y S i z e",
-                "quantity": 1
-            },
-            {
                 "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
-            },
-            {
-                "name": "F a b r i c B l u e",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": null,
@@ -15509,14 +13705,10 @@
         "ingredients": [
             {
                 "name": "V e h i c l e L i g h t s",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S o l a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "V e h i c l e L i g h t s",
                 "quantity": 1
             }
         ],
@@ -15533,26 +13725,18 @@
         "ingredients": [
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- o s m i u m",
-                "quantity": 1
-            },
-            {
-                "name": "C i r c u i t B o a r d",
+                "name": "R o d-o s m i u m",
                 "quantity": 1
             },
             {
                 "name": "B i o p l a s t i c",
-                "quantity": 1
+                "quantity": 2
             },
             {
-                "name": "R o d- a l l o y",
-                "quantity": 1
-            },
-            {
-                "name": "B i o p l a s t i c",
+                "name": "R o d-a l l o y",
                 "quantity": 1
             }
         ],
@@ -15569,27 +13753,11 @@
         "ingredients": [
             {
                 "name": "Z e o l i t e",
-                "quantity": 1
+                "quantity": 4
             },
             {
                 "name": "O x y g e n C a p s u l e",
-                "quantity": 1
-            },
-            {
-                "name": "Z e o l i t e",
-                "quantity": 1
-            },
-            {
-                "name": "Z e o l i t e",
-                "quantity": 1
-            },
-            {
-                "name": "O x y g e n C a p s u l e",
-                "quantity": 1
-            },
-            {
-                "name": "Z e o l i t e",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -15605,14 +13773,10 @@
         "ingredients": [
             {
                 "name": "Z e o l i t e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "R o c k e t R e a c t o r",
-                "quantity": 1
-            },
-            {
-                "name": "Z e o l i t e",
                 "quantity": 1
             }
         ],
@@ -15629,14 +13793,10 @@
         "ingredients": [
             {
                 "name": "V e h i c l e S p e e d",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "R e d P o w d e r",
-                "quantity": 1
-            },
-            {
-                "name": "V e h i c l e S p e e d",
                 "quantity": 1
             }
         ],
@@ -15653,26 +13813,18 @@
         "ingredients": [
             {
                 "name": "V e h i c l e S p e e d",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "R e d P o w d e r",
                 "quantity": 1
             },
             {
-                "name": "V e h i c l e S p e e d",
-                "quantity": 1
-            },
-            {
                 "name": "B a l z a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "P u l s a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "B a l z a r Q u a r t z",
                 "quantity": 1
             }
         ],
@@ -15689,26 +13841,18 @@
         "ingredients": [
             {
                 "name": "E x p l o s i v e",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "V e h i c l e S p e e d",
                 "quantity": 1
             },
             {
-                "name": "E x p l o s i v e",
-                "quantity": 1
-            },
-            {
                 "name": "S e l e n i u m",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "B a l z a r Q u a r t z",
-                "quantity": 1
-            },
-            {
-                "name": "S e l e n i u m",
                 "quantity": 1
             }
         ],
@@ -15725,14 +13869,10 @@
         "ingredients": [
             {
                 "name": "R o c k e t R e a c t o r",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "U r a n i m",
-                "quantity": 1
-            },
-            {
-                "name": "R o c k e t R e a c t o r",
                 "quantity": 1
             },
             {
@@ -15785,11 +13925,7 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,
@@ -15871,14 +14007,10 @@
         "ingredients": [
             {
                 "name": "S o l a r Q u a r t z",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "C i r c u i t B o a r d",
-                "quantity": 1
-            },
-            {
-                "name": "S o l a r Q u a r t z",
                 "quantity": 1
             },
             {
@@ -15959,15 +14091,7 @@
         "ingredients": [
             {
                 "name": "B i o p l a s t i c",
-                "quantity": 1
-            },
-            {
-                "name": "B i o p l a s t i c",
-                "quantity": 1
-            },
-            {
-                "name": "B i o p l a s t i c",
-                "quantity": 1
+                "quantity": 3
             },
             {
                 "name": "M a g n e s i u m",
@@ -16011,14 +14135,10 @@
             },
             {
                 "name": "B i o p l a s t i c",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "W a t e r B o t t l e",
-                "quantity": 1
-            },
-            {
-                "name": "B i o p l a s t i c",
                 "quantity": 1
             }
         ],
@@ -16039,27 +14159,15 @@
         "ingredients": [
             {
                 "name": "B i o p l a s t i c",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "A l l o y",
                 "quantity": 1
             },
             {
-                "name": "B i o p l a s t i c",
-                "quantity": 1
-            },
-            {
                 "name": "S i l k",
-                "quantity": 1
-            },
-            {
-                "name": "S i l k",
-                "quantity": 1
-            },
-            {
-                "name": "S i l k",
-                "quantity": 1
+                "quantity": 3
             }
         ],
         "unlockCondition": {
@@ -16079,27 +14187,15 @@
         "ingredients": [
             {
                 "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "B i o p l a s t i c",
-                "quantity": 1
-            },
-            {
-                "name": "I r o n",
-                "quantity": 1
+                "quantity": 2
             },
             {
                 "name": "S i l i c o n",
-                "quantity": 1
-            },
-            {
-                "name": "B i o p l a s t i c",
-                "quantity": 1
-            },
-            {
-                "name": "S i l i c o n",
-                "quantity": 1
+                "quantity": 2
             }
         ],
         "unlockCondition": null,

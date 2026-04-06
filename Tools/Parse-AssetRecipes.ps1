@@ -33,7 +33,6 @@
 .EXAMPLE
     .\Parse-AssetRecipes.ps1
     .\Parse-AssetRecipes.ps1 -ExportIcons
-    .\Parse-AssetRecipes.ps1 -AssetsRoot "C:\MyDump\MonoBehaviour" -OutputFile "C:\out.json"
 #>
 
 param(
@@ -54,9 +53,7 @@ $ErrorActionPreference = "Stop"
 function Get-AssetField([string[]]$lines, [string]$field) {
     foreach ($line in $lines) {
         if ($line -match "^\s+${field}:\s*(.+)$") {
-            # Strip null bytes / non-printable chars caused by UTF-16 files
-            # being read without explicit encoding
-            return ($Matches[1].Trim() -replace '[^\x20-\x7E\u00A0-\uFFFF]', '')
+            return $Matches[1].Trim()
         }
     }
     return $null
@@ -72,7 +69,7 @@ function Get-GuidFromRef([string]$refValue) {
 function Build-GuidToFilePath([string]$root) {
     $map = @{}
     Get-ChildItem -Path $root -Filter "*.asset.meta" -Recurse | ForEach-Object {
-        $metaContent = Get-Content $_.FullName -Raw -Encoding UTF8
+        $metaContent = Get-Content $_.FullName -Raw -Encoding Unicode
         if ($metaContent -match 'guid:\s*([0-9a-f]+)') {
             $guid      = $Matches[1]
             $assetPath = $_.FullName -replace '\.meta$', ''
@@ -90,8 +87,7 @@ function Build-GuidToId([hashtable]$guidToPath) {
         $guid = $entry.Key
         $path = $entry.Value
         try {
-            # UTF8 encoding prevents null-byte spacing on UTF-16 asset files
-            $lines = Get-Content $path -Encoding UTF8
+            $lines = Get-Content $path -Encoding Unicode
             $id    = Get-AssetField $lines "id"
             if ($id) { $map[$guid] = $id }
         } catch { <# skip unreadable files #> }
@@ -104,7 +100,7 @@ function Resolve-IconPath([string]$iconGuid, [string]$searchRoot) {
     $hit = Get-ChildItem -Path $searchRoot -Recurse -Include "*.png.meta", "*.png" |
         Where-Object { $_.Name -match '\.meta$' } |
         ForEach-Object {
-            $content = Get-Content $_.FullName -Raw -Encoding UTF8
+            $content = Get-Content $_.FullName -Raw -Encoding Unicode
             if ($content -match 'guid:\s*([0-9a-f]+)') {
                 if ($Matches[1] -eq $iconGuid) {
                     $_.FullName -replace '\.meta$', ''
@@ -168,7 +164,7 @@ Write-Host "  $($guidToPath.Count) asset files indexed."
 
 Write-Host "Pass 2: Scanning for assets with recipeIngredients ..."
 $craftableAssets = Get-ChildItem -Path $AssetsRoot -Filter "*.asset" -Recurse |
-    Where-Object { (Get-Content $_.FullName -Raw -Encoding UTF8) -match 'recipeIngredients:' }
+    Where-Object { (Get-Content $_.FullName -Raw -Encoding Unicode) -match 'recipeIngredients:' }
 Write-Host "  $($craftableAssets.Count) craftable assets found."
 
 # ---------------------------------------------------------------------------
@@ -179,7 +175,7 @@ Write-Host "Pass 3: Extracting recipe data ..."
 $results = [System.Collections.Generic.List[PSCustomObject]]::new()
 
 foreach ($assetFile in $craftableAssets) {
-    $lines = Get-Content $assetFile.FullName -Encoding UTF8
+    $lines = Get-Content $assetFile.FullName -Encoding Unicode
 
     # --- Item identity ---
     $itemId = Get-AssetField $lines "id"
