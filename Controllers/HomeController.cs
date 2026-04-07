@@ -71,6 +71,7 @@ namespace PlanetCrafterAssistant.Controllers
                 .ToList();
 
             ViewBag.Categories = categories;
+            ViewData["ShowHomeIcon"] = true;
             return View(recipes);
         }
 
