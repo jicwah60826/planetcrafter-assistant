@@ -1,13 +1,23 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 8080
-
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
+
+COPY PlanetCrafterAssistant.csproj ./
+RUN dotnet restore
+
 COPY . .
 RUN dotnet publish -c Release -o /app/publish
 
-FROM base AS final
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
+
 COPY --from=build /app/publish .
+
+# wwwroot/icons is populated by the Python parser — mount it as a volume
+# so icons persist and can be updated without rebuilding the image
+VOLUME ["/app/wwwroot/icons"]
+
+ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_ENVIRONMENT=Production
+
+EXPOSE 8080
 ENTRYPOINT ["dotnet", "PlanetCrafterAssistant.dll"]
