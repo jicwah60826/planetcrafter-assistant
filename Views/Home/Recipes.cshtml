@@ -39,6 +39,7 @@
                     {
                         <span class="card-raw-badge">RAW</span>
                     }
+                    <span class="card-usedby-badge" style="display:none"></span>
                 </div>
             }
         </div>
@@ -196,6 +197,30 @@
 
         if (isMobile()) pane.classList.add('mobile-open');
     }
+
+    // --- Populate USED BY count badges on all cards ---
+    (function buildUsedByBadges() {
+        // Count how many recipes reference each item as an ingredient
+        const usedByCount = {};
+        allRecipes.forEach(r => {
+            if (!r.ingredients) return;
+            r.ingredients.forEach(ing => {
+                usedByCount[ing.name] = (usedByCount[ing.name] || 0) + 1;
+            });
+        });
+
+        // Stamp the count onto each card badge
+        document.querySelectorAll('.item-card').forEach(card => {
+            const count = usedByCount[card.dataset.name] || 0;
+            if (count > 0) {
+                const badge = card.querySelector('.card-usedby-badge');
+                if (badge) {
+                    badge.textContent = `${count} recipe${count === 1 ? '' : 's'}`;
+                    badge.style.display = 'inline-block';
+                }
+            }
+        });
+    })();
 
     document.querySelectorAll('.tab').forEach(tab => {
         tab.addEventListener('click', () => {
