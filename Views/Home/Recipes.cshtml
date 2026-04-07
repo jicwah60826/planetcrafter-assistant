@@ -105,15 +105,14 @@
     }
 
     function getCraftedInHtml(craftedIn, recyclerYields) {
-        if (!craftedIn) return '';
+        if (!craftedIn) return '<div class="pane-list"><div class="pane-empty">Not craftable</div></div>';
         const recyclerRow = recyclerYields
             ? `<div class="pane-row pane-row--recycle">
                    <span class="pane-row-name">♻️ Recycling Machine</span>
                    <span class="pane-row-note">recovers ingredients</span>
                </div>`
             : '';
-        return `<div class="pane-section-title">CRAFTED IN</div>
-                <div class="pane-list">
+        return `<div class="pane-list">
                     <div class="pane-row pane-row--station">
                         <span class="pane-row-name">🔧 ${craftedIn}</span>
                     </div>
@@ -170,49 +169,55 @@
         );
 
         const requiresHtml = recipe.ingredients && recipe.ingredients.length > 0
-            ? `<div class="pane-section-title">REQUIRES (SOURCES)</div>
-               <div class="pane-list">
-                 ${recipe.ingredients.map(ing => {
-                   const ingSlug     = ing.name.toLowerCase().replace(/ /g, '_');
-                   const ingRecipe   = allRecipes.find(r => r.name === ing.name);
-                   const isCraftable = ingRecipe && ingRecipe.ingredients && ingRecipe.ingredients.length > 0;
-                   const depthBadge  = isCraftable
-                       ? `<span class="ing-depth-badge ing-depth-badge--craftable" title="Has its own recipe">⚙</span>`
-                       : `<span class="ing-depth-badge ing-depth-badge--raw" title="Raw material">◆</span>`;
-                   return `<div class="pane-row clickable" onclick="selectItem('${ing.name}')">
-                      <span class="pane-row-name">
-                        <img src="/icons/${ingSlug}.png"
-                             alt="${ing.name}"
-                             class="pane-row-icon"
-                             onerror="this.style.display='none'" />
-                        ${ing.name}
-                      </span>
-                      <span class="pane-row-right">
-                        ${depthBadge}
-                        <span class="pane-row-qty">x${ing.quantity}</span>
-                      </span>
-                    </div>`;
-                 }).join('')}
+            ? `<div class="pane-section pane-section--requires">
+                 <div class="pane-section-title">REQUIRES (SOURCES)</div>
+                 <div class="pane-list">
+                   ${recipe.ingredients.map(ing => {
+                     const ingSlug     = ing.name.toLowerCase().replace(/ /g, '_');
+                     const ingRecipe   = allRecipes.find(r => r.name === ing.name);
+                     const isCraftable = ingRecipe && ingRecipe.ingredients && ingRecipe.ingredients.length > 0;
+                     const depthBadge  = isCraftable
+                         ? `<span class="ing-depth-badge ing-depth-badge--craftable" title="Has its own recipe">⚙</span>`
+                         : `<span class="ing-depth-badge ing-depth-badge--raw" title="Raw material">◆</span>`;
+                     return `<div class="pane-row clickable" onclick="selectItem('${ing.name}')">
+                        <span class="pane-row-name">
+                          <img src="/icons/${ingSlug}.png"
+                               alt="${ing.name}"
+                               class="pane-row-icon"
+                               onerror="this.style.display='none'" />
+                          ${ing.name}
+                        </span>
+                        <span class="pane-row-right">
+                          ${depthBadge}
+                          <span class="pane-row-qty">x${ing.quantity}</span>
+                        </span>
+                      </div>`;
+                   }).join('')}
+                 </div>
                </div>`
-            : `<div class="pane-section-title">REQUIRES (SOURCES)</div>
-               <div class="pane-list"><div class="pane-empty">No ingredients — raw material</div></div>`;
+            : `<div class="pane-section pane-section--requires">
+                 <div class="pane-section-title">REQUIRES (SOURCES)</div>
+                 <div class="pane-list"><div class="pane-empty">No ingredients — raw material</div></div>
+               </div>`;
 
         const usedByHtml = usedBy.length > 0
-            ? `<div class="pane-section-title">USED BY (DERIVED)</div>
-               <div class="pane-list">
-                 ${usedBy.map(r => {
-                   const slug = r.name.toLowerCase().replace(/ /g, '_');
-                   return `<div class="pane-row clickable" onclick="selectItem('${r.name}')">
-                      <span class="pane-row-name">
-                        <img src="/icons/${slug}.png"
-                             alt="${r.name}"
-                             class="pane-row-icon"
-                             onerror="this.style.display='none'" />
-                        ${r.name}
-                      </span>
-                      <span class="pane-row-arrow">→</span>
-                    </div>`;
-                 }).join('')}
+            ? `<div class="pane-section pane-section--usedby">
+                 <div class="pane-section-title">USED BY (DERIVED)</div>
+                 <div class="pane-list">
+                   ${usedBy.map(r => {
+                     const slug = r.name.toLowerCase().replace(/ /g, '_');
+                     return `<div class="pane-row clickable" onclick="selectItem('${r.name}')">
+                        <span class="pane-row-name">
+                          <img src="/icons/${slug}.png"
+                               alt="${r.name}"
+                               class="pane-row-icon"
+                               onerror="this.style.display='none'" />
+                          ${r.name}
+                        </span>
+                        <span class="pane-row-arrow">→</span>
+                      </div>`;
+                   }).join('')}
+                 </div>
                </div>`
             : '';
 
@@ -225,9 +230,14 @@
             <div class="pane-icon">${getIconHtml(recipe.name)}</div>
             <h2 class="pane-title">${recipe.name}</h2>
             <p class="pane-description">${recipe.description || ''}</p>
-            <div class="pane-section-title">UNLOCKS</div>
-            ${getUnlockHtml(recipe.unlockCondition)}
-            ${getCraftedInHtml(recipe.craftedIn, recipe.recyclerYields)}
+            <div class="pane-section">
+                <div class="pane-section-title">UNLOCKS</div>
+                ${getUnlockHtml(recipe.unlockCondition)}
+            </div>
+            <div class="pane-section pane-section--crafted">
+                <div class="pane-section-title">CRAFTED IN</div>
+                ${getCraftedInHtml(recipe.craftedIn, recipe.recyclerYields)}
+            </div>
             ${requiresHtml}
             ${usedByHtml}
         `;

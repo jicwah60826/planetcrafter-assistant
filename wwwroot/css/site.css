@@ -795,3 +795,39 @@ html, body {
 main {
     padding-top: 53px;
 }
+
+/* ── Details pane sections ───────────────────────── */
+
+/* Wraps a section title + its pane-list as one visual block */
+.pane-section {
+    margin-bottom: 20px;
+}
+
+.pane-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    color: #6a8aaa;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1e2e44;
+}
+
+    /* Colour-coded left accent pip per section type */
+    .pane-section-title::before {
+        content: '';
+        display: inline-block;
+        width: 3px;
+        height: 12px;
+        border-radius: 2px;
+        flex-shrink: 0;
+        background: #3a5070; /* default/unlocks */
+    }
+
+.pane-section--crafted .pane-section-title::before  { background: #5b7fd4; } /* blue  — station  */
+.pane-section--requires .pane-section-title::before { background: #e8a020; } /* amber — inputs   */
+.pane-section--usedby .pane-section-title::before   { background: #4fc97e; } /* teal  — outputs  */
