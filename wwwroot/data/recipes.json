@@ -553,6 +553,72 @@
         "recyclerYields": true
     },
     {
+        "name": "Aquarium Tube T1",
+        "category": "Machine",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Oxygen Capsule",
+                "quantity": 1
+            },
+            {
+                "name": "Water Bottle",
+                "quantity": 1
+            },
+            {
+                "name": "Bacteria",
+                "quantity": 1
+            },
+            {
+                "name": "Magnesium",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
+        "name": "Arcade Machine T1",
+        "category": "Machine",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 2
+            },
+            {
+                "name": "Aluminium",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
+        "name": "Arch T1",
+        "category": "Resource",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Silicon",
+                "quantity": 1
+            },
+            {
+                "name": "Selenium",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": {
+            "stage": "Insects",
+            "threshold": 500000000.0,
+            "unit": "units"
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
         "name": "astrofood",
         "category": "Resource",
         "description": "",
@@ -1122,226 +1188,393 @@
         "name": "Blueprint Autocrafter",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Bed Double Colored",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Container T3",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Cooking Station",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Departure Platform",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Drone T2",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Equipment Increase T2",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Equipment Increase T5",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Fireplace",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Flare",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Fountain Big",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Hologram Generator",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Light Box Medium",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Pod9x A",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Pod9x B",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Pod9x C",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
+        "name": "Blueprint Shower",
+        "category": "Resource",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Smart Fabric",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Sofa Colored",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Solar Quartz",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint T T1",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Toxicity Diorama T1",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Toxicity Diorama T2",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Trade Platform",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Tree Planter",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
+        "name": "Blueprint Vehicle Jetpack T1",
+        "category": "Resource",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
+        "name": "Blueprint Wall Water Life",
+        "category": "Resource",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Blueprint Wardens Chip",
         "category": "Resource",
         "description": "",
-        "ingredients": [],
+        "ingredients": [
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            }
+        ],
         "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Boots Speed T1",
@@ -3648,6 +3881,24 @@
         "recyclerYields": true
     },
     {
+        "name": "Fence Rounded",
+        "category": "Resource",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Silicon",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": {
+            "stage": "Insects",
+            "threshold": 50000.0,
+            "unit": "units"
+        },
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
         "name": "Fertilizer T1",
         "category": "Resource",
         "description": "",
@@ -4237,6 +4488,28 @@
             }
         ],
         "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
+        "name": "Floor Angle Glass",
+        "category": "Resource",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Titanium",
+                "quantity": 1
+            },
+            {
+                "name": "Cobalt",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": {
+            "stage": "Biomass",
+            "threshold": 17000000.0,
+            "unit": "units"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -6186,6 +6459,28 @@
         "recyclerYields": true
     },
     {
+        "name": "Lava Lamp T1",
+        "category": "Machine",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Silicon",
+                "quantity": 1
+            },
+            {
+                "name": "Circuit Board",
+                "quantity": 1
+            },
+            {
+                "name": "Bioplastic",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
         "name": "Library T1",
         "category": "Machine",
         "description": "",
@@ -6210,6 +6505,20 @@
             },
             {
                 "name": "Solar Quartz",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
+        "name": "Locker T1",
+        "category": "Machine",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Iron",
                 "quantity": 1
             }
         ],
@@ -9500,6 +9809,28 @@
         "recyclerYields": true
     },
     {
+        "name": "Shower T1",
+        "category": "Machine",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Aluminium",
+                "quantity": 1
+            },
+            {
+                "name": "Bioplastic",
+                "quantity": 1
+            },
+            {
+                "name": "Fabric Blue",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
         "name": "Sign",
         "category": "Structure",
         "description": "",
@@ -10206,6 +10537,24 @@
         "unlockCondition": null,
         "craftedIn": null,
         "recyclerYields": false
+    },
+    {
+        "name": "Toilet T1",
+        "category": "Machine",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Silicon",
+                "quantity": 1
+            },
+            {
+                "name": "Bioplastic",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
     },
     {
         "name": "Toxic Goo",
@@ -11358,7 +11707,7 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 6000000000.0,
+            "threshold": 600000000.0,
             "unit": "nK"
         },
         "craftedIn": "Crafting Table",
@@ -11504,7 +11853,7 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 12000.0,
+            "threshold": 10000.0,
             "unit": "nK"
         },
         "craftedIn": "Crafting Table",
@@ -11781,6 +12130,28 @@
         "recyclerYields": true
     },
     {
+        "name": "Vehicle Jetpack T1",
+        "category": "Resource",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Rocket Reactor",
+                "quantity": 4
+            },
+            {
+                "name": "Solar Quartz",
+                "quantity": 1
+            },
+            {
+                "name": "Explosive",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
         "name": "Vehicle Lights T1",
         "category": "Resource",
         "description": "",
@@ -11983,6 +12354,24 @@
         "recyclerYields": true
     },
     {
+        "name": "Vending Machine T1",
+        "category": "Machine",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Rod-alloy",
+                "quantity": 1
+            },
+            {
+                "name": "Bioplastic",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
         "name": "door",
         "category": "Resource",
         "description": "",
@@ -12025,6 +12414,28 @@
         "ingredients": [
             {
                 "name": "Iron",
+                "quantity": 1
+            }
+        ],
+        "unlockCondition": null,
+        "craftedIn": "Crafting Table",
+        "recyclerYields": true
+    },
+    {
+        "name": "Wall Water Life",
+        "category": "Resource",
+        "description": "",
+        "ingredients": [
+            {
+                "name": "Iron",
+                "quantity": 1
+            },
+            {
+                "name": "Seed",
+                "quantity": 1
+            },
+            {
+                "name": "Water Bottle",
                 "quantity": 1
             }
         ],

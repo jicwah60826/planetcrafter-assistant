@@ -29,9 +29,9 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 # Default paths
 # ---------------------------------------------------------------------------
-MONO_ROOT      = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v3\ExportedProject\Assets\MonoBehaviour")
-EXPORT_ROOT    = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v3\ExportedProject")
-TEXTURE2D_DIR  = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v3\ExportedProject\Assets\Texture2D")
+MONO_ROOT      = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v_2.004_4_6_2026_ExportedProject\ExportedProject\Assets\MonoBehaviour")
+EXPORT_ROOT    = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v_2.004_4_6_2026_ExportedProject\ExportedProject")
+TEXTURE2D_DIR  = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v_2.004_4_6_2026_ExportedProject\ExportedProject\Assets\Texture2D")
 EXTRACTED_FILE = Path(r"D:\PlanetCrafterAssistant\Tools\extracted_recipes.json")
 RECIPES_JSON   = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\data\recipes.json")
 ICON_OUT_DIR   = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\icons")  # matches /icons/ in the app
