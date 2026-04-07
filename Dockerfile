@@ -16,6 +16,10 @@ COPY --from=build /app/publish .
 # so icons persist and can be updated without rebuilding the image
 VOLUME ["/app/wwwroot/icons"]
 
+# BUILD_ID is injected at build time via: docker build --build-arg BUILD_ID=<value>
+ARG BUILD_ID=dev
+ENV BUILD_ID=$BUILD_ID
+
 ENV ASPNETCORE_URLS=http://+:8080
 ENV ASPNETCORE_ENVIRONMENT=Production
 

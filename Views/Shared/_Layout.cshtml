@@ -34,31 +34,30 @@
 
     <!-- Top Bar -->
     <header class="top-bar">
-        <!-- Hamburger: left side -->
-        <button class="hamburger-btn" id="hamburgerBtn" onclick="openFlyout()" aria-label="Open menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <div class="top-bar-inner">
+            <button class="hamburger-btn" id="hamburgerBtn" onclick="openFlyout()" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <h1>Planet Crafter Assistant</h1>
+            <h1>Planet Crafter Assistant</h1>
 
-        <!-- Right-side icons -->
-        <div class="top-bar-right">
-            <a href="https://store.steampowered.com/app/1284190/The_Planet_Crafter/"
-               target="_blank" rel="noopener noreferrer"
-               class="top-bar-steam-btn" title="Get The Planet Crafter on Steam">
-                🎮 Steam
-            </a>
-            <div class="search-wrapper">
-                <input type="text" id="searchBox" placeholder="Search items..."
-                       class="search-box" oninput="filterCards()" />
-                <button id="searchClear" class="search-clear" onclick="clearSearch()" title="Clear search">✕</button>
+            <div class="top-bar-right">
+                <a href="https://store.steampowered.com/app/1284190/The_Planet_Crafter/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="top-bar-steam-btn" title="Get The Planet Crafter on Steam">
+                    🎮 Steam
+                </a>
+                <div class="search-wrapper">
+                    <input type="text" id="searchBox" placeholder="Search items..."
+                           class="search-box" oninput="filterCards()" />
+                    <button id="searchClear" class="search-clear" onclick="clearSearch()" title="Clear search">✕</button>
+                </div>
+                <a href="/" class="top-bar-home-btn" id="homeIconBtn" aria-label="Back to home" title="Home">
+                    🏠
+                </a>
             </div>
-            <!-- Home icon — only visible on inner pages -->
-            <a href="/" class="top-bar-home-btn" id="homeIconBtn" aria-label="Back to home" title="Home">
-                🏠
-            </a>
         </div>
     </header>
 
@@ -72,6 +71,7 @@
         <div class="bottom-nav-footer">
             <span>Planet Crafter Assistant &mdash; Unofficial fan tool</span>
             <a href="/Home/About">Legal Disclaimer</a>
+            <span class="build-id">build: @Context.Items["BuildId"]</span>
         </div>
         <div class="bottom-nav-links">
             <a href="/">Home</a>
