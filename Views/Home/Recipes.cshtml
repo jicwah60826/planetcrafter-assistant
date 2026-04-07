@@ -118,7 +118,10 @@
         document.querySelectorAll('.item-card').forEach(c => c.classList.remove('active'));
         const activeCard = [...document.querySelectorAll('.item-card')]
             .find(c => c.dataset.name === name);
-        if (activeCard) activeCard.classList.add('active');
+        if (activeCard) {
+            activeCard.classList.add('active');
+            activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
 
         const usedBy = allRecipes.filter(r =>
             r.ingredients && r.ingredients.some(i => i.name === name)
