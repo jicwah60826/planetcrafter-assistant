@@ -700,3 +700,57 @@
     border: 1px solid #004a66;
     border-radius: 3px;
 }
+
+/* ── Breadcrumb trail ────────────────────────────── */
+.breadcrumb-trail {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;        /* Firefox */
+    gap: 2px;
+    margin-bottom: 12px;
+    padding: 6px 8px;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.breadcrumb-trail::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+.breadcrumb-item {
+    background: none;
+    border: none;
+    color: #00d4ff;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+    flex-shrink: 0;
+    transition: background 0.15s;
+}
+
+.breadcrumb-item:hover {
+    background: #002a3a;
+    text-decoration: underline;
+}
+
+.breadcrumb-sep {
+    color: #444;
+    font-size: 11px;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.breadcrumb-collapsed {
+    color: #555;
+    font-size: 12px;
+    padding: 2px 4px;
+    flex-shrink: 0;
+    cursor: default;
+}

@@ -56,12 +56,16 @@
 <script>
     const allRecipes = @Html.Raw(allRecipesJson);
 
+    // Navigation history stack
+    let navHistory = [];
+
     function isMobile() { return window.innerWidth <= 600; }
 
     function closeMobilePane() {
         const pane = document.getElementById('detailsPane');
         pane.classList.remove('mobile-open');
         document.querySelectorAll('.item-card').forEach(c => c.classList.remove('active'));
+        navHistory = [];
     }
 
     function getIconHtml(name) {
@@ -117,7 +121,39 @@
                 </div>`;
     }
 
-    function selectItem(name) {
+    function getBreadcrumbHtml() {
+        if (navHistory.length === 0) return '';
+
+        const MAX_VISIBLE = 5;
+        let visibleCrumbs = navHistory;
+        let collapsedHtml = '';
+
+        // If history exceeds the cap, show "…" for the hidden older entries
+        if (navHistory.length > MAX_VISIBLE) {
+            visibleCrumbs = navHistory.slice(-MAX_VISIBLE);
+            const hiddenCount = navHistory.length - MAX_VISIBLE;
+            collapsedHtml = `<span class="breadcrumb-collapsed" title="${hiddenCount} earlier steps hidden">…</span>
+                             <span class="breadcrumb-sep">›</span>`;
+        }
+
+        const startIndex = navHistory.length - visibleCrumbs.length;
+        const crumbs = visibleCrumbs.map((name, i) =>
+            `<button class="breadcrumb-item"
+                     onclick="navigateBack(${startIndex + i})"
+                     title="${name}">${name}</button>
+             <span class="breadcrumb-sep">›</span>`
+        ).join('');
+
+        return `<div class="breadcrumb-trail">${collapsedHtml}${crumbs}</div>`;
+    }
+
+    function navigateBack(index) {
+        const targetName = navHistory[index];
+        navHistory = navHistory.slice(0, index);
+        renderItem(targetName);
+    }
+
+    function renderItem(name) {
         const recipe = allRecipes.find(r => r.name === name);
         if (!recipe) return;
 
@@ -137,10 +173,10 @@
             ? `<div class="pane-section-title">REQUIRES (SOURCES)</div>
                <div class="pane-list">
                  ${recipe.ingredients.map(ing => {
-                   const ingSlug    = ing.name.toLowerCase().replace(/ /g, '_');
-                   const ingRecipe  = allRecipes.find(r => r.name === ing.name);
+                   const ingSlug     = ing.name.toLowerCase().replace(/ /g, '_');
+                   const ingRecipe   = allRecipes.find(r => r.name === ing.name);
                    const isCraftable = ingRecipe && ingRecipe.ingredients && ingRecipe.ingredients.length > 0;
-                   const depthBadge = isCraftable
+                   const depthBadge  = isCraftable
                        ? `<span class="ing-depth-badge ing-depth-badge--craftable" title="Has its own recipe">⚙</span>`
                        : `<span class="ing-depth-badge ing-depth-badge--raw" title="Raw material">◆</span>`;
                    return `<div class="pane-row clickable" onclick="selectItem('${ing.name}')">
@@ -185,6 +221,7 @@
         const pane = document.getElementById('detailsPane');
         pane.innerHTML = `
             ${backBtnHtml}
+            ${getBreadcrumbHtml()}
             <div class="pane-icon">${getIconHtml(recipe.name)}</div>
             <h2 class="pane-title">${recipe.name}</h2>
             <p class="pane-description">${recipe.description || ''}</p>
@@ -198,9 +235,17 @@
         if (isMobile()) pane.classList.add('mobile-open');
     }
 
-    // --- Populate USED BY count badges on all cards ---
+    // Public entry point — pushes current item to history before navigating
+    function selectItem(name) {
+        const currentTitle = document.querySelector('#detailsPane .pane-title');
+        if (currentTitle && currentTitle.textContent) {
+            navHistory.push(currentTitle.textContent.trim());
+        }
+        renderItem(name);
+    }
+
+    // --- USED BY count badges ---
     (function buildUsedByBadges() {
-        // Count how many recipes reference each item as an ingredient
         const usedByCount = {};
         allRecipes.forEach(r => {
             if (!r.ingredients) return;
@@ -208,8 +253,6 @@
                 usedByCount[ing.name] = (usedByCount[ing.name] || 0) + 1;
             });
         });
-
-        // Stamp the count onto each card badge
         document.querySelectorAll('.item-card').forEach(card => {
             const count = usedByCount[card.dataset.name] || 0;
             if (count > 0) {
@@ -222,6 +265,7 @@
         });
     })();
 
+    // --- Filter tabs ---
     document.querySelectorAll('.tab').forEach(tab => {
         tab.addEventListener('click', () => {
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
