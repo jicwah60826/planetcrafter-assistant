@@ -17,11 +17,11 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 2
             },
             {
-                "name": "Methan Capsule",
+                "name": "Methan Capsule T1",
                 "quantity": 1
             }
         ],
@@ -141,7 +141,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             },
             {
@@ -149,7 +149,7 @@
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             },
             {
@@ -175,15 +175,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 2
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             },
             {
@@ -209,15 +209,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             },
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T1",
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             }
         ],
@@ -316,15 +316,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             },
             {
@@ -358,7 +358,7 @@
                 "quantity": 1
             },
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T1",
                 "quantity": 1
             }
         ],
@@ -376,7 +376,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Animal Food",
+                "name": "Animal Food T1",
                 "quantity": 1
             },
             {
@@ -384,7 +384,7 @@
                 "quantity": 1
             },
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             }
         ],
@@ -402,7 +402,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Animal Food",
+                "name": "Animal Food T2",
                 "quantity": 1
             },
             {
@@ -420,11 +420,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -432,15 +432,15 @@
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T0",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             },
             {
-                "name": "Methan Capsule",
+                "name": "Methan Capsule T1",
                 "quantity": 1
             }
         ],
@@ -488,7 +488,7 @@
                 "quantity": 1
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             }
         ],
@@ -502,11 +502,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             },
             {
-                "name": "Oxygen Capsule",
+                "name": "Oxygen Capsule T1",
                 "quantity": 1
             },
             {
@@ -514,7 +514,7 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -528,7 +528,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -536,12 +536,20 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             },
             {
-                "name": "Phytoplankton",
-                "quantity": 3
+                "name": "Phytoplankton T1",
+                "quantity": 1
+            },
+            {
+                "name": "Phytoplankton T2",
+                "quantity": 1
+            },
+            {
+                "name": "Phytoplankton T3",
+                "quantity": 1
             }
         ],
         "unlockCondition": {
@@ -558,15 +566,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Oxygen Capsule",
+                "name": "Oxygen Capsule T1",
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             },
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 1
             },
             {
@@ -584,7 +592,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 2
             },
             {
@@ -687,7 +695,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Backpack",
+                "name": "Backpack T1",
                 "quantity": 1
             },
             {
@@ -717,7 +725,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Backpack",
+                "name": "Backpack T2",
                 "quantity": 1
             },
             {
@@ -747,7 +755,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Backpack",
+                "name": "Backpack T3",
                 "quantity": 1
             },
             {
@@ -769,7 +777,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Backpack",
+                "name": "Backpack T4",
                 "quantity": 1
             },
             {
@@ -799,7 +807,7 @@
                 "quantity": 1
             },
             {
-                "name": "Backpack",
+                "name": "Backpack T5",
                 "quantity": 1
             },
             {
@@ -807,7 +815,7 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -833,7 +841,7 @@
                 "quantity": 2
             },
             {
-                "name": "Backpack",
+                "name": "Backpack T6",
                 "quantity": 1
             },
             {
@@ -849,7 +857,7 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 3
             }
         ],
@@ -867,7 +875,7 @@
                 "quantity": 3
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 3
             }
         ],
@@ -1000,15 +1008,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T2",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -1030,11 +1038,11 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             }
         ],
@@ -1060,11 +1068,11 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             }
         ],
@@ -1078,7 +1086,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Seed",
+                "name": "Seed T0",
                 "quantity": 1
             },
             {
@@ -1112,11 +1120,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 2
             },
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 2
             },
             {
@@ -1176,7 +1184,7 @@
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             }
         ],
@@ -1190,7 +1198,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1204,7 +1212,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1218,7 +1226,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1232,7 +1240,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1246,7 +1254,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1260,7 +1268,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1274,7 +1282,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1288,7 +1296,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1302,7 +1310,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1316,7 +1324,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1330,7 +1338,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1344,7 +1352,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1358,7 +1366,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1372,7 +1380,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1386,7 +1394,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1400,7 +1408,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1414,7 +1422,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1428,7 +1436,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1442,7 +1450,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1456,7 +1464,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1470,7 +1478,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1484,7 +1492,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1498,7 +1506,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1512,7 +1520,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1526,7 +1534,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1540,7 +1548,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1554,7 +1562,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1568,7 +1576,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -1600,7 +1608,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Boots Speed",
+                "name": "Boots Speed T1",
                 "quantity": 1
             },
             {
@@ -1622,7 +1630,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Boots Speed",
+                "name": "Boots Speed T2",
                 "quantity": 1
             },
             {
@@ -1630,7 +1638,7 @@
                 "quantity": 2
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             }
         ],
@@ -1653,15 +1661,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -1688,15 +1696,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -1719,15 +1727,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -1750,15 +1758,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -1781,15 +1789,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -1812,15 +1820,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -1843,15 +1851,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T2",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -1878,15 +1886,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T2",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -1913,15 +1921,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T2",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -1962,15 +1970,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -2011,15 +2019,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -2042,15 +2050,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -2073,15 +2081,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -2104,15 +2112,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -2135,15 +2143,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -2166,15 +2174,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -2197,15 +2205,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -2232,15 +2240,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -2276,8 +2284,12 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
-                "quantity": 2
+                "name": "Fertilizer T2",
+                "quantity": 1
+            },
+            {
+                "name": "Fertilizer T1",
+                "quantity": 1
             },
             {
                 "name": "Tree Root",
@@ -2306,7 +2318,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             },
             {
@@ -2314,7 +2326,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             }
         ],
@@ -2332,7 +2344,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             },
             {
@@ -2340,7 +2352,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             },
             {
@@ -2358,7 +2370,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T3",
                 "quantity": 1
             },
             {
@@ -2366,11 +2378,11 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T2",
                 "quantity": 1
             },
             {
@@ -2463,11 +2475,11 @@
                 "quantity": 1
             },
             {
-                "name": "Nitrogen Capsule",
+                "name": "Nitrogen Capsule T1",
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             },
             {
@@ -2555,7 +2567,7 @@
                 "quantity": 2
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -2727,7 +2739,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -2843,7 +2855,7 @@
                 "quantity": 1
             },
             {
-                "name": "Nitrogen Capsule",
+                "name": "Nitrogen Capsule T1",
                 "quantity": 1
             }
         ],
@@ -2946,11 +2958,11 @@
                 "quantity": 1
             },
             {
-                "name": "Fuse Energy",
+                "name": "Fuse Energy T1",
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -3016,7 +3028,7 @@
                 "quantity": 1
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             }
         ],
@@ -3245,7 +3257,7 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -3267,7 +3279,7 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -3275,7 +3287,7 @@
                 "quantity": 1
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             }
         ],
@@ -3319,7 +3331,7 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 3
             }
         ],
@@ -3337,19 +3349,19 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             },
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T2",
                 "quantity": 1
             },
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 1
             },
             {
@@ -3357,7 +3369,7 @@
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             }
         ],
@@ -3384,7 +3396,7 @@
                 "quantity": 3
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -3396,7 +3408,7 @@
                 "quantity": 1
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 3
             }
         ],
@@ -3488,7 +3500,7 @@
                 "quantity": 3
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 2
             },
             {
@@ -3510,7 +3522,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 3
             },
             {
@@ -3522,7 +3534,7 @@
                 "quantity": 3
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             }
         ],
@@ -3584,7 +3596,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Equipment Increase",
+                "name": "Equipment Increase T1",
                 "quantity": 1
             },
             {
@@ -3622,7 +3634,7 @@
                 "quantity": 2
             },
             {
-                "name": "Equipment Increase",
+                "name": "Equipment Increase T2",
                 "quantity": 1
             },
             {
@@ -3652,11 +3664,11 @@
                 "quantity": 2
             },
             {
-                "name": "Equipment Increase",
+                "name": "Equipment Increase T3",
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -3678,11 +3690,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 2
             },
             {
-                "name": "Equipment Increase",
+                "name": "Equipment Increase T4",
                 "quantity": 1
             },
             {
@@ -3766,11 +3778,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 2
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -3802,12 +3814,16 @@
                 "quantity": 2
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
-                "quantity": 2
+                "name": "Fertilizer T1",
+                "quantity": 1
+            },
+            {
+                "name": "Fertilizer T2",
+                "quantity": 1
             },
             {
                 "name": "Alloy",
@@ -3828,15 +3844,19 @@
                 "quantity": 2
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
-                "quantity": 2
+                "name": "Fertilizer T1",
+                "quantity": 1
             },
             {
                 "name": "Alloy",
+                "quantity": 1
+            },
+            {
+                "name": "Fertilizer T3",
                 "quantity": 1
             }
         ],
@@ -3850,7 +3870,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             },
             {
@@ -3926,7 +3946,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             },
             {
@@ -3938,7 +3958,7 @@
                 "quantity": 1
             },
             {
-                "name": "Methan Capsule",
+                "name": "Methan Capsule T1",
                 "quantity": 2
             }
         ],
@@ -3956,7 +3976,7 @@
                 "quantity": 2
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             }
         ],
@@ -3970,7 +3990,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             },
             {
@@ -3992,15 +4012,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T2",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4023,15 +4043,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4126,15 +4146,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4161,15 +4181,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4192,15 +4212,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T2",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4227,15 +4247,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T2",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4258,15 +4278,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4289,15 +4309,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T2",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4320,15 +4340,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4351,15 +4371,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T2",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4382,15 +4402,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4427,11 +4447,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 2
             },
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T1",
                 "quantity": 1
             },
             {
@@ -4449,11 +4469,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 2
             },
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T2",
                 "quantity": 1
             },
             {
@@ -4461,7 +4481,7 @@
                 "quantity": 2
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T3",
                 "quantity": 1
             }
         ],
@@ -4479,11 +4499,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             }
         ],
@@ -4549,7 +4569,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4571,7 +4591,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 1
             }
         ],
@@ -4589,7 +4609,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4679,7 +4699,7 @@
                 "quantity": 1
             },
             {
-                "name": "Methan Capsule",
+                "name": "Methan Capsule T1",
                 "quantity": 1
             },
             {
@@ -4773,11 +4793,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T3",
                 "quantity": 1
             }
         ],
@@ -4808,11 +4828,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T3",
                 "quantity": 1
             }
         ],
@@ -4843,7 +4863,7 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
@@ -4874,15 +4894,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T3",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -4909,7 +4929,7 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             }
         ],
@@ -4940,7 +4960,7 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             }
         ],
@@ -4967,11 +4987,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -5002,11 +5022,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -5033,11 +5053,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -5064,11 +5084,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             }
         ],
@@ -5095,11 +5115,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             }
         ],
@@ -5126,11 +5146,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             }
         ],
@@ -5171,11 +5191,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             }
         ],
@@ -5206,15 +5226,19 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
-                "quantity": 2
+                "name": "Mutagen T4",
+                "quantity": 1
             },
             {
                 "name": "Phosphorus",
                 "quantity": 1
             },
             {
-                "name": "Animal Food",
+                "name": "Mutagen T2",
+                "quantity": 1
+            },
+            {
+                "name": "Animal Food T1",
                 "quantity": 1
             }
         ],
@@ -5236,7 +5260,7 @@
                 "quantity": 2
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -5276,7 +5300,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T3",
                 "quantity": 2
             },
             {
@@ -5323,11 +5347,19 @@
                 "quantity": 1
             },
             {
-                "name": "Seed",
-                "quantity": 3
+                "name": "Seed T4",
+                "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Seed T5",
+                "quantity": 1
+            },
+            {
+                "name": "Seed T6",
+                "quantity": 1
+            },
+            {
+                "name": "Bioplastic T1",
                 "quantity": 1
             }
         ],
@@ -5515,7 +5547,7 @@
                 "quantity": 2
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -5566,11 +5598,11 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             }
         ],
@@ -5588,11 +5620,11 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             },
             {
@@ -5634,11 +5666,11 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             }
         ],
@@ -5818,7 +5850,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 2
             },
             {
@@ -5830,7 +5862,7 @@
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T0",
                 "quantity": 1
             }
         ],
@@ -5968,7 +6000,7 @@
                 "quantity": 2
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             }
         ],
@@ -5990,7 +6022,7 @@
                 "quantity": 3
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 3
             },
             {
@@ -6087,7 +6119,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             },
             {
@@ -6095,7 +6127,7 @@
                 "quantity": 1
             },
             {
-                "name": "Oxygen Capsule",
+                "name": "Oxygen Capsule T1",
                 "quantity": 1
             }
         ],
@@ -6157,7 +6189,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 2
             },
             {
@@ -6169,7 +6201,7 @@
                 "quantity": 1
             },
             {
-                "name": "Rocket Reactor",
+                "name": "Rocket Reactor T2",
                 "quantity": 1
             },
             {
@@ -6187,7 +6219,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Seed",
+                "name": "Seed T0",
                 "quantity": 1
             }
         ],
@@ -6219,7 +6251,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Jetpack",
+                "name": "Jetpack T1",
                 "quantity": 1
             },
             {
@@ -6249,7 +6281,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Jetpack",
+                "name": "Jetpack T2",
                 "quantity": 1
             },
             {
@@ -6261,7 +6293,7 @@
                 "quantity": 2
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 2
             }
         ],
@@ -6279,7 +6311,7 @@
                 "quantity": 1
             },
             {
-                "name": "Jetpack",
+                "name": "Jetpack T3",
                 "quantity": 1
             },
             {
@@ -6291,7 +6323,7 @@
                 "quantity": 2
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             }
         ],
@@ -6305,15 +6337,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Rocket Reactor",
+                "name": "Rocket Reactor T2",
                 "quantity": 2
             },
             {
-                "name": "Jetpack",
+                "name": "Jetpack T4",
                 "quantity": 1
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 2
             },
             {
@@ -6321,7 +6353,7 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 3
             }
         ],
@@ -6335,7 +6367,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 2
             }
         ],
@@ -6349,7 +6381,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 2
             }
         ],
@@ -6385,15 +6417,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T2",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             }
         ],
@@ -6416,15 +6448,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             },
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             }
         ],
@@ -6468,11 +6500,11 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             }
         ],
@@ -6885,7 +6917,7 @@
                 "quantity": 2
             },
             {
-                "name": "Multi Tool Cleaning Goo Chip",
+                "name": "Multi Tool Cleaning Goo Chip T1",
                 "quantity": 1
             },
             {
@@ -6911,7 +6943,7 @@
                 "quantity": 2
             },
             {
-                "name": "Multi Tool Cleaning Goo Chip",
+                "name": "Multi Tool Cleaning Goo Chip T2",
                 "quantity": 1
             },
             {
@@ -6941,7 +6973,7 @@
                 "quantity": 2
             },
             {
-                "name": "Multi Tool Cleaning Goo Chip",
+                "name": "Multi Tool Cleaning Goo Chip T3",
                 "quantity": 1
             },
             {
@@ -7003,7 +7035,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Methan Capsule",
+                "name": "Methan Capsule T1",
                 "quantity": 1
             },
             {
@@ -7029,7 +7061,7 @@
                 "quantity": 1
             },
             {
-                "name": "Multi Tool Deconstruct",
+                "name": "Multi Tool Deconstruct T2",
                 "quantity": 1
             },
             {
@@ -7095,7 +7127,7 @@
                 "quantity": 2
             },
             {
-                "name": "Multi Tool Light",
+                "name": "Multi Tool Light T2",
                 "quantity": 1
             }
         ],
@@ -7131,7 +7163,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Multi Tool Mine Speed",
+                "name": "Multi Tool Mine Speed T1",
                 "quantity": 1
             },
             {
@@ -7153,7 +7185,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Multi Tool Mine Speed",
+                "name": "Multi Tool Mine Speed T2",
                 "quantity": 1
             },
             {
@@ -7179,7 +7211,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Multi Tool Mine Speed",
+                "name": "Multi Tool Mine Speed T3",
                 "quantity": 1
             },
             {
@@ -7205,11 +7237,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 1
             },
             {
-                "name": "Methan Capsule",
+                "name": "Methan Capsule T1",
                 "quantity": 1
             },
             {
@@ -7227,11 +7259,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T1",
                 "quantity": 1
             },
             {
@@ -7249,11 +7281,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 1
             },
             {
-                "name": "Nitrogen Capsule",
+                "name": "Nitrogen Capsule T1",
                 "quantity": 1
             },
             {
@@ -7275,8 +7307,12 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Mutagen",
-                "quantity": 2
+                "name": "Mutagen T3",
+                "quantity": 1
+            },
+            {
+                "name": "Mutagen T1",
+                "quantity": 1
             }
         ],
         "unlockCondition": {
@@ -7302,7 +7338,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 2
             },
             {
@@ -7332,7 +7368,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 2
             },
             {
@@ -7584,7 +7620,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Oxygen Tank",
+                "name": "Oxygen Tank T1",
                 "quantity": 1
             },
             {
@@ -7618,7 +7654,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Oxygen Tank",
+                "name": "Oxygen Tank T2",
                 "quantity": 1
             },
             {
@@ -7660,7 +7696,7 @@
                 "quantity": 3
             },
             {
-                "name": "Oxygen Tank",
+                "name": "Oxygen Tank T3",
                 "quantity": 1
             },
             {
@@ -7682,7 +7718,7 @@
                 "quantity": 2
             },
             {
-                "name": "Oxygen Tank",
+                "name": "Oxygen Tank T4",
                 "quantity": 1
             },
             {
@@ -7694,7 +7730,7 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 3
             }
         ],
@@ -7778,11 +7814,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Pin Chip",
+                "name": "Pin Chip T1",
                 "quantity": 1
             },
             {
-                "name": "Methan Capsule",
+                "name": "Methan Capsule T1",
                 "quantity": 1
             },
             {
@@ -7816,7 +7852,7 @@
                 "quantity": 1
             },
             {
-                "name": "Pin Chip",
+                "name": "Pin Chip T2",
                 "quantity": 1
             },
             {
@@ -7838,7 +7874,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fuse Trade Rockets Speed",
+                "name": "Fuse Trade Rockets Speed T1",
                 "quantity": 1
             },
             {
@@ -8050,11 +8086,11 @@
                 "quantity": 2
             },
             {
-                "name": "Fuse Energy",
+                "name": "Fuse Energy T1",
                 "quantity": 2
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 2
             },
             {
@@ -8205,7 +8241,7 @@
                 "quantity": 1
             },
             {
-                "name": "Methan Capsule",
+                "name": "Methan Capsule T1",
                 "quantity": 1
             }
         ],
@@ -8286,7 +8322,7 @@
                 "quantity": 1
             },
             {
-                "name": "Methan Capsule",
+                "name": "Methan Capsule T1",
                 "quantity": 1
             }
         ],
@@ -8304,7 +8340,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Chlorine Capsule",
+                "name": "Chlorine Capsule T1",
                 "quantity": 1
             },
             {
@@ -8352,7 +8388,7 @@
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             }
         ],
@@ -8378,7 +8414,7 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -8400,7 +8436,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             },
             {
@@ -8452,7 +8488,7 @@
                 "quantity": 2
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -8492,7 +8528,7 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             },
             {
@@ -8522,11 +8558,11 @@
                 "quantity": 2
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T0",
                 "quantity": 1
             },
             {
@@ -8548,11 +8584,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T3",
                 "quantity": 1
             },
             {
-                "name": "Rocket Reactor",
+                "name": "Rocket Reactor T2",
                 "quantity": 1
             },
             {
@@ -8560,8 +8596,16 @@
                 "quantity": 1
             },
             {
-                "name": "Seed",
-                "quantity": 3
+                "name": "Seed T2",
+                "quantity": 1
+            },
+            {
+                "name": "Seed T3",
+                "quantity": 1
+            },
+            {
+                "name": "Seed T4",
+                "quantity": 1
             }
         ],
         "unlockCondition": null,
@@ -8608,7 +8652,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 2
             },
             {
@@ -8656,7 +8700,7 @@
                 "quantity": 2
             },
             {
-                "name": "Rocket Reactor",
+                "name": "Rocket Reactor T2",
                 "quantity": 1
             },
             {
@@ -8664,7 +8708,7 @@
                 "quantity": 2
             },
             {
-                "name": "Fuse Heat",
+                "name": "Fuse Heat T1",
                 "quantity": 1
             },
             {
@@ -8746,7 +8790,7 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T2",
                 "quantity": 1
             },
             {
@@ -8768,15 +8812,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T3",
                 "quantity": 1
             },
             {
-                "name": "Rocket Reactor",
+                "name": "Rocket Reactor T2",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             },
             {
@@ -8872,7 +8916,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 2
             },
             {
@@ -8906,11 +8950,11 @@
                 "quantity": 2
             },
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
@@ -8958,7 +9002,7 @@
                 "quantity": 2
             },
             {
-                "name": "Rocket Reactor",
+                "name": "Rocket Reactor T2",
                 "quantity": 1
             },
             {
@@ -8966,7 +9010,7 @@
                 "quantity": 2
             },
             {
-                "name": "Fuse Pressure",
+                "name": "Fuse Pressure T1",
                 "quantity": 1
             },
             {
@@ -9044,7 +9088,7 @@
                 "quantity": 1
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -9120,7 +9164,7 @@
                 "quantity": 2
             },
             {
-                "name": "Fuse Energy",
+                "name": "Fuse Energy T1",
                 "quantity": 1
             }
         ],
@@ -9451,7 +9495,7 @@
                 "quantity": 1
             },
             {
-                "name": "Chlorine Capsule",
+                "name": "Chlorine Capsule T1",
                 "quantity": 1
             }
         ],
@@ -9483,15 +9527,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Mutagen",
+                "name": "Mutagen T3",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             },
             {
-                "name": "Phytoplankton",
+                "name": "Phytoplankton T1",
                 "quantity": 1
             }
         ],
@@ -9730,7 +9774,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 3
             },
             {
@@ -9742,7 +9786,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -9760,7 +9804,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 2
             },
             {
@@ -9768,7 +9812,7 @@
                 "quantity": 2
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 2
             }
         ],
@@ -9786,7 +9830,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -9818,7 +9862,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             },
             {
@@ -9871,11 +9915,11 @@
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             },
             {
-                "name": "Oxygen Capsule",
+                "name": "Oxygen Capsule T1",
                 "quantity": 1
             }
         ],
@@ -9889,15 +9933,15 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Larvae Base",
+                "name": "Larvae Base T2",
                 "quantity": 1
             },
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -9933,7 +9977,7 @@
                 "quantity": 2
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],
@@ -10019,7 +10063,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Nitrogen Capsule",
+                "name": "Nitrogen Capsule T1",
                 "quantity": 1
             },
             {
@@ -10341,7 +10385,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             }
         ],
@@ -10377,7 +10421,7 @@
                 "quantity": 1
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             },
             {
@@ -10421,7 +10465,7 @@
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             }
         ],
@@ -10515,7 +10559,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Chlorine Capsule",
+                "name": "Chlorine Capsule T1",
                 "quantity": 1
             },
             {
@@ -10617,7 +10661,7 @@
                 "quantity": 2
             },
             {
-                "name": "Chlorine Capsule",
+                "name": "Chlorine Capsule T1",
                 "quantity": 1
             }
         ],
@@ -10692,7 +10736,7 @@
                 "quantity": 2
             },
             {
-                "name": "Toxins Filter",
+                "name": "Toxins Filter T1",
                 "quantity": 1
             },
             {
@@ -10718,7 +10762,7 @@
                 "quantity": 2
             },
             {
-                "name": "Toxins Filter",
+                "name": "Toxins Filter T2",
                 "quantity": 1
             },
             {
@@ -10740,7 +10784,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 3
             },
             {
@@ -10866,7 +10910,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -10915,7 +10959,7 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             }
         ],
@@ -10942,7 +10986,7 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             }
         ],
@@ -10969,7 +11013,7 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             }
         ],
@@ -11032,11 +11076,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T3",
                 "quantity": 1
             }
         ],
@@ -11071,7 +11115,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T3",
                 "quantity": 1
             }
         ],
@@ -11106,7 +11150,7 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T4",
                 "quantity": 1
             }
         ],
@@ -11133,11 +11177,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T1",
                 "quantity": 1
             }
         ],
@@ -11164,11 +11208,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T2",
                 "quantity": 1
             }
         ],
@@ -11195,11 +11239,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T3",
                 "quantity": 1
             }
         ],
@@ -11226,11 +11270,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T4",
                 "quantity": 1
             }
         ],
@@ -11257,11 +11301,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T5",
                 "quantity": 1
             }
         ],
@@ -11288,11 +11332,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T6",
                 "quantity": 1
             }
         ],
@@ -11319,7 +11363,7 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
@@ -11350,11 +11394,11 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
+                "name": "Mutagen T1",
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T0",
                 "quantity": 1
             }
         ],
@@ -11381,8 +11425,12 @@
                 "quantity": 1
             },
             {
-                "name": "Mutagen",
-                "quantity": 2
+                "name": "Mutagen T1",
+                "quantity": 1
+            },
+            {
+                "name": "Mutagen T2",
+                "quantity": 1
             }
         ],
         "unlockCondition": {
@@ -11403,7 +11451,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             }
         ],
@@ -11421,7 +11469,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -11448,11 +11496,11 @@
                 "quantity": 1
             },
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             },
             {
@@ -11460,7 +11508,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             }
         ],
@@ -11482,7 +11530,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 1
             },
             {
@@ -11490,7 +11538,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 1
             },
             {
@@ -11516,7 +11564,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bacteria",
+                "name": "Bacteria T1",
                 "quantity": 1
             },
             {
@@ -11524,7 +11572,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T2",
                 "quantity": 2
             },
             {
@@ -11640,7 +11688,7 @@
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             }
         ],
@@ -11658,7 +11706,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             },
             {
@@ -11666,7 +11714,7 @@
                 "quantity": 1
             },
             {
-                "name": "Fertilizer",
+                "name": "Fertilizer T1",
                 "quantity": 1
             }
         ],
@@ -11736,7 +11784,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             },
             {
@@ -11836,7 +11884,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Vehicle Equipment Size",
+                "name": "Vehicle Equipment Size T1",
                 "quantity": 2
             },
             {
@@ -11884,7 +11932,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Vehicle Inventory Size",
+                "name": "Vehicle Inventory Size T1",
                 "quantity": 2
             },
             {
@@ -11906,7 +11954,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Vehicle Inventory Size",
+                "name": "Vehicle Inventory Size T2",
                 "quantity": 2
             },
             {
@@ -11972,7 +12020,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Vehicle Lights",
+                "name": "Vehicle Lights T1",
                 "quantity": 2
             },
             {
@@ -11990,7 +12038,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 2
             },
             {
@@ -11998,7 +12046,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 2
             },
             {
@@ -12020,7 +12068,7 @@
                 "quantity": 4
             },
             {
-                "name": "Oxygen Capsule",
+                "name": "Oxygen Capsule T1",
                 "quantity": 2
             }
         ],
@@ -12052,11 +12100,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Vehicle Speed",
+                "name": "Vehicle Speed T1",
                 "quantity": 2
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             }
         ],
@@ -12070,11 +12118,11 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Vehicle Speed",
+                "name": "Vehicle Speed T2",
                 "quantity": 2
             },
             {
-                "name": "Red Powder",
+                "name": "Red Powder T1",
                 "quantity": 1
             },
             {
@@ -12100,7 +12148,7 @@
                 "quantity": 2
             },
             {
-                "name": "Vehicle Speed",
+                "name": "Vehicle Speed T3",
                 "quantity": 1
             },
             {
@@ -12156,7 +12204,7 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 1
             }
         ],
@@ -12224,11 +12272,11 @@
                 "quantity": 1
             },
             {
-                "name": "Seed",
+                "name": "Seed T0",
                 "quantity": 1
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             }
         ],
@@ -12286,7 +12334,7 @@
                 "quantity": 2
             },
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             },
             {
@@ -12360,7 +12408,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 3
             },
             {
@@ -12402,11 +12450,11 @@
                 "quantity": 1
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 2
             },
             {
-                "name": "Water Bottle",
+                "name": "Water Bottle T1",
                 "quantity": 1
             }
         ],
@@ -12424,7 +12472,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 2
             },
             {
@@ -12454,7 +12502,7 @@
                 "quantity": 2
             },
             {
-                "name": "Bioplastic",
+                "name": "Bioplastic T1",
                 "quantity": 2
             },
             {
@@ -12551,7 +12599,7 @@
         "description": "",
         "ingredients": [
             {
-                "name": "Circuit Board",
+                "name": "Circuit Board T1",
                 "quantity": 1
             }
         ],

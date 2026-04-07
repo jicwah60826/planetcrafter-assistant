@@ -314,9 +314,10 @@ def extract_recipes(craftable: list, guid_to_id: dict,
         for g in ingredient_guids:
             resolved_id = guid_to_id.get(g)
             if resolved_id:
-                friendly = re.sub(r"\d+$", "", resolved_id)
-                friendly = re.sub(r"(?<=[a-z0-9])([A-Z])", r" \1", friendly)
-                name_counts[friendly.strip()] += 1
+                # Use pascal_to_display() so ingredient names exactly match
+                # the display names written for the items themselves.
+                # e.g. 'Bioplastic1' -> 'Bioplastic T1', not 'Bioplastic'
+                name_counts[pascal_to_display(resolved_id)] += 1
 
         ingredients = [
             {"name": name, "quantity": qty}
