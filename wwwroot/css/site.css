@@ -658,3 +658,32 @@
     border-radius: 3px;
     text-transform: uppercase;
 }
+
+.pane-row-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.ing-depth-badge {
+    font-size: 10px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Craftable ingredient — has its own recipe */
+.ing-depth-badge--craftable {
+    color: #00d4ff;
+    background: #001f2e;
+    border: 1px solid #004a66;
+}
+
+/* Raw ingredient — no recipe, dead end */
+.ing-depth-badge--raw {
+    color: #7a5c00;
+    background: #2a1f00;
+    border: 1px solid #5a4000;
+}

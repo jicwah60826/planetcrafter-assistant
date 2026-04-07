@@ -136,7 +136,12 @@
             ? `<div class="pane-section-title">REQUIRES (SOURCES)</div>
                <div class="pane-list">
                  ${recipe.ingredients.map(ing => {
-                   const ingSlug = ing.name.toLowerCase().replace(/ /g, '_');
+                   const ingSlug    = ing.name.toLowerCase().replace(/ /g, '_');
+                   const ingRecipe  = allRecipes.find(r => r.name === ing.name);
+                   const isCraftable = ingRecipe && ingRecipe.ingredients && ingRecipe.ingredients.length > 0;
+                   const depthBadge = isCraftable
+                       ? `<span class="ing-depth-badge ing-depth-badge--craftable" title="Has its own recipe">⚙</span>`
+                       : `<span class="ing-depth-badge ing-depth-badge--raw" title="Raw material">◆</span>`;
                    return `<div class="pane-row clickable" onclick="selectItem('${ing.name}')">
                       <span class="pane-row-name">
                         <img src="/icons/${ingSlug}.png"
@@ -145,7 +150,10 @@
                              onerror="this.style.display='none'" />
                         ${ing.name}
                       </span>
-                      <span class="pane-row-qty">x${ing.quantity}</span>
+                      <span class="pane-row-right">
+                        ${depthBadge}
+                        <span class="pane-row-qty">x${ing.quantity}</span>
+                      </span>
                     </div>`;
                  }).join('')}
                </div>`
