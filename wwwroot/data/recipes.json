@@ -1,7 +1,7 @@
 [
     {
         "name": "Air Filter T1",
-        "category": "Resource",
+        "category": "Filter",
         "description": "",
         "ingredients": [
             {
@@ -119,7 +119,7 @@
     },
     {
         "name": "Algae1 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -128,7 +128,7 @@
     },
     {
         "name": "Algae1 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -346,7 +346,7 @@
     },
     {
         "name": "Animal Food T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -372,7 +372,7 @@
     },
     {
         "name": "Animal Food T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -398,7 +398,7 @@
     },
     {
         "name": "Animal Food T3",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -454,7 +454,7 @@
     },
     {
         "name": "Anti Toxins Explosive T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -476,7 +476,7 @@
     },
     {
         "name": "Anti Toxins Explosive T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -620,7 +620,7 @@
     },
     {
         "name": "astrofood",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -629,7 +629,7 @@
     },
     {
         "name": "astrofood T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -669,7 +669,7 @@
     },
     {
         "name": "Backpack T1",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -683,7 +683,7 @@
     },
     {
         "name": "Backpack T2",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -713,7 +713,7 @@
     },
     {
         "name": "Backpack T3",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -743,7 +743,7 @@
     },
     {
         "name": "Backpack T4",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -765,7 +765,7 @@
     },
     {
         "name": "Backpack T5",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -791,7 +791,7 @@
     },
     {
         "name": "Backpack T6",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -825,7 +825,7 @@
     },
     {
         "name": "Backpack T7",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -859,7 +859,7 @@
     },
     {
         "name": "Bacteria T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -877,7 +877,7 @@
     },
     {
         "name": "Balzar Quartz",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -987,7 +987,7 @@
     },
     {
         "name": "Bee1 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -996,7 +996,7 @@
     },
     {
         "name": "Bee1 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1164,7 +1164,7 @@
     },
     {
         "name": "Bioplastic T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1186,7 +1186,7 @@
     },
     {
         "name": "Blueprint Autocrafter",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1200,7 +1200,7 @@
     },
     {
         "name": "Blueprint Bed Double Colored",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1214,7 +1214,7 @@
     },
     {
         "name": "Blueprint Container T3",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1228,7 +1228,7 @@
     },
     {
         "name": "Blueprint Cooking Station",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1242,7 +1242,7 @@
     },
     {
         "name": "Blueprint Departure Platform",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1256,7 +1256,7 @@
     },
     {
         "name": "Blueprint Drone T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1270,7 +1270,7 @@
     },
     {
         "name": "Blueprint Equipment Increase T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1284,7 +1284,7 @@
     },
     {
         "name": "Blueprint Equipment Increase T5",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1298,7 +1298,7 @@
     },
     {
         "name": "Blueprint Fireplace",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1312,7 +1312,7 @@
     },
     {
         "name": "Blueprint Flare",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1326,7 +1326,7 @@
     },
     {
         "name": "Blueprint Fountain Big",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1340,7 +1340,7 @@
     },
     {
         "name": "Blueprint Hologram Generator",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1354,7 +1354,7 @@
     },
     {
         "name": "Blueprint Light Box Medium",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1368,7 +1368,7 @@
     },
     {
         "name": "Blueprint Pod9x A",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1382,7 +1382,7 @@
     },
     {
         "name": "Blueprint Pod9x B",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1396,7 +1396,7 @@
     },
     {
         "name": "Blueprint Pod9x C",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1410,7 +1410,7 @@
     },
     {
         "name": "Blueprint Shower",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1424,7 +1424,7 @@
     },
     {
         "name": "Blueprint Smart Fabric",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1438,7 +1438,7 @@
     },
     {
         "name": "Blueprint Sofa Colored",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1452,7 +1452,7 @@
     },
     {
         "name": "Blueprint Solar Quartz",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1466,7 +1466,7 @@
     },
     {
         "name": "Blueprint T T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1480,7 +1480,7 @@
     },
     {
         "name": "Blueprint Toxicity Diorama T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1494,7 +1494,7 @@
     },
     {
         "name": "Blueprint Toxicity Diorama T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1508,7 +1508,7 @@
     },
     {
         "name": "Blueprint Trade Platform",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1522,7 +1522,7 @@
     },
     {
         "name": "Blueprint Tree Planter",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1536,7 +1536,7 @@
     },
     {
         "name": "Blueprint Vehicle Jetpack T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1550,7 +1550,7 @@
     },
     {
         "name": "Blueprint Wall Water Life",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1564,7 +1564,7 @@
     },
     {
         "name": "Blueprint Wardens Chip",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1578,7 +1578,7 @@
     },
     {
         "name": "Boots Speed T1",
-        "category": "Resource",
+        "category": "Speed",
         "description": "",
         "ingredients": [
             {
@@ -1596,7 +1596,7 @@
     },
     {
         "name": "Boots Speed T2",
-        "category": "Resource",
+        "category": "Speed",
         "description": "",
         "ingredients": [
             {
@@ -1618,7 +1618,7 @@
     },
     {
         "name": "Boots Speed T3",
-        "category": "Resource",
+        "category": "Speed",
         "description": "",
         "ingredients": [
             {
@@ -1640,7 +1640,7 @@
     },
     {
         "name": "Butterfly10 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1649,7 +1649,7 @@
     },
     {
         "name": "Butterfly10 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1675,7 +1675,7 @@
     },
     {
         "name": "Butterfly11 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1684,7 +1684,7 @@
     },
     {
         "name": "Butterfly11 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1706,7 +1706,7 @@
     },
     {
         "name": "Butterfly12 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1715,7 +1715,7 @@
     },
     {
         "name": "Butterfly12 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1737,7 +1737,7 @@
     },
     {
         "name": "Butterfly13 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1746,7 +1746,7 @@
     },
     {
         "name": "Butterfly13 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1768,7 +1768,7 @@
     },
     {
         "name": "Butterfly14 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1777,7 +1777,7 @@
     },
     {
         "name": "Butterfly14 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1799,7 +1799,7 @@
     },
     {
         "name": "Butterfly15 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1808,7 +1808,7 @@
     },
     {
         "name": "Butterfly15 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1830,7 +1830,7 @@
     },
     {
         "name": "Butterfly16 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1839,7 +1839,7 @@
     },
     {
         "name": "Butterfly16 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1865,7 +1865,7 @@
     },
     {
         "name": "Butterfly17 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1874,7 +1874,7 @@
     },
     {
         "name": "Butterfly17 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1900,7 +1900,7 @@
     },
     {
         "name": "Butterfly18 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1909,7 +1909,7 @@
     },
     {
         "name": "Butterfly18 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1931,7 +1931,7 @@
     },
     {
         "name": "Butterfly19 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1940,7 +1940,7 @@
     },
     {
         "name": "Butterfly19 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1949,7 +1949,7 @@
     },
     {
         "name": "Butterfly1 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1958,7 +1958,7 @@
     },
     {
         "name": "Butterfly1 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -1980,7 +1980,7 @@
     },
     {
         "name": "Butterfly20 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1989,7 +1989,7 @@
     },
     {
         "name": "Butterfly20 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -1998,7 +1998,7 @@
     },
     {
         "name": "Butterfly2 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2007,7 +2007,7 @@
     },
     {
         "name": "Butterfly2 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2029,7 +2029,7 @@
     },
     {
         "name": "Butterfly3 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2038,7 +2038,7 @@
     },
     {
         "name": "Butterfly3 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2060,7 +2060,7 @@
     },
     {
         "name": "Butterfly4 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2069,7 +2069,7 @@
     },
     {
         "name": "Butterfly4 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2091,7 +2091,7 @@
     },
     {
         "name": "Butterfly5 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2100,7 +2100,7 @@
     },
     {
         "name": "Butterfly5 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2122,7 +2122,7 @@
     },
     {
         "name": "Butterfly6 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2131,7 +2131,7 @@
     },
     {
         "name": "Butterfly6 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2153,7 +2153,7 @@
     },
     {
         "name": "Butterfly7 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2162,7 +2162,7 @@
     },
     {
         "name": "Butterfly7 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2184,7 +2184,7 @@
     },
     {
         "name": "Butterfly8 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2193,7 +2193,7 @@
     },
     {
         "name": "Butterfly8 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2219,7 +2219,7 @@
     },
     {
         "name": "Butterfly9 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2228,7 +2228,7 @@
     },
     {
         "name": "Butterfly9 Larvae",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2438,7 +2438,7 @@
     },
     {
         "name": "Chlorine Capsule T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2447,7 +2447,7 @@
     },
     {
         "name": "Circuit Board T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2623,7 +2623,7 @@
     },
     {
         "name": "Cook Cake T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2645,7 +2645,7 @@
     },
     {
         "name": "Cook Chocolate",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2659,7 +2659,7 @@
     },
     {
         "name": "Cook Cocoa Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2668,7 +2668,7 @@
     },
     {
         "name": "Cook Cocoa Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2677,7 +2677,7 @@
     },
     {
         "name": "Cook Cookie T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2695,7 +2695,7 @@
     },
     {
         "name": "Cook Croissant",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2709,7 +2709,7 @@
     },
     {
         "name": "Cook Flour",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2741,7 +2741,7 @@
     },
     {
         "name": "Cook Stew T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2767,7 +2767,7 @@
     },
     {
         "name": "Cook Stew Fish T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2789,7 +2789,7 @@
     },
     {
         "name": "Cook Wheat Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2798,7 +2798,7 @@
     },
     {
         "name": "Cook Wheat Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -2807,7 +2807,7 @@
     },
     {
         "name": "Cosmic Quartz",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -2929,7 +2929,7 @@
     },
     {
         "name": "Debris Container T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -3118,7 +3118,7 @@
     },
     {
         "name": "DNASequence",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -3237,7 +3237,7 @@
     },
     {
         "name": "Drone T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -3259,7 +3259,7 @@
     },
     {
         "name": "Drone T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -3294,7 +3294,7 @@
     },
     {
         "name": "Drone Log",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -3558,7 +3558,7 @@
     },
     {
         "name": "Equipment Increase T1",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -3580,7 +3580,7 @@
     },
     {
         "name": "Equipment Increase T2",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -3614,7 +3614,7 @@
     },
     {
         "name": "Equipment Increase T3",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -3644,7 +3644,7 @@
     },
     {
         "name": "Equipment Increase T4",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -3674,7 +3674,7 @@
     },
     {
         "name": "Equipment Increase T5",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -3762,7 +3762,7 @@
     },
     {
         "name": "Explosive",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -3780,7 +3780,7 @@
     },
     {
         "name": "Fabric Blue",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -3900,7 +3900,7 @@
     },
     {
         "name": "Fertilizer T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -3922,7 +3922,7 @@
     },
     {
         "name": "Fertilizer T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -3948,7 +3948,7 @@
     },
     {
         "name": "Fertilizer T3",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -3988,7 +3988,7 @@
     },
     {
         "name": "Fish10 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4010,7 +4010,7 @@
     },
     {
         "name": "Fish10 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4019,7 +4019,7 @@
     },
     {
         "name": "Fish11 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4041,7 +4041,7 @@
     },
     {
         "name": "Fish11 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4050,7 +4050,7 @@
     },
     {
         "name": "Fish12 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4059,7 +4059,7 @@
     },
     {
         "name": "Fish12 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4068,7 +4068,7 @@
     },
     {
         "name": "Fish13 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4077,7 +4077,7 @@
     },
     {
         "name": "Fish13 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4086,7 +4086,7 @@
     },
     {
         "name": "Fish14 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4095,7 +4095,7 @@
     },
     {
         "name": "Fish14 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4104,7 +4104,7 @@
     },
     {
         "name": "Fish15 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4113,7 +4113,7 @@
     },
     {
         "name": "Fish15 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4122,7 +4122,7 @@
     },
     {
         "name": "Fish1 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4148,7 +4148,7 @@
     },
     {
         "name": "Fish1 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4157,7 +4157,7 @@
     },
     {
         "name": "Fish2 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4179,7 +4179,7 @@
     },
     {
         "name": "Fish2 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4188,7 +4188,7 @@
     },
     {
         "name": "Fish3 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4214,7 +4214,7 @@
     },
     {
         "name": "Fish3 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4223,7 +4223,7 @@
     },
     {
         "name": "Fish4 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4245,7 +4245,7 @@
     },
     {
         "name": "Fish4 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4254,7 +4254,7 @@
     },
     {
         "name": "Fish5 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4276,7 +4276,7 @@
     },
     {
         "name": "Fish5 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4285,7 +4285,7 @@
     },
     {
         "name": "Fish6 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4307,7 +4307,7 @@
     },
     {
         "name": "Fish6 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4316,7 +4316,7 @@
     },
     {
         "name": "Fish7 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4338,7 +4338,7 @@
     },
     {
         "name": "Fish7 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4347,7 +4347,7 @@
     },
     {
         "name": "Fish8 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4369,7 +4369,7 @@
     },
     {
         "name": "Fish8 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4378,7 +4378,7 @@
     },
     {
         "name": "Fish9 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4400,7 +4400,7 @@
     },
     {
         "name": "Fish9 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4475,7 +4475,7 @@
     },
     {
         "name": "Flare",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4693,7 +4693,7 @@
     },
     {
         "name": "Frog10 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4702,7 +4702,7 @@
     },
     {
         "name": "Frog10 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4711,7 +4711,7 @@
     },
     {
         "name": "Frog11 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4720,7 +4720,7 @@
     },
     {
         "name": "Frog11 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4729,7 +4729,7 @@
     },
     {
         "name": "Frog12 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4738,7 +4738,7 @@
     },
     {
         "name": "Frog12 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4747,7 +4747,7 @@
     },
     {
         "name": "Frog13 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4756,7 +4756,7 @@
     },
     {
         "name": "Frog13 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4765,7 +4765,7 @@
     },
     {
         "name": "Frog14 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4791,7 +4791,7 @@
     },
     {
         "name": "Frog14 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4800,7 +4800,7 @@
     },
     {
         "name": "Frog15 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4826,7 +4826,7 @@
     },
     {
         "name": "Frog15 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4835,7 +4835,7 @@
     },
     {
         "name": "Frog16 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4861,7 +4861,7 @@
     },
     {
         "name": "Frog16 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4870,7 +4870,7 @@
     },
     {
         "name": "Frog1 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4892,7 +4892,7 @@
     },
     {
         "name": "Frog1 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4901,7 +4901,7 @@
     },
     {
         "name": "Frog2 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4923,7 +4923,7 @@
     },
     {
         "name": "Frog2 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4932,7 +4932,7 @@
     },
     {
         "name": "Frog3 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4950,7 +4950,7 @@
     },
     {
         "name": "Frog3 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4959,7 +4959,7 @@
     },
     {
         "name": "Frog4 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -4985,7 +4985,7 @@
     },
     {
         "name": "Frog4 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -4994,7 +4994,7 @@
     },
     {
         "name": "Frog5 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5016,7 +5016,7 @@
     },
     {
         "name": "Frog5 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5025,7 +5025,7 @@
     },
     {
         "name": "Frog6 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5047,7 +5047,7 @@
     },
     {
         "name": "Frog6 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5056,7 +5056,7 @@
     },
     {
         "name": "Frog7 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5078,7 +5078,7 @@
     },
     {
         "name": "Frog7 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5087,7 +5087,7 @@
     },
     {
         "name": "Frog8 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5109,7 +5109,7 @@
     },
     {
         "name": "Frog8 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5118,7 +5118,7 @@
     },
     {
         "name": "Frog9 Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5140,7 +5140,7 @@
     },
     {
         "name": "Frog9 Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5163,7 +5163,7 @@
     },
     {
         "name": "Frog Gold Eggs",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5185,7 +5185,7 @@
     },
     {
         "name": "Frog Gold Hatched",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5194,7 +5194,7 @@
     },
     {
         "name": "Fuse Animals T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5228,7 +5228,7 @@
     },
     {
         "name": "Fuse Cartridge",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5246,7 +5246,7 @@
     },
     {
         "name": "Fuse Energy T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5272,7 +5272,7 @@
     },
     {
         "name": "Fuse Growth T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5298,7 +5298,7 @@
     },
     {
         "name": "Fuse Heat T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5307,7 +5307,7 @@
     },
     {
         "name": "Fuse Insects T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5337,7 +5337,7 @@
     },
     {
         "name": "Fuse Oxygen T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5346,7 +5346,7 @@
     },
     {
         "name": "Fuse Plants T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5355,7 +5355,7 @@
     },
     {
         "name": "Fuse Pressure T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5364,7 +5364,7 @@
     },
     {
         "name": "Fuse Production T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -5373,7 +5373,7 @@
     },
     {
         "name": "Fuse Purification T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5407,7 +5407,7 @@
     },
     {
         "name": "Fuse Trade Rockets Speed T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5433,7 +5433,7 @@
     },
     {
         "name": "Fusion Energy Cell",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -5652,7 +5652,7 @@
     },
     {
         "name": "Genetic Trait",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6026,7 +6026,7 @@
     },
     {
         "name": "honey",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6035,7 +6035,7 @@
     },
     {
         "name": "Hud Chip Clean Construction",
-        "category": "Resource",
+        "category": "HUD Chip",
         "description": "",
         "ingredients": [
             {
@@ -6057,7 +6057,7 @@
     },
     {
         "name": "Hud Compass",
-        "category": "Resource",
+        "category": "HUD Chip",
         "description": "",
         "ingredients": [
             {
@@ -6197,7 +6197,7 @@
     },
     {
         "name": "Jetpack T1",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -6215,7 +6215,7 @@
     },
     {
         "name": "Jetpack T2",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -6245,7 +6245,7 @@
     },
     {
         "name": "Jetpack T3",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -6271,7 +6271,7 @@
     },
     {
         "name": "Jetpack T4",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -6301,7 +6301,7 @@
     },
     {
         "name": "Jetpack T5",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -6331,7 +6331,7 @@
     },
     {
         "name": "Keycard T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -6345,7 +6345,7 @@
     },
     {
         "name": "Key Card T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -6381,7 +6381,7 @@
     },
     {
         "name": "Larvae Base T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -6403,7 +6403,7 @@
     },
     {
         "name": "Larvae Base T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6412,7 +6412,7 @@
     },
     {
         "name": "Larvae Base T3",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -6528,7 +6528,7 @@
     },
     {
         "name": "Magnetar Quartz",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6537,7 +6537,7 @@
     },
     {
         "name": "Map Chip",
-        "category": "Resource",
+        "category": "HUD Chip",
         "description": "",
         "ingredients": [
             {
@@ -6577,7 +6577,7 @@
     },
     {
         "name": "Methan Capsule T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6586,7 +6586,7 @@
     },
     {
         "name": "Micro Plastics",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6595,7 +6595,7 @@
     },
     {
         "name": "Alloy",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -6629,7 +6629,7 @@
     },
     {
         "name": "Aluminium",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6638,7 +6638,7 @@
     },
     {
         "name": "Bauxite",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -6664,7 +6664,7 @@
     },
     {
         "name": "Cobalt",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6673,7 +6673,7 @@
     },
     {
         "name": "Dolomite",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -6703,7 +6703,7 @@
     },
     {
         "name": "ice",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6712,7 +6712,7 @@
     },
     {
         "name": "Iridium",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6721,7 +6721,7 @@
     },
     {
         "name": "Iron",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6730,7 +6730,7 @@
     },
     {
         "name": "Magnesium",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6739,7 +6739,7 @@
     },
     {
         "name": "Obsidian",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6748,7 +6748,7 @@
     },
     {
         "name": "Osmium",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6757,7 +6757,7 @@
     },
     {
         "name": "Phosphorus",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6766,7 +6766,7 @@
     },
     {
         "name": "Selenium",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6775,7 +6775,7 @@
     },
     {
         "name": "Silicon",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6784,7 +6784,7 @@
     },
     {
         "name": "Sulfur",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6793,7 +6793,7 @@
     },
     {
         "name": "Titanium",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6802,7 +6802,7 @@
     },
     {
         "name": "Minable-Tungsten",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6811,7 +6811,7 @@
     },
     {
         "name": "Uraninite",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -6841,7 +6841,7 @@
     },
     {
         "name": "Uranim",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6850,7 +6850,7 @@
     },
     {
         "name": "Zeolite",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -6859,7 +6859,7 @@
     },
     {
         "name": "Multi Tool Cleaning Goo Chip T1",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -6877,7 +6877,7 @@
     },
     {
         "name": "Multi Tool Cleaning Goo Chip T2",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -6903,7 +6903,7 @@
     },
     {
         "name": "Multi Tool Cleaning Goo Chip T3",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -6933,7 +6933,7 @@
     },
     {
         "name": "Multi Tool Cleaning Goo Chip T4",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -6963,7 +6963,7 @@
     },
     {
         "name": "Multi Build",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -6981,7 +6981,7 @@
     },
     {
         "name": "Multi Deconstruct",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -6999,7 +6999,7 @@
     },
     {
         "name": "Multi Tool Deconstruct T2",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -7021,7 +7021,7 @@
     },
     {
         "name": "Multi Tool Deconstruct T3",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -7043,7 +7043,7 @@
     },
     {
         "name": "Multi Tool Light",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -7061,7 +7061,7 @@
     },
     {
         "name": "Multi Tool Light T2",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -7087,7 +7087,7 @@
     },
     {
         "name": "Multi Tool Light T3",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -7105,7 +7105,7 @@
     },
     {
         "name": "Multi Tool Mine Speed T1",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -7127,7 +7127,7 @@
     },
     {
         "name": "Multi Tool Mine Speed T2",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -7149,7 +7149,7 @@
     },
     {
         "name": "Multi Tool Mine Speed T3",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -7175,7 +7175,7 @@
     },
     {
         "name": "Multi Tool Mine Speed T4",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -7201,7 +7201,7 @@
     },
     {
         "name": "Mutagen T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -7223,7 +7223,7 @@
     },
     {
         "name": "Mutagen T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -7245,7 +7245,7 @@
     },
     {
         "name": "Mutagen T3",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -7271,7 +7271,7 @@
     },
     {
         "name": "Mutagen T4",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -7289,7 +7289,7 @@
     },
     {
         "name": "Nitrogen Capsule T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -7544,7 +7544,7 @@
     },
     {
         "name": "Oxygen Capsule T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -7558,7 +7558,7 @@
     },
     {
         "name": "Oxygen Tank T1",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -7580,7 +7580,7 @@
     },
     {
         "name": "Oxygen Tank T2",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -7614,7 +7614,7 @@
     },
     {
         "name": "Oxygen Tank T3",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -7652,7 +7652,7 @@
     },
     {
         "name": "Oxygen Tank T4",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -7674,7 +7674,7 @@
     },
     {
         "name": "Oxygen Tank T5",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -7704,7 +7704,7 @@
     },
     {
         "name": "Phytoplankton T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -7713,7 +7713,7 @@
     },
     {
         "name": "Phytoplankton T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -7722,7 +7722,7 @@
     },
     {
         "name": "Phytoplankton T3",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -7731,7 +7731,7 @@
     },
     {
         "name": "Phytoplankton T4",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -7740,7 +7740,7 @@
     },
     {
         "name": "Pin Chip T1",
-        "category": "Resource",
+        "category": "HUD Chip",
         "description": "",
         "ingredients": [
             {
@@ -7774,7 +7774,7 @@
     },
     {
         "name": "Pin Chip T2",
-        "category": "Resource",
+        "category": "HUD Chip",
         "description": "",
         "ingredients": [
             {
@@ -7808,7 +7808,7 @@
     },
     {
         "name": "Pin Chip T3",
-        "category": "Resource",
+        "category": "HUD Chip",
         "description": "",
         "ingredients": [
             {
@@ -7878,7 +7878,7 @@
     },
     {
         "name": "Plastic Polymer",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8193,7 +8193,7 @@
     },
     {
         "name": "Pristine Mushroom",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8224,7 +8224,7 @@
     },
     {
         "name": "Procedural Wreck Container T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8238,7 +8238,7 @@
     },
     {
         "name": "Procedural Wreck Container T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8266,7 +8266,7 @@
     },
     {
         "name": "Pulsar Quartz",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8300,7 +8300,7 @@
     },
     {
         "name": "Purification Capsule",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8322,7 +8322,7 @@
     },
     {
         "name": "Purification Gel",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8344,7 +8344,7 @@
     },
     {
         "name": "Purified Water",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8392,7 +8392,7 @@
     },
     {
         "name": "Quasar Quartz",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8462,7 +8462,7 @@
     },
     {
         "name": "Red Powder T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8480,7 +8480,7 @@
     },
     {
         "name": "Rocket Animals T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8510,7 +8510,7 @@
     },
     {
         "name": "Rocket Biomass T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8544,7 +8544,7 @@
     },
     {
         "name": "Rocket Biomass T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8570,7 +8570,7 @@
     },
     {
         "name": "Rocket Departure T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8604,7 +8604,7 @@
     },
     {
         "name": "Rocket Drones T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8626,7 +8626,7 @@
     },
     {
         "name": "Rocket Heat T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8648,7 +8648,7 @@
     },
     {
         "name": "Rocket Heat T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8678,7 +8678,7 @@
     },
     {
         "name": "Rocket Informations T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8704,7 +8704,7 @@
     },
     {
         "name": "Rocket Informations T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8734,7 +8734,7 @@
     },
     {
         "name": "Rocket Insects T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8764,7 +8764,7 @@
     },
     {
         "name": "Rocket Insects T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8798,7 +8798,7 @@
     },
     {
         "name": "Rocket Map T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8820,7 +8820,7 @@
     },
     {
         "name": "Rocket Map T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8842,7 +8842,7 @@
     },
     {
         "name": "Rocket Map T3",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8868,7 +8868,7 @@
     },
     {
         "name": "Rocket Map T4",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8894,7 +8894,7 @@
     },
     {
         "name": "Rocket Oxygen T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8928,7 +8928,7 @@
     },
     {
         "name": "Rocket Pressure T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8950,7 +8950,7 @@
     },
     {
         "name": "Rocket Pressure T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -8980,7 +8980,7 @@
     },
     {
         "name": "Rocket Purification T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9006,7 +9006,7 @@
     },
     {
         "name": "Rocket Reactor",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9028,7 +9028,7 @@
     },
     {
         "name": "Rocket Reactor T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9058,7 +9058,7 @@
     },
     {
         "name": "Rocket Toxic Informations T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9088,7 +9088,7 @@
     },
     {
         "name": "Rocket Travel T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9143,7 +9143,7 @@
     },
     {
         "name": "Rod-alloy",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9165,7 +9165,7 @@
     },
     {
         "name": "Rod-iridium",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9179,7 +9179,7 @@
     },
     {
         "name": "Rod-osmium",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9197,7 +9197,7 @@
     },
     {
         "name": "Rod-plastic",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9215,7 +9215,7 @@
     },
     {
         "name": "Rod-tungsten",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9233,7 +9233,7 @@
     },
     {
         "name": "Rod-uranium",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9479,7 +9479,7 @@
     },
     {
         "name": "Seed T0",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9501,7 +9501,7 @@
     },
     {
         "name": "Seed0 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9510,7 +9510,7 @@
     },
     {
         "name": "Seed T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9519,7 +9519,7 @@
     },
     {
         "name": "Seed10 Humble",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9528,7 +9528,7 @@
     },
     {
         "name": "Seed10 Humble Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9537,7 +9537,7 @@
     },
     {
         "name": "Seed11 Humble",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9546,7 +9546,7 @@
     },
     {
         "name": "Seed11 Humble Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9555,7 +9555,7 @@
     },
     {
         "name": "Seed1 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9564,7 +9564,7 @@
     },
     {
         "name": "Seed T2",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9573,7 +9573,7 @@
     },
     {
         "name": "Seed2 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9582,7 +9582,7 @@
     },
     {
         "name": "Seed T3",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9591,7 +9591,7 @@
     },
     {
         "name": "Seed3 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9600,7 +9600,7 @@
     },
     {
         "name": "Seed T4",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9609,7 +9609,7 @@
     },
     {
         "name": "Seed4 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9618,7 +9618,7 @@
     },
     {
         "name": "Seed T5",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9627,7 +9627,7 @@
     },
     {
         "name": "Seed5 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9636,7 +9636,7 @@
     },
     {
         "name": "Seed T6",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9645,7 +9645,7 @@
     },
     {
         "name": "Seed6 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9654,7 +9654,7 @@
     },
     {
         "name": "Seed7 Humble",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9663,7 +9663,7 @@
     },
     {
         "name": "Seed7 Humble Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9672,7 +9672,7 @@
     },
     {
         "name": "Seed8 Humble",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9681,7 +9681,7 @@
     },
     {
         "name": "Seed8 Humble Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9690,7 +9690,7 @@
     },
     {
         "name": "Seed9 Humble",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9699,7 +9699,7 @@
     },
     {
         "name": "Seed9 Humble Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9708,7 +9708,7 @@
     },
     {
         "name": "Seed Gold",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9717,7 +9717,7 @@
     },
     {
         "name": "Seed Gold Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9850,7 +9850,7 @@
     },
     {
         "name": "Silk",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -9885,7 +9885,7 @@
     },
     {
         "name": "Silk Worm",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -9904,213 +9904,6 @@
         "unlockCondition": null,
         "craftedIn": "Crafting Table",
         "recyclerYields": true
-    },
-    {
-        "name": "Skin- T01",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T02",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T03",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T04",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T05",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T06",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T07",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T08",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T09",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T10",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T11",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T12",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T13",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T14",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T15",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T16",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T17",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T18",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T19",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T20",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T21",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T22",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
-    },
-    {
-        "name": "Skin- T23",
-        "category": "Resource",
-        "description": "",
-        "ingredients": [],
-        "unlockCondition": null,
-        "craftedIn": null,
-        "recyclerYields": false
     },
     {
         "name": "Skin Displayer",
@@ -10132,7 +9925,7 @@
     },
     {
         "name": "Smart Fabric",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -10222,7 +10015,7 @@
     },
     {
         "name": "Solar Quartz",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -10504,7 +10297,7 @@
     },
     {
         "name": "Terra Tokens T100",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -10513,7 +10306,7 @@
     },
     {
         "name": "Terra Tokens T1000",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -10522,7 +10315,7 @@
     },
     {
         "name": "Terra Tokens T500",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -10531,7 +10324,7 @@
     },
     {
         "name": "Terra Tokens T5000",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -10558,7 +10351,7 @@
     },
     {
         "name": "Toxic Goo",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -10576,7 +10369,7 @@
     },
     {
         "name": "Toxicity Ammo",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -10598,7 +10391,7 @@
     },
     {
         "name": "Toxicity Ammo Pack",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -10664,7 +10457,7 @@
     },
     {
         "name": "Toxicity Medecine",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -10682,7 +10475,7 @@
     },
     {
         "name": "Toxicity Medecine Pack",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -10718,7 +10511,7 @@
     },
     {
         "name": "Toxic Spores",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -10736,7 +10529,7 @@
     },
     {
         "name": "Toxic Water",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -10816,7 +10609,7 @@
     },
     {
         "name": "Toxic Zone Hud Displayer",
-        "category": "Resource",
+        "category": "HUD Chip",
         "description": "",
         "ingredients": [
             {
@@ -10834,7 +10627,7 @@
     },
     {
         "name": "Toxic Zone Hud Displayer T2",
-        "category": "Resource",
+        "category": "HUD Chip",
         "description": "",
         "ingredients": [
             {
@@ -10860,7 +10653,7 @@
     },
     {
         "name": "Toxins",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -10869,7 +10662,7 @@
     },
     {
         "name": "Toxins Filter T1",
-        "category": "Resource",
+        "category": "Filter",
         "description": "",
         "ingredients": [
             {
@@ -10891,7 +10684,7 @@
     },
     {
         "name": "Toxins Filter T2",
-        "category": "Resource",
+        "category": "Filter",
         "description": "",
         "ingredients": [
             {
@@ -10917,7 +10710,7 @@
     },
     {
         "name": "Toxins Filter T3",
-        "category": "Resource",
+        "category": "Filter",
         "description": "",
         "ingredients": [
             {
@@ -11087,7 +10880,7 @@
     },
     {
         "name": "Tree0 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11096,7 +10889,7 @@
     },
     {
         "name": "Tree0 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11105,7 +10898,7 @@
     },
     {
         "name": "Tree10 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11114,7 +10907,7 @@
     },
     {
         "name": "Tree10 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11132,7 +10925,7 @@
     },
     {
         "name": "Tree11 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11141,7 +10934,7 @@
     },
     {
         "name": "Tree11 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11159,7 +10952,7 @@
     },
     {
         "name": "Tree12 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11168,7 +10961,7 @@
     },
     {
         "name": "Tree12 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11186,7 +10979,7 @@
     },
     {
         "name": "Tree13 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11195,7 +10988,7 @@
     },
     {
         "name": "Tree13 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11204,7 +10997,7 @@
     },
     {
         "name": "Tree14 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11213,7 +11006,7 @@
     },
     {
         "name": "Tree14 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11222,7 +11015,7 @@
     },
     {
         "name": "Tree15 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11231,7 +11024,7 @@
     },
     {
         "name": "Tree15 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11257,7 +11050,7 @@
     },
     {
         "name": "Tree16 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11266,7 +11059,7 @@
     },
     {
         "name": "Tree16 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11292,7 +11085,7 @@
     },
     {
         "name": "Tree17 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11301,7 +11094,7 @@
     },
     {
         "name": "Tree17 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11323,7 +11116,7 @@
     },
     {
         "name": "Tree1 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11332,7 +11125,7 @@
     },
     {
         "name": "Tree1 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11354,7 +11147,7 @@
     },
     {
         "name": "Tree2 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11363,7 +11156,7 @@
     },
     {
         "name": "Tree2 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11385,7 +11178,7 @@
     },
     {
         "name": "Tree3 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11394,7 +11187,7 @@
     },
     {
         "name": "Tree3 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11416,7 +11209,7 @@
     },
     {
         "name": "Tree4 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11425,7 +11218,7 @@
     },
     {
         "name": "Tree4 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11447,7 +11240,7 @@
     },
     {
         "name": "Tree5 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11456,7 +11249,7 @@
     },
     {
         "name": "Tree5 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11478,7 +11271,7 @@
     },
     {
         "name": "Tree6 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11487,7 +11280,7 @@
     },
     {
         "name": "Tree6 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11509,7 +11302,7 @@
     },
     {
         "name": "Tree7 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11518,7 +11311,7 @@
     },
     {
         "name": "Tree7 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11540,7 +11333,7 @@
     },
     {
         "name": "Tree8 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11549,7 +11342,7 @@
     },
     {
         "name": "Tree8 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11571,7 +11364,7 @@
     },
     {
         "name": "Tree9 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11580,7 +11373,7 @@
     },
     {
         "name": "Tree9 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -11638,7 +11431,7 @@
     },
     {
         "name": "Tree Root",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11763,7 +11556,7 @@
     },
     {
         "name": "Vegetable0 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11772,7 +11565,7 @@
     },
     {
         "name": "Vegetable0 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11781,7 +11574,7 @@
     },
     {
         "name": "Vegetable1 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11790,7 +11583,7 @@
     },
     {
         "name": "Vegetable1 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11799,7 +11592,7 @@
     },
     {
         "name": "Vegetable2 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11808,7 +11601,7 @@
     },
     {
         "name": "Vegetable2 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11817,7 +11610,7 @@
     },
     {
         "name": "Vegetable3 Growable",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11826,7 +11619,7 @@
     },
     {
         "name": "Vegetable3 Seed",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -11969,7 +11762,7 @@
     },
     {
         "name": "Vehicle Beacon T1",
-        "category": "Resource",
+        "category": "HUD Chip",
         "description": "",
         "ingredients": [
             {
@@ -12017,7 +11810,7 @@
     },
     {
         "name": "Vehicle Equipment Size T1",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -12039,7 +11832,7 @@
     },
     {
         "name": "Vehicle Equipment Size T2",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -12061,7 +11854,7 @@
     },
     {
         "name": "Vehicle Inventory Size T1",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -12087,7 +11880,7 @@
     },
     {
         "name": "Vehicle Inventory Size T2",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -12109,7 +11902,7 @@
     },
     {
         "name": "Vehicle Inventory Size T3",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -12131,7 +11924,7 @@
     },
     {
         "name": "Vehicle Jetpack T1",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -12153,7 +11946,7 @@
     },
     {
         "name": "Vehicle Lights T1",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -12175,7 +11968,7 @@
     },
     {
         "name": "Vehicle Lights T2",
-        "category": "Resource",
+        "category": "MultiTool Chip",
         "description": "",
         "ingredients": [
             {
@@ -12193,7 +11986,7 @@
     },
     {
         "name": "Vehicle Logistic T1",
-        "category": "Resource",
+        "category": "Vehicle Chip",
         "description": "",
         "ingredients": [
             {
@@ -12219,7 +12012,7 @@
     },
     {
         "name": "Vehicle Oxygen T1",
-        "category": "Resource",
+        "category": "Equipment",
         "description": "",
         "ingredients": [
             {
@@ -12237,7 +12030,7 @@
     },
     {
         "name": "Vehicle Speed T1",
-        "category": "Resource",
+        "category": "Speed",
         "description": "",
         "ingredients": [
             {
@@ -12255,7 +12048,7 @@
     },
     {
         "name": "Vehicle Speed T2",
-        "category": "Resource",
+        "category": "Speed",
         "description": "",
         "ingredients": [
             {
@@ -12273,7 +12066,7 @@
     },
     {
         "name": "Vehicle Speed T3",
-        "category": "Resource",
+        "category": "Speed",
         "description": "",
         "ingredients": [
             {
@@ -12299,7 +12092,7 @@
     },
     {
         "name": "Vehicle Speed T4",
-        "category": "Resource",
+        "category": "Speed",
         "description": "",
         "ingredients": [
             {
@@ -12325,7 +12118,7 @@
     },
     {
         "name": "Vehicle Truck",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -12476,7 +12269,7 @@
     },
     {
         "name": "Warden Key",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [],
         "unlockCondition": null,
@@ -12485,7 +12278,7 @@
     },
     {
         "name": "Wardens Chip",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -12511,7 +12304,7 @@
     },
     {
         "name": "Water Bottle T1",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {
@@ -12593,7 +12386,7 @@
     },
     {
         "name": "Water Filter",
-        "category": "Resource",
+        "category": "Consumable",
         "description": "",
         "ingredients": [
             {

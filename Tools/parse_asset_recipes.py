@@ -45,6 +45,32 @@ CATEGORY_MAP = {
     "6": "Machine",   "7": "Rocket",    "8": "Automation",
     "9": "Toxicity",  "10": "Storage",
 }
+
+# Maps equipableType integer -> app category label for assets that have no
+# groupCategory. Values confirmed from item names in scan_categories.py output.
+EQUIP_TYPE_MAP = {
+    "0":  "Consumable",     # seeds, growables, animal food
+    "1":  "Equipment",      # OxygenTank
+    "2":  "Equipment",      # Backpack
+    "3":  "Equipment",      # EquipmentIncrease (inventory upgrades)
+    "4":  "MultiTool Chip", # MultiToolLight, VehicleLights
+    "5":  "MultiTool Chip", # MultiToolDeconstruct
+    "6":  "MultiTool Chip", # MultiBuild
+    "7":  "MultiTool Chip", # MultiToolMineSpeed
+    "8":  "Speed",          # BootsSpeed, VehicleSpeed
+    "9":  "HUD Chip",       # HudCompass
+    "10": "Equipment",      # Jetpack
+    "11": "Filter",         # AirFilter
+    "12": "HUD Chip",       # HudChipCleanConstruction
+    "13": "HUD Chip",       # MapChip, VehicleBeacon
+    "14": "HUD Chip",       # PinChip
+    "15": None,             # Cosmetic skins -- excluded from recipes
+    "16": "Vehicle Chip",   # VehicleLogistic
+    "17": "MultiTool Chip", # MultiToolCleaningGooChip
+    "18": "Filter",         # ToxinsFilter
+    "19": "HUD Chip",       # ToxicZoneHudDisplayer
+}
+
 WORLD_UNIT_MAP = {
     "1": "Heat",    "2": "Pressure", "3": "Oxygen",
     "4": "Biomass", "5": "Insects",  "6": "Animals", "7": "Humidity",
@@ -189,10 +215,22 @@ def find_craftable_assets(mono_root: Path) -> list:
     for asset_path in mono_root.rglob("*.asset"):
         try:
             text = read_asset(asset_path)
-            if "recipeIngredients:" in text:
-                craftable.append(asset_path)
         except Exception:
             continue
+
+        if "recipeIngredients:" not in text:
+            continue
+
+        has_category   = bool(get_field(text, "groupCategory"))
+        has_equipable  = bool(get_field(text, "equipableType"))
+
+        # Exclude pure seeds/growables: no groupCategory and no equipableType
+        # means this asset's recipeIngredients is for farming/recycler, not
+        # player crafting. These would otherwise appear as 445 ghost entries.
+        if not has_category and not has_equipable:
+            continue
+
+        craftable.append(asset_path)
     return craftable
 
 
@@ -221,7 +259,19 @@ def extract_recipes(craftable: list, guid_to_id: dict,
 
         # --- Category ---
         group_cat = get_field(text, "groupCategory") or ""
-        category  = CATEGORY_MAP.get(group_cat, "Resource")
+        if group_cat:
+            if group_cat not in CATEGORY_MAP:
+                print(f"  WARNING: Unknown groupCategory '{group_cat}' in {asset_path.name} -- update CATEGORY_MAP")
+            category = CATEGORY_MAP.get(group_cat, f"Unknown({group_cat})")
+        else:
+            # No groupCategory -- resolve via equipableType instead
+            equip_type = get_field(text, "equipableType") or ""
+            if equip_type not in EQUIP_TYPE_MAP:
+                print(f"  WARNING: Unknown equipableType '{equip_type}' in {asset_path.name} -- update EQUIP_TYPE_MAP")
+            category = EQUIP_TYPE_MAP.get(equip_type, f"Unknown(equip={equip_type})")
+            if category is None:
+                # Explicitly excluded (e.g. cosmetic skins) -- skip this asset
+                continue
 
         # --- Icon ---
         # Match PNG from Texture2D by the asset id stem (e.g. 'autocrafter1')
