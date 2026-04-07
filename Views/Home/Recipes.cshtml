@@ -26,6 +26,7 @@
                 <div class="item-card"
                      data-name="@recipe.Name"
                      data-category="@recipe.Category"
+                     data-raw="@(recipe.Ingredients.Count == 0 ? "true" : "false")"
                      onclick="selectItem('@recipe.Name')">
                     <div class="card-icon">
                         <img src="/icons/@(recipe.IconSlug).png"
@@ -34,6 +35,10 @@
                         <span class="card-icon-fallback" style="display:none">⚙</span>
                     </div>
                     <div class="card-label">@recipe.Name</div>
+                    @if (recipe.Ingredients.Count == 0)
+                    {
+                        <span class="card-raw-badge">RAW</span>
+                    }
                 </div>
             }
         </div>
