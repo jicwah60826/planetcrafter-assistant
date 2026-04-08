@@ -29,7 +29,7 @@
                      data-raw="@(recipe.Ingredients.Count == 0 ? "true" : "false")"
                      onclick="selectItem('@recipe.Name')">
                     <div class="card-icon">
-                        <img src="/icons/@(recipe.IconSlug).png"
+                        <img src="/images/icons/@(recipe.IconSlug).png"
                              alt="@recipe.Name"
                              onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
                         <span class="card-icon-fallback" style="display:none">⚙</span>
@@ -70,7 +70,7 @@
 
     function getIconHtml(name) {
         const slug = name.toLowerCase().replace(/ /g, '_');
-        return `<img src="/icons/${slug}.png"
+        return `<img src="/images/icons/${slug}.png"
                      alt="${name}"
                      onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"
                      style="width:48px;height:48px;object-fit:contain" />

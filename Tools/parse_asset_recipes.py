@@ -34,7 +34,7 @@ EXPORT_ROOT    = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v_2.004_4_6_2026_E
 TEXTURE2D_DIR  = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v_2.004_4_6_2026_ExportedProject\ExportedProject\Assets\Texture2D")
 EXTRACTED_FILE = Path(r"D:\PlanetCrafterAssistant\Tools\extracted_recipes.json")
 RECIPES_JSON   = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\data\recipes.json")
-ICON_OUT_DIR   = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\icons")  # matches /icons/ in the app
+ICON_OUT_DIR   = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\images\icons")  # matches /images/icons/ in the app
 
 # ---------------------------------------------------------------------------
 # Lookup tables
