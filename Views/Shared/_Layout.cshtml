@@ -130,10 +130,24 @@
         }
 
         // ── Cart (localStorage-backed) ─────────────────────────
+        // cart is an array of { name: string, qty: number }
         var cart = JSON.parse(localStorage.getItem('pc-cart') || '[]');
+
+        // Migrate legacy flat string[] saved by the old implementation
+        if (cart.length > 0 && typeof cart[0] === 'string') {
+            cart = cart.map(function (n) { return { name: n, qty: 1 }; });
+        }
 
         function saveCart() {
             localStorage.setItem('pc-cart', JSON.stringify(cart));
+        }
+
+        function cartEntry(name) {
+            return cart.find(function (e) { return e.name === name; });
+        }
+
+        function isInCart(name) {
+            return !!cartEntry(name);
         }
 
         function openCart() {
@@ -148,20 +162,38 @@
         }
 
         function addToCart(name) {
-            if (!cart.includes(name)) {
-                cart.push(name);
-                saveCart();
-                updateCartBadge();
-                syncCartButtons();
+            var entry = cartEntry(name);
+            if (entry) {
+                entry.qty += 1;
+            } else {
+                cart.push({ name: name, qty: 1 });
             }
-        }
-
-        function removeFromCart(name) {
-            cart = cart.filter(n => n !== name);
             saveCart();
             updateCartBadge();
             syncCartButtons();
             renderCartPanel();
+        }
+
+        function removeFromCart(name) {
+            cart = cart.filter(function (e) { return e.name !== name; });
+            saveCart();
+            updateCartBadge();
+            syncCartButtons();
+            renderCartPanel();
+        }
+
+        function setCartQty(name, qty) {
+            var n = parseInt(qty, 10);
+            if (isNaN(n) || n < 1) {
+                removeFromCart(name);
+                return;
+            }
+            var entry = cartEntry(name);
+            if (entry) {
+                entry.qty = n;
+                saveCart();
+                renderCartPanel();
+            }
         }
 
         function clearCart() {
@@ -175,14 +207,15 @@
         function updateCartBadge() {
             var badge = document.getElementById('cartBadge');
             if (!badge) return;
+            // Badge shows total number of unique items
             badge.textContent = cart.length;
             badge.style.display = cart.length > 0 ? 'block' : 'none';
         }
 
-        // Keep add-to-cart buttons in sync with cart state
+        // Keep add-to-cart buttons on the card grid in sync
         function syncCartButtons() {
             document.querySelectorAll('.add-to-cart-btn[data-item]').forEach(function (btn) {
-                var inCart = cart.includes(btn.dataset.item);
+                var inCart = isInCart(btn.dataset.item);
                 btn.classList.toggle('in-cart', inCart);
                 btn.title = inCart ? 'Remove from cart' : 'Add to cart';
                 btn.textContent = inCart ? '✓' : '🛒';
@@ -198,40 +231,43 @@
                 return;
             }
 
-            // Resolve allRecipes — only available on the Recipes page
+            // allRecipes is only defined on the Recipes page
             var recipes = (typeof allRecipes !== 'undefined') ? allRecipes : [];
 
-            // ── Queued items list ──────────────────────────────
-            var queuedHtml = cart.map(function (name) {
-                var slug = name.toLowerCase().replace(/ /g, '_');
+            // ── Items to Craft list with qty controls ──────────
+            var queuedHtml = cart.map(function (entry) {
+                var slug = entry.name.toLowerCase().replace(/ /g, '_');
+                var safeName = entry.name.replace(/'/g, "\\'");
                 return `<div class="cart-item-row">
                     <img src="/images/icons/${slug}.png"
-                         alt="${name}"
+                         alt="${entry.name}"
                          class="cart-item-icon"
                          onerror="this.style.display='none'" />
-                    <span class="cart-item-name">${name}</span>
+                    <span class="cart-item-name">${entry.name}</span>
+                    <div class="cart-qty-controls">
+                        <button class="cart-qty-btn" onclick="setCartQty('${safeName}', ${entry.qty - 1})" title="Decrease">−</button>
+                        <span class="cart-qty-value">${entry.qty}</span>
+                        <button class="cart-qty-btn" onclick="setCartQty('${safeName}', ${entry.qty + 1})" title="Increase">+</button>
+                    </div>
                     <button class="cart-item-remove"
-                            onclick="removeFromCart('${name.replace(/'/g, "\\'")}')"
+                            onclick="removeFromCart('${safeName}')"
                             title="Remove">✕</button>
                 </div>`;
             }).join('');
 
-            // ── Aggregate raw ingredients ──────────────────────
+            // ── Aggregate ingredients across all entries × qty ──
             var totals = {};
 
-            function accumulate(itemName) {
-                var r = recipes.find(function (x) { return x.name === itemName; });
+            cart.forEach(function (entry) {
+                var r = recipes.find(function (x) { return x.name === entry.name; });
                 if (!r || !r.ingredients || r.ingredients.length === 0) {
-                    // It's a raw material — count it directly
-                    totals[itemName] = (totals[itemName] || 0) + 1;
+                    totals[entry.name] = (totals[entry.name] || 0) + entry.qty;
                     return;
                 }
                 r.ingredients.forEach(function (ing) {
-                    totals[ing.name] = (totals[ing.name] || 0) + ing.quantity;
+                    totals[ing.name] = (totals[ing.name] || 0) + (ing.quantity * entry.qty);
                 });
-            }
-
-            cart.forEach(accumulate);
+            });
 
             var gatherHtml = Object.keys(totals).sort().map(function (name) {
                 var slug = name.toLowerCase().replace(/ /g, '_');
