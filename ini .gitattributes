@@ -1,0 +1,2 @@
+# Treat PNG icons as binary so git doesn't diff them
+wwwroot/icons/*.png binary
