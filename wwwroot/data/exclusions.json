@@ -1,0 +1,21 @@
+{
+  "comment": "Items matching any rule below are hidden from the site. Use exact names or wildcard patterns with * as a prefix, suffix, or both.",
+    "rules": [
+        "*Hatched*",
+        "*hatched*",
+        "*Blueprint*",
+        "Desktop T2",
+        "Debris Container T1",
+        "Elevator",
+        "*Escape Pod*",
+        "Container Aqualis",
+        "Container Golden Aqualis",
+        "Fusion Generator T1",
+        "Generation Group Vein",
+        "Ivy T1",
+        "*Growable*",
+        "*Multiplier*",
+        "Warden Austel",
+        "*Wreck*"
+    ]
+}
