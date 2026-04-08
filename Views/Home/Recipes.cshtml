@@ -44,7 +44,9 @@
                         <button class="add-to-cart-btn"
                                 data-item="@recipe.Name"
                                 title="Add to cart"
-                                onclick="event.stopPropagation(); toggleCart('@recipe.Name')">🛒</button>
+                                onclick="event.stopPropagation(); toggleCart('@recipe.Name')">
+                            <img src="/images/Cart.png" alt="" aria-hidden="true" style="width:14px;height:14px;object-fit:contain;" />
+                        </button>
                     }
                     <span class="card-usedby-badge" style="display:none"></span>
                 </div>
@@ -60,6 +62,7 @@
     </div>
 </div>
 
+@section Scripts {
 <script>
     const allRecipes = @Html.Raw(allRecipesJson);
 
@@ -180,7 +183,8 @@
             ? `<button class="add-to-cart-btn ${inCart ? 'in-cart' : ''}"
                        style="width:auto;padding:0 12px;height:32px;font-size:13px;margin:0 auto;display:flex;align-items:center;gap:6px"
                        onclick="toggleCart('${name.replace(/'/g, "\\'")}')">
-                   ${inCart ? '✓ In Cart' : '🛒 Add to Cart'}
+                   <img src="/images/Cart.png" alt="" aria-hidden="true" style="width:14px;height:14px;object-fit:contain;" />
+                   ${inCart ? '✓ In Cart' : 'Add to Cart'}
                </button>`
             : '';
 
@@ -314,11 +318,8 @@
         tab.addEventListener('click', () => {
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            const filter = tab.dataset.filter;
-            document.querySelectorAll('.item-card').forEach(card => {
-                card.style.display =
-                    filter === 'all' || card.dataset.category === filter ? '' : 'none';
-            });
+            applyFilters();
         });
     });
 </script>
+}

@@ -19,14 +19,16 @@
             <button class="flyout-close" onclick="closeFlyout()" aria-label="Close menu">✕</button>
         </div>
         <ul class="flyout-links">
-            <li><a href="/">🏠 Home</a></li>
+            <li><a href="/"><img src="~/images/Home.png" alt="" class="nav-home-icon" aria-hidden="true" /> Home</a></li>
             <li><a href="/Home/About">ℹ️ About</a></li>
             <li class="flyout-links-divider"></li>
             <li>
                 <a href="https://store.steampowered.com/app/1284190/The_Planet_Crafter/"
                    target="_blank" rel="noopener noreferrer"
                    class="flyout-steam-link">
-                    🎮 Get The Planet Crafter on Steam
+                    <img src="~/images/planetCrafterIcon.png"
+                         alt="" class="nav-game-icon" aria-hidden="true" />
+                    Get The Planet Crafter on Steam
                 </a>
             </li>
         </ul>
@@ -38,11 +40,17 @@
     <!-- Cart panel (slides in from right) -->
     <div class="cart-panel" id="cartPanel">
         <div class="cart-panel-header">
-            <span class="cart-panel-title">🛒 Crafting Cart</span>
+            <span class="cart-panel-title">
+                <img src="~/images/Cart.png" alt="" class="nav-cart-icon" aria-hidden="true" />
+                Crafting Cart
+            </span>
             <button class="cart-panel-close" onclick="closeCart()" aria-label="Close cart">✕</button>
         </div>
         <div class="cart-panel-body" id="cartPanelBody">
-            <p class="cart-empty-msg">Your cart is empty.<br />Add craftable items using the 🛒 button.</p>
+            <p class="cart-empty-msg">
+                Your cart is empty.<br />
+                Add craftable items using the <img src="~/images/Cart.png" alt="cart" style="width:13px;height:13px;object-fit:contain;vertical-align:middle;" /> button.
+            </p>
         </div>
     </div>
 
@@ -61,7 +69,9 @@
                 <a href="https://store.steampowered.com/app/1284190/The_Planet_Crafter/"
                    target="_blank" rel="noopener noreferrer"
                    class="top-bar-steam-btn" title="Get The Planet Crafter on Steam">
-                    🎮 Steam
+                    <img src="~/images/planetCrafterIcon.png"
+                         alt="" class="nav-game-icon" aria-hidden="true" />
+                    Steam
                 </a>
                 <div class="search-wrapper">
                     <input type="text" id="searchBox" placeholder="Search items..."
@@ -69,10 +79,10 @@
                     <button id="searchClear" class="search-clear" onclick="clearSearch()" title="Clear search">✕</button>
                 </div>
                 <a href="/" class="top-bar-home-btn" id="homeIconBtn" aria-label="Back to home" title="Home">
-                    🏠
+                    <img src="~/images/Home.png" alt="" class="nav-home-icon" aria-hidden="true" />
                 </a>
                 <button class="cart-btn" id="cartToggleBtn" onclick="openCart()" title="View crafting cart" aria-label="Crafting cart">
-                    🛒
+                    <img src="~/images/Cart.png" alt="" class="nav-cart-icon" aria-hidden="true" />
                     <span class="cart-badge" id="cartBadge">0</span>
                 </button>
             </div>
@@ -218,7 +228,9 @@
                 var inCart = isInCart(btn.dataset.item);
                 btn.classList.toggle('in-cart', inCart);
                 btn.title = inCart ? 'Remove from cart' : 'Add to cart';
-                btn.textContent = inCart ? '✓' : '🛒';
+                btn.innerHTML = inCart
+                    ? '✓'
+                    : '<img src="/images/Cart.png" alt="" aria-hidden="true" style="width:14px;height:14px;object-fit:contain;" />';
             });
         }
 
@@ -227,7 +239,7 @@
             if (!body) return;
 
             if (cart.length === 0) {
-                body.innerHTML = '<p class="cart-empty-msg">Your cart is empty.<br />Add craftable items using the 🛒 button.</p>';
+                body.innerHTML = '<p class="cart-empty-msg">Your cart is empty.<br />Add craftable items using the <img src="/images/Cart.png" alt="cart" style="width:13px;height:13px;object-fit:contain;vertical-align:middle;" /> button.</p>';
                 return;
             }
 

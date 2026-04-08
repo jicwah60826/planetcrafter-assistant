@@ -1,71 +1,38 @@
-@{
+﻿@{
     ViewData["Title"] = "About & Legal Disclaimer";
 }
 
-<div class="content about-page">
-    <h2 class="about-heading">About Planet Crafter Assistant</h2>
-    <p class="about-intro">
-        Planet Crafter Assistant is an unofficial, community-built reference tool to help players
-        browse crafting recipes, resources, and game data for <em>The Planet Crafter</em>.
-    </p>
+<div class="about-page">
+    <section class="about-section">
+        <h2 class="about-title">Planet Crafter Assistant</h2>
+        <p class="about-lead">
+            An unofficial, community-built reference tool to help players browse
+            crafting recipes, resources, and game data for <em>The Planet Crafter</em>.
+        </p>
+    </section>
 
-    <hr class="about-divider" />
+    <hr class="about-rule" />
+    <section class="about-section">
+        <h3 class="about-heading">Legal Disclaimer</h3>
 
-    <h3 class="about-subheading">Legal Disclaimer</h3>
-    <p>
-        This website is an unofficial, fan-made tool and is not affiliated with, endorsed by,
-        or in any way connected to <strong>Miju Games</strong>.
-    </p>
-    <p>
-        <em>The Planet Crafter</em> and all related characters, items, names, and assets are the
-        sole property and copyright of <strong>Miju Games</strong>. All icons and in-game data
-        are used under Fair Use principles for informational and educational purposes to assist
-        the player community.
-    </p>
-    <p>
-        This project is non-commercial and free to use. No copyright infringement is intended.
-        If you are the copyright holder and wish for any content to be removed, please use the
-        form below.
-    </p>
+        <p>
+            This website is an unofficial, fan-made companion tool and is not affiliated with,
+            endorsed by, or in any way connected to <strong>Miju Games</strong>.
+        </p>
 
-    <hr class="about-divider" />
+        <p>
+            <em>The Planet Crafter™</em> and all related names, items, characters, and assets
+            are trademarks and copyrights of <strong>Miju Games</strong>. All in-game icons and
+            data are used under Fair Use principles for informational and educational purposes
+            to support the player community.
+        </p>
 
-    <h3 class="about-subheading">Database Correction Report</h3>
-    <p>Notice a discrepancy in the blueprint data? Submit a correction to the archive.</p>
-
-    <form id="contactForm"
-          action="https://formspree.io/f/your-id-here"
-          method="POST"
-          class="report-form"
-          onsubmit="handleFormSubmit(event)">
-
-        <div class="report-form-row">
-            <input type="text"
-                   id="reportItemName"
-                   name="item_name"
-                   placeholder="Item Name (e.g. Pulsar Quartz)"
-                   required
-                   class="report-input" />
-
-            <select name="issue_type" class="report-select">
-                <option value="wrong_recipe">Wrong Recipe</option>
-                <option value="missing_item">Missing Item</option>
-                <option value="wrong_unlock">Unlock Stage Incorrect</option>
-                <option value="other">Other / Suggestion</option>
-            </select>
-        </div>
-
-        <textarea name="message"
-                  rows="4"
-                  placeholder="Describe the correct recipe or missing data..."
-                  required
-                  class="report-textarea"></textarea>
-
-        <div class="report-form-footer">
-            <button type="submit" class="report-submit">Submit Report</button>
-            <span id="reportStatus" class="report-status" aria-live="polite"></span>
-        </div>
-    </form>
+        <p>
+            If you are a copyright holder and believe your material is being used in a way that
+            constitutes copyright infringement, or if you would like specific assets removed,
+            please contact <a href="mailto:jon@pixelgraft.com" class="about-link">the site owner</a>.
+        </p>
+    </section>
 </div>
 
 @section Scripts {

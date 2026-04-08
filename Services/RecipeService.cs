@@ -7,6 +7,7 @@ namespace PlanetCrafterAssistant.Services
     public class RecipeService
     {
         private readonly List<Recipe> _recipes;
+        private readonly List<CraftStation> _stations;
 
         public RecipeService(IWebHostEnvironment env)
         {
@@ -20,6 +21,8 @@ namespace PlanetCrafterAssistant.Services
 
             var exclusionPatterns = LoadExclusionPatterns(env);
             _recipes = allRecipes.Where(r => !IsExcluded(r.Name, exclusionPatterns)).ToList();
+
+            _stations = LoadCraftStations(env);
         }
 
         public List<Recipe> GetAll() => _recipes;
@@ -28,6 +31,31 @@ namespace PlanetCrafterAssistant.Services
             _recipes.FirstOrDefault(
                 r => string.Equals(r.Name, name, StringComparison.OrdinalIgnoreCase)
             );
+
+        public List<CraftStation> GetAllStations() => _stations;
+
+        public CraftStation? GetStation(string displayName) =>
+            _stations.FirstOrDefault(
+                s => string.Equals(s.DisplayName, displayName, StringComparison.OrdinalIgnoreCase)
+            );
+
+        // ── Station helpers ────────────────────────────────────
+
+        private static List<CraftStation> LoadCraftStations(IWebHostEnvironment env)
+        {
+            var path = Path.Combine(env.WebRootPath, "data", "craftStations.json");
+            if (!File.Exists(path))
+                return new List<CraftStation>();
+
+            using var doc = JsonDocument.Parse(File.ReadAllText(path));
+            if (!doc.RootElement.TryGetProperty("stations", out var stationsEl))
+                return new List<CraftStation>();
+
+            return JsonSerializer.Deserialize<List<CraftStation>>(
+                    stationsEl.GetRawText(),
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true }
+                ) ?? new List<CraftStation>();
+        }
 
         // ── Exclusion helpers ──────────────────────────────────
 

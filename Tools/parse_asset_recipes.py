@@ -11,6 +11,18 @@ resolves ingredient GUIDs via .meta sidecar files, and:
   2. Writes extracted_recipes.json  (includes _sourceAsset/_iconFile helpers)
   3. Writes wwwroot/data/recipes.json (clean, ready for the app)
 
+Craft station detection
+-----------------------
+The script resolves craftedIn in three passes, in priority order:
+
+  1. crafterType field on the asset (integer -> station name via CRAFTER_TYPE_MAP)
+  2. Asset id keyword heuristics (e.g. 'Biolab', 'QuartzStation' in the id)
+  3. groupCategory / equipableType fallback:
+       - groupCategory 3 (Structure) -> "Build Menu"   (constructibles)
+       - everything else with ingredients -> "Crafting Table"
+
+Any unresolved crafterType integer triggers a WARNING so the map can be updated.
+
 Usage
 -----
     python Tools\\parse_asset_recipes.py
@@ -78,6 +90,81 @@ WORLD_UNIT_MAP = {
 UNIT_LABEL_MAP = {
     "Heat": "nK", "Pressure": "\u00b5Pa", "Oxygen": "ppm",
 }
+
+# ---------------------------------------------------------------------------
+# Craft station detection
+# ---------------------------------------------------------------------------
+
+# Maps the crafterType integer from .asset files -> craftedIn display name.
+# The integer enum is defined in the game source as CrafterType.
+# Add new entries here if a future game update introduces a new station and
+# you see "WARNING: Unknown crafterType" in the script output.
+CRAFTER_TYPE_MAP = {
+    "0": "Crafting Table",       # Default player inventory crafter
+    "1": "Biolab",               # Biological laboratory station
+    "2": "Quartz Craft Station", # Quartz-specific crafting station
+    "3": "DNA Manipulator",      # DNA/genetics station
+    "4": "Incubator",            # Egg/larva incubation station
+    # Add further entries as discovered from new asset exports
+}
+
+# Keyword fragments in the item id that strongly imply a specific station.
+# Checked ONLY when crafterType is absent from the asset.
+# Keys are lowercase substrings to match against item_id.lower().
+# Ordered from most-specific to least-specific.
+ID_KEYWORD_STATION_MAP = [
+    ("quartz",    "Quartz Craft Station"),  # QuasarQuartz, SolarQuartz, etc.
+    ("biolab",    "Biolab"),
+    ("mutagen",   "Biolab"),
+    ("larva",     "Biolab"),
+    ("bacteria",  "Biolab"),
+    ("fabric",    "Biolab"),                # Smart Fabric / Fabric
+    ("fertilizer","Biolab"),
+    ("explosive", "Biolab"),
+    ("flare",     "Biolab"),
+    ("pulsar",    "Biolab"),
+    ("dna",       "DNA Manipulator"),
+]
+
+# groupCategory values that represent player-placed constructibles (Build Menu).
+# groupCategory 3 = Structure in CATEGORY_MAP.
+BUILD_MENU_CATEGORIES = {"3"}
+
+
+def resolve_craft_station(text: str, item_id: str, group_cat: str) -> str | None:
+    """
+    Determine the craftedIn station for an asset.
+
+    Priority:
+      1. crafterType field on the asset  ->  CRAFTER_TYPE_MAP
+      2. id keyword heuristics           ->  ID_KEYWORD_STATION_MAP
+      3. groupCategory is a Structure    ->  "Build Menu"
+      4. Has ingredients                 ->  "Crafting Table"  (safe fallback)
+    """
+    # --- Priority 1: explicit crafterType field ---
+    crafter_type = get_field(text, "crafterType")
+    if crafter_type is not None:
+        station = CRAFTER_TYPE_MAP.get(crafter_type)
+        if station:
+            return station
+        # Unknown integer -- warn and fall through so the item still gets a value
+        print(
+            f"  WARNING: Unknown crafterType '{crafter_type}' on item '{item_id}' "
+            f"-- add to CRAFTER_TYPE_MAP. Falling back to heuristics."
+        )
+
+    # --- Priority 2: id keyword heuristics ---
+    id_lower = item_id.lower()
+    for keyword, station in ID_KEYWORD_STATION_MAP:
+        if keyword in id_lower:
+            return station
+
+    # --- Priority 3: Structure groupCategory -> Build Menu ---
+    if group_cat in BUILD_MENU_CATEGORIES:
+        return "Build Menu"
+
+    # --- Priority 4: safe fallback ---
+    return "Crafting Table"
 
 
 # ---------------------------------------------------------------------------
@@ -245,6 +332,10 @@ def extract_recipes(craftable: list, guid_to_id: dict,
     icons_miss   = 0
     miss_samples = []
 
+    # Tally how each station was assigned and which method resolved it,
+    # printed at the end so you can spot-check the heuristics.
+    station_tally: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+
     icon_out_dir.mkdir(parents=True, exist_ok=True)
 
     for asset_path in craftable:
@@ -337,16 +428,36 @@ def extract_recipes(craftable: list, guid_to_id: dict,
                 "unit":      UNIT_LABEL_MAP.get(stage, "units"),
             }
 
+        # --- Craft station ---
+        # Only assign a station when there are actual ingredients; raw/found
+        # items that have no recipe get None.
+        crafted_in     = None
+        station_method = "none (no ingredients)"
+        if ingredients:
+            crafted_in     = resolve_craft_station(text, item_id, group_cat)
+            # Determine which resolution path fired for the tally
+            crafter_type = get_field(text, "crafterType")
+            if crafter_type and crafter_type in CRAFTER_TYPE_MAP:
+                station_method = f"crafterType={crafter_type}"
+            elif any(kw in item_id.lower() for kw, _ in ID_KEYWORD_STATION_MAP):
+                station_method = "id_keyword"
+            elif group_cat in BUILD_MENU_CATEGORIES:
+                station_method = "build_menu_category"
+            else:
+                station_method = "fallback"
+            station_tally[crafted_in][station_method] += 1
+
         recipes.append({
             "name":            display_name,
             "category":        category,
             "description":     "",
             "ingredients":     ingredients,
             "unlockCondition": unlock_condition,
-            "craftedIn":       "Crafting Table" if ingredients else None,
+            "craftedIn":       crafted_in,
             "recyclerYields":  bool(ingredients),
             "_sourceAsset":    asset_path.name,
             "_iconFile":       icon_file,
+            "_stationMethod":  station_method,   # review helper, stripped by to_clean_recipe
         })
 
     print(f"  Icons resolved: {icons_found}  |  Icons not found: {icons_miss}")
@@ -354,6 +465,13 @@ def extract_recipes(craftable: list, guid_to_id: dict,
         print(f"  Sample unmatched keys (first {len(miss_samples)}):")
         for s in miss_samples:
             print(f"    {s}")
+
+    # Print station tally so you can validate coverage at a glance
+    print("\n  Craft station assignment summary:")
+    for station, methods in sorted(station_tally.items()):
+        total = sum(methods.values())
+        breakdown = ", ".join(f"{m}:{n}" for m, n in sorted(methods.items()))
+        print(f"    {station:<28}  {total:>4} items  ({breakdown})")
 
     return recipes
 
@@ -415,9 +533,11 @@ def main():
     print(f"\nDone. {len(recipes)} recipes written.")
     print(f"  Icons copied to: {icon_out_dir}")
     print("\nNext steps:")
-    print("  1. Check 'Icons not found' count above — 0 is ideal")
-    print("  2. Fill in 'description' fields in recipes.json as needed")
-    print("  3. Run the app and verify icons appear on the Recipes page")
+    print("  1. Check WARNING lines above for unknown crafterType values")
+    print("  2. Review the station assignment summary -- 'fallback' items may need keyword rules")
+    print("  3. Check 'Icons not found' count above -- 0 is ideal")
+    print("  4. Fill in 'description' fields in recipes.json as needed")
+    print("  5. Run the app and verify stations appear correctly on the Recipes page")
 
 
 if __name__ == "__main__":

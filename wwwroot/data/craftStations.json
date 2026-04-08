@@ -1,0 +1,28 @@
+{
+  "stations": [
+    {
+      "id": "BuildMenu",
+      "displayName": "Build Menu",
+      "description": "Placed directly into the world via the Q build menu.",
+      "iconSlug": "build_menu"
+    },
+    {
+      "id": "CraftingTable",
+      "displayName": "Crafting Table",
+      "description": "Crafted at the Crafting Table machine.",
+      "iconSlug": "crafting_table"
+    },
+    {
+      "id": "Biolab",
+      "displayName": "Biolab",
+      "description": "Crafted inside the Biolab.",
+      "iconSlug": "biolab"
+    },
+    {
+      "id": "QuartzCraftStation",
+      "displayName": "Quartz Craft Station",
+      "description": "Crafted inside the Quartz Craft Station.",
+      "iconSlug": "quartz_craft_station"
+    }
+  ]
+}
