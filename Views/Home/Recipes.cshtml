@@ -39,6 +39,13 @@
                     {
                         <span class="card-raw-badge">RAW</span>
                     }
+                    else
+                    {
+                        <button class="add-to-cart-btn"
+                                data-item="@recipe.Name"
+                                title="Add to cart"
+                                onclick="event.stopPropagation(); toggleCart('@recipe.Name')">🛒</button>
+                    }
                     <span class="card-usedby-badge" style="display:none"></span>
                 </div>
             }
@@ -127,7 +134,6 @@
         let visibleCrumbs = navHistory;
         let collapsedHtml = '';
 
-        // If history exceeds the cap, show "…" for the hidden older entries
         if (navHistory.length > MAX_VISIBLE) {
             visibleCrumbs = navHistory.slice(-MAX_VISIBLE);
             const hiddenCount = navHistory.length - MAX_VISIBLE;
@@ -167,6 +173,16 @@
         const usedBy = allRecipes.filter(r =>
             r.ingredients && r.ingredients.some(i => i.name === name)
         );
+
+        const inCart = cart.includes(name);
+        const isCraftable = recipe.ingredients && recipe.ingredients.length > 0;
+        const cartBtnHtml = isCraftable
+            ? `<button class="add-to-cart-btn ${inCart ? 'in-cart' : ''}"
+                       style="width:auto;padding:0 12px;height:32px;font-size:13px;margin:0 auto;display:flex;align-items:center;gap:6px"
+                       onclick="toggleCart('${name.replace(/'/g, "\\'")}')">
+                   ${inCart ? '✓ In Cart' : '🛒 Add to Cart'}
+               </button>`
+            : '';
 
         const requiresHtml = recipe.ingredients && recipe.ingredients.length > 0
             ? `<div class="pane-section pane-section--requires">
@@ -229,7 +245,8 @@
             ${getBreadcrumbHtml()}
             <div class="pane-icon">${getIconHtml(recipe.name)}</div>
             <h2 class="pane-title">${recipe.name}</h2>
-            <p class="pane-description">${recipe.description || ''}</p>
+            ${cartBtnHtml}
+            <p class="pane-description" style="margin-top:10px">${recipe.description || ''}</p>
             <div class="pane-section">
                 <div class="pane-section-title">UNLOCKS</div>
                 ${getUnlockHtml(recipe.unlockCondition)}
@@ -243,6 +260,20 @@
         `;
 
         if (isMobile()) pane.classList.add('mobile-open');
+    }
+
+    // Toggle cart membership from any button
+    function toggleCart(name) {
+        if (cart.includes(name)) {
+            removeFromCart(name);
+        } else {
+            addToCart(name);
+        }
+        // Re-render the detail pane so the in-pane button label updates too
+        const currentTitle = document.querySelector('#detailsPane .pane-title');
+        if (currentTitle && currentTitle.textContent.trim() === name) {
+            renderItem(name);
+        }
     }
 
     // Public entry point — pushes current item to history before navigating
@@ -274,6 +305,9 @@
             }
         });
     })();
+
+    // Sync cart button states on page load
+    syncCartButtons();
 
     // --- Filter tabs ---
     document.querySelectorAll('.tab').forEach(tab => {

@@ -32,6 +32,20 @@
         </ul>
     </nav>
 
+    <!-- Cart backdrop -->
+    <div class="cart-backdrop" id="cartBackdrop" onclick="closeCart()"></div>
+
+    <!-- Cart panel (slides in from right) -->
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-panel-header">
+            <span class="cart-panel-title">🛒 Crafting Cart</span>
+            <button class="cart-panel-close" onclick="closeCart()" aria-label="Close cart">✕</button>
+        </div>
+        <div class="cart-panel-body" id="cartPanelBody">
+            <p class="cart-empty-msg">Your cart is empty.<br />Add craftable items using the 🛒 button.</p>
+        </div>
+    </div>
+
     <!-- Top Bar -->
     <header class="top-bar">
         <div class="top-bar-inner">
@@ -57,6 +71,10 @@
                 <a href="/" class="top-bar-home-btn" id="homeIconBtn" aria-label="Back to home" title="Home">
                     🏠
                 </a>
+                <button class="cart-btn" id="cartToggleBtn" onclick="openCart()" title="View crafting cart" aria-label="Crafting cart">
+                    🛒
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
             </div>
         </div>
     </header>
@@ -110,6 +128,137 @@
             document.getElementById('flyoutBackdrop').classList.remove('open');
             document.body.classList.remove('flyout-active');
         }
+
+        // ── Cart (localStorage-backed) ─────────────────────────
+        var cart = JSON.parse(localStorage.getItem('pc-cart') || '[]');
+
+        function saveCart() {
+            localStorage.setItem('pc-cart', JSON.stringify(cart));
+        }
+
+        function openCart() {
+            renderCartPanel();
+            document.getElementById('cartPanel').classList.add('open');
+            document.getElementById('cartBackdrop').classList.add('open');
+        }
+
+        function closeCart() {
+            document.getElementById('cartPanel').classList.remove('open');
+            document.getElementById('cartBackdrop').classList.remove('open');
+        }
+
+        function addToCart(name) {
+            if (!cart.includes(name)) {
+                cart.push(name);
+                saveCart();
+                updateCartBadge();
+                syncCartButtons();
+            }
+        }
+
+        function removeFromCart(name) {
+            cart = cart.filter(n => n !== name);
+            saveCart();
+            updateCartBadge();
+            syncCartButtons();
+            renderCartPanel();
+        }
+
+        function clearCart() {
+            cart = [];
+            saveCart();
+            updateCartBadge();
+            syncCartButtons();
+            renderCartPanel();
+        }
+
+        function updateCartBadge() {
+            var badge = document.getElementById('cartBadge');
+            if (!badge) return;
+            badge.textContent = cart.length;
+            badge.style.display = cart.length > 0 ? 'block' : 'none';
+        }
+
+        // Keep add-to-cart buttons in sync with cart state
+        function syncCartButtons() {
+            document.querySelectorAll('.add-to-cart-btn[data-item]').forEach(function (btn) {
+                var inCart = cart.includes(btn.dataset.item);
+                btn.classList.toggle('in-cart', inCart);
+                btn.title = inCart ? 'Remove from cart' : 'Add to cart';
+                btn.textContent = inCart ? '✓' : '🛒';
+            });
+        }
+
+        function renderCartPanel() {
+            var body = document.getElementById('cartPanelBody');
+            if (!body) return;
+
+            if (cart.length === 0) {
+                body.innerHTML = '<p class="cart-empty-msg">Your cart is empty.<br />Add craftable items using the 🛒 button.</p>';
+                return;
+            }
+
+            // Resolve allRecipes — only available on the Recipes page
+            var recipes = (typeof allRecipes !== 'undefined') ? allRecipes : [];
+
+            // ── Queued items list ──────────────────────────────
+            var queuedHtml = cart.map(function (name) {
+                var slug = name.toLowerCase().replace(/ /g, '_');
+                return `<div class="cart-item-row">
+                    <img src="/images/icons/${slug}.png"
+                         alt="${name}"
+                         class="cart-item-icon"
+                         onerror="this.style.display='none'" />
+                    <span class="cart-item-name">${name}</span>
+                    <button class="cart-item-remove"
+                            onclick="removeFromCart('${name.replace(/'/g, "\\'")}')"
+                            title="Remove">✕</button>
+                </div>`;
+            }).join('');
+
+            // ── Aggregate raw ingredients ──────────────────────
+            var totals = {};
+
+            function accumulate(itemName) {
+                var r = recipes.find(function (x) { return x.name === itemName; });
+                if (!r || !r.ingredients || r.ingredients.length === 0) {
+                    // It's a raw material — count it directly
+                    totals[itemName] = (totals[itemName] || 0) + 1;
+                    return;
+                }
+                r.ingredients.forEach(function (ing) {
+                    totals[ing.name] = (totals[ing.name] || 0) + ing.quantity;
+                });
+            }
+
+            cart.forEach(accumulate);
+
+            var gatherHtml = Object.keys(totals).sort().map(function (name) {
+                var slug = name.toLowerCase().replace(/ /g, '_');
+                return `<div class="gather-row">
+                    <img src="/images/icons/${slug}.png"
+                         alt="${name}"
+                         class="gather-row-icon"
+                         onerror="this.style.display='none'" />
+                    <span class="gather-row-name">${name}</span>
+                    <span class="gather-row-qty">x${totals[name]}</span>
+                </div>`;
+            }).join('');
+
+            body.innerHTML = `
+                <div class="cart-section">
+                    <div class="cart-section-title">Items to Craft</div>
+                    ${queuedHtml}
+                </div>
+                <div class="cart-section">
+                    <div class="cart-section-title cart-section-title--gather">Materials to Gather</div>
+                    ${gatherHtml}
+                </div>
+                <button class="cart-clear-btn" onclick="clearCart()">🗑 Clear Cart</button>`;
+        }
+
+        // Init badge on every page load
+        updateCartBadge();
     </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
