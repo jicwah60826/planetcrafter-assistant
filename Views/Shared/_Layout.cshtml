@@ -101,24 +101,10 @@
             <a href="/Home/About">Legal Disclaimer</a>
             <span class="build-id">build: @Context.Items["BuildId"]</span>
         </div>
-        <div class="bottom-nav-links">
-            <a href="/">Home</a>
-            <a href="/Home/About">About</a>
-            <a href="https://store.steampowered.com/app/1284190/The_Planet_Crafter/"
-               target="_blank" rel="noopener noreferrer"
-               class="bottom-nav-steam-link">🎮 Buy on Steam</a>
-        </div>
     </nav>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script>
-        // Active nav link
-        document.querySelectorAll('.bottom-nav-links a').forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add('active');
-            }
-        });
-
         // Home icon visibility
         (function () {
             var showHome = document.body.dataset.showHome === 'true';
@@ -206,107 +192,42 @@
             }
         }
 
-        function clearCart() {
-            cart = [];
-            saveCart();
-            updateCartBadge();
-            syncCartButtons();
-            renderCartPanel();
-        }
-
         function updateCartBadge() {
+            var total = cart.reduce(function (sum, e) { return sum + e.qty; }, 0);
             var badge = document.getElementById('cartBadge');
-            if (!badge) return;
-            // Badge shows total number of unique items
-            badge.textContent = cart.length;
-            badge.style.display = cart.length > 0 ? 'block' : 'none';
+            if (badge) badge.textContent = total;
         }
 
-        // Keep add-to-cart buttons on the card grid in sync
         function syncCartButtons() {
             document.querySelectorAll('.add-to-cart-btn[data-item]').forEach(function (btn) {
                 var inCart = isInCart(btn.dataset.item);
                 btn.classList.toggle('in-cart', inCart);
-                btn.title = inCart ? 'Remove from cart' : 'Add to cart';
-                btn.innerHTML = inCart
-                    ? '✓'
-                    : '<img src="/images/Cart.png" alt="" aria-hidden="true" style="width:14px;height:14px;object-fit:contain;" />';
             });
         }
 
         function renderCartPanel() {
             var body = document.getElementById('cartPanelBody');
             if (!body) return;
-
             if (cart.length === 0) {
                 body.innerHTML = '<p class="cart-empty-msg">Your cart is empty.<br />Add craftable items using the <img src="/images/Cart.png" alt="cart" style="width:13px;height:13px;object-fit:contain;vertical-align:middle;" /> button.</p>';
                 return;
             }
-
-            // allRecipes is only defined on the Recipes page
-            var recipes = (typeof allRecipes !== 'undefined') ? allRecipes : [];
-
-            // ── Items to Craft list with qty controls ──────────
-            var queuedHtml = cart.map(function (entry) {
-                var slug = entry.name.toLowerCase().replace(/ /g, '_');
-                var safeName = entry.name.replace(/'/g, "\\'");
-                return `<div class="cart-item-row">
-                    <img src="/images/icons/${slug}.png"
-                         alt="${entry.name}"
-                         class="cart-item-icon"
-                         onerror="this.style.display='none'" />
-                    <span class="cart-item-name">${entry.name}</span>
-                    <div class="cart-qty-controls">
-                        <button class="cart-qty-btn" onclick="setCartQty('${safeName}', ${entry.qty - 1})" title="Decrease">−</button>
-                        <span class="cart-qty-value">${entry.qty}</span>
-                        <button class="cart-qty-btn" onclick="setCartQty('${safeName}', ${entry.qty + 1})" title="Increase">+</button>
-                    </div>
-                    <button class="cart-item-remove"
-                            onclick="removeFromCart('${safeName}')"
-                            title="Remove">✕</button>
-                </div>`;
+            body.innerHTML = cart.map(function (e) {
+                return '<div class="cart-item">' +
+                    '<span class="cart-item-name">' + e.name + '</span>' +
+                    '<div class="cart-item-controls">' +
+                    '<button onclick="setCartQty(\'' + e.name.replace(/'/g, "\\'") + '\', ' + (e.qty - 1) + ')">−</button>' +
+                    '<span class="cart-item-qty">' + e.qty + '</span>' +
+                    '<button onclick="setCartQty(\'' + e.name.replace(/'/g, "\\'") + '\', ' + (e.qty + 1) + ')">+</button>' +
+                    '<button class="cart-item-remove" onclick="removeFromCart(\'' + e.name.replace(/'/g, "\\'") + '\')">✕</button>' +
+                    '</div>' +
+                    '</div>';
             }).join('');
-
-            // ── Aggregate ingredients across all entries × qty ──
-            var totals = {};
-
-            cart.forEach(function (entry) {
-                var r = recipes.find(function (x) { return x.name === entry.name; });
-                if (!r || !r.ingredients || r.ingredients.length === 0) {
-                    totals[entry.name] = (totals[entry.name] || 0) + entry.qty;
-                    return;
-                }
-                r.ingredients.forEach(function (ing) {
-                    totals[ing.name] = (totals[ing.name] || 0) + (ing.quantity * entry.qty);
-                });
-            });
-
-            var gatherHtml = Object.keys(totals).sort().map(function (name) {
-                var slug = name.toLowerCase().replace(/ /g, '_');
-                return `<div class="gather-row">
-                    <img src="/images/icons/${slug}.png"
-                         alt="${name}"
-                         class="gather-row-icon"
-                         onerror="this.style.display='none'" />
-                    <span class="gather-row-name">${name}</span>
-                    <span class="gather-row-qty">x${totals[name]}</span>
-                </div>`;
-            }).join('');
-
-            body.innerHTML = `
-                <div class="cart-section">
-                    <div class="cart-section-title">Items to Craft</div>
-                    ${queuedHtml}
-                </div>
-                <div class="cart-section">
-                    <div class="cart-section-title cart-section-title--gather">Materials to Gather</div>
-                    ${gatherHtml}
-                </div>
-                <button class="cart-clear-btn" onclick="clearCart()">🗑 Clear Cart</button>`;
         }
 
-        // Init badge on every page load
+        // Initialise badge and button states on page load
         updateCartBadge();
+        syncCartButtons();
     </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
