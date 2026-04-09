@@ -19,6 +19,9 @@ namespace PlanetCrafterAssistant.Services
                     new JsonSerializerOptions { PropertyNameCaseInsensitive = true }
                 ) ?? new List<Recipe>();
 
+            var nameOverrides = LoadNameOverrides(env);
+            ApplyNameOverrides(allRecipes, nameOverrides);
+
             var exclusionPatterns = LoadExclusionPatterns(env);
             _recipes = allRecipes.Where(r => !IsExcluded(r.Name, exclusionPatterns)).ToList();
 
@@ -55,6 +58,50 @@ namespace PlanetCrafterAssistant.Services
                     stationsEl.GetRawText(),
                     new JsonSerializerOptions { PropertyNameCaseInsensitive = true }
                 ) ?? new List<CraftStation>();
+        }
+
+        // ── Name override helpers ──────────────────────────────
+
+        private static Dictionary<string, string> LoadNameOverrides(IWebHostEnvironment env)
+        {
+            var path = Path.Combine(env.WebRootPath, "data", "name_overrides.json");
+            if (!File.Exists(path))
+                return new Dictionary<string, string>();
+
+            using var doc = JsonDocument.Parse(File.ReadAllText(path));
+            if (!doc.RootElement.TryGetProperty("items", out var itemsEl))
+                return new Dictionary<string, string>();
+
+            var overrides = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            foreach (var entry in itemsEl.EnumerateArray())
+            {
+                var from = entry.TryGetProperty("from", out var f) ? f.GetString() : null;
+                var to = entry.TryGetProperty("to", out var t) ? t.GetString() : null;
+                if (!string.IsNullOrWhiteSpace(from) && !string.IsNullOrWhiteSpace(to))
+                    overrides[from] = to;
+            }
+            return overrides;
+        }
+
+        private static void ApplyNameOverrides(
+            List<Recipe> recipes,
+            Dictionary<string, string> overrides
+        )
+        {
+            if (overrides.Count == 0)
+                return;
+
+            foreach (var recipe in recipes)
+            {
+                if (overrides.TryGetValue(recipe.Name, out var newName))
+                    recipe.Name = newName;
+
+                foreach (var ingredient in recipe.Ingredients)
+                {
+                    if (overrides.TryGetValue(ingredient.Name, out var newIngredientName))
+                        ingredient.Name = newIngredientName;
+                }
+            }
         }
 
         // ── Exclusion helpers ──────────────────────────────────

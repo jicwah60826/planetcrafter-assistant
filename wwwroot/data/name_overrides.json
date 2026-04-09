@@ -1,0 +1,373 @@
+{
+    "remarks": "Maps the raw parsed name (from recipes.json) to the correct in-game/wiki display name. RecipeService applies these at startup, and parse_asset_recipes.py uses them when naming icon files.",
+    "items": [
+        {
+            "from": "Rocket Reactor",
+            "to": "Rocket"
+        },
+        {
+            "from": "Alloy",
+            "to": "Super Alloy"
+        },
+        {
+            "from": "Balzar Quartz",
+            "to": "Blazar Quartz"
+        },
+        {
+            "from": "Genetic Synthetizer T1",
+            "to": "Genetic Synthetizer"
+        },
+        {
+            "from": "Rod-alloy",
+            "to": "Super Alloy Rod"
+        },
+        {
+            "from": "Drill T0",
+            "to": "T1 Drill"
+        },
+        {
+            "from": "Drill T1",
+            "to": "T2 Drill"
+        },
+        {
+            "from": "Drill T2",
+            "to": "T3 Drill"
+        },
+        {
+            "from": "Drill T3",
+            "to": "T4 Drill"
+        },
+        {
+            "from": "Drill T4",
+            "to": "T5 Drill"
+        },
+        {
+            "from": "astrofood",
+            "to": "Space Food"
+        },
+        {
+            "from": "astrofood T2",
+            "to": "HQ Food"
+        },
+        {
+            "from": "Methan Capsule T1",
+            "to": "Methane"
+        },
+        {
+            "from": "Bacteria T1",
+            "to": "Bacteria Sample"
+        },
+        {
+            "from": "Algae1 Seed",
+            "to": "Algae"
+        },
+        {
+            "from": "Water Bottle T1",
+            "to": "Water Bottle"
+        },
+        {
+            "from": "Amphibians Farm T1",
+            "to": "Amphibian Farm"
+        },
+        {
+            "from": "Larvae Base T1",
+            "to": "Common Larva"
+        },
+        {
+            "from": "Phytoplankton T1",
+            "to": "Phytoplankton A"
+        },
+        {
+            "from": "Phytoplankton T2",
+            "to": "Phytoplankton B"
+        },
+        {
+            "from": "Phytoplankton T3",
+            "to": "Phytoplankton C"
+        },
+        {
+            "from": "Phytoplankton T4",
+            "to": "Phytoplankton D"
+        },
+        {
+            "from": "Air Filter T1",
+            "to": "Air Filter"
+        },
+        {
+            "from": "Auto Crafter T1",
+            "to": "Auto Crafter"
+        },
+        {
+            "from": "Bee1 Larvae",
+            "to": "Bee Larva"
+        },
+        {
+            "from": "biodome",
+            "to": "Biodome"
+        },
+        {
+            "from": "Biodome T2",
+            "to": "T2 Biodome"
+        },
+        {
+            "from": "Bioplastic T1",
+            "to": "Bioplastic"
+        },
+        {
+            "from": "Boots Speed T1",
+            "to": "T1 Agility Boots"
+        },
+        {
+            "from": "Boots Speed T2",
+            "to": "T2 Agility Boots"
+        },
+        {
+            "from": "Boots Speed T3",
+            "to": "T3 Agility Boots"
+        },
+        {
+            "from": "Butterfly Dome T1",
+            "to": "Butterfly Dome"
+        },
+        {
+            "from": "Butterfly Farm T1",
+            "to": "Butterfly Farm"
+        },
+        {
+            "from": "Butterfly Farm T2",
+            "to": "T2 Butterfly Farm"
+        },
+        {
+            "from": "Butterfly Farm T3",
+            "to": "T3 Butterfly Farm"
+        },
+        {
+            "from": "Chair T1",
+            "to": "Chair"
+        },
+        {
+            "from": "Chair T2",
+            "to": "Cozy Chair"
+        },
+        {
+            "from": "Chlorine Capsule T1",
+            "to": "Chlorine Dioxide"
+        },
+        {
+            "from": "Com Antenna",
+            "to": "Communication Antenna"
+        },
+        {
+            "from": "Anti Toxins Explosive T1",
+            "to": "T1 Toxic Goo Removal Explosives"
+        },
+        {
+            "from": "Anti Toxins Explosive T2",
+            "to": "T2 Toxic Goo Removal Explosives"
+        },
+        {
+            "from": "Butterfly Displayer T1",
+            "to": "Butterfly Display Box"
+        },
+        {
+            "from": "Circuit Board T1",
+            "to": "Circuit Board"
+        },
+        {
+            "from": "Container Toxic T1",
+            "to": "Toxic Goo Storage"
+        },
+        {
+            "from": "Cook Cake T1",
+            "to": "Birthday Cake"
+        },
+        {
+            "from": "Cook Chocolate",
+            "to": "Chocolate"
+        },
+        {
+            "from": "Cook Cocoa Seed",
+            "to": "Coca Seed"
+        },
+        {
+            "from": "Cook Cookie T1",
+            "to": "Cookie"
+        },
+        {
+            "from": "Cook Croissant",
+            "to": "Croissant"
+        },
+        {
+            "from": "Cook Flour",
+            "to": "Flour"
+        },
+        {
+            "from": "Cooking Station T1",
+            "to": "Cooking Station"
+        },
+        {
+            "from": "Cook Stew T1",
+            "to": "Honey Cooked Beans"
+        },
+        {
+            "from": "Cook Stew Fish T1",
+            "to": "Fish Soup"
+        },
+        {
+            "from": "Cook Wheat Seed",
+            "to": "Wheat"
+        },
+        {
+            "from": "Counter T1",
+            "to": "Countertop"
+        },
+        {
+            "from": "Counter T2",
+            "to": "Countertop T2"
+        },
+        {
+            "from": "Craft Station T1",
+            "to": "T1 Craft Station"
+        },
+        {
+            "from": "Craft Station T2",
+            "to": "Advanced Craft Station"
+        },
+        {
+            "from": "Departure Platform",
+            "to": "Extraction Platform"
+        },
+        {
+            "from": "Desktop T1",
+            "to": "Desktop"
+        },
+        {
+            "from": "Destructor T1",
+            "to": "Shredder Machine"
+        },
+        {
+            "from": "Detoxification Machine T1",
+            "to": "Detoxification Machine"
+        },
+        {
+            "from": "Detoxification Machine T2",
+            "to": "T2 Detoxification Machine"
+        },
+        {
+            "from": "Detoxification Machine T3",
+            "to": "T3 Detoxification Machine"
+        },
+        {
+            "from": "DNA Sequence",
+            "to": "Creature DNA"
+        },
+        {
+            "from": "Drone Station T1",
+            "to": "Drone Station"
+        },
+        {
+            "from": "Ecosystem T1",
+            "to": "Ecosystem"
+        },
+        {
+            "from": "Energy Generator T1",
+            "to": "Wind Turbine"
+        },
+        {
+            "from": "Energy Generator T2",
+            "to": "T1 Solar Panel"
+        },
+        {
+            "from": "Energy Generator T3",
+            "to": "T2 Solar Panel"
+        },
+        {
+            "from": "Energy Generator T4",
+            "to": "T1 Nuclear Reactor"
+        },
+        {
+            "from": "Energy Generator T5",
+            "to": "T2 Nuclear Reactor"
+        },
+        {
+            "from": "Energy Generator T6",
+            "to": "Nuclear Fusion Generator"
+        },
+        {
+            "from": "Equipment Increase T1",
+            "to": "T1 Exoskeleton"
+        },
+        {
+            "from": "Equipment Increase T2",
+            "to": "T2 Exoskeleton"
+        },
+        {
+            "from": "Equipment Increase T3",
+            "to": "T3 Exoskeleton"
+        },
+        {
+            "from": "Equipment Increase T4",
+            "to": "T4 Exoskeleton"
+        },
+        {
+            "from": "Equipment Increase T5",
+            "to": "T5 Exoskeleton"
+        },
+        {
+            "from": "Excercise Bike T1",
+            "to": "Excercise Bike"
+        },
+        {
+            "from": "Bed Simple",
+            "to": "Bed"
+        },
+        {
+            "from": "Ending Explosives",
+            "to": "T2 Explosive"
+        },
+        {
+            "from": "Fabric Blue",
+            "to": "Fabric"
+        },
+        {
+            "from": "Farm T1",
+            "to": "Outdoor Farm"
+        },
+        {
+            "from": "Farm T2",
+            "to": "T2 Outdoor Farm"
+        },
+        {
+            "from": "Faucet T1",
+            "to": "Faucet"
+        },
+        {
+            "from": "Fertilizer T1",
+            "to": "Fertilizer"
+        },
+        {
+            "from": "Fertilizer T2",
+            "to": "T2 Fertilizer"
+        },
+        {
+            "from": "Fertilizer T3",
+            "to": "T3 Fertilizer"
+        },
+        {
+            "from": "Fish Farm T1",
+            "to": "Fish Farm"
+        },
+        {
+            "from": "Fish Farm T2",
+            "to": "T2 Fish Farm"
+        },
+        {
+            "from": "Terra Tokens T100",
+            "to": "Terra Tokens"
+        },
+        {
+            "from": "Tree Root",
+            "to": "Tree bark"
+        }
+    ]
+}

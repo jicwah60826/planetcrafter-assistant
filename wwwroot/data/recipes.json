@@ -26,16 +26,16 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 3000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 3.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
     {
         "name": "Air Purification Machine T1",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -57,7 +57,7 @@
     },
     {
         "name": "Air Purification Machine T2",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -75,7 +75,7 @@
     },
     {
         "name": "Air Purification Machine T3",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -97,7 +97,7 @@
     },
     {
         "name": "Air Purification Machine T4",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -196,9 +196,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 25000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 25.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -222,9 +222,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 80000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 80.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -337,9 +337,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 500000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 500.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -363,9 +363,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 85000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 85.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -389,9 +389,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 2250000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 2250.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -445,9 +445,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 500000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 500.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -553,9 +553,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 42000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 42.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -619,9 +619,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 500000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 500.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -649,7 +649,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 15.0,
+            "unit": "k"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -668,9 +672,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 2500000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 2.5,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -712,7 +716,7 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
+            "stage": "Plants",
             "threshold": 300.0,
             "unit": "units"
         },
@@ -742,9 +746,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 2500.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 2.5,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -790,9 +794,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 5000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 5.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -824,9 +828,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 350000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 350.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -902,9 +906,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 400000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 400.0,
+            "unit": "B"
         },
         "craftedIn": "Quartz Craft Station",
         "recyclerYields": true
@@ -950,9 +954,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 25000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 25.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -1047,9 +1051,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 80000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 80.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -1076,7 +1080,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 145.0,
+            "unit": "M"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -1163,7 +1171,7 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
+            "stage": "Insects",
             "threshold": 865.0,
             "unit": "units"
         },
@@ -1674,9 +1682,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 2000000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 2.0,
+            "unit": "B"
         },
         "craftedIn": "Biolab",
         "recyclerYields": true
@@ -1864,9 +1872,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 8400000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 8.4,
+            "unit": "B"
         },
         "craftedIn": "Biolab",
         "recyclerYields": true
@@ -1899,9 +1907,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 22100000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 22.1,
+            "unit": "B"
         },
         "craftedIn": "Biolab",
         "recyclerYields": true
@@ -2218,9 +2226,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 550000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 550.0,
+            "unit": "M"
         },
         "craftedIn": "Biolab",
         "recyclerYields": true
@@ -2253,9 +2261,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 870000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 870.0,
+            "unit": "M"
         },
         "craftedIn": "Biolab",
         "recyclerYields": true
@@ -2274,7 +2282,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 2.5,
+            "unit": "M"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -2305,9 +2317,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 140000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 140.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -2331,9 +2343,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 3250000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 3.25,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -2360,7 +2372,11 @@
                 "quantity": 2
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 925.0,
+            "unit": "M"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -2488,9 +2504,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 160000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 160.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -2519,8 +2535,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 4000.0,
-            "unit": "units"
+            "threshold": 4.0,
+            "unit": "kg"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -2550,9 +2566,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 50000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 50.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -2617,7 +2633,7 @@
     },
     {
         "name": "Container Toxic T1",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -2932,9 +2948,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 175000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 175.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -3038,7 +3054,7 @@
     },
     {
         "name": "Detoxification Machine T1",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -3064,7 +3080,7 @@
     },
     {
         "name": "Detoxification Machine T2",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -3086,7 +3102,7 @@
     },
     {
         "name": "Detoxification Machine T3",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -3171,8 +3187,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 1200.0,
-            "unit": "units"
+            "threshold": 1.2,
+            "unit": "kg"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -3240,9 +3256,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 23000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 23.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -3336,9 +3352,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 45000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 45.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -3373,7 +3389,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 64.25,
+            "unit": "M"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -3449,9 +3469,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 1000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 1.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -3483,9 +3503,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 17500.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 17.5,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -3510,8 +3530,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 60000.0,
-            "unit": "units"
+            "threshold": 60.0,
+            "unit": "kg"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -3540,8 +3560,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 1500000.0,
-            "unit": "units"
+            "threshold": 1.5,
+            "unit": "t"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -3647,9 +3667,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 1000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 1.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -3677,9 +3697,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 86500000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 86.5,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -3800,7 +3820,11 @@
                 "quantity": 2
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 950.0,
+            "unit": "k"
+        },
         "craftedIn": "Biolab",
         "recyclerYields": true
     },
@@ -3830,7 +3854,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 1.5,
+            "unit": "M"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -3911,9 +3939,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 50000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 50.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4159,9 +4187,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 30000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 30.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4225,9 +4253,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 35000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 35.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4486,9 +4514,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 72500000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 72.5,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4527,8 +4555,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 17000000.0,
-            "unit": "units"
+            "threshold": 17.0,
+            "unit": "t"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4549,8 +4577,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 4000.0,
-            "unit": "units"
+            "threshold": 4.0,
+            "unit": "kg"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4575,8 +4603,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 420000.0,
-            "unit": "nK"
+            "threshold": 420.0,
+            "unit": "mK"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4642,9 +4670,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 680000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 680.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4660,9 +4688,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 60000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 60.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4802,9 +4830,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 10000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 10.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4837,9 +4865,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 10000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 10.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4872,9 +4900,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 100000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 100.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4934,9 +4962,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 450000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 450.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -4996,9 +5024,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 80000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 80.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5030,7 +5058,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 12.0,
+            "unit": "B"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -5243,9 +5275,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 100000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 100.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5430,9 +5462,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 100000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 100.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5482,9 +5514,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 40000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 40.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5531,8 +5563,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 100000000.0,
-            "unit": "units"
+            "threshold": 100.0,
+            "unit": "t"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5560,9 +5592,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 15500000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 15.5,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5606,7 +5638,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 350.0,
+            "unit": "M"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -5637,9 +5673,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 80000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 80.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5675,9 +5711,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 52000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 52.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5868,8 +5904,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 150000.0,
-            "unit": "nK"
+            "threshold": 150.0,
+            "unit": "mK"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5893,9 +5929,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 75000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 75.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5950,8 +5986,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 1850.0,
-            "unit": "nK"
+            "threshold": 1.85,
+            "unit": "mK"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -5980,8 +6016,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 80000.0,
-            "unit": "nK"
+            "threshold": 80.0,
+            "unit": "mK"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -6006,8 +6042,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 63000000.0,
-            "unit": "nK"
+            "threshold": 63.0,
+            "unit": "μK"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -6031,9 +6067,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 8300000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 8.3,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -6132,9 +6168,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 5000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 5.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -6176,9 +6212,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 80000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 80.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -6405,8 +6441,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 1000.0,
-            "unit": "nK"
+            "threshold": 1.0,
+            "unit": "mK"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -6483,9 +6519,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 345000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 345.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -7271,7 +7307,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 50.0,
+            "unit": "M"
+        },
         "craftedIn": "Biolab",
         "recyclerYields": true
     },
@@ -7294,9 +7334,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 122000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 122.0,
+            "unit": "B"
         },
         "craftedIn": "Biolab",
         "recyclerYields": true
@@ -7316,9 +7356,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 142000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 142.0,
+            "unit": "B"
         },
         "craftedIn": "Biolab",
         "recyclerYields": true
@@ -7355,9 +7395,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 70000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 70.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -7433,9 +7473,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 25000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 25.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -7463,9 +7503,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 1000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 1.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -7498,8 +7538,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 155000.0,
-            "unit": "units"
+            "threshold": 155.0,
+            "unit": "kg"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -7524,8 +7564,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 364500000.0,
-            "unit": "units"
+            "threshold": 364.5,
+            "unit": "t"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -7554,8 +7594,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 13330000000.0,
-            "unit": "units"
+            "threshold": 13.33,
+            "unit": "kt"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -7643,7 +7683,7 @@
         "unlockCondition": {
             "stage": "Biomass",
             "threshold": 70.0,
-            "unit": "units"
+            "unit": "g"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -7680,8 +7720,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 5000.0,
-            "unit": "nK"
+            "threshold": 5.0,
+            "unit": "mK"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -7801,9 +7841,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 550000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 550.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -8103,9 +8143,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 250000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 250.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -8327,9 +8367,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 175000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 175.0,
+            "unit": "B"
         },
         "craftedIn": "Quartz Craft Station",
         "recyclerYields": true
@@ -8537,9 +8577,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 70000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 70.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -8571,9 +8611,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 175000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 175.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -8799,9 +8839,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 17700500000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 17.7,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -8963,9 +9003,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 650000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 650.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -9169,9 +9209,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 4150000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 4150.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -9200,9 +9240,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 750000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 750.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -9232,9 +9272,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 36000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 36.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -9375,8 +9415,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 4000.0,
-            "unit": "units"
+            "threshold": 4.0,
+            "unit": "kg"
         },
         "craftedIn": "Build Menu",
         "recyclerYields": true
@@ -9400,9 +9440,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 550000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 550.0,
+            "unit": "M"
         },
         "craftedIn": "Build Menu",
         "recyclerYields": true
@@ -9426,9 +9466,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 4150000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 4150.0,
+            "unit": "B"
         },
         "craftedIn": "Build Menu",
         "recyclerYields": true
@@ -9483,7 +9523,7 @@
     },
     {
         "name": "Screen Toxic T1",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -9792,8 +9832,8 @@
         ],
         "unlockCondition": {
             "stage": "Biomass",
-            "threshold": 2500000.0,
-            "unit": "units"
+            "threshold": 2.5,
+            "unit": "t"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -9817,9 +9857,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 500000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 500.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -9923,7 +9963,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 800.0,
+            "unit": "k"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -10332,9 +10376,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 25000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 25.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -10533,7 +10577,7 @@
     },
     {
         "name": "Toxic Refinement Craft Station T1",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -10591,7 +10635,7 @@
     },
     {
         "name": "Toxic Water Collector T1",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -10609,7 +10653,7 @@
     },
     {
         "name": "Toxic Water Collector T2",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -10631,7 +10675,7 @@
     },
     {
         "name": "Toxic Water Collector T3",
-        "category": "Toxicity",
+        "category": "Rocket",
         "description": "",
         "ingredients": [
             {
@@ -11085,9 +11129,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 1000000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 1000.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -11120,9 +11164,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 1000000000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 1000.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -11247,7 +11291,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 500.0,
+            "unit": "units"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -11278,7 +11326,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 100.0,
+            "unit": "k"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -11309,7 +11361,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 500.0,
+            "unit": "k"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -11340,7 +11396,11 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "stage": "Humidity",
+            "threshold": 1.1,
+            "unit": "M"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -11434,9 +11494,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Humidity",
-            "threshold": 5700000000.0,
-            "unit": "units"
+            "stage": "Animals",
+            "threshold": 5.7,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -11513,9 +11573,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 45000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 45.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -11548,8 +11608,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 600000000.0,
-            "unit": "nK"
+            "threshold": 600.0,
+            "unit": "μK"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -11581,9 +11641,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 41500000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 41.5,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -11694,8 +11754,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 10000.0,
-            "unit": "nK"
+            "threshold": 10.0,
+            "unit": "mK"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -11719,9 +11779,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Animals",
-            "threshold": 35000000.0,
-            "unit": "units"
+            "stage": "Insects",
+            "threshold": 35.0,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -11802,8 +11862,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 30000.0,
-            "unit": "nK"
+            "threshold": 30.0,
+            "unit": "mK"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -11849,9 +11909,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 6500000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 6.5,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -11919,9 +11979,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 17500000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 17.5,
+            "unit": "M"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -12301,7 +12361,7 @@
         "unlockCondition": {
             "stage": "Biomass",
             "threshold": 250.0,
-            "unit": "units"
+            "unit": "g"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -12395,9 +12455,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 30000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 30.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -12425,9 +12485,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 30000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 30.0,
+            "unit": "k"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -12459,9 +12519,9 @@
             }
         ],
         "unlockCondition": {
-            "stage": "Insects",
-            "threshold": 7000000000.0,
-            "unit": "units"
+            "stage": "Plants",
+            "threshold": 7.0,
+            "unit": "B"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
@@ -12486,8 +12546,8 @@
         ],
         "unlockCondition": {
             "stage": "Heat",
-            "threshold": 87000000000.0,
-            "unit": "nK"
+            "threshold": 87.0,
+            "unit": "K"
         },
         "craftedIn": "Crafting Table",
         "recyclerYields": true

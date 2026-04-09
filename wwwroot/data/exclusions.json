@@ -16,6 +16,13 @@
         "*Growable*",
         "*Multiplier*",
         "Warden Austel",
-        "*Wreck*"
+        "*Wreck*",
+        "canister",
+        "Drone Explodable",
+        "Procedural Instance Generator",
+        "Terra Tokens T100",
+        "Terra Tokens T1000",
+        "Terra Tokens T500",
+        "Terra Tokens T5000"
     ]
 }

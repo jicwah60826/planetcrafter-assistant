@@ -46,7 +46,8 @@ EXPORT_ROOT    = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v_2.004_4_6_2026_E
 TEXTURE2D_DIR  = Path(r"D:\PlanetCrafterAssistant\AssetRipper\v_2.004_4_6_2026_ExportedProject\ExportedProject\Assets\Texture2D")
 EXTRACTED_FILE = Path(r"D:\PlanetCrafterAssistant\Tools\extracted_recipes.json")
 RECIPES_JSON   = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\data\recipes.json")
-ICON_OUT_DIR   = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\images\icons")  # matches /images/icons/ in the app
+ICON_OUT_DIR        = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\images\icons")  # matches /images/icons/ in the app
+NAME_OVERRIDES_JSON = Path(r"D:\PlanetCrafterAssistant\App\wwwroot\data\name_overrides.json")
 
 # ---------------------------------------------------------------------------
 # Lookup tables
@@ -314,6 +315,30 @@ def to_clean_recipe(r: dict) -> dict:
     }
 
 
+def load_name_overrides(path: Path) -> dict[str, str]:
+    """
+    Load name_overrides.json -> dict[raw_name, override_name].
+    Returns an empty dict if the file is absent so the script degrades gracefully.
+    This is the single source of truth shared with RecipeService.
+    """
+    if not path.exists():
+        print(f"  NOTE: name_overrides.json not found at {path} -- no overrides applied.")
+        return {}
+
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+
+    overrides = {}
+    for entry in data.get("items", []):
+        raw  = entry.get("from", "").strip()
+        name = entry.get("to",   "").strip()
+        if raw and name:
+            overrides[raw] = name
+
+    print(f"  {len(overrides)} name override(s) loaded from {path.name}.")
+    return overrides
+
+
 # ---------------------------------------------------------------------------
 # Pass 1 – Build GUID -> id map from .meta sidecars
 # ---------------------------------------------------------------------------
@@ -377,6 +402,34 @@ def build_texture_map(texture2d_dir: Path) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Pass 1c – Load name overrides from name_overrides.json
+# ---------------------------------------------------------------------------
+
+def load_name_overrides(path: Path) -> dict[str, str]:
+    """
+    Load name_overrides.json -> dict[raw_name, override_name].
+    Returns an empty dict if the file is absent so the script degrades gracefully.
+    This is the single source of truth shared with RecipeService.
+    """
+    if not path.exists():
+        print(f"  NOTE: name_overrides.json not found at {path} -- no overrides applied.")
+        return {}
+
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+
+    overrides = {}
+    for entry in data.get("items", []):
+        raw  = entry.get("from", "").strip()
+        name = entry.get("to",   "").strip()
+        if raw and name:
+            overrides[raw] = name
+
+    print(f"  {len(overrides)} name override(s) loaded from {path.name}.")
+    return overrides
+
+
+# ---------------------------------------------------------------------------
 # Pass 2 – Find all craftable assets (those containing recipeIngredients)
 # ---------------------------------------------------------------------------
 
@@ -409,7 +462,8 @@ def find_craftable_assets(mono_root: Path) -> list:
 # ---------------------------------------------------------------------------
 
 def extract_recipes(craftable: list, guid_to_id: dict,
-                    stem_to_png: dict, icon_out_dir: Path) -> list:
+                    stem_to_png: dict, icon_out_dir: Path,
+                    name_overrides: dict[str, str]) -> list:
     recipes      = []
     icons_found  = 0
     icons_miss   = 0
@@ -456,12 +510,20 @@ def extract_recipes(craftable: list, guid_to_id: dict,
         png_path   = stem_to_png.get(lookup_key)
 
         if png_path:
-            slug      = display_to_slug(display_name)   # e.g. 'animal_feeder_t1'
+            slug      = display_to_slug(display_name)
             icon_file = f"{slug}.png"
             icons_found += 1
             dest = icon_out_dir / icon_file
             if not dest.exists():
                 shutil.copy2(png_path, dest)
+
+            # If this item has a name override, copy the icon under the override
+            # slug so /images/icons/{override_slug}.png resolves in the app.
+            # Always overwrite -- ensures a re-run picks up newly added overrides.
+            override_name = name_overrides.get(display_name)
+            if override_name:
+                override_slug = display_to_slug(override_name)
+                shutil.copy2(png_path, icon_out_dir / f"{override_slug}.png")
         else:
             icons_miss += 1
             if len(miss_samples) < 10:
@@ -568,20 +630,22 @@ def main():
     parser = argparse.ArgumentParser(
         description="Extract Planet Crafter recipes from AssetRipper export."
     )
-    parser.add_argument("--mono-root",     default=str(MONO_ROOT),      help="Path to MonoBehaviour folder")
-    parser.add_argument("--export-root",   default=str(EXPORT_ROOT),    help="Root of full AssetRipper export")
-    parser.add_argument("--texture2d-dir", default=str(TEXTURE2D_DIR),  help="Path to Texture2D PNG folder")
-    parser.add_argument("--extracted",     default=str(EXTRACTED_FILE), help="Output path for extracted_recipes.json")
-    parser.add_argument("--recipes-json",  default=str(RECIPES_JSON),   help="Project recipes.json to overwrite")
-    parser.add_argument("--icon-out-dir",  default=str(ICON_OUT_DIR),   help="wwwroot/icons folder")
+    parser.add_argument("--mono-root",       default=str(MONO_ROOT),           help="Path to MonoBehaviour folder")
+    parser.add_argument("--export-root",     default=str(EXPORT_ROOT),         help="Root of full AssetRipper export")
+    parser.add_argument("--texture2d-dir",   default=str(TEXTURE2D_DIR),       help="Path to Texture2D PNG folder")
+    parser.add_argument("--extracted",       default=str(EXTRACTED_FILE),      help="Output path for extracted_recipes.json")
+    parser.add_argument("--recipes-json",    default=str(RECIPES_JSON),        help="Project recipes.json to overwrite")
+    parser.add_argument("--icon-out-dir",    default=str(ICON_OUT_DIR),        help="wwwroot/icons folder")
+    parser.add_argument("--name-overrides",  default=str(NAME_OVERRIDES_JSON), help="Path to name_overrides.json")
     args = parser.parse_args()
 
-    mono_root     = Path(args.mono_root)
-    export_root   = Path(args.export_root)
-    texture2d_dir = Path(args.texture2d_dir)
-    extracted     = Path(args.extracted)
-    recipes_json  = Path(args.recipes_json)
-    icon_out_dir  = Path(args.icon_out_dir)
+    mono_root           = Path(args.mono_root)
+    export_root         = Path(args.export_root)
+    texture2d_dir       = Path(args.texture2d_dir)
+    extracted           = Path(args.extracted)
+    recipes_json        = Path(args.recipes_json)
+    icon_out_dir        = Path(args.icon_out_dir)
+    name_overrides_path = Path(args.name_overrides)
 
     # Pass 1
     print(f"Pass 1: Building GUID map from {export_root} ...")
@@ -592,6 +656,10 @@ def main():
     print(f"Pass 1b: Indexing PNGs from {texture2d_dir} ...")
     stem_to_png = build_texture_map(texture2d_dir)
 
+    # Pass 1c
+    print(f"Pass 1c: Loading name overrides from {name_overrides_path} ...")
+    name_overrides = load_name_overrides(name_overrides_path)
+
     # Pass 2
     print(f"Pass 2: Scanning {mono_root} for craftable assets ...")
     craftable = find_craftable_assets(mono_root)
@@ -599,7 +667,7 @@ def main():
 
     # Pass 3
     print(f"Pass 3: Extracting recipes and copying matched icons to {icon_out_dir} ...")
-    recipes = extract_recipes(craftable, guid_to_id, stem_to_png, icon_out_dir)
+    recipes = extract_recipes(craftable, guid_to_id, stem_to_png, icon_out_dir, name_overrides)
 
     # Write extracted_recipes.json (with helper fields for review)
     extracted.parent.mkdir(parents=True, exist_ok=True)
