@@ -85,11 +85,94 @@ EQUIP_TYPE_MAP = {
 
 WORLD_UNIT_MAP = {
     "1": "Heat",    "2": "Pressure", "3": "Oxygen",
-    "4": "Biomass", "5": "Insects",  "6": "Animals", "7": "Humidity",
+    "4": "Biomass", "5": "Plants",   "6": "Insects", "7": "Animals", "8": "Humidity",
 }
-UNIT_LABEL_MAP = {
-    "Heat": "nK", "Pressure": "\u00b5Pa", "Oxygen": "ppm",
+
+# ---------------------------------------------------------------------------
+# Unit conversion: raw game float -> (display_value, display_unit)
+# The game stores all values in base units. We scale to a human-readable
+# range and pick the appropriate SI prefix / label.
+# ---------------------------------------------------------------------------
+
+def _pick_scale(value: float, tiers: list[tuple[float, str]]) -> tuple[float, str]:
+    """
+    Walk tiers largest-first and return (scaled_value, unit_label) for the
+    first tier whose divisor is <= value.  Falls back to the smallest tier.
+    """
+    for divisor, label in tiers:
+        if value >= divisor:
+            return value / divisor, label
+    return value / tiers[-1][0], tiers[-1][1]
+
+
+# Each stage maps to an ordered list of (divisor, unit_label) from largest to smallest.
+STAGE_UNIT_TIERS: dict[str, list[tuple[float, str]]] = {
+    # Heat: stored in nK
+    "Heat": [
+        (1_000_000_000.0, "K"),
+        (1_000_000.0,     "\u03bcK"),   # μK
+        (1_000.0,         "mK"),
+        (1.0,             "nK"),
+    ],
+    # Pressure: stored in μPa
+    "Pressure": [
+        (1_000_000.0, "Pa"),
+        (1_000.0,     "mPa"),
+        (1.0,         "\u03bcPa"),      # μPa
+    ],
+    # Oxygen: stored in ppm (no conversion needed; keep as ppm)
+    "Oxygen": [
+        (1.0, "ppm"),
+    ],
+    # Biomass: stored in grams
+    "Biomass": [
+        (1_000_000_000.0, "kt"),
+        (1_000_000.0,     "t"),
+        (1_000.0,         "kg"),
+        (1.0,             "g"),
+    ],
+    # Plants / Insects / Animals / Humidity: raw counts
+    "Plants":   [
+        (1_000_000_000.0, "B"),
+        (1_000_000.0,     "M"),
+        (1_000.0,         "k"),
+        (1.0,             "units"),
+    ],
+    "Insects":  [
+        (1_000_000_000.0, "B"),
+        (1_000_000.0,     "M"),
+        (1_000.0,         "k"),
+        (1.0,             "units"),
+    ],
+    "Animals":  [
+        (1_000_000_000.0, "B"),
+        (1_000_000.0,     "M"),
+        (1_000.0,         "k"),
+        (1.0,             "units"),
+    ],
+    "Humidity": [
+        (1_000_000_000.0, "B"),
+        (1_000_000.0,     "M"),
+        (1_000.0,         "k"),
+        (1.0,             "units"),
+    ],
 }
+
+
+def convert_unlock_value(stage: str, raw_value: float) -> tuple[float, str]:
+    """
+    Convert a raw game unlock value to a (display_threshold, unit) pair.
+    Returns (raw_value, 'units') for any unknown stage.
+    """
+    tiers = STAGE_UNIT_TIERS.get(stage)
+    if not tiers:
+        return raw_value, "units"
+    display_val, unit = _pick_scale(raw_value, tiers)
+    # Round to 2 decimal places; strip trailing zeros so '2.00' stays '2.00'
+    # but '500.00k' doesn't become '500.0000k'.
+    display_val = round(display_val, 2)
+    return display_val, unit
+
 
 # ---------------------------------------------------------------------------
 # Craft station detection
@@ -422,10 +505,11 @@ def extract_recipes(craftable: list, guid_to_id: dict,
 
         unlock_condition = None
         if stage and world_value > 0:
+            display_threshold, display_unit = convert_unlock_value(stage, world_value)
             unlock_condition = {
                 "stage":     stage,
-                "threshold": world_value,
-                "unit":      UNIT_LABEL_MAP.get(stage, "units"),
+                "threshold": display_threshold,
+                "unit":      display_unit,
             }
 
         # --- Craft station ---

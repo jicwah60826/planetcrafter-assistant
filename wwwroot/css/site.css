@@ -225,7 +225,7 @@ main {
     background: #141e2e;
     border: 1px solid #1e2e44;
     color: #d8e8f0;
-    padding: 6px 32px 6px 12px;
+    padding: 6px 40px 6px 12px;
     border-radius: 4px;
     width: 220px;
     font-size: 13px;
@@ -243,14 +243,19 @@ main {
 .search-clear {
     display: none;
     position: absolute;
-    right: 8px;
+    right: 4px;
     background: none;
     border: none;
     color: #6a8aaa;
-    font-size: 13px;
+    font-size: 16px;
     cursor: pointer;
-    padding: 0;
+    padding: 0 6px;
+    min-width: 36px;
+    min-height: 36px;
     line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
     transition: color 0.15s;
 }
 
