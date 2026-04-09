@@ -35,7 +35,7 @@
     },
     {
         "name": "Air Purification Machine T1",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -57,7 +57,7 @@
     },
     {
         "name": "Air Purification Machine T2",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -75,7 +75,7 @@
     },
     {
         "name": "Air Purification Machine T3",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -97,7 +97,7 @@
     },
     {
         "name": "Air Purification Machine T4",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -2617,7 +2617,7 @@
     },
     {
         "name": "Container Toxic T1",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -3038,7 +3038,7 @@
     },
     {
         "name": "Detoxification Machine T1",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -3064,7 +3064,7 @@
     },
     {
         "name": "Detoxification Machine T2",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -3086,7 +3086,7 @@
     },
     {
         "name": "Detoxification Machine T3",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -9483,7 +9483,7 @@
     },
     {
         "name": "Screen Toxic T1",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -10533,7 +10533,7 @@
     },
     {
         "name": "Toxic Refinement Craft Station T1",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -10591,7 +10591,7 @@
     },
     {
         "name": "Toxic Water Collector T1",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -10609,7 +10609,7 @@
     },
     {
         "name": "Toxic Water Collector T2",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
@@ -10631,7 +10631,7 @@
     },
     {
         "name": "Toxic Water Collector T3",
-        "category": "Rocket",
+        "category": "Toxicity",
         "description": "",
         "ingredients": [
             {
