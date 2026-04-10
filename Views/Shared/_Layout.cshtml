@@ -192,10 +192,21 @@
             }
         }
 
+        function clearCart() {
+            cart = [];
+            saveCart();
+            updateCartBadge();
+            syncCartButtons();
+            renderCartPanel();
+        }
+
         function updateCartBadge() {
             var total = cart.reduce(function (sum, e) { return sum + e.qty; }, 0);
             var badge = document.getElementById('cartBadge');
-            if (badge) badge.textContent = total;
+            if (badge) {
+                badge.textContent = total;
+                badge.style.display = total > 0 ? 'block' : 'none';
+            }
         }
 
         function syncCartButtons() {
@@ -208,21 +219,64 @@
         function renderCartPanel() {
             var body = document.getElementById('cartPanelBody');
             if (!body) return;
+
             if (cart.length === 0) {
                 body.innerHTML = '<p class="cart-empty-msg">Your cart is empty.<br />Add craftable items using the <img src="/images/Cart.png" alt="cart" style="width:13px;height:13px;object-fit:contain;vertical-align:middle;" /> button.</p>';
                 return;
             }
-            body.innerHTML = cart.map(function (e) {
-                return '<div class="cart-item">' +
+
+            // ── Section 1: Queued items ──
+            var itemsHtml = cart.map(function (e) {
+                var slug = e.name.toLowerCase().replace(/ /g, '_');
+                var safeName = e.name.replace(/'/g, "\\'");
+                return '<div class="cart-item-row">' +
+                    '<img class="cart-item-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
                     '<span class="cart-item-name">' + e.name + '</span>' +
-                    '<div class="cart-item-controls">' +
-                    '<button onclick="setCartQty(\'' + e.name.replace(/'/g, "\\'") + '\', ' + (e.qty - 1) + ')">−</button>' +
-                    '<span class="cart-item-qty">' + e.qty + '</span>' +
-                    '<button onclick="setCartQty(\'' + e.name.replace(/'/g, "\\'") + '\', ' + (e.qty + 1) + ')">+</button>' +
-                    '<button class="cart-item-remove" onclick="removeFromCart(\'' + e.name.replace(/'/g, "\\'") + '\')">✕</button>' +
+                    '<div class="cart-qty-controls">' +
+                    '<button class="cart-qty-btn" onclick="setCartQty(\'' + safeName + '\', ' + (e.qty - 1) + ')">−</button>' +
+                    '<span class="cart-qty-value">' + e.qty + '</span>' +
+                    '<button class="cart-qty-btn" onclick="setCartQty(\'' + safeName + '\', ' + (e.qty + 1) + ')">+</button>' +
                     '</div>' +
+                    '<button class="cart-item-remove" onclick="removeFromCart(\'' + safeName + '\')" title="Remove">✕</button>' +
                     '</div>';
             }).join('');
+
+            // ── Section 2: Aggregated raw materials to gather ──
+            var gatherMap = {};
+            cart.forEach(function (e) {
+                var recipe = (typeof allRecipes !== 'undefined')
+                    ? allRecipes.find(function (r) { return r.name === e.name; })
+                    : null;
+                if (recipe && recipe.ingredients && recipe.ingredients.length > 0) {
+                    recipe.ingredients.forEach(function (ing) {
+                        gatherMap[ing.name] = (gatherMap[ing.name] || 0) + (ing.quantity * e.qty);
+                    });
+                }
+            });
+
+            var gatherEntries = Object.keys(gatherMap);
+            var gatherHtml = '';
+            if (gatherEntries.length > 0) {
+                gatherHtml = '<div class="cart-section">' +
+                    '<div class="cart-section-title cart-section-title--gather">Materials to Gather</div>' +
+                    gatherEntries.map(function (matName) {
+                        var slug = matName.toLowerCase().replace(/ /g, '_');
+                        return '<div class="gather-row">' +
+                            '<img class="gather-row-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
+                            '<span class="gather-row-name">' + matName + '</span>' +
+                            '<span class="gather-row-qty">x' + gatherMap[matName] + '</span>' +
+                            '</div>';
+                    }).join('') +
+                    '</div>';
+            }
+
+            body.innerHTML =
+                '<div class="cart-section">' +
+                '<div class="cart-section-title">Items to Craft</div>' +
+                itemsHtml +
+                '</div>' +
+                gatherHtml +
+                '<button class="cart-clear-btn" onclick="clearCart()">✕ Clear Cart</button>';
         }
 
         // Initialise badge and button states on page load

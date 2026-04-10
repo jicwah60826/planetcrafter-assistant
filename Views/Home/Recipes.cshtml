@@ -177,7 +177,7 @@
             r.ingredients && r.ingredients.some(i => i.name === name)
         );
 
-        const inCart = cart.includes(name);
+        const inCart = isInCart(name);
         const isCraftable = recipe.ingredients && recipe.ingredients.length > 0;
         const cartBtnHtml = isCraftable
             ? `<button class="add-to-cart-btn ${inCart ? 'in-cart' : ''}"
@@ -268,7 +268,7 @@
 
     // Toggle cart membership from any button
     function toggleCart(name) {
-        if (cart.includes(name)) {
+        if (isInCart(name)) {
             removeFromCart(name);
         } else {
             addToCart(name);
