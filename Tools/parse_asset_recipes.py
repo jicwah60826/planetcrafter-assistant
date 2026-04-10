@@ -569,6 +569,7 @@ def extract_recipes(craftable: list, guid_to_id: dict,
         if stage and world_value > 0:
             display_threshold, display_unit = convert_unlock_value(stage, world_value)
             unlock_condition = {
+                "type":      "terraformation",
                 "stage":     stage,
                 "threshold": display_threshold,
                 "unit":      display_unit,

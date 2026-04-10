@@ -97,21 +97,53 @@
         'Animals':  '🐾'
     };
 
-    function getUnlockHtml(unlockCondition) {
-        if (!unlockCondition) {
+    function getUnlockHtml(uc) {
+        if (!uc || uc.type === 'always') {
             return `<div class="pane-unlock pane-unlock--always">
                         <span class="pane-unlock-icon">🔓</span>
                         <span>Available from the start</span>
                     </div>`;
         }
-        const icon = stageIcons[unlockCondition.stage] || '🔒';
-        return `<div class="pane-unlock">
-                    <span class="pane-unlock-icon">${icon}</span>
-                    <span>
-                        Unlocks when <strong>${unlockCondition.stage}</strong>
-                        reaches <strong>${unlockCondition.threshold} ${unlockCondition.unit}</strong>
-                    </span>
-                </div>`;
+
+        const typeMap = {
+            terraformation: () => {
+                const icon = stageIcons[uc.stage] || '🌍';
+                return `<div class="pane-unlock pane-unlock--terra">
+                            <span class="pane-unlock-icon">${icon}</span>
+                            <span>Unlocks when <strong>${uc.stage}</strong>
+                            reaches <strong>${uc.threshold} ${uc.unit}</strong></span>
+                        </div>`;
+            },
+            blueprint: () =>
+                `<div class="pane-unlock pane-unlock--blueprint">
+                     <span class="pane-unlock-icon">📋</span>
+                     <span>Found via <strong>Blueprint Chip</strong>
+                     ${uc.blueprintSource ? `<br><span class="pane-unlock-sub">${uc.blueprintSource}</span>` : ''}
+                     </span>
+                 </div>`,
+            trade: () =>
+                `<div class="pane-unlock pane-unlock--trade">
+                     <span class="pane-unlock-icon">🏪</span>
+                     <span>Purchased from the <strong>Trade Platform</strong>
+                     ${uc.tradeCost ? `<br><span class="pane-unlock-sub">Cost: ${uc.tradeCost}</span>` : ''}
+                     </span>
+                 </div>`,
+            story: () =>
+                `<div class="pane-unlock pane-unlock--story">
+                     <span class="pane-unlock-icon">📖</span>
+                     <span>Unlocked via <strong>Story Progression</strong>
+                     ${uc.storyEvent ? `<br><span class="pane-unlock-sub">${uc.storyEvent}</span>` : ''}
+                     </span>
+                 </div>`,
+        };
+
+        const renderer = typeMap[uc.type];
+        return renderer
+            ? renderer()
+            : `<div class="pane-unlock">
+                   <span class="pane-unlock-icon">🔒</span>
+                   <span>${uc.type}</span>
+               </div>`;
     }
 
     function getCraftedInHtml(craftedIn, recyclerYields) {

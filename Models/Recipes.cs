@@ -35,32 +35,71 @@
     }
 
     /// <summary>
-    /// Describes the terraforming threshold required to unlock a blueprint.
-    /// e.g. Stage = "Heat", Threshold = 100.00, Unit = "nK"
+    /// Base unlock condition. Use the <c>type</c> discriminator field to determine
+    /// which subclass properties apply.
+    /// Supported types: "terraformation", "blueprint", "trade", "always", "story"
     /// </summary>
     public class UnlockCondition
     {
         /// <summary>
+        /// Discriminator. One of: "terraformation", "blueprint", "trade", "always", "story"
+        /// </summary>
+        public string Type { get; set; } = "terraformation";
+
+        // ── Terraformation fields ──────────────────────────────────────────────
+        /// <summary>
         /// The terraforming index that must be reached.
         /// e.g. "Heat", "Pressure", "Oxygen", "Biomass", "Plants", "Insects", "Animals"
+        /// Only used when Type = "terraformation".
         /// </summary>
-        public string Stage { get; set; }
+        public string? Stage { get; set; }
 
         /// <summary>
         /// The numeric value that must be reached.
+        /// Only used when Type = "terraformation".
         /// </summary>
-        public double Threshold { get; set; }
+        public double? Threshold { get; set; }
 
         /// <summary>
-        /// The display unit for the threshold value.
-        /// e.g. "nK", "µPa", "ppm", "g"
+        /// The display unit for the threshold value. e.g. "nK", "µPa", "ppm", "g"
+        /// Only used when Type = "terraformation".
         /// </summary>
-        public string Unit { get; set; }
+        public string? Unit { get; set; }
 
+        // ── Blueprint fields ───────────────────────────────────────────────────
         /// <summary>
-        /// Returns a human-readable unlock string.
-        /// e.g. "Heat ≥ 100.00 nK"
+        /// Optional label for where the chip is found or obtained.
+        /// e.g. "Crashed Ship — Sector 7", "Wrecked Rover — North Cave"
+        /// Only used when Type = "blueprint".
         /// </summary>
-        public override string ToString() => $"{Stage} ≥ {Threshold:0.##} {Unit}";
+        public string? BlueprintSource { get; set; }
+
+        // ── Trade Platform fields ──────────────────────────────────────────────
+        /// <summary>
+        /// The trade cost to unlock via the Trade Platform, if applicable.
+        /// Only used when Type = "trade".
+        /// </summary>
+        public string? TradeCost { get; set; }
+
+        // ── Story fields ───────────────────────────────────────────────────────
+        /// <summary>
+        /// A short label describing the story event that grants the unlock.
+        /// Only used when Type = "story".
+        /// </summary>
+        public string? StoryEvent { get; set; }
+
+        public override string ToString() =>
+            Type switch
+            {
+                "terraformation" => $"{Stage} ≥ {Threshold:0.##} {Unit}",
+                "blueprint"
+                    => BlueprintSource != null
+                        ? $"Blueprint Chip ({BlueprintSource})"
+                        : "Blueprint Chip",
+                "trade" => TradeCost != null ? $"Trade Platform — {TradeCost}" : "Trade Platform",
+                "story" => StoryEvent != null ? $"Story: {StoryEvent}" : "Story Progression",
+                "always" => "Available from the start",
+                _ => "Unknown"
+            };
     }
 }

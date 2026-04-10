@@ -26,6 +26,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 3.0,
             "unit": "B"
@@ -162,6 +163,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 2000000.0,
             "unit": "ppm"
@@ -196,6 +198,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 25.0,
             "unit": "k"
@@ -222,6 +225,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 80.0,
             "unit": "M"
@@ -337,6 +341,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 500.0,
             "unit": "k"
@@ -363,6 +368,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 85.0,
             "unit": "B"
@@ -389,6 +395,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 2250.0,
             "unit": "B"
@@ -445,6 +452,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 500.0,
             "unit": "k"
@@ -553,6 +561,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 42.0,
             "unit": "B"
@@ -619,6 +628,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 500.0,
             "unit": "M"
@@ -650,6 +660,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 15.0,
             "unit": "k"
@@ -672,6 +683,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 2.5,
             "unit": "B"
@@ -716,6 +728,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 300.0,
             "unit": "units"
@@ -746,6 +759,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 2.5,
             "unit": "k"
@@ -794,6 +808,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 5.0,
             "unit": "M"
@@ -828,6 +843,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 350.0,
             "unit": "B"
@@ -906,6 +922,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 400.0,
             "unit": "B"
@@ -932,6 +949,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 5000.0,
             "unit": "ppm"
@@ -954,6 +972,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 25.0,
             "unit": "k"
@@ -1051,6 +1070,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 80.0,
             "unit": "M"
@@ -1081,6 +1101,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 145.0,
             "unit": "M"
@@ -1115,6 +1136,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 100000.0,
             "unit": "ppm"
@@ -1145,6 +1167,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 12000000.0,
             "unit": "ppm"
@@ -1171,6 +1194,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 865.0,
             "unit": "units"
@@ -1682,6 +1706,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 2.0,
             "unit": "B"
@@ -1872,6 +1897,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 8.4,
             "unit": "B"
@@ -1907,6 +1933,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 22.1,
             "unit": "B"
@@ -2226,6 +2253,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 550.0,
             "unit": "M"
@@ -2261,6 +2289,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 870.0,
             "unit": "M"
@@ -2283,6 +2312,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 2.5,
             "unit": "M"
@@ -2317,6 +2347,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 140.0,
             "unit": "M"
@@ -2343,6 +2374,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 3.25,
             "unit": "B"
@@ -2373,6 +2405,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 925.0,
             "unit": "M"
@@ -2504,6 +2537,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 160.0,
             "unit": "B"
@@ -2534,6 +2568,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 4.0,
             "unit": "kg"
@@ -2566,6 +2601,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 50.0,
             "unit": "k"
@@ -2948,6 +2984,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 175.0,
             "unit": "k"
@@ -3186,6 +3223,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 1.2,
             "unit": "kg"
@@ -3212,6 +3250,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 21000.0,
             "unit": "ppm"
@@ -3234,6 +3273,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 41000000.0,
             "unit": "ppm"
@@ -3256,6 +3296,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 23.0,
             "unit": "B"
@@ -3307,7 +3348,10 @@
                 "quantity": 1
             }
         ],
-        "unlockCondition": null,
+        "unlockCondition": {
+            "type": "trade",
+            "tradeCost": "12,000 Terra Tokens"
+        },
         "craftedIn": "Crafting Table",
         "recyclerYields": true
     },
@@ -3352,6 +3396,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 45.0,
             "unit": "B"
@@ -3390,6 +3435,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 64.25,
             "unit": "M"
@@ -3469,6 +3515,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 1.0,
             "unit": "k"
@@ -3503,6 +3550,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 17.5,
             "unit": "k"
@@ -3529,6 +3577,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 60.0,
             "unit": "kg"
@@ -3559,6 +3608,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 1.5,
             "unit": "t"
@@ -3581,6 +3631,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 750000000.0,
             "unit": "ppm"
@@ -3637,6 +3688,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 10000.0,
             "unit": "ppm"
@@ -3667,6 +3719,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 1.0,
             "unit": "B"
@@ -3697,6 +3750,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 86.5,
             "unit": "B"
@@ -3821,6 +3875,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 950.0,
             "unit": "k"
@@ -3855,6 +3910,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 1.5,
             "unit": "M"
@@ -3939,6 +3995,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 50.0,
             "unit": "k"
@@ -4187,6 +4244,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 30.0,
             "unit": "B"
@@ -4253,6 +4311,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 35.0,
             "unit": "B"
@@ -4514,6 +4573,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 72.5,
             "unit": "B"
@@ -4554,6 +4614,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 17.0,
             "unit": "t"
@@ -4576,6 +4637,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 4.0,
             "unit": "kg"
@@ -4602,6 +4664,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 420.0,
             "unit": "mK"
@@ -4670,6 +4733,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 680.0,
             "unit": "k"
@@ -4688,6 +4752,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 60.0,
             "unit": "M"
@@ -4830,6 +4895,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 10.0,
             "unit": "B"
@@ -4865,6 +4931,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 10.0,
             "unit": "B"
@@ -4900,6 +4967,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 100.0,
             "unit": "B"
@@ -4962,6 +5030,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 450.0,
             "unit": "B"
@@ -5024,6 +5093,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 80.0,
             "unit": "B"
@@ -5059,6 +5129,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 12.0,
             "unit": "B"
@@ -5275,6 +5346,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 100.0,
             "unit": "M"
@@ -5462,6 +5534,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 100.0,
             "unit": "M"
@@ -5514,6 +5587,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 40.0,
             "unit": "B"
@@ -5562,6 +5636,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 100.0,
             "unit": "t"
@@ -5592,6 +5667,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 15.5,
             "unit": "B"
@@ -5639,6 +5715,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 350.0,
             "unit": "M"
@@ -5673,6 +5750,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 80.0,
             "unit": "k"
@@ -5711,6 +5789,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 52.0,
             "unit": "B"
@@ -5903,6 +5982,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 150.0,
             "unit": "mK"
@@ -5929,6 +6009,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 75.0,
             "unit": "B"
@@ -5985,6 +6066,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 1.85,
             "unit": "mK"
@@ -6015,6 +6097,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 80.0,
             "unit": "mK"
@@ -6041,6 +6124,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 63.0,
             "unit": "μK"
@@ -6067,6 +6151,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 8.3,
             "unit": "B"
@@ -6168,6 +6253,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 5.0,
             "unit": "B"
@@ -6212,6 +6298,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 80.0,
             "unit": "M"
@@ -6440,6 +6527,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 1.0,
             "unit": "mK"
@@ -6519,6 +6607,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 345.0,
             "unit": "k"
@@ -7308,6 +7397,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 50.0,
             "unit": "M"
@@ -7334,6 +7424,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 122.0,
             "unit": "B"
@@ -7356,6 +7447,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 142.0,
             "unit": "B"
@@ -7395,6 +7487,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 70.0,
             "unit": "M"
@@ -7421,6 +7514,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 1850000000.0,
             "unit": "ppm"
@@ -7473,6 +7567,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 25.0,
             "unit": "k"
@@ -7503,6 +7598,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 1.0,
             "unit": "M"
@@ -7537,6 +7633,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 155.0,
             "unit": "kg"
@@ -7563,6 +7660,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 364.5,
             "unit": "t"
@@ -7593,6 +7691,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 13.33,
             "unit": "kt"
@@ -7681,6 +7780,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 70.0,
             "unit": "g"
@@ -7719,6 +7819,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 5.0,
             "unit": "mK"
@@ -7841,6 +7942,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 550.0,
             "unit": "k"
@@ -8143,6 +8245,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 250.0,
             "unit": "B"
@@ -8367,6 +8470,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 175.0,
             "unit": "B"
@@ -8577,6 +8681,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 70.0,
             "unit": "B"
@@ -8611,6 +8716,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 175.0,
             "unit": "k"
@@ -8839,6 +8945,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 17.7,
             "unit": "B"
@@ -9003,6 +9110,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 650.0,
             "unit": "M"
@@ -9209,6 +9317,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 4150.0,
             "unit": "B"
@@ -9240,6 +9349,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 750.0,
             "unit": "M"
@@ -9272,6 +9382,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 36.0,
             "unit": "B"
@@ -9414,6 +9525,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 4.0,
             "unit": "kg"
@@ -9440,6 +9552,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 550.0,
             "unit": "M"
@@ -9466,6 +9579,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 4150.0,
             "unit": "B"
@@ -9514,6 +9628,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 2000.0,
             "unit": "ppm"
@@ -9831,6 +9946,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 2.5,
             "unit": "t"
@@ -9857,6 +9973,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 500.0,
             "unit": "k"
@@ -9925,6 +10042,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 500000.0,
             "unit": "ppm"
@@ -9964,6 +10082,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 800.0,
             "unit": "k"
@@ -10376,6 +10495,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 25.0,
             "unit": "B"
@@ -11129,6 +11249,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 1000.0,
             "unit": "B"
@@ -11164,6 +11285,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 1000.0,
             "unit": "B"
@@ -11292,6 +11414,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 500.0,
             "unit": "units"
@@ -11327,6 +11450,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 100.0,
             "unit": "k"
@@ -11362,6 +11486,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 500.0,
             "unit": "k"
@@ -11397,6 +11522,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Humidity",
             "threshold": 1.1,
             "unit": "M"
@@ -11494,6 +11620,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Animals",
             "threshold": 5.7,
             "unit": "B"
@@ -11573,6 +11700,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 45.0,
             "unit": "M"
@@ -11607,6 +11735,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 600.0,
             "unit": "μK"
@@ -11641,6 +11770,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 41.5,
             "unit": "B"
@@ -11753,6 +11883,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 10.0,
             "unit": "mK"
@@ -11779,6 +11910,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Insects",
             "threshold": 35.0,
             "unit": "M"
@@ -11831,6 +11963,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Oxygen",
             "threshold": 500.0,
             "unit": "ppm"
@@ -11861,6 +11994,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 30.0,
             "unit": "mK"
@@ -11909,6 +12043,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 6.5,
             "unit": "M"
@@ -11979,6 +12114,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 17.5,
             "unit": "M"
@@ -12359,6 +12495,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Biomass",
             "threshold": 250.0,
             "unit": "g"
@@ -12455,6 +12592,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 30.0,
             "unit": "k"
@@ -12485,6 +12623,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 30.0,
             "unit": "k"
@@ -12519,6 +12658,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Plants",
             "threshold": 7.0,
             "unit": "B"
@@ -12545,6 +12685,7 @@
             }
         ],
         "unlockCondition": {
+            "type": "terraformation",
             "stage": "Heat",
             "threshold": 87.0,
             "unit": "K"
