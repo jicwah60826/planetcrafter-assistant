@@ -564,6 +564,13 @@ main {
     flex-shrink: 0;
 }
 
+.pane-unlock-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
 .pane-unlock strong {
     color: #d8e8f0;
 }

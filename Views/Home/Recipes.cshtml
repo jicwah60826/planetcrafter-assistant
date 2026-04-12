@@ -97,6 +97,14 @@
         'Animals':  '🐾'
     };
 
+    function getUnlockIconHtml(imgFile, fallbackEmoji) {
+        return `<img src="/images/${imgFile}"
+                     alt="${fallbackEmoji}"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"
+                     class="pane-unlock-icon-img" />
+                <span style="display:none">${fallbackEmoji}</span>`;
+    }
+
     function getUnlockHtml(uc) {
         if (!uc || uc.type === 'always') {
             return `<div class="pane-unlock pane-unlock--always">
@@ -116,14 +124,14 @@
             },
             blueprint: () =>
                 `<div class="pane-unlock pane-unlock--blueprint">
-                     <span class="pane-unlock-icon">📋</span>
+                     <span class="pane-unlock-icon">${getUnlockIconHtml('blueprint_t_t1.png', '📋')}</span>
                      <span>Found via <strong>Blueprint Chip</strong>
                      ${uc.blueprintSource ? `<br><span class="pane-unlock-sub">${uc.blueprintSource}</span>` : ''}
                      </span>
                  </div>`,
             trade: () =>
                 `<div class="pane-unlock pane-unlock--trade">
-                     <span class="pane-unlock-icon">🏪</span>
+                     <span class="pane-unlock-icon">${getUnlockIconHtml('tradePlatform.png', '🏪')}</span>
                      <span>Purchased from the <strong>Trade Platform</strong>
                      ${uc.tradeCost ? `<br><span class="pane-unlock-sub">Cost: ${uc.tradeCost}</span>` : ''}
                      </span>
