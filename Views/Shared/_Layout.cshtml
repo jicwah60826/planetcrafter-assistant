@@ -6,6 +6,13 @@
     <title>@ViewData["Title"] - Planet Crafter Assistant</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PlanetCrafterAssistant.styles.css" asp-append-version="true" />
+
+    <!-- PWA / iOS home screen support -->
+    <link rel="manifest" href="~/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="PC Assistant" />
+    <link rel="apple-touch-icon" href="~/images/icons/apple-touch-icon.png" />
 </head>
 <body data-show-home="@(ViewData["ShowHomeIcon"] != null ? "true" : "false")">
 
@@ -284,5 +291,12 @@
         syncCartButtons();
     </script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- PWA service worker registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
 </body>
 </html>
