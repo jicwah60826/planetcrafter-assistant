@@ -8,10 +8,10 @@
     var categories = ViewBag.Categories as List<string> ?? new List<string>();
 }
 
-<div class="app-layout">
+<div class="recipes-root">
 
-    <!-- LEFT: Card grid -->
-    <div class="panel-left">
+    <!-- ── VIEW: Item list ─────────────────────────── -->
+    <div class="view-layer" id="viewList">
         <div class="filter-tabs">
             <button class="tab active" data-filter="all">All Items</button>
             @foreach (var cat in categories)
@@ -27,7 +27,7 @@
                      data-name="@recipe.Name"
                      data-category="@recipe.Category"
                      data-raw="@(recipe.Ingredients.Count == 0 ? "true" : "false")"
-                     onclick="selectItem('@recipe.Name')">
+                     onclick="selectItem('@recipe.Name.Replace("'", "\\'")')">
                     <div class="card-icon">
                         <img src="/images/icons/@(recipe.IconSlug).png"
                              alt="@recipe.Name"
@@ -44,7 +44,7 @@
                         <button class="add-to-cart-btn"
                                 data-item="@recipe.Name"
                                 title="Add to cart"
-                                onclick="event.stopPropagation(); toggleCart('@recipe.Name')">
+                                onclick="event.stopPropagation(); toggleCart('@recipe.Name.Replace("'", "\\'")')">
                             <img src="/images/Cart.png" alt="" aria-hidden="true" style="width:14px;height:14px;object-fit:contain;" />
                         </button>
                     }
@@ -54,37 +54,39 @@
         </div>
     </div>
 
-    <!-- RIGHT: Details pane -->
-    <div class="panel-right" id="detailsPane">
-        <div class="details-placeholder">
-            <p>Select an item to view details</p>
+    <!-- ── VIEW: Item detail ───────────────────────── -->
+    <div class="view-layer view-layer--detail" id="viewDetail" aria-label="Item details">
+        <!-- Sticky breadcrumb -->
+        <div class="detail-breadcrumb" id="detailBreadcrumb"></div>
+        <!-- Scroll container that holds the animating content slots -->
+        <div class="detail-scroll" id="detailScroll">
+            <div class="detail-slot" id="detailSlotA"></div>
+            <div class="detail-slot" id="detailSlotB"></div>
         </div>
     </div>
+
 </div>
 
 @section Scripts {
 <script>
     const allRecipes = @Html.Raw(allRecipesJson);
 
-    // Navigation history stack
-    let navHistory = [];
+    // ── Navigation state ─────────────────────────────────────
+    let navStack   = [];
+    let detailOpen = false;
+    let activeSlot = 'A';
 
-    function isMobile() { return window.innerWidth <= 600; }
-
-    function closeMobilePane() {
-        const pane = document.getElementById('detailsPane');
-        pane.classList.remove('mobile-open');
-        document.querySelectorAll('.item-card').forEach(c => c.classList.remove('active'));
-        navHistory = [];
-    }
+    // ── Helpers ──────────────────────────────────────────────
+    function getSlot(id)   { return document.getElementById('detailSlot' + id); }
+    function otherSlot(id) { return id === 'A' ? 'B' : 'A'; }
 
     function getIconHtml(name) {
         const slug = name.toLowerCase().replace(/ /g, '_');
         return `<img src="/images/icons/${slug}.png"
                      alt="${name}"
                      onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"
-                     style="width:48px;height:48px;object-fit:contain" />
-                <span style="display:none;font-size:2rem">⚙</span>`;
+                     style="width:60px;height:60px;object-fit:contain" />
+                <span style="display:none;font-size:2.5rem">⚙</span>`;
     }
 
     const stageIcons = {
@@ -112,7 +114,6 @@
                         <span>Available from the start</span>
                     </div>`;
         }
-
         const typeMap = {
             terraformation: () => {
                 const icon = stageIcons[uc.stage] || '🌍';
@@ -144,14 +145,10 @@
                      </span>
                  </div>`,
         };
-
         const renderer = typeMap[uc.type];
         return renderer
             ? renderer()
-            : `<div class="pane-unlock">
-                   <span class="pane-unlock-icon">🔒</span>
-                   <span>${uc.type}</span>
-               </div>`;
+            : `<div class="pane-unlock"><span class="pane-unlock-icon">🔒</span><span>${uc.type}</span></div>`;
     }
 
     function getCraftedInHtml(craftedIn, recyclerYields) {
@@ -170,88 +167,39 @@
                 </div>`;
     }
 
-    function getBreadcrumbHtml() {
-        if (navHistory.length === 0) return '';
-
-        const MAX_VISIBLE = 5;
-        let visibleCrumbs = navHistory;
-        let collapsedHtml = '';
-
-        if (navHistory.length > MAX_VISIBLE) {
-            visibleCrumbs = navHistory.slice(-MAX_VISIBLE);
-            const hiddenCount = navHistory.length - MAX_VISIBLE;
-            collapsedHtml = `<span class="breadcrumb-collapsed" title="${hiddenCount} earlier steps hidden">…</span>
-                             <span class="breadcrumb-sep">›</span>`;
-        }
-
-        const startIndex = navHistory.length - visibleCrumbs.length;
-        const crumbs = visibleCrumbs.map((name, i) =>
-            `<button class="breadcrumb-item"
-                     onclick="navigateBack(${startIndex + i})"
-                     title="${name}">${name}</button>
-             <span class="breadcrumb-sep">›</span>`
-        ).join('');
-
-        return `<div class="breadcrumb-trail">${collapsedHtml}${crumbs}</div>`;
-    }
-
-    function navigateBack(index) {
-        const targetName = navHistory[index];
-        navHistory = navHistory.slice(0, index);
-        renderItem(targetName);
-    }
-
-    function renderItem(name) {
-        const recipe = allRecipes.find(r => r.name === name);
-        if (!recipe) return;
-
-        document.querySelectorAll('.item-card').forEach(c => c.classList.remove('active'));
-        const activeCard = [...document.querySelectorAll('.item-card')]
-            .find(c => c.dataset.name === name);
-        if (activeCard) {
-            activeCard.classList.add('active');
-            activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-
-        const usedBy = allRecipes.filter(r =>
-            r.ingredients && r.ingredients.some(i => i.name === name)
-        );
-
-        const inCart = isInCart(name);
+    function buildDetailHtml(recipe) {
+        const usedBy      = allRecipes.filter(r => r.ingredients && r.ingredients.some(i => i.name === recipe.name));
+        const inCart      = isInCart(recipe.name);
         const isCraftable = recipe.ingredients && recipe.ingredients.length > 0;
+
         const cartBtnHtml = isCraftable
-            ? `<button class="add-to-cart-btn ${inCart ? 'in-cart' : ''}"
-                       style="width:auto;padding:0 12px;height:32px;font-size:13px;margin:0 auto;display:flex;align-items:center;gap:6px"
-                       onclick="toggleCart('${name.replace(/'/g, "\\'")}')">
+            ? `<button class="add-to-cart-btn detail-cart-btn ${inCart ? 'in-cart' : ''}"
+                       data-item="${recipe.name}"
+                       onclick="toggleCart('${recipe.name.replace(/'/g, "\\'")}')">
                    <img src="/images/Cart.png" alt="" aria-hidden="true" style="width:14px;height:14px;object-fit:contain;" />
                    ${inCart ? '✓ In Cart' : 'Add to Cart'}
                </button>`
             : '';
 
-        const requiresHtml = recipe.ingredients && recipe.ingredients.length > 0
+        const requiresHtml = isCraftable
             ? `<div class="pane-section pane-section--requires">
                  <div class="pane-section-title">REQUIRES (SOURCES)</div>
                  <div class="pane-list">
                    ${recipe.ingredients.map(ing => {
-                     const ingSlug     = ing.name.toLowerCase().replace(/ /g, '_');
-                     const ingRecipe   = allRecipes.find(r => r.name === ing.name);
-                     const isCraftable = ingRecipe && ingRecipe.ingredients && ingRecipe.ingredients.length > 0;
-                     const depthBadge  = isCraftable
+                     const ingSlug   = ing.name.toLowerCase().replace(/ /g, '_');
+                     const ingRecipe = allRecipes.find(r => r.name === ing.name);
+                     const craftable = ingRecipe && ingRecipe.ingredients && ingRecipe.ingredients.length > 0;
+                     const badge     = craftable
                          ? `<span class="ing-depth-badge ing-depth-badge--craftable" title="Has its own recipe">⚙</span>`
                          : `<span class="ing-depth-badge ing-depth-badge--raw" title="Raw material">◆</span>`;
-                     return `<div class="pane-row clickable" onclick="selectItem('${ing.name}')">
-                        <span class="pane-row-name">
-                          <img src="/images/icons/${ingSlug}.png"
-                               alt="${ing.name}"
-                               class="pane-row-icon"
-                               onerror="this.style.display='none'" />
-                          ${ing.name}
-                        </span>
-                        <span class="pane-row-right">
-                          ${depthBadge}
-                          <span class="pane-row-qty">x${ing.quantity}</span>
-                        </span>
-                      </div>`;
+                     return `<div class="pane-row clickable" onclick="selectItem('${ing.name.replace(/'/g, "\\'")}')">
+                               <span class="pane-row-name">
+                                 <img src="/images/icons/${ingSlug}.png" alt="${ing.name}"
+                                      class="pane-row-icon" onerror="this.style.display='none'" />
+                                 ${ing.name}
+                               </span>
+                               <span class="pane-row-right">${badge}<span class="pane-row-qty">x${ing.quantity}</span></span>
+                             </div>`;
                    }).join('')}
                  </div>
                </div>`
@@ -266,31 +214,26 @@
                  <div class="pane-list">
                    ${usedBy.map(r => {
                      const slug = r.name.toLowerCase().replace(/ /g, '_');
-                     return `<div class="pane-row clickable" onclick="selectItem('${r.name}')">
-                        <span class="pane-row-name">
-                          <img src="/images/icons/${slug}.png"
-                               alt="${r.name}"
-                               class="pane-row-icon"
-                               onerror="this.style.display='none'" />
-                          ${r.name}
-                        </span>
-                        <span class="pane-row-arrow">→</span>
-                      </div>`;
+                     return `<div class="pane-row clickable" onclick="selectItem('${r.name.replace(/'/g, "\\'")}')">
+                               <span class="pane-row-name">
+                                 <img src="/images/icons/${slug}.png" alt="${r.name}"
+                                      class="pane-row-icon" onerror="this.style.display='none'" />
+                                 ${r.name}
+                               </span>
+                               <span class="pane-row-arrow">→</span>
+                             </div>`;
                    }).join('')}
                  </div>
                </div>`
             : '';
 
-        const backBtnHtml = `<button class="pane-back-btn" onclick="closeMobilePane()">← Back</button>`;
-
-        const pane = document.getElementById('detailsPane');
-        pane.innerHTML = `
-            ${backBtnHtml}
-            ${getBreadcrumbHtml()}
-            <div class="pane-icon">${getIconHtml(recipe.name)}</div>
-            <h2 class="pane-title">${recipe.name}</h2>
-            ${cartBtnHtml}
-            <p class="pane-description" style="margin-top:10px">${recipe.description || ''}</p>
+        return `
+            <div class="detail-hero">
+                <div class="pane-icon">${getIconHtml(recipe.name)}</div>
+                <h2 class="pane-title">${recipe.name}</h2>
+                ${cartBtnHtml}
+                <p class="pane-description">${recipe.description || ''}</p>
+            </div>
             <div class="pane-section">
                 <div class="pane-section-title">UNLOCKS</div>
                 ${getUnlockHtml(recipe.unlockCondition)}
@@ -302,58 +245,200 @@
             ${requiresHtml}
             ${usedByHtml}
         `;
-
-        if (isMobile()) pane.classList.add('mobile-open');
     }
 
-    // Toggle cart membership from any button
+    // ── Breadcrumb ───────────────────────────────────────────
+    function renderBreadcrumb() {
+        const el = document.getElementById('detailBreadcrumb');
+        if (!el) return;
+
+        const allCrumbs = ['All Items', ...navStack];
+        const MAX_VISIBLE = 5;
+        let visible = allCrumbs;
+        let collapsedHtml = '';
+
+        if (allCrumbs.length > MAX_VISIBLE) {
+            visible = allCrumbs.slice(-MAX_VISIBLE);
+            const hiddenCount = allCrumbs.length - MAX_VISIBLE;
+            collapsedHtml = `<span class="breadcrumb-collapsed" title="${hiddenCount} earlier steps hidden">…</span>
+                             <span class="breadcrumb-sep">›</span>`;
+        }
+
+        const startIndex = allCrumbs.length - visible.length;
+        const crumbs = visible.map((label, i) => {
+            const absIndex = startIndex + i;
+            if (absIndex === allCrumbs.length - 1) {
+                return `<span class="breadcrumb-current">${label}</span>`;
+            }
+            if (absIndex === 0) {
+                return `<button class="breadcrumb-item" onclick="closeDetail()" title="Back to item list">${label}</button>
+                        <span class="breadcrumb-sep">›</span>`;
+            }
+            return `<button class="breadcrumb-item"
+                             onclick="navigateBack(${absIndex})"
+                             title="${label}">${label}</button>
+                     <span class="breadcrumb-sep">›</span>`;
+        }).join('');
+
+        el.innerHTML = `${collapsedHtml}${crumbs}`;
+    }
+
+    // ── Slot animation ───────────────────────────────────────
+    function animateToSlot(html, direction) {
+        const incoming = otherSlot(activeSlot);
+        const inEl     = getSlot(incoming);
+        const outEl    = getSlot(activeSlot);
+
+        // Populate and reset the incoming slot
+        inEl.innerHTML = html;
+        inEl.scrollTop = 0;
+        inEl.classList.remove('slot-enter-left', 'slot-enter-right',
+                               'slot-exit-left',  'slot-exit-right',
+                               'slot-visible',     'slot-animating');
+        outEl.classList.remove('slot-enter-left', 'slot-enter-right',
+                                'slot-exit-left',  'slot-exit-right',
+                                'slot-animating');
+
+        // Stage incoming off-screen in the correct direction
+        inEl.classList.add(direction === 'forward' ? 'slot-enter-right' : 'slot-enter-left');
+
+        // Force reflow so the browser paints the start position before transitioning
+        inEl.getBoundingClientRect();
+
+        // Enable transitions on both slots, then move them
+        inEl.classList.add('slot-animating');
+        outEl.classList.add('slot-animating');
+
+        if (direction === 'forward') {
+            inEl.classList.replace('slot-enter-right', 'slot-visible');
+            outEl.classList.add('slot-exit-left');
+        } else {
+            inEl.classList.replace('slot-enter-left', 'slot-visible');
+            outEl.classList.add('slot-exit-right');
+        }
+
+        // Clean up after the transition completes
+        setTimeout(() => {
+            outEl.classList.remove('slot-visible', 'slot-exit-left', 'slot-exit-right', 'slot-animating');
+            outEl.innerHTML = '';
+            inEl.classList.remove('slot-animating');
+            activeSlot = incoming;
+        }, 320);
+    }
+
+    // ── View-level open / close (list ↔ detail layer) ────────
+    function openDetail(html, direction) {
+        if (!detailOpen) {
+            // ── First open ──────────────────────────────────
+            // Populate slot A and mark it visible BEFORE the layer slides in,
+            // so the content is already rendered when the CSS transition ends.
+            const slotA = getSlot('A');
+            slotA.innerHTML = html;
+            slotA.scrollTop = 0;
+            slotA.classList.add('slot-visible');   // ← the fix: make it visible
+            activeSlot = 'A';
+            detailOpen = true;
+
+            document.getElementById('viewList').classList.add('view-exit');
+            document.getElementById('viewDetail').classList.add('view-enter');
+        } else {
+            // ── Subsequent navigations ───────────────────────
+            animateToSlot(html, direction);
+        }
+    }
+
+    function closeDetail() {
+        if (!detailOpen) return;
+        detailOpen = false;
+        navStack   = [];
+
+        document.getElementById('viewList').classList.remove('view-exit');
+        document.getElementById('viewDetail').classList.remove('view-enter');
+
+        // Reset slots after the slide-out animation finishes
+        setTimeout(() => {
+            getSlot('A').innerHTML  = '';
+            getSlot('B').innerHTML  = '';
+            getSlot('A').className  = 'detail-slot';
+            getSlot('B').className  = 'detail-slot';
+            activeSlot = 'A';
+        }, 320);
+
+        document.querySelectorAll('.item-card').forEach(c => c.classList.remove('active', 'was-active'));
+        const wasActive = document.querySelector('.item-card.was-active');
+        if (wasActive) wasActive.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // ── Core render ──────────────────────────────────────────
+    function renderItem(name, direction) {
+        const recipe = allRecipes.find(r => r.name === name);
+        if (!recipe) return;
+
+        const html = buildDetailHtml(recipe);
+        renderBreadcrumb();
+        openDetail(html, direction || 'forward');
+    }
+
+    // ── Navigate back via breadcrumb ─────────────────────────
+    function navigateBack(absIndex) {
+        const targetName = navStack[absIndex - 1];
+        navStack = navStack.slice(0, absIndex - 1);
+        renderItem(targetName, 'backward');
+    }
+
+    // ── Cart toggle ──────────────────────────────────────────
     function toggleCart(name) {
         if (isInCart(name)) {
             removeFromCart(name);
         } else {
             addToCart(name);
         }
-        // Re-render the detail pane so the in-pane button label updates too
-        const currentTitle = document.querySelector('#detailsPane .pane-title');
-        if (currentTitle && currentTitle.textContent.trim() === name) {
-            renderItem(name);
+        const btn = document.querySelector(`.detail-cart-btn[data-item="${CSS.escape(name)}"]`);
+        if (btn) {
+            const inCart = isInCart(name);
+            btn.className = `add-to-cart-btn detail-cart-btn${inCart ? ' in-cart' : ''}`;
+            btn.innerHTML = `<img src="/images/Cart.png" alt="" aria-hidden="true" style="width:14px;height:14px;object-fit:contain;" />
+                             ${inCart ? '✓ In Cart' : 'Add to Cart'}`;
         }
     }
 
-    // Public entry point — pushes current item to history before navigating
+    // ── Public entry point ───────────────────────────────────
     function selectItem(name) {
-        const currentTitle = document.querySelector('#detailsPane .pane-title');
-        if (currentTitle && currentTitle.textContent) {
-            navHistory.push(currentTitle.textContent.trim());
+        if (detailOpen) {
+            const currentTitle = getSlot(activeSlot).querySelector('.pane-title');
+            if (currentTitle) navStack.push(currentTitle.textContent.trim());
         }
-        renderItem(name);
+
+        document.querySelectorAll('.item-card').forEach(c => c.classList.remove('active', 'was-active'));
+        const card = [...document.querySelectorAll('.item-card')].find(c => c.dataset.name === name);
+        if (card) card.classList.add('active', 'was-active');
+
+        renderItem(name, 'forward');
     }
 
-    // --- USED BY count badges ---
+    // ── USED BY count badges ─────────────────────────────────
     (function buildUsedByBadges() {
-        const usedByCount = {};
+        const counts = {};
         allRecipes.forEach(r => {
-            if (!r.ingredients) return;
-            r.ingredients.forEach(ing => {
-                usedByCount[ing.name] = (usedByCount[ing.name] || 0) + 1;
+            (r.ingredients || []).forEach(ing => {
+                counts[ing.name] = (counts[ing.name] || 0) + 1;
             });
         });
         document.querySelectorAll('.item-card').forEach(card => {
-            const count = usedByCount[card.dataset.name] || 0;
-            if (count > 0) {
+            const n = counts[card.dataset.name] || 0;
+            if (n > 0) {
                 const badge = card.querySelector('.card-usedby-badge');
                 if (badge) {
-                    badge.textContent = `${count} recipe${count === 1 ? '' : 's'}`;
+                    badge.textContent = `${n} recipe${n === 1 ? '' : 's'}`;
                     badge.style.display = 'inline-block';
                 }
             }
         });
     })();
 
-    // Sync cart button states on page load
     syncCartButtons();
 
-    // --- Filter tabs ---
+    // ── Filter tabs ──────────────────────────────────────────
     document.querySelectorAll('.tab').forEach(tab => {
         tab.addEventListener('click', () => {
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));

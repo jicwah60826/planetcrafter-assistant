@@ -1,34 +1,16 @@
-﻿/* ── Planet Crafter color palette ────────────────────
-   --bg-deep:      #0a0e14   page background (deep space)
-   --bg-panel:     #0f1520   panel/card backgrounds
-   --bg-surface:   #141e2e   elevated surfaces
-   --bg-chrome:    #0d1829   nav bars / top bar
-   --border:       #1e2e44   default borders
-   --border-bright:#2a4060   brighter border on hover
-   --accent-teal:  #4fc97e   primary accent (oxygen/atmosphere green)
-   --accent-amber: #e8a020   secondary accent (crafting/resources)
-   --accent-blue:  #5b7fd4   tertiary accent (atmospheric blue)
-   --text-primary: #d8e8f0   main text
-   --text-muted:   #6a8aaa   muted/secondary text
-   --text-dim:     #3a5070   very dim text
+﻿--bg-deep: #0a0e14 page background (deep space)
+--bg-panel: #0f1520 panel/card backgrounds
+--bg-surface: #141e2e elevated surfaces
+--bg-chrome: #0d1829 nav bars / top bar
+--border: #1e2e44 default borders
+--border-bright:#2a4060 brighter border on hover
+--accent-teal: #4fc97e primary accent (oxygen/atmosphere green)
+--accent-amber: #e8a020 secondary accent (crafting/resources)
+--accent-blue: #5b7fd4 tertiary accent (atmospheric blue)
+--text-primary: #d8e8f0 main text
+--text-muted: #6a8aaa muted/secondary text
+--text-dim: #3a5070 very dim text
 ──────────────────────────────────────────────────── */
-
-html, body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background: #0a0e14;
-    color: #d8e8f0;
-    font-size: 14px;
-    /* Prevent body itself from scrolling on iOS */
-    overflow: hidden;
-}
-
-main {
-    /* Replace body scroll with a contained scroll region */
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    height: 100%;
-}
 
 *,
 *::before,
@@ -36,6 +18,22 @@ main {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: #0a0e14;
+    color: #d8e8f0;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+/* Main scroll container — sits below fixed top bar */
+main {
+    padding-top: 53px;
+    height: 100%;
+    overflow: hidden;
 }
 
 /* ── Top bar ─────────────────────────────────────── */
@@ -51,8 +49,6 @@ main {
     background: #0d1829;
     padding: 10px 14px;
     border-bottom: 1px solid #1e2e44;
-    /* iOS Safari: promote to its own GPU layer so fixed positioning
-       is honoured during momentum (inertia) scroll */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
@@ -80,7 +76,6 @@ main {
     text-overflow: ellipsis;
 }
 
-/* Right-side cluster: search + home icon */
 .top-bar-right {
     display: flex;
     align-items: center;
@@ -88,7 +83,7 @@ main {
     flex-shrink: 0;
 }
 
-/* ── Hamburger button ────────────────────────────── */
+/* ── Hamburger ───────────────────────────────────── */
 .hamburger-btn {
     display: flex;
     flex-direction: column;
@@ -127,7 +122,28 @@ main {
     flex-shrink: 0;
 }
 
+/* ── Top-bar icon sizes ──────────────────────────── */
 .nav-home-icon {
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+}
+
+.nav-game-icon {
+    width: 18px;
+    height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+}
+
+.nav-cart-icon {
     width: 20px;
     height: 20px;
     max-width: 20px;
@@ -142,7 +158,7 @@ main {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0,0,0,0.7);
     z-index: 299;
 }
 
@@ -217,6 +233,12 @@ main {
             color: #4fc97e;
         }
 
+.flyout-links-divider {
+    height: 1px;
+    background: #1e2e44;
+    margin: 8px 12px;
+}
+
 /* ── Search bar ──────────────────────────────────── */
 .search-wrapper {
     position: relative;
@@ -244,7 +266,6 @@ main {
     }
 
 .search-clear {
-    display: none;
     position: absolute;
     right: 4px;
     background: none;
@@ -297,30 +318,119 @@ main {
             text-decoration: underline;
         }
 
-/* ── Two-panel layout ────────────────────────────── */
-.app-layout {
-    display: flex;
+/* ═══════════════════════════════════════════════════
+   SINGLE-COLUMN VIEW SYSTEM
+   ─────────────────────────────────────────────────
+   .recipes-root is the clipping viewport.
+   .view-layer        = the item list (default visible)
+   .view-layer--detail = off-screen right; slides in
+                         with .view-enter; list exits
+                         left with .view-exit.
+═══════════════════════════════════════════════════ */
+
+.recipes-root {
+    position: relative;
     height: calc(100vh - 53px - 27px);
     overflow: hidden;
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
 }
 
-.panel-left {
-    flex: 1;
+/* Both layers share the same full-size slot */
+.view-layer {
+    position: absolute;
+    inset: 0;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     padding: 16px;
-    border-right: 1px solid #1e2e44;
+    background: #0a0e14;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
+    will-change: transform;
 }
 
-.panel-right {
-    width: 420px;
-    min-width: 320px;
-    overflow-y: auto;
-    padding: 24px 20px;
-    background: #0f1520;
+    /* List layer: default = fully visible */
+    .view-layer:not(.view-layer--detail) {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+        /* List layer EXITING: slides left off-screen */
+        .view-layer:not(.view-layer--detail).view-exit {
+            transform: translateX(-100%);
+            visibility: hidden;
+            transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.32s;
+        }
+
+/* Detail layer: default = off-screen right */
+.view-layer--detail {
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.32s;
+    /* overflow-y handled by the slots inside, not this wrapper */
+    overflow-y: hidden;
+    /* Remove default padding — slots have their own */
+    padding: 0;
 }
+
+    /* Detail layer ENTERING: slides in from right */
+    .view-layer--detail.view-enter {
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
+    }
+
+/* ── Detail scroll container ─────────────────────── */
+/* Clips the two animating slots; sits inside .view-layer--detail */
+.detail-scroll {
+    position: relative;
+    /* Fill the full detail layer height */
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ── Detail content slots ────────────────────────── */
+/* Two absolutely-positioned peers — one visible, one staged off-screen */
+.detail-slot {
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+    background: #0a0e14;
+    /* Off-screen by default; JS sets slot-visible on the active one */
+    transform: translateX(100%);
+    visibility: hidden;
+}
+
+    /* The slot currently on screen */
+    .detail-slot.slot-visible {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    /* Starting positions before a transition fires */
+    .detail-slot.slot-enter-right {
+        transform: translateX(100%);
+        visibility: visible;
+    }
+
+    .detail-slot.slot-enter-left {
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+
+    /* Exit destinations */
+    .detail-slot.slot-exit-left {
+        transform: translateX(-100%);
+    }
+
+    .detail-slot.slot-exit-right {
+        transform: translateX(100%);
+    }
+
+    /* Transition only fires while .slot-animating is present —
+   prevents spurious animation on initial paint / cleanup   */
+    .detail-slot.slot-animating {
+        transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
+    }
 
 /* ── Filter tabs ─────────────────────────────────── */
 .filter-tabs {
@@ -353,7 +463,7 @@ main {
         font-weight: 600;
     }
 
-/* ── Item list (vertical) ────────────────────────── */
+/* ── Item list ───────────────────────────────────── */
 .card-grid {
     display: flex;
     flex-direction: column;
@@ -426,50 +536,153 @@ main {
 
 .card-usedby-badge {
     color: #4fc97e;
-    font-size: 10px;
 }
 
-/* ── Details pane ────────────────────────────────── */
-.details-placeholder {
-    color: #3a5070;
+/* ── Detail view layout ──────────────────────────── */
+
+/* Sticky breadcrumb — positioned inside .view-layer--detail,
+   above .detail-scroll, so it stays fixed during slot swaps  */
+.detail-breadcrumb {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 8px 16px;
+    background: #0d1829;
+    border-bottom: 1px solid #1e2e44;
+    font-size: 11px;
+    min-height: 38px;
+    flex-shrink: 0;
+}
+
+/* Scrollable detail content — inside a slot */
+.detail-body {
+    padding-bottom: 60px;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Hero block: icon + title + cart button + description */
+.detail-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-top: 60px;
-    font-size: 13px;
+    padding: 24px 0 20px;
+    border-bottom: 1px solid #1e2e44;
+    margin-bottom: 20px;
 }
 
+/* ── Breadcrumb items ────────────────────────────── */
+.breadcrumb-item {
+    background: none;
+    border: none;
+    color: #4fc97e;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+    transition: background 0.15s, color 0.15s;
+}
+
+    .breadcrumb-item:hover {
+        background: #141e2e;
+        color: #d8e8f0;
+    }
+
+.breadcrumb-current {
+    color: #d8e8f0;
+    font-size: 11px;
+    padding: 2px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    font-weight: 600;
+}
+
+.breadcrumb-sep {
+    color: #1e2e44;
+    font-size: 11px;
+    user-select: none;
+}
+
+.breadcrumb-collapsed {
+    color: #3a5070;
+    font-size: 11px;
+    padding: 2px 4px;
+    cursor: default;
+}
+
+/* ── Shared pane / detail styles ─────────────────── */
 .pane-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 64px;
+    height: 72px;
     margin-bottom: 10px;
-    font-size: 48px;
     color: #e8a020;
-    text-align: center;
 }
 
 .pane-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    text-align: center;
     color: #d8e8f0;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .pane-description {
     font-size: 12px;
     color: #6a8aaa;
-    text-align: center;
     font-style: italic;
+    margin-top: 8px;
+}
+
+.pane-section {
     margin-bottom: 20px;
 }
 
 .pane-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 10px;
-    letter-spacing: 1px;
-    color: #3a5070;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    color: #6a8aaa;
     text-transform: uppercase;
-    margin: 16px 0 6px;
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1e2e44;
+}
+
+    .pane-section-title::before {
+        content: '';
+        display: inline-block;
+        width: 3px;
+        height: 12px;
+        border-radius: 2px;
+        flex-shrink: 0;
+        background: #3a5070;
+    }
+
+.pane-section--crafted .pane-section-title::before {
+    background: #5b7fd4;
+}
+
+.pane-section--requires .pane-section-title::before {
+    background: #e8a020;
+}
+
+.pane-section--usedby .pane-section-title::before {
+    background: #4fc97e;
 }
 
 .pane-list {
@@ -491,7 +704,7 @@ main {
 
     .pane-row.clickable {
         cursor: pointer;
-        transition: background 0.15s, border-color 0.15s;
+        transition: background 0.15s, border-color 0.15s, color 0.15s;
     }
 
         .pane-row.clickable:hover {
@@ -500,9 +713,40 @@ main {
             color: #4fc97e;
         }
 
-.pane-row-qty, .pane-row-arrow {
+.pane-row-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pane-row-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pane-row-qty,
+.pane-row-arrow {
     color: #6a8aaa;
     font-size: 12px;
+}
+
+.pane-row--station {
+    border-color: #1e3a5a;
+    background: #0f1828;
+    color: #5b7fd4;
+}
+
+.pane-row--recycle {
+    border-color: #1a4a28;
+    background: #0a1e12;
+    color: #4fc97e;
+}
+
+.pane-row-note {
+    font-size: 11px;
+    color: #3a5070;
+    font-style: italic;
 }
 
 .pane-empty {
@@ -511,7 +755,28 @@ main {
     padding: 6px 0;
 }
 
-/* ── Unlock condition badge ──────────────────────── */
+/* ── Icons inside rows ───────────────────────────── */
+.pane-row-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.ing-depth-badge {
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.ing-depth-badge--craftable {
+    color: #5b7fd4;
+}
+
+.ing-depth-badge--raw {
+    color: #3a5070;
+}
+
+/* ── Unlock condition ────────────────────────────── */
 .pane-unlock {
     display: flex;
     align-items: center;
@@ -530,7 +795,6 @@ main {
     color: #4fc97e;
 }
 
-/* ── Unlock type variants ────────────────────────── */
 .pane-unlock--terra {
     background: #0f1828;
     border-color: #1e3a5a;
@@ -578,312 +842,47 @@ main {
     color: #d8e8f0;
 }
 
-/* ── Legacy card styles (Dashboard etc.) ─────────── */
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-}
-
-.card {
-    background: #0f1520;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
+/* ── Add-to-cart button ──────────────────────────── */
+.add-to-cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
     border: 1px solid #1e2e44;
-    transition: border-color 0.15s;
+    border-radius: 4px;
+    color: #6a8aaa;
+    font-size: 14px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    margin-left: 6px;
 }
 
-    .card:hover {
+    .add-to-cart-btn:hover {
+        background: #141e2e;
+        color: #e8a020;
+        border-color: #e8a020;
+    }
+
+    .add-to-cart-btn.in-cart {
+        background: #1a2a10;
+        color: #4fc97e;
         border-color: #4fc97e;
     }
 
-/* ── Content wrapper (non-recipe pages) ──────────── */
-.content {
-    padding: 15px;
-    padding-bottom: 90px;
+/* Detail-view cart button: wider pill style */
+.detail-cart-btn {
+    width: auto !important;
+    padding: 0 18px !important;
+    height: 34px !important;
+    font-size: 13px !important;
+    gap: 6px;
+    margin: 10px 0 0;
 }
 
-/* ── Crafted-in station rows ─────────────────────── */
-.pane-row--station {
-    border-color: #1e3a5a;
-    background: #0f1828;
-    color: #5b7fd4;
-}
-
-.pane-row--recycle {
-    border-color: #1a4a28;
-    background: #0a1e12;
-    color: #4fc97e;
-}
-
-.pane-row-note {
-    font-size: 11px;
-    color: #3a5070;
-    font-style: italic;
-}
-
-/* ── Mobile (≤ 600px) ────────────────────────────── */
-@media (max-width: 600px) {
-
-    .top-bar {
-        padding: 8px 10px;
-        gap: 8px;
-    }
-
-        .top-bar h1 {
-            font-size: 1rem;
-        }
-
-    .search-box {
-        width: 140px;
-    }
-
-    .app-layout {
-        flex-direction: column;
-        height: auto;
-        overflow: visible;
-    }
-
-    .panel-left {
-        border-right: none;
-        border-bottom: 1px solid #1e2e44;
-        overflow-y: visible;
-        padding: 10px;
-    }
-
-    .panel-right {
-        display: none;
-        position: fixed;
-        inset: 0;
-        width: 100%;
-        min-width: unset;
-        z-index: 200;
-        overflow-y: auto;
-        padding: 16px 14px 80px;
-        background: #0f1520;
-    }
-
-        .panel-right.mobile-open {
-            display: block;
-        }
-
-    .item-card {
-        padding: 7px 10px;
-        gap: 12px;
-    }
-
-    .card-icon,
-    .card-icon img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .card-icon-fallback {
-        font-size: 24px;
-    }
-
-    .card-label {
-        font-size: 13px;
-    }
-
-    .pane-back-btn {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        background: none;
-        border: none;
-        color: #4fc97e;
-        font-size: 13px;
-        cursor: pointer;
-        padding: 0 0 16px;
-    }
-}
-
-@media (min-width: 601px) {
-    .pane-back-btn {
-        display: none !important;
-    }
-}
-
-/* ── Footer ──────────────────────────────────────── */
-.site-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    background: #0a0e14;
-    border-top: 1px solid #1e2e44;
-    padding: 8px 20px 52px;
-    font-size: 11px;
-    color: #3a5070;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-    .site-footer a {
-        color: #4fc97e;
-        text-decoration: none;
-        font-size: 11px;
-    }
-
-        .site-footer a:hover {
-            text-decoration: underline;
-        }
-
-/* ── Steam links ─────────────────────────────────── */
-.top-bar-steam-btn {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background: #1b2838;
-    color: #c7d5e0;
-    border: 1px solid #2a475e;
-    border-radius: 4px;
-    padding: 5px 10px;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-    flex-shrink: 0;
-    transition: background 0.15s, color 0.15s;
-}
-
-    .top-bar-steam-btn:hover {
-        background: #2a475e;
-        color: #fff;
-    }
-
-.bottom-nav-steam-link {
-    color: #c7d5e0 !important;
-    font-weight: 600;
-}
-
-    .bottom-nav-steam-link:hover {
-        color: #fff !important;
-    }
-
-.flyout-steam-link {
-    color: #c7d5e0 !important;
-    font-weight: 600;
-}
-
-    .flyout-steam-link:hover {
-        background: #1b2838 !important;
-        color: #fff !important;
-    }
-
-.flyout-links-divider {
-    height: 1px;
-    background: #1e2e44;
-    margin: 8px 12px;
-}
-
-/* ── Breadcrumb trail ────────────────────────────── */
-.breadcrumb-trail {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2px;
-    margin-bottom: 14px;
-    padding: 6px 10px;
-    background: #0f1520;
-    border: 1px solid #1e2e44;
-    border-radius: 4px;
-    font-size: 11px;
-}
-
-.breadcrumb-item {
-    background: none;
-    border: none;
-    color: #4fc97e;
-    cursor: pointer;
-    font-size: 11px;
-    padding: 2px 4px;
-    border-radius: 3px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 120px;
-    transition: background 0.15s, color 0.15s;
-}
-
-    .breadcrumb-item:hover {
-        background: #141e2e;
-        color: #d8e8f0;
-    }
-
-.breadcrumb-sep {
-    color: #1e2e44;
-    font-size: 11px;
-    user-select: none;
-}
-
-.breadcrumb-collapsed {
-    color: #3a5070;
-    font-size: 11px;
-    padding: 2px 4px;
-    cursor: default;
-}
-
-/* ── Icons inside ingredient / used-by rows ──────── */
-.pane-row-icon {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    vertical-align: middle;
-    flex-shrink: 0;
-}
-
-/* ── Build ID ────────────────────────────────────── */
-.build-id {
-    font-size: 10px;
-    color: #1e2e44;
-    margin-left: auto;
-}
-
-/* Push content below the fixed top bar */
-main {
-    padding-top: 53px;
-}
-
-/* ── Details pane sections ───────────────────────── */
-
-/* Wraps a section title + its pane-list as one visual block */
-.pane-section {
-    margin-bottom: 20px;
-}
-
-.pane-section-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 10px;
-    letter-spacing: 1.2px;
-    font-weight: 700;
-    color: #6a8aaa;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #1e2e44;
-}
-
-    /* Colour-coded left accent pip per section type */
-    .pane-section-title::before {
-        content: '';
-        display: inline-block;
-        width: 3px;
-        height: 12px;
-        border-radius: 2px;
-        flex-shrink: 0;
-        background: #3a5070; /* default/unlocks */
-    }
-
-.pane-section--crafted .pane-section-title::before  { background: #5b7fd4; } /* blue  — station  */
-.pane-section--requires .pane-section-title::before { background: #e8a020; } /* amber — inputs   */
-.pane-section--usedby .pane-section-title::before   { background: #4fc97e; } /* teal  — outputs  */
-
-/* ── Shopping cart ───────────────────────────────── */
+/* ── Cart button in top bar ──────────────────────── */
 .cart-btn {
     position: relative;
     display: flex;
@@ -920,35 +919,6 @@ main {
     padding: 0 3px;
 }
 
-.add-to-cart-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: 1px solid #1e2e44;
-    border-radius: 4px;
-    color: #6a8aaa;
-    font-size: 14px;
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: background 0.15s, color 0.15s, border-color 0.15s;
-    margin-left: 6px;
-}
-
-    .add-to-cart-btn:hover {
-        background: #141e2e;
-        color: #e8a020;
-        border-color: #e8a020;
-    }
-
-    .add-to-cart-btn.in-cart {
-        background: #1a2a10;
-        color: #4fc97e;
-        border-color: #4fc97e;
-    }
-
 /* ── Cart panel ──────────────────────────────────── */
 .cart-panel {
     display: none;
@@ -959,7 +929,7 @@ main {
     width: 360px;
     background: #0d1829;
     border-left: 1px solid #1e2e44;
-    z-index: 400;
+    z-index: 500;
     flex-direction: column;
     overflow: hidden;
 }
@@ -1138,21 +1108,15 @@ main {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 399;
+    background: rgba(0,0,0,0.6);
+    z-index: 499;
 }
 
     .cart-backdrop.open {
         display: block;
     }
 
-@media (max-width: 600px) {
-    .cart-panel {
-        width: 100%;
-    }
-}
-
-/* ── Cart quantity controls ──────────────────────── */
+/* ── Cart qty controls ───────────────────────────── */
 .cart-qty-controls {
     display: flex;
     align-items: center;
@@ -1191,6 +1155,72 @@ main {
     color: #e8a020;
 }
 
+/* ── Steam links ─────────────────────────────────── */
+.top-bar-steam-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #1b2838;
+    color: #c7d5e0;
+    border: 1px solid #2a475e;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s;
+}
+
+    .top-bar-steam-btn:hover {
+        background: #2a475e;
+        color: #fff;
+    }
+
+.flyout-steam-link {
+    color: #c7d5e0 !important;
+    font-weight: 600;
+}
+
+    .flyout-steam-link:hover {
+        background: #1b2838 !important;
+        color: #fff !important;
+    }
+
+/* ── Legacy cards (Dashboard etc.) ──────────────── */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    background: #0f1520;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #1e2e44;
+    transition: border-color 0.15s;
+}
+
+    .card:hover {
+        border-color: #4fc97e;
+    }
+
+/* ── Content wrapper (non-recipe pages) ──────────── */
+.content {
+    padding: 15px;
+    padding-bottom: 90px;
+}
+
+/* ── Build ID ────────────────────────────────────── */
+.build-id {
+    font-size: 10px;
+    color: #1e2e44;
+    margin-left: auto;
+}
+
 /* ── About page ──────────────────────────────────── */
 .about-page {
     max-width: 720px;
@@ -1198,340 +1228,58 @@ main {
     padding: 32px 20px 60px;
 }
 
-.about-section {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.about-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #4fc97e;
-    letter-spacing: 0.5px;
-}
-
-.about-lead {
-    font-size: 1rem;
-    color: #d8e8f0;
-    line-height: 1.65;
-}
-
-.about-rule {
-    border: none;
-    border-top: 1px solid #1e2e44;
-    margin: 28px 0;
-}
-
-.about-heading {
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #e8a020;
-}
-
-.about-section p {
-    font-size: 0.9rem;
-    color: #d8e8f0;
-    line-height: 1.7;
-}
-
-.about-form-intro {
-    color: #6a8aaa;
-    font-size: 0.875rem;
-}
-
-.about-link {
-    color: #5b7fd4;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: color 0.15s, border-color 0.15s;
-}
-
-    .about-link:hover {
-        color: #4fc97e;
-        border-bottom-color: #4fc97e;
-    }
-
-/* ── Tips & Tricks page ──────────────────────────── */
-.tips-page {
-    max-width: 860px;
-    margin: 0 auto;
-}
-
-.tips-page-header {
-    margin-bottom: 24px;
-}
-
-.tips-page-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4fc97e;
-    margin-bottom: 4px;
-}
-
-.tips-page-subtitle {
-    font-size: 13px;
-    color: #6a8aaa;
-}
-
-.tips-list {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.tips-row {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    background: #0f1520;
-    border: 1px solid #1e2e44;
-    border-radius: 6px;
-    padding: 12px 14px;
-    cursor: pointer;
-    transition: border-color 0.15s, background 0.15s;
-    text-decoration: none;
-}
-
-    .tips-row:hover {
-        background: #141e2e;
-        border-color: #4fc97e;
-    }
-
-.tips-row-emoji {
-    font-size: 1.6rem;
-    flex-shrink: 0;
-    width: 36px;
-    text-align: center;
-}
-
-.tips-row-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    min-width: 0;
-}
-
-.tips-row-title {
-    font-size: 14px;
-    font-weight: 600;
-    color: #d8e8f0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.tips-row-summary {
-    font-size: 12px;
-    color: #6a8aaa;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.tips-row-category {
-    font-size: 10px;
-    color: #5b7fd4;
-    border: 1px solid #1e3a5a;
-    border-radius: 3px;
-    padding: 2px 7px;
-    flex-shrink: 0;
-    white-space: nowrap;
-}
-
-.tips-row-arrow {
-    color: #3a5070;
-    font-size: 18px;
-    flex-shrink: 0;
-    transition: color 0.15s;
-}
-
-.tips-row:hover .tips-row-arrow {
-    color: #4fc97e;
-}
-
-/* ── Tips detail flyout ──────────────────────────── */
-.tips-backdrop {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.65);
-    z-index: 399;
-}
-
-    .tips-backdrop.open {
-        display: block;
-    }
-
-.tips-flyout {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 420px;
-    max-width: 100%;
-    background: #0d1829;
-    border-left: 1px solid #1e2e44;
-    z-index: 400;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-    .tips-flyout.open {
-        display: flex;
-    }
-
-.tips-flyout-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
-    border-bottom: 1px solid #1e2e44;
-    flex-shrink: 0;
-}
-
-.tips-flyout-back {
-    background: none;
-    border: none;
-    color: #4fc97e;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background 0.15s, color 0.15s;
-}
-
-    .tips-flyout-back:hover {
-        background: #0f1e18;
-        color: #d8e8f0;
-    }
-
-.tips-flyout-close {
-    background: none;
-    border: none;
-    color: #6a8aaa;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 4px;
-    transition: color 0.15s;
-}
-
-    .tips-flyout-close:hover {
-        color: #d8e8f0;
-    }
-
-.tips-flyout-body {
-    flex: 1;
-    overflow-y: auto;
-    padding: 24px 20px;
-}
-
-/* ── Tip detail content ──────────────────────────── */
-.tip-detail {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.tip-detail-emoji {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 4px;
-}
-
-.tip-detail-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #d8e8f0;
-    text-align: center;
-}
-
-.tip-detail-category {
-    display: block;
-    text-align: center;
-    font-size: 11px;
-    color: #5b7fd4;
-    border: 1px solid #1e3a5a;
-    border-radius: 3px;
-    padding: 2px 10px;
-    align-self: center;
-}
-
-.tip-detail-content {
-    margin-top: 12px;
-    font-size: 14px;
-    color: #c0d8e8;
-    line-height: 1.75;
-    white-space: pre-line;
-}
-
+/* ── Mobile (≤ 600px) ────────────────────────────── */
 @media (max-width: 600px) {
-    .tips-flyout {
+
+    .top-bar {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+        .top-bar h1 {
+            font-size: 1rem;
+        }
+
+    .search-box {
+        width: 140px;
+    }
+
+    .recipes-root {
+        height: calc(100vh - 53px - 27px);
+    }
+
+    .view-layer {
+        padding: 10px;
+    }
+
+    .detail-breadcrumb {
+        padding: 8px 10px;
+    }
+
+    .detail-slot {
+        padding: 10px;
+    }
+
+    .item-card {
+        padding: 7px 10px;
+        gap: 12px;
+    }
+
+    .card-icon,
+    .card-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-icon-fallback {
+        font-size: 24px;
+    }
+
+    .card-label {
+        font-size: 13px;
+    }
+
+    .cart-panel {
         width: 100%;
     }
-
-    .tips-row-category {
-        display: none;
-    }
-}
-
-/* ── Nav icon sizes (hard constraints) ──────────── */
-.nav-game-icon {
-    width: 18px;
-    height: 18px;
-    max-width: 18px;
-    max-height: 18px;
-    object-fit: contain;
-    flex-shrink: 0;
-    display: block;
-}
-
-.nav-home-icon {
-    width: 20px;
-    height: 20px;
-    max-width: 20px;
-    max-height: 20px;
-    object-fit: contain;
-    flex-shrink: 0;
-    display: block;
-}
-
-.nav-cart-icon {
-    width: 20px;
-    height: 20px;
-    max-width: 20px;
-    max-height: 20px;
-    object-fit: contain;
-    flex-shrink: 0;
-    display: block;
-}
-
-/* Belt-and-suspenders: scope directly to the containers too */
-.top-bar-steam-btn img,
-.flyout-steam-link img,
-.flyout-links li a img {
-    width: 18px;
-    height: 18px;
-    max-width: 18px;
-    max-height: 18px;
-    object-fit: contain;
-    flex-shrink: 0;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.top-bar-home-btn img,
-.cart-btn img {
-    width: 20px;
-    height: 20px;
-    max-width: 20px;
-    max-height: 20px;
-    object-fit: contain;
-    flex-shrink: 0;
-    display: block;
 }

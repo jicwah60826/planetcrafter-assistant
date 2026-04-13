@@ -134,25 +134,17 @@
         }
 
         // ── Cart (localStorage-backed) ─────────────────────────
-        // cart is an array of { name: string, qty: number }
         var cart = JSON.parse(localStorage.getItem('pc-cart') || '[]');
 
-        // Migrate legacy flat string[] saved by the old implementation
         if (cart.length > 0 && typeof cart[0] === 'string') {
             cart = cart.map(function (n) { return { name: n, qty: 1 }; });
         }
 
-        function saveCart() {
-            localStorage.setItem('pc-cart', JSON.stringify(cart));
-        }
+        function saveCart() { localStorage.setItem('pc-cart', JSON.stringify(cart)); }
 
-        function cartEntry(name) {
-            return cart.find(function (e) { return e.name === name; });
-        }
+        function cartEntry(name) { return cart.find(function (e) { return e.name === name; }); }
 
-        function isInCart(name) {
-            return !!cartEntry(name);
-        }
+        function isInCart(name) { return !!cartEntry(name); }
 
         function openCart() {
             renderCartPanel();
@@ -167,73 +159,46 @@
 
         function addToCart(name) {
             var entry = cartEntry(name);
-            if (entry) {
-                entry.qty += 1;
-            } else {
-                cart.push({ name: name, qty: 1 });
-            }
-            saveCart();
-            updateCartBadge();
-            syncCartButtons();
-            renderCartPanel();
+            if (entry) { entry.qty += 1; } else { cart.push({ name: name, qty: 1 }); }
+            saveCart(); updateCartBadge(); syncCartButtons(); renderCartPanel();
         }
 
         function removeFromCart(name) {
             cart = cart.filter(function (e) { return e.name !== name; });
-            saveCart();
-            updateCartBadge();
-            syncCartButtons();
-            renderCartPanel();
+            saveCart(); updateCartBadge(); syncCartButtons(); renderCartPanel();
         }
 
         function setCartQty(name, qty) {
             var n = parseInt(qty, 10);
-            if (isNaN(n) || n < 1) {
-                removeFromCart(name);
-                return;
-            }
+            if (isNaN(n) || n < 1) { removeFromCart(name); return; }
             var entry = cartEntry(name);
-            if (entry) {
-                entry.qty = n;
-                saveCart();
-                renderCartPanel();
-            }
+            if (entry) { entry.qty = n; saveCart(); renderCartPanel(); }
         }
 
         function clearCart() {
             cart = [];
-            saveCart();
-            updateCartBadge();
-            syncCartButtons();
-            renderCartPanel();
+            saveCart(); updateCartBadge(); syncCartButtons(); renderCartPanel();
         }
 
         function updateCartBadge() {
             var total = cart.reduce(function (sum, e) { return sum + e.qty; }, 0);
             var badge = document.getElementById('cartBadge');
-            if (badge) {
-                badge.textContent = total;
-                badge.style.display = total > 0 ? 'block' : 'none';
-            }
+            if (badge) { badge.textContent = total; badge.style.display = total > 0 ? 'block' : 'none'; }
         }
 
         function syncCartButtons() {
             document.querySelectorAll('.add-to-cart-btn[data-item]').forEach(function (btn) {
-                var inCart = isInCart(btn.dataset.item);
-                btn.classList.toggle('in-cart', inCart);
+                btn.classList.toggle('in-cart', isInCart(btn.dataset.item));
             });
         }
 
         function renderCartPanel() {
             var body = document.getElementById('cartPanelBody');
             if (!body) return;
-
             if (cart.length === 0) {
                 body.innerHTML = '<p class="cart-empty-msg">Your cart is empty.<br />Add craftable items using the <img src="/images/Cart.png" alt="cart" style="width:13px;height:13px;object-fit:contain;vertical-align:middle;" /> button.</p>';
                 return;
             }
-
-            // ── Section 1: Queued items ──
             var itemsHtml = cart.map(function (e) {
                 var slug = e.name.toLowerCase().replace(/ /g, '_');
                 var safeName = e.name.replace(/'/g, "\\'");
@@ -248,46 +213,32 @@
                     '<button class="cart-item-remove" onclick="removeFromCart(\'' + safeName + '\')" title="Remove">✕</button>' +
                     '</div>';
             }).join('');
-
-            // ── Section 2: Aggregated raw materials to gather ──
             var gatherMap = {};
             cart.forEach(function (e) {
                 var recipe = (typeof allRecipes !== 'undefined')
-                    ? allRecipes.find(function (r) { return r.name === e.name; })
-                    : null;
+                    ? allRecipes.find(function (r) { return r.name === e.name; }) : null;
                 if (recipe && recipe.ingredients && recipe.ingredients.length > 0) {
                     recipe.ingredients.forEach(function (ing) {
                         gatherMap[ing.name] = (gatherMap[ing.name] || 0) + (ing.quantity * e.qty);
                     });
                 }
             });
-
             var gatherEntries = Object.keys(gatherMap);
             var gatherHtml = '';
             if (gatherEntries.length > 0) {
-                gatherHtml = '<div class="cart-section">' +
-                    '<div class="cart-section-title cart-section-title--gather">Materials to Gather</div>' +
-                    gatherEntries.map(function (matName) {
-                        var slug = matName.toLowerCase().replace(/ /g, '_');
-                        return '<div class="gather-row">' +
-                            '<img class="gather-row-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
-                            '<span class="gather-row-name">' + matName + '</span>' +
-                            '<span class="gather-row-qty">x' + gatherMap[matName] + '</span>' +
-                            '</div>';
-                    }).join('') +
-                    '</div>';
+                gatherHtml = '<div class="cart-section"><div class="cart-section-title cart-section-title--gather">Materials to Gather</div>' +
+                    gatherEntries.map(function (n) {
+                        var slug = n.toLowerCase().replace(/ /g, '_');
+                        return '<div class="gather-row"><img class="gather-row-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
+                            '<span class="gather-row-name">' + n + '</span><span class="gather-row-qty">x' + gatherMap[n] + '</span></div>';
+                    }).join('') + '</div>';
             }
-
             body.innerHTML =
-                '<div class="cart-section">' +
-                '<div class="cart-section-title">Items to Craft</div>' +
-                itemsHtml +
-                '</div>' +
+                '<div class="cart-section"><div class="cart-section-title">Items to Craft</div>' + itemsHtml + '</div>' +
                 gatherHtml +
                 '<button class="cart-clear-btn" onclick="clearCart()">✕ Clear Cart</button>';
         }
 
-        // Initialise badge and button states on page load
         updateCartBadge();
         syncCartButtons();
     </script>
