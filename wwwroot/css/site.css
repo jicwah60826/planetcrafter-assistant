@@ -1,5 +1,4 @@
-﻿--bg-deep: #0a0e14 page background (deep space)
---bg-panel: #0f1520 panel/card backgrounds
+﻿--bg-panel: #0f1520 panel/card backgrounds
 --bg-surface: #141e2e elevated surfaces
 --bg-chrome: #0d1829 nav bars / top bar
 --border: #1e2e44 default borders
@@ -1239,8 +1238,19 @@ main {
             font-size: 1rem;
         }
 
+    /* Hide the Steam button on mobile — accessible via the flyout menu */
+    .top-bar-steam-btn {
+        display: none;
+    }
+
+    /* Cap search width so cart button is never pushed off-screen */
     .search-box {
-        width: 140px;
+        width: 120px;
+    }
+
+    /* Cart button is always visible, even when cart is empty */
+    .cart-btn {
+        display: flex !important;
     }
 
     .recipes-root {
