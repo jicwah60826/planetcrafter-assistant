@@ -1,0 +1,34 @@
+﻿[
+  {
+    "id": "early-oxygen",
+    "title": "Early Oxygen Boost",
+    "category": "Progression",
+    "summary": "Kick-start your oxygen stage before anything else.",
+    "content": "As soon as you land, craft a Biodome T1 and fill it with Grass Seeds. Each dome provides a steady oxygen rate and the seeds are found in abundance near your landing pod. Stacking two or three domes in the first 10 minutes will significantly accelerate your Oxygen index and unlock mid-tier equipment faster.",
+    "emoji": "🌿"
+  },
+  {
+    "id": "trade-platform-tips",
+    "title": "Trade Platform Priority Items",
+    "category": "Resources",
+    "summary": "Know what to buy first from the Trade Platform.",
+    "content": "Spend your Rockets on Iridium and Osmium early — both are bottlenecks for T2 and T3 crafting recipes. Avoid spending on raw resources like Iron or Silicon that you can mine on foot. Once your terraformation is past the Heat stage, prioritise buying Blueprint Chips as they gate several high-value machines.",
+    "emoji": "🏪"
+  },
+  {
+    "id": "inventory-management",
+    "title": "Inventory Management",
+    "category": "General",
+    "summary": "Keep your backpack clean and efficient.",
+    "content": "Assign dedicated chests near your base entrance for raw materials and crafted components separately. Sort by category so you always know where to look. Use the Auto-Crafter once unlocked to pull directly from linked chests, removing the need to carry stacks manually across your base.",
+    "emoji": "🎒"
+  },
+  {
+    "id": "golden-chest-route",
+    "title": "Golden Chest Route",
+    "category": "Exploration",
+    "summary": "Plan an efficient loop to collect all golden chests.",
+    "content": "Golden chests respawn on major game updates, not on a fixed timer. Map out a route from your base that hits each known chest location in a single loop. Equip a Jetpack T2 or higher before attempting the wrecks — several chests are on elevated platforms or inside derelict structures that require vertical movement.",
+    "emoji": "🗺️"
+  }
+]

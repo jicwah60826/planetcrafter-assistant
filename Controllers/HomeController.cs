@@ -10,16 +10,19 @@ namespace PlanetCrafterAssistant.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IWebHostEnvironment _env;
         private readonly RecipeService _recipeService;
+        private readonly TipsService _tipsService;
 
         public HomeController(
             ILogger<HomeController> logger,
             IWebHostEnvironment env,
-            RecipeService recipeService
+            RecipeService recipeService,
+            TipsService tipsService
         )
         {
             _logger = logger;
             _env = env;
             _recipeService = recipeService;
+            _tipsService = tipsService;
         }
 
         public IActionResult Index()
@@ -87,6 +90,13 @@ namespace PlanetCrafterAssistant.Controllers
         public IActionResult About()
         {
             return View();
+        }
+
+        public IActionResult TipsAndTricks()
+        {
+            var tips = _tipsService.GetAll();
+            ViewData["ShowHomeIcon"] = true;
+            return View(tips);
         }
     }
 }

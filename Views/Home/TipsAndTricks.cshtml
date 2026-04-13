@@ -1,0 +1,81 @@
+﻿@model List<PlanetCrafterAssistant.Models.Tip>
+@using System.Text.Json
+
+@{
+    ViewData["Title"] = "Tips & Tricks";
+    var jsonOptions = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+    var allTipsJson = JsonSerializer.Serialize(Model, jsonOptions);
+}
+
+<!-- Tips flyout backdrop -->
+<div class="tips-backdrop" id="tipsBackdrop" onclick="closeTipFlyout()"></div>
+
+<!-- Tips detail flyout (slides in from right) -->
+<div class="tips-flyout" id="tipsFlyout">
+    <div class="tips-flyout-header">
+        <button class="tips-flyout-back" onclick="closeTipFlyout()" aria-label="Close tip">
+            ← Back
+        </button>
+        <button class="tips-flyout-close" onclick="closeTipFlyout()" aria-label="Close tip">✕</button>
+    </div>
+    <div class="tips-flyout-body" id="tipsFlyoutBody"></div>
+</div>
+
+<div class="tips-page content">
+    <div class="tips-page-header">
+        <h2 class="tips-page-title">💡 Tips &amp; Tricks</h2>
+        <p class="tips-page-subtitle">Community tips to help you thrive on the planet.</p>
+    </div>
+
+    <div class="tips-list" id="tipsList">
+        @foreach (var tip in Model)
+        {
+            <div class="tips-row"
+                 data-id="@tip.Id"
+                 onclick="openTip('@tip.Id')">
+                <span class="tips-row-emoji">@tip.Emoji</span>
+                <div class="tips-row-text">
+                    <span class="tips-row-title">@tip.Title</span>
+                    <span class="tips-row-summary">@tip.Summary</span>
+                </div>
+                <span class="tips-row-category">@tip.Category</span>
+                <span class="tips-row-arrow">›</span>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    const allTips = @Html.Raw(allTipsJson);
+
+    function openTip(id) {
+        var tip = allTips.find(function (t) { return t.id === id; });
+        if (!tip) return;
+
+        document.getElementById('tipsFlyoutBody').innerHTML =
+            '<div class="tip-detail">' +
+                '<div class="tip-detail-emoji">' + tip.emoji + '</div>' +
+                '<h2 class="tip-detail-title">' + escapeHtml(tip.title) + '</h2>' +
+                '<span class="tip-detail-category">' + escapeHtml(tip.category) + '</span>' +
+                '<p class="tip-detail-content">' + escapeHtml(tip.content) + '</p>' +
+            '</div>';
+
+        document.getElementById('tipsFlyout').classList.add('open');
+        document.getElementById('tipsBackdrop').classList.add('open');
+        document.body.classList.add('tips-flyout-active');
+    }
+
+    function closeTipFlyout() {
+        document.getElementById('tipsFlyout').classList.remove('open');
+        document.getElementById('tipsBackdrop').classList.remove('open');
+        document.body.classList.remove('tips-flyout-active');
+    }
+
+    function escapeHtml(str) {
+        var d = document.createElement('div');
+        d.appendChild(document.createTextNode(str));
+        return d.innerHTML;
+    }
+</script>
+}

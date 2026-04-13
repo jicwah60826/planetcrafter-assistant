@@ -368,6 +368,142 @@
         {
             "from": "Tree Root",
             "to": "Tree bark"
+        },
+        {
+            "from": "Butterfly10 Larvae",
+            "to": "Butterfly Larvae Liux"
+        },
+        {
+            "from": "Butterfly11 Larvae",
+            "to": "Butterfly Larvae Nere"
+        },
+        {
+            "from": "Butterfly12 Larvae",
+            "to": "Butterfly Larvae Lorpen"
+        },
+        {
+            "from": "Butterfly13 Larvae",
+            "to": "Butterfly Larvae Fiorente"
+        },
+        {
+            "from": "Butterfly14 Larvae",
+            "to": "Butterfly Larvae Alben"
+        },
+        {
+            "from": "Butterfly15 Larvae",
+            "to": "Butterfly Larvae Futura"
+        },
+        {
+            "from": "Butterfly16 Larvae",
+            "to": "Butterfly Larvae lmeo"
+        },
+        {
+            "from": "Butterfly17 Larvae",
+            "to": "Butterfly Larvae Serena"
+        },
+        {
+            "from": "Butterfly18 Larvae",
+            "to": "Butterfly Larvae Golden"
+        },
+        {
+            "from": "Butterfly19 Larvae",
+            "to": "Butterfly Larvae Faleria"
+        },
+        {
+            "from": "Butterfly1 Larvae",
+            "to": "Butterfly Larvae Azurae"
+        },
+        {
+            "from": "Butterfly20 Larvae",
+            "to": "Butterfly Larvae Oesbe"
+        },
+        {
+            "from": "Butterfly2 Larvae",
+            "to": "Butterfly Larvae Leani"
+        },
+        {
+            "from": "Butterfly3 Larvae",
+            "to": "Butterfly Larvae Fensea"
+        },
+        {
+            "from": "Butterfly4 Larvae",
+            "to": "Butterfly Larvae Galaxe"
+        },
+        {
+            "from": "Butterfly5 Larvae",
+            "to": "Butterfly Larvae Abstreus"
+        },
+        {
+            "from": "Butterfly6 Larvae",
+            "to": "Butterfly Larvae Empalio"
+        },
+        {
+            "from": "Butterfly7 Larvae",
+            "to": "Butterfly Larvae Penga"
+        },
+        {
+            "from": "Butterfly8 Larvae",
+            "to": "Butterfly Larvae Chevrone"
+        },
+        {
+            "from": "Butterfly9 Larvae",
+            "to": "Butterfly Larvae Aemel"
+        },
+        {
+            "from": "Fish1 Eggs",
+            "to": "Fish Eggs Provios"
+        },
+        {
+            "from": "Fish2 Eggs",
+            "to": "Fish Eggs Vilnus"
+        },
+        {
+            "from": "Fish3 Eggs",
+            "to": "Fish Eggs Gerrero"
+        },
+        {
+            "from": "Fish4 Eggs",
+            "to": "Fish Eggs Khrom"
+        },
+        {
+            "from": "Fish5 Eggs",
+            "to": "Fish Eggs Ulani"
+        },
+        {
+            "from": "Fish6 Eggs",
+            "to": "Fish Eggs Aelera"
+        },
+        {
+            "from": "Fish7 Eggs",
+            "to": "Fish Eggs Tegede"
+        },
+        {
+            "from": "Fish8 Eggs",
+            "to": "Fish Eggs Ecaru"
+        },
+        {
+            "from": "Fish9 Eggs",
+            "to": "Fish Eggs Buyu"
+        },
+        {
+            "from": "Fish10 Eggs",
+            "to": "Fish Eggs Tiloo"
+        },
+        {
+            "from": "Fish11 Eggs",
+            "to": "Fish Eggs Golden"
+        },
+        {
+            "from": "Fish12 Eggs",
+            "to": "Fish Eggs Velkia"
+        },
+        {
+            "from": "Fish13 Eggs",
+            "to": "Fish Eggs Galbea"
+        },
+        {
+            "from": "Tree Spreader T0Fish13 Eggs",
+            "to": "Fish Eggs Galbea"
         }
     ]
 }

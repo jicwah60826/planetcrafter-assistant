@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<PlanetCrafterAssistant.Services.RecipeService>();
+builder.Services.AddSingleton<PlanetCrafterAssistant.Services.TipsService>();
 
 // Expose BUILD_ID to all views via ViewData
 var buildId = Environment.GetEnvironmentVariable("BUILD_ID") ?? "dev";
