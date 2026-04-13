@@ -393,9 +393,8 @@ main {
     inset: 0;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 16px;
+    padding: 16px 16px 72px; /* bottom clears the fixed 27px bottom nav + breathing room */
     background: #0a0e14;
-    /* Off-screen by default; JS sets slot-visible on the active one */
     transform: translateX(100%);
     visibility: hidden;
 }
@@ -1257,7 +1256,7 @@ main {
     }
 
     .detail-slot {
-        padding: 10px;
+        padding: 10px 10px 72px; /* keep bottom clearance on mobile too */
     }
 
     .item-card {

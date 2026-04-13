@@ -248,11 +248,13 @@
     }
 
     // ── Breadcrumb ───────────────────────────────────────────
-    function renderBreadcrumb() {
+    // currentItem: the name being rendered RIGHT NOW (not yet on navStack)
+    function renderBreadcrumb(currentItem) {
         const el = document.getElementById('detailBreadcrumb');
         if (!el) return;
 
-        const allCrumbs = ['All Items', ...navStack];
+        // Full trail: root + history + the item currently on screen
+        const allCrumbs = ['All Items', ...navStack, currentItem];
         const MAX_VISIBLE = 5;
         let visible = allCrumbs;
         let collapsedHtml = '';
@@ -267,13 +269,17 @@
         const startIndex = allCrumbs.length - visible.length;
         const crumbs = visible.map((label, i) => {
             const absIndex = startIndex + i;
+
+            // Last crumb = current item, always non-clickable
             if (absIndex === allCrumbs.length - 1) {
                 return `<span class="breadcrumb-current">${label}</span>`;
             }
+            // "All Items" root — always a clickable button
             if (absIndex === 0) {
                 return `<button class="breadcrumb-item" onclick="closeDetail()" title="Back to item list">${label}</button>
                         <span class="breadcrumb-sep">›</span>`;
             }
+            // Mid-stack item
             return `<button class="breadcrumb-item"
                              onclick="navigateBack(${absIndex})"
                              title="${label}">${label}</button>
@@ -374,7 +380,7 @@
         if (!recipe) return;
 
         const html = buildDetailHtml(recipe);
-        renderBreadcrumb();
+        renderBreadcrumb(name);                    // ← pass current item name
         openDetail(html, direction || 'forward');
     }
 
