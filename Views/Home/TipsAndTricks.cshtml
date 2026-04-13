@@ -7,42 +7,45 @@
     var allTipsJson = JsonSerializer.Serialize(Model, jsonOptions);
 }
 
-<!-- Tips flyout backdrop -->
-<div class="tips-backdrop" id="tipsBackdrop" onclick="closeTipFlyout()"></div>
+<div class="tips-root">
 
-<!-- Tips detail flyout (slides in from right) -->
-<div class="tips-flyout" id="tipsFlyout">
-    <div class="tips-flyout-header">
-        <button class="tips-flyout-back" onclick="closeTipFlyout()" aria-label="Close tip">
-            ← Back
-        </button>
-        <button class="tips-flyout-close" onclick="closeTipFlyout()" aria-label="Close tip">✕</button>
-    </div>
-    <div class="tips-flyout-body" id="tipsFlyoutBody"></div>
-</div>
+    <!-- ── VIEW: Tip list ─────────────────────────── -->
+    <div class="view-layer" id="tipViewList">
+        <div class="tips-page-header">
+            <h2 class="tips-page-title">💡 Tips &amp; Tricks</h2>
+            <p class="tips-page-subtitle">Community tips to help you thrive on the planet.</p>
+        </div>
 
-<div class="tips-page content">
-    <div class="tips-page-header">
-        <h2 class="tips-page-title">💡 Tips &amp; Tricks</h2>
-        <p class="tips-page-subtitle">Community tips to help you thrive on the planet.</p>
-    </div>
-
-    <div class="tips-list" id="tipsList">
-        @foreach (var tip in Model)
-        {
-            <div class="tips-row"
-                 data-id="@tip.Id"
-                 onclick="openTip('@tip.Id')">
-                <span class="tips-row-emoji">@tip.Emoji</span>
-                <div class="tips-row-text">
-                    <span class="tips-row-title">@tip.Title</span>
-                    <span class="tips-row-summary">@tip.Summary</span>
+        <div class="card-grid" id="tipsList">
+            @foreach (var tip in Model)
+            {
+                <div class="item-card"
+                     data-id="@tip.Id"
+                     onclick="openTip('@tip.Id')">
+                    <div class="tips-card-emoji">@tip.Emoji</div>
+                    <div class="tips-card-text">
+                        <span class="card-label">@tip.Title</span>
+                        <span class="tips-card-summary">@tip.Summary</span>
+                    </div>
+                    <span class="tips-card-category">@tip.Category</span>
+                    <span class="pane-row-arrow">›</span>
                 </div>
-                <span class="tips-row-category">@tip.Category</span>
-                <span class="tips-row-arrow">›</span>
-            </div>
-        }
+            }
+        </div>
     </div>
+
+    <!-- ── VIEW: Tip detail ───────────────────────── -->
+    <div class="view-layer view-layer--detail" id="tipViewDetail" aria-label="Tip details">
+        <div class="detail-breadcrumb" id="tipBreadcrumb">
+            <button class="breadcrumb-item" onclick="closeTip()">← Tips &amp; Tricks</button>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-item" id="tipBreadcrumbTitle"></span>
+        </div>
+        <div class="detail-scroll">
+            <div class="detail-slot slot-visible" id="tipDetailSlot"></div>
+        </div>
+    </div>
+
 </div>
 
 @section Scripts {
@@ -53,23 +56,23 @@
         var tip = allTips.find(function (t) { return t.id === id; });
         if (!tip) return;
 
-        document.getElementById('tipsFlyoutBody').innerHTML =
+        document.getElementById('tipBreadcrumbTitle').textContent = tip.title;
+
+        document.getElementById('tipDetailSlot').innerHTML =
             '<div class="tip-detail">' +
                 '<div class="tip-detail-emoji">' + tip.emoji + '</div>' +
-                '<h2 class="tip-detail-title">' + escapeHtml(tip.title) + '</h2>' +
-                '<span class="tip-detail-category">' + escapeHtml(tip.category) + '</span>' +
-                '<p class="tip-detail-content">' + escapeHtml(tip.content) + '</p>' +
+                '<h2 class="pane-title">' + escapeHtml(tip.title) + '</h2>' +
+                '<span class="tips-detail-category">' + escapeHtml(tip.category) + '</span>' +
+                '<p class="pane-description" style="margin-top:16px;font-style:normal;font-size:14px;color:#d8e8f0">' + escapeHtml(tip.content) + '</p>' +
             '</div>';
 
-        document.getElementById('tipsFlyout').classList.add('open');
-        document.getElementById('tipsBackdrop').classList.add('open');
-        document.body.classList.add('tips-flyout-active');
+        document.getElementById('tipViewList').classList.add('view-exit');
+        document.getElementById('tipViewDetail').classList.add('view-enter');
     }
 
-    function closeTipFlyout() {
-        document.getElementById('tipsFlyout').classList.remove('open');
-        document.getElementById('tipsBackdrop').classList.remove('open');
-        document.body.classList.remove('tips-flyout-active');
+    function closeTip() {
+        document.getElementById('tipViewList').classList.remove('view-exit');
+        document.getElementById('tipViewDetail').classList.remove('view-enter');
     }
 
     function escapeHtml(str) {
