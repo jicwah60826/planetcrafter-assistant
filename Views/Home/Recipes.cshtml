@@ -330,15 +330,14 @@
     function openDetail(html, direction) {
         if (!detailOpen) {
             // ── First open ──────────────────────────────────
-            // Populate slot A and mark it visible BEFORE the layer slides in,
-            // so the content is already rendered when the CSS transition ends.
             const slotA = getSlot('A');
             slotA.innerHTML = html;
             slotA.scrollTop = 0;
-            slotA.classList.add('slot-visible');   // ← the fix: make it visible
+            slotA.classList.add('slot-visible');
             activeSlot = 'A';
             detailOpen = true;
 
+            document.body.classList.add('detail-active');           // ← hide search
             document.getElementById('viewList').classList.add('view-exit');
             document.getElementById('viewDetail').classList.add('view-enter');
         } else {
@@ -352,15 +351,15 @@
         detailOpen = false;
         navStack   = [];
 
+        document.body.classList.remove('detail-active');            // ← restore search
         document.getElementById('viewList').classList.remove('view-exit');
         document.getElementById('viewDetail').classList.remove('view-enter');
 
-        // Reset slots after the slide-out animation finishes
         setTimeout(() => {
-            getSlot('A').innerHTML  = '';
-            getSlot('B').innerHTML  = '';
-            getSlot('A').className  = 'detail-slot';
-            getSlot('B').className  = 'detail-slot';
+            getSlot('A').innerHTML = '';
+            getSlot('B').innerHTML = '';
+            getSlot('A').className = 'detail-slot';
+            getSlot('B').className = 'detail-slot';
             activeSlot = 'A';
         }, 320);
 

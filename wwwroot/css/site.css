@@ -1283,3 +1283,8 @@ main {
         width: 100%;
     }
 }
+
+/* ── Hide search when item detail is open ────────── */
+body.detail-active .search-wrapper {
+    display: none;
+}
