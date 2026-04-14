@@ -264,6 +264,15 @@ main {
         border-color: #4fc97e;
     }
 
+/* Prevent iOS Safari auto-zoom on input focus (triggered when font-size < 16px).
+   font-size: 16px is the threshold; we use `touch-action` media to scope this
+   to touch devices only so the desktop layout is unchanged. */
+@media (hover: none) and (pointer: coarse) {
+    .search-box {
+        font-size: 16px;
+    }
+}
+
 .search-clear {
     position: absolute;
     right: 4px;
