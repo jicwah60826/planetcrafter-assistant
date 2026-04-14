@@ -1,34 +1,228 @@
 ﻿[
-  {
-    "id": "early-oxygen",
-    "title": "Early Oxygen Boost",
-    "category": "Progression",
-    "summary": "Kick-start your oxygen stage before anything else.",
-    "content": "As soon as you land, craft a Biodome T1 and fill it with Grass Seeds. Each dome provides a steady oxygen rate and the seeds are found in abundance near your landing pod. Stacking two or three domes in the first 10 minutes will significantly accelerate your Oxygen index and unlock mid-tier equipment faster.",
-    "emoji": "🌿"
-  },
-  {
-    "id": "trade-platform-tips",
-    "title": "Trade Platform Priority Items",
-    "category": "Resources",
-    "summary": "Know what to buy first from the Trade Platform.",
-    "content": "Spend your Rockets on Iridium and Osmium early — both are bottlenecks for T2 and T3 crafting recipes. Avoid spending on raw resources like Iron or Silicon that you can mine on foot. Once your terraformation is past the Heat stage, prioritise buying Blueprint Chips as they gate several high-value machines.",
-    "emoji": "🏪"
-  },
-  {
-    "id": "inventory-management",
-    "title": "Inventory Management",
-    "category": "General",
-    "summary": "Keep your backpack clean and efficient.",
-    "content": "Assign dedicated chests near your base entrance for raw materials and crafted components separately. Sort by category so you always know where to look. Use the Auto-Crafter once unlocked to pull directly from linked chests, removing the need to carry stacks manually across your base.",
-    "emoji": "🎒"
-  },
-  {
-    "id": "golden-chest-route",
-    "title": "Golden Chest Route",
-    "category": "Exploration",
-    "summary": "Plan an efficient loop to collect all golden chests.",
-    "content": "Golden chests respawn on major game updates, not on a fixed timer. Map out a route from your base that hits each known chest location in a single loop. Equip a Jetpack T2 or higher before attempting the wrecks — several chests are on elevated platforms or inside derelict structures that require vertical movement.",
-    "emoji": "🗺️"
-  }
+    {
+        "id": "the-high-ground",
+        "title": "Build for the Future (Flooding)",
+        "category": "Construction",
+        "summary": "Avoid a watery grave for your first base.",
+        "content": "The 'Starting Valley' will eventually fill with water as the Liquid Water stage progresses. To avoid having to move your entire storage and power grid later, build your primary hub on the elevated plateau near the crashed cruiser or the 'Standard' landing site hills. If you've already built low, start migrating your Chests and Crafting Stations once you see the first puddles appear.",
+        "emoji": "🌊"
+    },
+    {
+        "id": "golden-crate-multiplier",
+        "title": "Save the Golden Crates",
+        "category": "Exploration",
+        "summary": "Timing your loot for maximum endgame value.",
+        "content": "Golden Crates do NOT respawn. The loot inside scales with your current Terraformation stage. While it's tempting to open them immediately for Iridium, waiting until you reach the 'Lakes' or 'Amphibians' stage will yield high-tier Blueprints, Rods, and Rare Larvae that are much harder to craft manually.",
+        "emoji": "🎁"
+    },
+    {
+        "id": "auto-crafter-logistics",
+        "title": "The 'Range' of Automation",
+        "category": "Automation",
+        "summary": "Mastering the Auto-Crafter's invisible radius.",
+        "content": "The Auto-Crafter has a spherical radius that can 'see' through walls and floors. Place your Storage Containers in a tight cluster or a 2-story 'sandwich' with the Auto-Crafter in the center. This allows it to pull from dozens of chests simultaneously, enabling you to mass-produce complex items like Pulsar Quartz or Bacteria Samples without ever opening a menu.",
+        "emoji": "🤖"
+    },
+    {
+        "id": "rocket-stacking",
+        "title": "The 1000% Multiplier Trick",
+        "category": "Progression",
+        "summary": "Rockets are the most efficient way to boost TI.",
+        "content": "Building more drills or heaters has diminishing returns compared to the Launch Platform. Each Magnetic Field or Heat Rocket provides a global 1000% (10x) multiplier to its respective stat. Launching 10 rockets is exponentially more effective than building 50 Tier 4 machines. Always prioritize Rocket Engines as your primary 'mid-game' resource.",
+        "emoji": "🚀"
+    },
+    {
+        "id": "toxicity-filter-management",
+        "title": "Purification Priority",
+        "category": "Toxicity",
+        "summary": "Surviving the 2026 Toxicity zones.",
+        "content": "When entering 'Green Mist' zones, your Oxygen will deplete faster regardless of your tank size. Always carry two Filter Cartridges. Rather than building small shacks for oxygen, focus on the 'Purification Totem'—it clears a radius of toxicity, allowing you to explore the new 2026 biomes without the constant ticking health drain.",
+        "emoji": "☣️"
+    },
+    {
+        "id": "ore-extractor-placement",
+        "title": "Specific Ore Mining",
+        "category": "Resources",
+        "summary": "Where you place the drill determines the loot.",
+        "content": "Ore Extractors (T1 & T2) produce specific rare ores based on the ground they sit on. Place them in the Aluminum Hills for Aluminum, the Iridium Cave for Iridium, and the Sulfur Fields for Sulfur. If you place them in a 'neutral' zone, you will only get common minerals like Iron and Titanium. Tip: T3 Extractors allow you to select the ore regardless of location, but they are deep in the tech tree.",
+        "emoji": "⛏️"
+    },
+
+    {
+        "id": "osmium-thaw",
+        "title": "The Osmium Gate",
+        "category": "Resources",
+        "summary": "Accessing late-game areas early.",
+        "content": "Several caves (like the one connecting the Starting Valley to the Sulfur Fields) are blocked by ice. This ice only melts once you reach specific 'Heat' thresholds. If you're stuck, don't just explore—build more Heaters or launch a Magnetic Field Rocket to force the thaw and reach the Osmium and Sulfur nodes.",
+        "emoji": "🧊"
+    },
+    {
+        "id": "pulsar-quartz-mining",
+        "title": "Infinite Pulsar Quartz",
+        "category": "Automation",
+        "summary": "Stop crafting it, start mining it.",
+        "content": "In the late game, crafting Pulsar Quartz is a resource sink. Once you unlock the Ore Extractor T3, place one in the 'Meteor Crater' or the 'Wasteland' biomes. You can set the filter specifically to Pulsar Quartz, providing an infinite supply for your Fusion Generators and Teleporters.",
+        "emoji": "💎"
+    },
+    {
+        "id": "drone-logistics-optimization",
+        "title": "Drone Priority Levels",
+        "category": "Logistics",
+        "summary": "Ensuring your auto-crafters never go hungry.",
+        "content": "Drones can get overwhelmed. Set your 'Supply' chests (from Ore Extractors) to Priority 1 and your 'Demand' chests (next to Auto-Crafters) to Priority 5. This ensures drones prioritize filling the machines that are actively producing items over simply moving dirt around your base.",
+        "emoji": "🛸"
+    },
+    {
+        "id": "breathable-atmosphere",
+        "title": "Infinite Oxygen Secret",
+        "category": "Progression",
+        "summary": "The moment you can stop carrying blue bottles.",
+        "content": "Once your Terraformation reaches the 'Breathable Atmosphere' stage, you no longer need an Oxygen tank while outside. However, the Oxygen gauge will still deplete if you enter a Toxicity zone or a deep wreck. Always check your HUD before venturing into the 2026 expansion craters.",
+        "emoji": "🌬️"
+    },
+    {
+        "id": "butterfly-multiplier",
+        "title": "Hidden Butterfly Species",
+        "category": "Biomass",
+        "summary": "Boosting your Insect stage multiplier.",
+        "content": "Not all larvae are found on the ground. Some of the highest-multiplier Butterfly larvae (like the Serena or Golden larvae) must be crafted in the Incubator using a specific combination of Mutagen and Fertilizer. Check the 'Incubator Recipes' section of this app to see the exact requirements.",
+        "emoji": "🦋"
+    },
+    {
+        "id": "teleporter-network",
+        "title": "Global Fast Travel",
+        "category": "General",
+        "summary": "Managing energy costs for instant travel.",
+        "content": "Teleporters are the ultimate mid-to-late game luxury. They consume massive amounts of Energy (approx. 300 kW/s). Before building a global network, ensure you have a stable Nuclear Fusion array. Label your teleporters clearly (e.g., 'Iridium Mine', 'Trade Hub') to save time during resource runs.",
+        "emoji": "🌀"
+    },
+    {
+        "id": "larvae-spawning-mechanic",
+        "title": "How to Find Rare Larvae",
+        "category": "Exploration",
+        "summary": "Larvae spawn near the player, not in fixed spots.",
+        "content": "Larvae spawning is based on your character's location. If you are looking for rare larvae in the 2026 Toxicity biomes, stand still for 30-60 seconds. The game will slowly spawn larvae in a radius around you. If you keep running, you might miss them before they appear.",
+        "emoji": "🐛"
+    },
+    {
+        "id": "recycler-efficiency",
+        "title": "The 'Refund' Strategy",
+        "category": "Resources",
+        "summary": "Recovering 100% of your crafting costs.",
+        "content": "The Recycler is one of the most powerful tools for rebuilding. It returns 100% of the ingredients used to craft an item. If you find high-tier items in wrecks that you don't need (like a Rocket Engine you already have too many of), recycle it to get the expensive Iridium Rods and Uranium back.",
+        "emoji": "♻️"
+    },
+    {
+        "id": "toxicity-protection-suit",
+        "title": "Hazmat vs. Toxicity Gear",
+        "category": "Toxicity",
+        "summary": "Choosing the right suit for the 2026 biomes.",
+        "content": "The standard Hazmat suit protects against reactor leaks, but it does NOT protect against the new Toxicity zones. You must craft the 'Purification Rebreather' found in the new tech tree. This allows you to stay in 'Green Mist' zones 3x longer before taking damage.",
+        "emoji": "🛡️"
+    },
+    {
+        "id": "optimizer-chips",
+        "title": "Machine Optimizers",
+        "category": "Progression",
+        "summary": "Multiplying your existing machines.",
+        "content": "Machine Optimizers use 'Optimizer Blueprints' to boost nearby structures. One T2 Optimizer with a 'Speed' chip can make three T4 Drills perform like twelve. It is always more energy-efficient to optimize a few machines than to build dozens of un-boosted ones.",
+        "emoji": "⚡"
+    },
+
+    {
+        "id": "fusion-energy-efficiency",
+        "title": "The Fusion Transition",
+        "category": "Energy",
+        "summary": "When to deconstruct your solar and nuclear arrays.",
+        "content": "Once you unlock the Fusion Generator, stop building Nuclear T2s. One Fusion Generator produces significantly more energy and takes up less physical space. Use the Recycler to break down your old Nuclear Rods to recover the explosive powder needed for the Fusion cells. This keeps your base footprint small and your energy surplus high.",
+        "emoji": "⚛️"
+    },
+    {
+        "id": "water-collector-placement",
+        "title": "Atmospheric vs. Lake Collectors",
+        "category": "Resources",
+        "summary": "Optimizing your hydration supply.",
+        "content": "Atmospheric Water Collectors work anywhere but are slow. Once the 'Lakes' stage begins, place Lake Water Collectors directly on the water's surface. They produce water significantly faster. If you're automating Bacteria Samples, place your Water Collectors right next to your Bio-Lab and set a Drone to 'Supply' to keep production running 24/7.",
+        "emoji": "🥤"
+    },
+    {
+        "id": "creature-shaper-traits",
+        "title": "Genetic Trait Overrides",
+        "category": "Biomass",
+        "summary": "Getting the 2026 'Perfect' animal specimens.",
+        "content": "In the new 2026 Animal stage, using 'Standard' DNA results in generic creatures. To get high-multiplier traits like 'Glowing' or 'Gigantism,' you must mix DNA with the new Toxicity-derived enzymes found in the Deep Craters. These 'Mutated' specimens provide a 5x boost to your total Biomass index compared to standard breeds.",
+        "emoji": "🧬"
+    },
+    {
+        "id": "warden-key-altars",
+        "title": "The Warden's Secret",
+        "category": "Exploration",
+        "summary": "Don't ignore the stone altars.",
+        "content": "Scattered across the map are ancient stone altars. These require 'Warden Keys' found in hidden chests or behind waterfall fake-walls. Completing the Warden's Altar questline is the only way to unlock the 'Ancient City' biome and the 'Portal Generator' blueprints. Always keep 3-5 Warden Keys in a dedicated chest for when you stumble upon a new altar.",
+        "emoji": "🗿"
+    },
+    {
+        "id": "portal-instability",
+        "title": "Portal Loot Scaling",
+        "category": "Progression",
+        "summary": "Risk vs. Reward in procedural wrecks.",
+        "content": "When using the Portal Generator, the 'Difficulty' and 'Rarity' sliders determine the loot quality. However, high-rarity portals have high 'Instability.' If the timer runs out while you are inside, the portal collapses and you lose everything in your backpack. Tip: Bring a 'Portal Stabilizer' (unlocked at 500 GTi) to double your exploration time.",
+        "emoji": "🌀"
+    },
+    {
+        "id": "zeolite-regrowth",
+        "title": "The Zeolite Harvest",
+        "category": "Resources",
+        "summary": "Understanding the 'Flora' resource stage.",
+        "content": "Zeolite doesn't spawn until the 'Flora' stage. It grows on white, vine-like structures typically near water sources or in the Arches biome. Unlike Iron or Silicon, Zeolite does NOT respawn naturally. Once you harvest the world nodes, your only source will be T3 Ore Extractors or high-tier Trade Shipments.",
+        "emoji": "🌿"
+    },
+    {
+        "id": "magnesium-bottleneck",
+        "title": "The Magnesium Trap",
+        "category": "General",
+        "summary": "Why you shouldn't throw away 'common' ore.",
+        "content": "Early on, Magnesium feels useless. However, in the mid-game, it is a core ingredient for Fertilizer and Silicon-Carbide plates. Many players dump Magnesium to make room for Iridium, only to find themselves hunting for it later. Keep at least two Storage Container T2s full of Magnesium—you'll need them for the Bio-Lab grind.",
+        "emoji": "🧲"
+    },
+    {
+        "id": "fish-farm-spacing",
+        "title": "Optimizing Fish Farms",
+        "category": "Biomass",
+        "summary": "Maximizing the spread of your aquatic life.",
+        "content": "Fish Farms (T1 & T2) have a hidden 'clutter' penalty. If you place ten farms in a small pond, their efficiency drops. Spread them out across larger bodies of water. For the best results, place them near 'Water Life Spreaders' to get a combined multiplier effect on your Animals index.",
+        "emoji": "🐟"
+    },
+    {
+        "id": "toxicity-extraction",
+        "title": "Mining Toxicity Ores",
+        "category": "Toxicity",
+        "summary": "Setting up 2026 expansion extractors.",
+        "content": "The new 2026 'Venomous' materials required for Purification Totems can only be mined in the Toxicity craters. You must use a T3 Ore Extractor and set the filter to 'Toxic Sludge' or 'Corrupted Quartz.' Standard drills will not yield these materials, even in the correct biome.",
+        "emoji": "🧪"
+    },
+    {
+        "id": "jetpack-fuel-efficiency",
+        "title": "Jetpack Verticality",
+        "category": "Exploration",
+        "summary": "Saving fuel while climbing.",
+        "content": "The Jetpack (T1-T4) is faster if you tap the spacebar (feathering) rather than holding it down. This allows the internal 'recharge' to kick in slightly between bursts, giving you about 20% more height per flight. This is essential for reaching the top of the 'Sand Falls' before your initial oxygen tank runs out.",
+        "emoji": "🎒"
+    },
+    {
+        "id": "tree-spreader-placement",
+        "title": "The 'Tree' Multiplier",
+        "category": "Biomass",
+        "summary": "Where to plant for maximum Oxygen.",
+        "content": "Tree Spreaders (T1-T3) must be placed on land, but they provide a much higher Oxygen boost if placed near water. The 'Tree Spreader T3' is especially powerful as it creates its own forest. Tip: Use 'Solea' or 'Pleru' tree seeds early on; save your 'Golden' tree seeds for spreaders located near your base for the aesthetic and the 600% multiplier.",
+        "emoji": "🌳"
+    },
+    {
+        "id": "auto-sort-inventory",
+        "title": "Instant Inventory Sort",
+        "category": "General",
+        "summary": "A hidden UI shortcut.",
+        "content": "When inside any storage container, there is a small icon in the top right of the chest window that looks like three lines. Clicking this will instantly sort the chest by item type. You can also use the 'Transfer All' button (the arrow icon) to dump your entire backpack into a supply chest instantly after a resource run.",
+        "emoji": "📋"
+    }
 ]
