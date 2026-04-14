@@ -60,10 +60,7 @@ main {
     align-items: center;
     gap: 10px;
     width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
 }
-
 .top-bar h1 {
     flex: 1;
     font-size: 1.1rem;
