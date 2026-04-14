@@ -1,4 +1,9 @@
-﻿--bg-panel: #0f1520 panel/card backgrounds
+﻿/* ───────────────────────────────────────────────────
+   GNOSIS - THE ULTIMATE HYPERSPACE COOKBOOK CSS
+   ───────────────────────────────────────────────────
+
+Design tokens: 
+--bg-panel: #0f1520 panel/card backgrounds
 --bg-surface: #141e2e elevated surfaces
 --bg-chrome: #0d1829 nav bars / top bar
 --border: #1e2e44 default borders
@@ -1027,6 +1032,23 @@ main {
     margin-bottom: 4px;
     font-size: 13px;
     color: #c0d8e8;
+}
+
+.cart-item-row.clickable,
+.gather-row.clickable {
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.cart-item-row.clickable:hover,
+.gather-row.clickable:hover {
+    background: #141e2e;
+    border-color: #4fc97e;
+}
+
+.cart-item-row.clickable:hover .cart-item-name,
+.gather-row.clickable:hover .gather-row-name {
+    color: #4fc97e;
 }
 
 .cart-item-icon {

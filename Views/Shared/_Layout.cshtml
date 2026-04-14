@@ -193,6 +193,15 @@
             });
         }
 
+        function navigateToItem(name) {
+            closeCart();
+            if (typeof selectItem === 'function') {
+                selectItem(name);
+            } else {
+                window.location.href = '/Home/Recipes#item=' + encodeURIComponent(name);
+            }
+        }
+
         function renderCartPanel() {
             var body = document.getElementById('cartPanelBody');
             if (!body) return;
@@ -203,15 +212,15 @@
             var itemsHtml = cart.map(function (e) {
                 var slug = e.name.toLowerCase().replace(/ /g, '_');
                 var safeName = e.name.replace(/'/g, "\\'");
-                return '<div class="cart-item-row">' +
+                return '<div class="cart-item-row clickable" onclick="navigateToItem(\'' + safeName + '\')">' +
                     '<img class="cart-item-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
                     '<span class="cart-item-name">' + e.name + '</span>' +
                     '<div class="cart-qty-controls">' +
-                    '<button class="cart-qty-btn" onclick="setCartQty(\'' + safeName + '\', ' + (e.qty - 1) + ')">−</button>' +
+                    '<button class="cart-qty-btn" onclick="event.stopPropagation();setCartQty(\'' + safeName + '\', ' + (e.qty - 1) + ')">−</button>' +
                     '<span class="cart-qty-value">' + e.qty + '</span>' +
-                    '<button class="cart-qty-btn" onclick="setCartQty(\'' + safeName + '\', ' + (e.qty + 1) + ')">+</button>' +
+                    '<button class="cart-qty-btn" onclick="event.stopPropagation();setCartQty(\'' + safeName + '\', ' + (e.qty + 1) + ')">+</button>' +
                     '</div>' +
-                    '<button class="cart-item-remove" onclick="removeFromCart(\'' + safeName + '\')" title="Remove">✕</button>' +
+                    '<button class="cart-item-remove" onclick="event.stopPropagation();removeFromCart(\'' + safeName + '\')" title="Remove">✕</button>' +
                     '</div>';
             }).join('');
             var gatherMap = {};
@@ -230,8 +239,12 @@
                 gatherHtml = '<div class="cart-section"><div class="cart-section-title cart-section-title--gather">Materials to Gather</div>' +
                     gatherEntries.map(function (n) {
                         var slug = n.toLowerCase().replace(/ /g, '_');
-                        return '<div class="gather-row"><img class="gather-row-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
-                            '<span class="gather-row-name">' + n + '</span><span class="gather-row-qty">x' + gatherMap[n] + '</span></div>';
+                        var safeName = n.replace(/'/g, "\\'");
+                        return '<div class="gather-row clickable" onclick="navigateToItem(\'' + safeName + '\')">' +
+                            '<img class="gather-row-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
+                            '<span class="gather-row-name">' + n + '</span>' +
+                            '<span class="gather-row-qty">x' + gatherMap[n] + '</span>' +
+                            '</div>';
                     }).join('') + '</div>';
             }
             body.innerHTML =

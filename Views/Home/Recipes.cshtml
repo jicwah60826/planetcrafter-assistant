@@ -443,13 +443,16 @@
 
     syncCartButtons();
 
-    // ── Filter tabs ──────────────────────────────────────────
-    document.querySelectorAll('.tab').forEach(tab => {
-        tab.addEventListener('click', () => {
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            applyFilters();
-        });
-    });
+    // ── Auto-select item from URL hash (e.g. navigated from cart) ────
+    (function () {
+        var hash = window.location.hash;
+        if (hash && hash.startsWith('#item=')) {
+            var name = decodeURIComponent(hash.slice(6));
+            history.replaceState(null, '', window.location.pathname);
+            if (name) {
+                selectItem(name);
+            }
+        }
+    })();
 </script>
 }
