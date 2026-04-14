@@ -33,3 +33,16 @@ function clearSearch() {
     applyFilters();
     searchBox.focus();
 }
+
+document.addEventListener('click', function (e) {
+    const tab = e.target.closest('.tab');
+    if (!tab) return;
+
+    // Update active state on all sibling tabs
+    tab.closest('.filter-tabs')
+       .querySelectorAll('.tab')
+       .forEach(t => t.classList.remove('active'));
+
+    tab.classList.add('active');
+    applyFilters();
+});
