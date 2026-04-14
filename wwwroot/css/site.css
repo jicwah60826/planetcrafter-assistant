@@ -1838,3 +1838,1007 @@ body.detail-active .search-wrapper {
     margin-bottom: 4px;
     background: #0a1e12;
 }
+
+/* ── Cart full-screen view ───────────────────────── */
+.cart-root {
+    position: fixed;
+    inset: 53px 0 27px; /* below top-bar, above bottom-nav */
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    background: #0a0e14;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.32s;
+    will-change: transform;
+}
+
+body.cart-active .cart-root {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
+}
+
+/* Hide search box when cart is open (mirrors detail-active behaviour) */
+body.cart-active .search-wrapper {
+    display: none;
+}
+
+.cart-root-body {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px 16px 72px;
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cart-empty-msg {
+    color: #3a5070;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cart-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    color: #6a8aaa;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1e2e44;
+}
+
+    .cart-section-title::before {
+        content: '';
+        display: inline-block;
+        width: 3px;
+        height: 12px;
+        border-radius: 2px;
+        flex-shrink: 0;
+        background: #e8a020;
+    }
+
+.cart-section-title--gather::before {
+    background: #4fc97e;
+}
+
+.cart-section {
+    margin-bottom: 24px;
+}
+
+.cart-item-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #0f1520;
+    border: 1px solid #1e2e44;
+    border-radius: 4px;
+    padding: 7px 10px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #c0d8e8;
+}
+
+.cart-item-row.clickable,
+.gather-row.clickable {
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.cart-item-row.clickable:hover,
+.gather-row.clickable:hover {
+    background: #141e2e;
+    border-color: #4fc97e;
+}
+
+.cart-item-row.clickable:hover .cart-item-name,
+.gather-row.clickable:hover .gather-row-name {
+    color: #4fc97e;
+}
+
+.cart-item-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.cart-item-name {
+    flex: 1;
+}
+
+.cart-item-remove {
+    background: none;
+    border: none;
+    color: #3a5070;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: color 0.15s, background 0.15s;
+    line-height: 1;
+}
+
+    .cart-item-remove:hover {
+        color: #e05050;
+        background: #1a1020;
+    }
+
+.gather-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #0f1520;
+    border: 1px solid #1e2e44;
+    border-radius: 4px;
+    padding: 7px 10px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #c0d8e8;
+}
+
+.gather-row-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.gather-row-name {
+    flex: 1;
+}
+
+.gather-row-qty {
+    font-weight: 700;
+    color: #e8a020;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.cart-clear-btn {
+    display: block;
+    width: 100%;
+    background: none;
+    border: 1px solid #3a2020;
+    color: #6a3a3a;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+    .cart-clear-btn:hover {
+        background: #1a0f0f;
+        border-color: #e05050;
+        color: #e05050;
+    }
+
+/* ── Cart qty controls ───────────────────────────── */
+.cart-qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.cart-qty-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #141e2e;
+    border: 1px solid #2a4060;
+    border-radius: 4px;
+    color: #d8e8f0;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+    .cart-qty-btn:hover {
+        background: #1a2e48;
+        border-color: #4fc97e;
+        color: #4fc97e;
+    }
+
+.cart-qty-value {
+    min-width: 22px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #e8a020;
+}
+
+/* ── Steam links ─────────────────────────────────── */
+.top-bar-steam-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #1b2838;
+    color: #c7d5e0;
+    border: 1px solid #2a475e;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s;
+}
+
+    .top-bar-steam-btn:hover {
+        background: #2a475e;
+        color: #fff;
+    }
+
+.flyout-steam-link {
+    color: #c7d5e0 !important;
+    font-weight: 600;
+}
+
+    .flyout-steam-link:hover {
+        background: #1b2838 !important;
+        color: #fff !important;
+    }
+
+/* ── Legacy cards (Dashboard etc.) ──────────────── */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    background: #0f1520;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #1e2e44;
+    transition: border-color 0.15s;
+}
+
+    .card:hover {
+        border-color: #4fc97e;
+    }
+
+/* ── Content wrapper (non-recipe pages) ──────────── */
+.content {
+    padding: 15px;
+    padding-bottom: 90px;
+}
+
+/* ── Build ID ────────────────────────────────────── */
+.build-id {
+    font-size: 10px;
+    color: #1e2e44;
+    margin-left: auto;
+}
+
+/* ── About page ──────────────────────────────────── */
+.about-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+
+/* ── Mobile (≤ 600px) ────────────────────────────── */
+@media (max-width: 600px) {
+
+    .top-bar {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+        .top-bar h1 {
+            font-size: 1rem;
+        }
+
+    /* Hide the Steam button on mobile — accessible via the flyout menu */
+    .top-bar-steam-btn {
+        display: none;
+    }
+
+    /* Cap search width so cart button is never pushed off-screen */
+    .search-box {
+        width: 120px;
+    }
+
+    /* Cart button is always visible, even when cart is empty */
+    .cart-btn {
+        display: flex !important;
+    }
+
+    .recipes-root {
+        height: calc(100vh - 53px - 27px);
+    }
+
+    .view-layer {
+        padding: 10px;
+    }
+
+    .detail-breadcrumb {
+        padding: 8px 10px;
+    }
+
+    .detail-slot {
+        padding: 10px 10px 72px; /* keep bottom clearance on mobile too */
+    }
+
+    .item-card {
+        padding: 7px 10px;
+        gap: 12px;
+    }
+
+    .card-icon,
+    .card-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-icon-fallback {
+        font-size: 24px;
+    }
+
+    .card-label {
+        font-size: 13px;
+    }
+
+    .cart-panel {
+        width: 100%;
+    }
+}
+
+/* ── Hide search when item detail is open ────────── */
+body.detail-active .search-wrapper {
+    display: none;
+}
+
+/* ── Tips & Tricks page ──────────────────────────── */
+.tips-root {
+    position: relative;
+    height: calc(100vh - 53px - 27px);
+    overflow: hidden;
+}
+
+.tips-page-header {
+    margin-bottom: 16px;
+}
+
+.tips-page-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #d8e8f0;
+    margin-bottom: 4px;
+}
+
+.tips-page-subtitle {
+    font-size: 12px;
+    color: #6a8aaa;
+}
+
+.tips-card-emoji {
+    font-size: 22px;
+    flex-shrink: 0;
+    width: 32px;
+    text-align: center;
+}
+
+.tips-card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.tips-card-summary {
+    font-size: 11px;
+    color: #6a8aaa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tips-card-category {
+    font-size: 10px;
+    color: #3a5070;
+    border: 1px solid #1e2e44;
+    border-radius: 3px;
+    padding: 1px 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ── Tip detail content ──────────────────────────── */
+.tip-detail {
+    padding: 8px 0;
+}
+
+.tip-detail-emoji {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.tips-detail-category {
+    display: inline-block;
+    font-size: 10px;
+    color: #4fc97e;
+    border: 1px solid #1a4a28;
+    border-radius: 3px;
+    padding: 2px 8px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    background: #0a1e12;
+}
+
+/* ── Cart full-screen view ───────────────────────── */
+.cart-root {
+    position: fixed;
+    inset: 53px 0 27px; /* below top-bar, above bottom-nav */
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    background: #0a0e14;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.32s;
+    will-change: transform;
+}
+
+body.cart-active .cart-root {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
+}
+
+/* Hide search box when cart is open (mirrors detail-active behaviour) */
+body.cart-active .search-wrapper {
+    display: none;
+}
+
+.cart-root-body {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px 16px 72px;
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cart-empty-msg {
+    color: #3a5070;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cart-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    color: #6a8aaa;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1e2e44;
+}
+
+    .cart-section-title::before {
+        content: '';
+        display: inline-block;
+        width: 3px;
+        height: 12px;
+        border-radius: 2px;
+        flex-shrink: 0;
+        background: #e8a020;
+    }
+
+.cart-section-title--gather::before {
+    background: #4fc97e;
+}
+
+.cart-section {
+    margin-bottom: 24px;
+}
+
+.cart-item-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #0f1520;
+    border: 1px solid #1e2e44;
+    border-radius: 4px;
+    padding: 7px 10px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #c0d8e8;
+}
+
+.cart-item-row.clickable,
+.gather-row.clickable {
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.cart-item-row.clickable:hover,
+.gather-row.clickable:hover {
+    background: #141e2e;
+    border-color: #4fc97e;
+}
+
+.cart-item-row.clickable:hover .cart-item-name,
+.gather-row.clickable:hover .gather-row-name {
+    color: #4fc97e;
+}
+
+.cart-item-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.cart-item-name {
+    flex: 1;
+}
+
+.cart-item-remove {
+    background: none;
+    border: none;
+    color: #3a5070;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: color 0.15s, background 0.15s;
+    line-height: 1;
+}
+
+    .cart-item-remove:hover {
+        color: #e05050;
+        background: #1a1020;
+    }
+
+.gather-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #0f1520;
+    border: 1px solid #1e2e44;
+    border-radius: 4px;
+    padding: 7px 10px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #c0d8e8;
+}
+
+.gather-row-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.gather-row-name {
+    flex: 1;
+}
+
+.gather-row-qty {
+    font-weight: 700;
+    color: #e8a020;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.cart-clear-btn {
+    display: block;
+    width: 100%;
+    background: none;
+    border: 1px solid #3a2020;
+    color: #6a3a3a;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+    .cart-clear-btn:hover {
+        background: #1a0f0f;
+        border-color: #e05050;
+        color: #e05050;
+    }
+
+/* ── Cart qty controls ───────────────────────────── */
+.cart-qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.cart-qty-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #141e2e;
+    border: 1px solid #2a4060;
+    border-radius: 4px;
+    color: #d8e8f0;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+    .cart-qty-btn:hover {
+        background: #1a2e48;
+        border-color: #4fc97e;
+        color: #4fc97e;
+    }
+
+.cart-qty-value {
+    min-width: 22px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #e8a020;
+}
+
+/* ── Steam links ─────────────────────────────────── */
+.top-bar-steam-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #1b2838;
+    color: #c7d5e0;
+    border: 1px solid #2a475e;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s;
+}
+
+    .top-bar-steam-btn:hover {
+        background: #2a475e;
+        color: #fff;
+    }
+
+.flyout-steam-link {
+    color: #c7d5e0 !important;
+    font-weight: 600;
+}
+
+    .flyout-steam-link:hover {
+        background: #1b2838 !important;
+        color: #fff !important;
+    }
+
+/* ── Legacy cards (Dashboard etc.) ──────────────── */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    background: #0f1520;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #1e2e44;
+    transition: border-color 0.15s;
+}
+
+    .card:hover {
+        border-color: #4fc97e;
+    }
+
+/* ── Content wrapper (non-recipe pages) ──────────── */
+.content {
+    padding: 15px;
+    padding-bottom: 90px;
+}
+
+/* ── Build ID ────────────────────────────────────── */
+.build-id {
+    font-size: 10px;
+    color: #1e2e44;
+    margin-left: auto;
+}
+
+/* ── About page ──────────────────────────────────── */
+.about-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+
+/* ── Mobile (≤ 600px) ────────────────────────────── */
+@media (max-width: 600px) {
+
+    .top-bar {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+        .top-bar h1 {
+            font-size: 1rem;
+        }
+
+    /* Hide the Steam button on mobile — accessible via the flyout menu */
+    .top-bar-steam-btn {
+        display: none;
+    }
+
+    /* Cap search width so cart button is never pushed off-screen */
+    .search-box {
+        width: 120px;
+    }
+
+    /* Cart button is always visible, even when cart is empty */
+    .cart-btn {
+        display: flex !important;
+    }
+
+    .recipes-root {
+        height: calc(100vh - 53px - 27px);
+    }
+
+    .view-layer {
+        padding: 10px;
+    }
+
+    .detail-breadcrumb {
+        padding: 8px 10px;
+    }
+
+    .detail-slot {
+        padding: 10px 10px 72px; /* keep bottom clearance on mobile too */
+    }
+
+    .item-card {
+        padding: 7px 10px;
+        gap: 12px;
+    }
+
+    .card-icon,
+    .card-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-icon-fallback {
+        font-size: 24px;
+    }
+
+    .card-label {
+        font-size: 13px;
+    }
+
+    .cart-panel {
+        width: 100%;
+    }
+}
+
+/* ── Hide search when item detail is open ────────── */
+body.detail-active .search-wrapper {
+    display: none;
+}
+
+/* ── Tips & Tricks page ──────────────────────────── */
+.tips-root {
+    position: relative;
+    height: calc(100vh - 53px - 27px);
+    overflow: hidden;
+}
+
+.tips-page-header {
+    margin-bottom: 16px;
+}
+
+.tips-page-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #d8e8f0;
+    margin-bottom: 4px;
+}
+
+.tips-page-subtitle {
+    font-size: 12px;
+    color: #6a8aaa;
+}
+
+.tips-card-emoji {
+    font-size: 22px;
+    flex-shrink: 0;
+    width: 32px;
+    text-align: center;
+}
+
+.tips-card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.tips-card-summary {
+    font-size: 11px;
+    color: #6a8aaa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tips-card-category {
+    font-size: 10px;
+    color: #3a5070;
+    border: 1px solid #1e2e44;
+    border-radius: 3px;
+    padding: 1px 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ── Tip detail content ──────────────────────────── */
+.tip-detail {
+    padding: 8px 0;
+}
+
+.tip-detail-emoji {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.tips-detail-category {
+    display: inline-block;
+    font-size: 10px;
+    color: #4fc97e;
+    border: 1px solid #1a4a28;
+    border-radius: 3px;
+    padding: 2px 8px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    background: #0a1e12;
+}
+
+/* ── Cart tab bar ────────────────────────────────── */
+.cart-tab-bar {
+    display: flex;
+    flex-shrink: 0;
+    border-bottom: 1px solid #1e2e44;
+    background: #0d1829;
+}
+
+.cart-tab {
+    flex: 1;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #6a8aaa;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 0;
+    cursor: pointer;
+    letter-spacing: 0.4px;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+    .cart-tab:hover {
+        color: #d8e8f0;
+    }
+
+    .cart-tab.active {
+        color: #4fc97e;
+        border-bottom-color: #4fc97e;
+    }
+
+/* ── Cart tree view ──────────────────────────────── */
+.cart-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 16px;
+}
+
+.tree-node {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+    min-height: 40px;
+}
+
+    .tree-node:hover {
+        background: #141e2e;
+    }
+
+.tree-node--craftable > .tree-node-name {
+    color: #c0d8e8;
+}
+
+.tree-node--raw > .tree-node-name {
+    color: #6a8aaa;
+}
+
+.tree-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    color: #4fc97e;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.15s;
+}
+
+    .tree-toggle:hover {
+        color: #d8e8f0;
+    }
+
+.tree-toggle-spacer {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.tree-node-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.tree-node-name {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+.tree-node-qty {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e8a020;
+    flex-shrink: 0;
+}

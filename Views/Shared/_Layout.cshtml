@@ -51,6 +51,13 @@
                 <img src="~/images/Cart.png" alt="" style="width:12px;height:12px;object-fit:contain;vertical-align:middle;margin-right:4px;" aria-hidden="true" />Crafting Cart
             </span>
         </div>
+
+        <!-- List / Tree tab bar -->
+        <div class="cart-tab-bar">
+            <button class="cart-tab active" id="cartTabList" onclick="switchCartTab('list')">☰ List</button>
+            <button class="cart-tab" id="cartTabTree" onclick="switchCartTab('tree')">⑂ Tree</button>
+        </div>
+
         <div class="cart-root-body" id="cartPanelBody">
             <p class="cart-empty-msg">
                 Your cart is empty.<br />
@@ -133,6 +140,9 @@
 
         // ── Cart (localStorage-backed) ─────────────────────────
         var cart = JSON.parse(localStorage.getItem('pc-cart') || '[]');
+        var cartViewTab = 'list'; // 'list' | 'tree'
+        // Tracks which tree nodes are collapsed: key = nodeId, value = true if collapsed
+        var treeCollapsed = {};
 
         if (cart.length > 0 && typeof cart[0] === 'string') {
             cart = cart.map(function (n) { return { name: n, qty: 1 }; });
@@ -197,13 +207,74 @@
             }
         }
 
-        function renderCartPanel() {
-            var body = document.getElementById('cartPanelBody');
-            if (!body) return;
-            if (cart.length === 0) {
-                body.innerHTML = '<p class="cart-empty-msg">Your cart is empty.<br />Add craftable items using the <img src="/images/Cart.png" alt="cart" style="width:13px;height:13px;object-fit:contain;vertical-align:middle;" /> button.</p>';
-                return;
+        // ── Tab switching ──────────────────────────────────────
+        function switchCartTab(tab) {
+            cartViewTab = tab;
+            document.getElementById('cartTabList').classList.toggle('active', tab === 'list');
+            document.getElementById('cartTabTree').classList.toggle('active', tab === 'tree');
+            renderCartPanel();
+        }
+
+        // ── Tree helpers ───────────────────────────────────────
+        function getRecipe(name) {
+            if (typeof allRecipes === 'undefined') return null;
+            return allRecipes.find(function (r) { return r.name === name; }) || null;
+        }
+
+        function isCraftable(name) {
+            var r = getRecipe(name);
+            return r && r.ingredients && r.ingredients.length > 0;
+        }
+
+        function toggleTreeNode(nodeId) {
+            treeCollapsed[nodeId] = !treeCollapsed[nodeId];
+            renderCartPanel();
+        }
+
+        // Recursively build tree HTML for one item at a given depth/multiplier.
+        // nodeId is a unique string path used to track collapse state.
+        function buildTreeNodeHtml(name, qty, depth, nodeId) {
+            var slug = name.toLowerCase().replace(/ /g, '_');
+            var safeName = name.replace(/'/g, "\\'");
+            var craftable = isCraftable(name);
+            var collapsed = treeCollapsed[nodeId] || false;
+            var indent = depth * 20;
+
+            var chevron = '';
+            var childrenHtml = '';
+
+            if (craftable) {
+                chevron = '<button class="tree-toggle" onclick="event.stopPropagation();toggleTreeNode(\'' + nodeId.replace(/'/g, "\\'") + '\')" aria-label="Toggle">' +
+                    (collapsed ? '›' : '⌄') +
+                    '</button>';
+
+                if (!collapsed) {
+                    var recipe = getRecipe(name);
+                    childrenHtml = recipe.ingredients.map(function (ing) {
+                        var childId = nodeId + '/' + ing.name;
+                        return buildTreeNodeHtml(ing.name, ing.quantity * qty, depth + 1, childId);
+                    }).join('');
+                }
+            } else {
+                // Raw material — leaf node spacer so names stay aligned
+                chevron = '<span class="tree-toggle-spacer"></span>';
             }
+
+            var rowClass = 'tree-node' + (craftable ? ' tree-node--craftable' : ' tree-node--raw');
+
+            var rowHtml =
+                '<div class="' + rowClass + '" style="padding-left:' + indent + 'px" onclick="navigateToItem(\'' + safeName + '\')">' +
+                chevron +
+                '<img class="tree-node-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
+                '<span class="tree-node-name">' + name + '</span>' +
+                '<span class="tree-node-qty">x' + qty + '</span>' +
+                '</div>';
+
+            return rowHtml + childrenHtml;
+        }
+
+        // ── List view renderer ─────────────────────────────────
+        function renderListView() {
             var itemsHtml = cart.map(function (e) {
                 var slug = e.name.toLowerCase().replace(/ /g, '_');
                 var safeName = e.name.replace(/'/g, "\\'");
@@ -218,16 +289,17 @@
                     '<button class="cart-item-remove" onclick="event.stopPropagation();removeFromCart(\'' + safeName + '\')" title="Remove">✕</button>' +
                     '</div>';
             }).join('');
+
             var gatherMap = {};
             cart.forEach(function (e) {
-                var recipe = (typeof allRecipes !== 'undefined')
-                    ? allRecipes.find(function (r) { return r.name === e.name; }) : null;
+                var recipe = getRecipe(e.name);
                 if (recipe && recipe.ingredients && recipe.ingredients.length > 0) {
                     recipe.ingredients.forEach(function (ing) {
                         gatherMap[ing.name] = (gatherMap[ing.name] || 0) + (ing.quantity * e.qty);
                     });
                 }
             });
+
             var gatherEntries = Object.keys(gatherMap);
             var gatherHtml = '';
             if (gatherEntries.length > 0) {
@@ -242,10 +314,32 @@
                             '</div>';
                     }).join('') + '</div>';
             }
-            body.innerHTML =
-                '<div class="cart-section"><div class="cart-section-title">Items to Craft</div>' + itemsHtml + '</div>' +
+
+            return '<div class="cart-section"><div class="cart-section-title">Items to Craft</div>' + itemsHtml + '</div>' +
                 gatherHtml +
                 '<button class="cart-clear-btn" onclick="clearCart()">✕ Clear Cart</button>';
+        }
+
+        // ── Tree view renderer ─────────────────────────────────
+        function renderTreeView() {
+            var html = '<div class="cart-tree">' +
+                cart.map(function (e) {
+                    return buildTreeNodeHtml(e.name, e.qty, 0, e.name);
+                }).join('') +
+                '</div>' +
+                '<button class="cart-clear-btn" onclick="clearCart()">✕ Clear Cart</button>';
+            return html;
+        }
+
+        // ── Main render dispatcher ─────────────────────────────
+        function renderCartPanel() {
+            var body = document.getElementById('cartPanelBody');
+            if (!body) return;
+            if (cart.length === 0) {
+                body.innerHTML = '<p class="cart-empty-msg">Your cart is empty.<br />Add craftable items using the <img src="/images/Cart.png" alt="cart" style="width:13px;height:13px;object-fit:contain;vertical-align:middle;" /> button.</p>';
+                return;
+            }
+            body.innerHTML = cartViewTab === 'tree' ? renderTreeView() : renderListView();
         }
 
         updateCartBadge();
