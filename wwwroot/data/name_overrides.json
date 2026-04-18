@@ -504,6 +504,446 @@
         {
             "from": "Tree Spreader T0Fish13 Eggs",
             "to": "Fish Eggs Galbea"
+        },
+        {
+            "from": "Vegetable0 Growable",
+            "to": "Eggplant"
+        },
+        {
+            "from": "Vegetable1 Growable",
+            "to": "Squash"
+        },
+        {
+            "from": "Vegetable2 Growable",
+            "to": "Beans"
+        },
+        {
+            "from": "Vegetable3 Growable",
+            "to": "Mushroom"
+        },
+        {
+            "from": "honey",
+            "to": "Honey"
+        },
+        {
+            "from": "Red Powder T1",
+            "to": "Explosive Powder"
+        },
+        {
+            "from": "Animal Shelter T1",
+            "to": "Animal Shelter"
+        },
+        {
+            "from": "Arch T1",
+            "to": "Arch"
+        },
+        {
+            "from": "Container T1",
+            "to": "Container"
+        },
+        {
+            "from": "Fish Displayer T1",
+            "to": "Fish Displayer"
+        },
+        {
+            "from": "Flower Pot T1",
+            "to": "Flower Pot"
+        },
+        {
+            "from": "Flower Pot T2",
+            "to": "Hanging Flower Pot"
+        },
+        {
+            "from": "Flower Pot T3",
+            "to": "Big Flower Pot"
+        },
+        {
+            "from": "Fridge T1",
+            "to": "Fridge"
+        },
+        {
+            "from": "Fuse Animals T1",
+            "to": "Animals Multiplier Fuse"
+        },
+        {
+            "from": "Fuse Energy T1",
+            "to": "Energy Multiplier Fuse"
+        },
+        {
+            "from": "Fuse Growth T1",
+            "to": "Growth Multiplier Fuse"
+        },
+        {
+            "from": "Fuse Heat T1",
+            "to": "Heat Multiplier Fuse"
+        },
+        {
+            "from": "Fuse Insects T1",
+            "to": "Insects Multiplier Fuse"
+        },
+        {
+            "from": "Fuse Oxygen T1",
+            "to": "Oxygen Multiplier Fuse"
+        },
+        {
+            "from": "Fuse Plants T1",
+            "to": "Plant Multiplier Fuse"
+        },
+        {
+            "from": "Fuse Pressure T1",
+            "to": "Pressure Multiplier Fuse"
+        },
+        {
+            "from": "Fuse Production T1",
+            "to": "Production Multiplier Fuse"
+        },
+        {
+            "from": "Fuse Purification T1",
+            "to": "Purification Multiplier Fuse"
+        },
+        {
+            "from": "Genetic Extractor T1",
+            "to": "Genetic Extractor"
+        },
+        {
+            "from": "Genetic Manipulator T1",
+            "to": "Genetic Manipulator"
+        },
+        {
+            "from": "Genetic Synthesizer T1",
+            "to": "Genetic Synthesizer"
+        },
+        {
+            "from": "Harvesting Robot T1",
+            "to": "Harvesting Robot"
+        },
+        {
+            "from": "Incubator T1",
+            "to": "Incubator"
+        },
+        {
+            "from": "Inside Lamp T1",
+            "to": "Inside Lamp"
+        },
+        {
+            "from": "Interior Stairs T1",
+            "to": "Interior Stairs"
+        },
+        {
+            "from": "Larvae Base T2",
+            "to": "Uncommon Larvae"
+        },
+        {
+            "from": "Lava Lamp T1",
+            "to": "Lava Lamp"
+        },
+        {
+            "from": "Library T1",
+            "to": "Library"
+        },
+        {
+            "from": "Megadome T1",
+            "to": "Megadome"
+        },
+        {
+            "from": "ics",
+            "to": "Ice"
+        },
+        {
+            "from": "Minable-Tungsten",
+            "to": "Tungsten"
+        },
+        {
+            "from": "Uranim",
+            "to": "Uranium"
+        },
+        {
+            "from": "Nitrogen Capsule T1",
+            "to": "Nitrogen"
+        },
+        {
+            "from": "Outside Lamp T1",
+            "to": "Outside Lamp"
+        },
+        {
+            "from": "Oxygen Capsule T1",
+            "to": "Oxygen Capsule"
+        },
+        {
+            "from": "Planetary Delivery Depot T1",
+            "to": "Planetary Delivery Depot"
+        },
+        {
+            "from": "Planet Viewer T1",
+            "to": "Planet Viewer"
+        },
+        {
+            "from": "pod",
+            "to": "Living Compartment"
+        },
+        {
+            "from": "Pod4x",
+            "to": "Big Living Compartment"
+        },
+        {
+            "from": "Pod9x A",
+            "to": "Rounded Living Compartment"
+        },
+        {
+            "from": "Pod9x B",
+            "to": "Living Compartment with Dome"
+        },
+        {
+            "from": "Pod9x C",
+            "to": "3x3 Living Compartment"
+        },
+        {
+            "from": "pod Angle",
+            "to": "Living Compartment Corner"
+        },
+        {
+            "from": "Pooltable T1",
+            "to": "Pooltable"
+        },
+        {
+            "from": "Portal Generator T1",
+            "to": "Portal Generator"
+        },
+        {
+            "from": "Quartz Craft Station T1",
+            "to": "Quartz Craft Station"
+        },
+        {
+            "from": "Rocket Animals T1",
+            "to": "Rocket Animals T1"
+        },
+        {
+            "from": "Rocket Biomass T1",
+            "to": "Plant Rocket"
+        },
+        {
+            "from": "Rocket Biomass T2",
+            "to": "T2 Plant Rocket"
+        },
+        {
+            "from": "Rocket Departure T1",
+            "to": "Extraction Rocket"
+        },
+        {
+            "from": "Rocket Drones T1",
+            "to": "Drone Visualization Rocket"
+        },
+        {
+            "from": "Rocket Heat T1",
+            "to": "Asteroid Attraction Rocket"
+        },
+        {
+            "from": "Rocket Heat T2",
+            "to": "T2 Asteroid Attraction Rocket"
+        },
+        {
+            "from": "Rocket Informations T1",
+            "to": "Map Information Rocket"
+        },
+        {
+            "from": "Rocket Informations T2",
+            "to": "T2 Map Information Rocket"
+        },
+        {
+            "from": "Rocket Insects T1",
+            "to": "Insect Spreader Rocket"
+        },
+        {
+            "from": "Rocket Insects T2",
+            "to": "T2 Insect Spreader Rocket"
+        },
+        {
+            "from": "Rocket Map T1",
+            "to": "T1 GPS Satellite"
+        },
+        {
+            "from": "Rocket Map T2",
+            "to": "T2 GPS Satellite"
+        },
+        {
+            "from": "Rocket Map T3",
+            "to": "T3 GPS Satellite"
+        },
+        {
+            "from": "Rocket Map T4",
+            "to": "T4 GPS Satellite"
+        },
+        {
+            "from": "Rocket Oxygen T1",
+            "to": "Seed Spreader Rocket"
+        },
+        {
+            "from": "Rocket Pressure T1",
+            "to": "Magnetic Field Protection Rocket"
+        },
+        {
+            "from": "Rocket Pressure T2",
+            "to": "T2 Magnetic Field Protection Rocket"
+        },
+        {
+            "from": "Rocket Purification T1",
+            "to": "Purification Rocket"
+        },
+        {
+            "from": "Rocket Reactor T2",
+            "to": "T2 Rocket"
+        },
+        {
+            "from": "Rod-iridium",
+            "to": "Iridium Rod"
+        },
+        {
+            "from": "Rod-osmium",
+            "to": "Osmium Rod"
+        },
+        {
+            "from": "Rod-plastic",
+            "to": "Plastic Rod"
+        },
+        {
+            "from": "Rod-tungsten",
+            "to": "Tungsten Rod"
+        },
+        {
+            "from": "Rod-uranium",
+            "to": "Uranium Rod"
+        },
+        {
+            "from": "Screen Biomass",
+            "to": "Biomass Screen"
+        },
+        {
+            "from": "Screen Energy",
+            "to": "Energy Screen"
+        },
+        {
+            "from": "Toxicity Medecine",
+            "to": "Pristine Purifying Balm"
+        },
+        {
+            "from": "Toxicity Medecine Pack",
+            "to": "Pristine Purifying Balms Pack"
+        },
+        {
+            "from": "Vehicle Truck",
+            "to": "Vehicle - Rover"
+        },
+        {
+            "from": "Vehicle Crafter T1",
+            "to": "Vehicle Station"
+        },
+        {
+            "from": "door",
+            "to": "Living Compartment Door"
+        },
+        {
+            "from": "Wall Inside",
+            "to": "Interior Wall"
+        },
+        {
+            "from": "window",
+            "to": "Living Compartment Window"
+        },
+        {
+            "from": "Water Collector T1",
+            "to": "Atmospheric Water Collector"
+        },
+        {
+            "from": "Vegetable Grower T1",
+            "to": "Food Grower"
+        },
+        {
+            "from": "Vegetable Grower T2",
+            "to": "T2 Food Grower"
+        },
+        {
+            "from": "Vegetube T1",
+            "to": "T1 Vegetube"
+        },
+        {
+            "from": "Vegetube T2",
+            "to": "T2 Vegetube"
+        },
+        {
+            "from": "Vegetube T3",
+            "to": "T3 Vegetube"
+        },
+        {
+            "from": "Water Collector T2",
+            "to": "Lake Water Collector"
+        },
+        {
+            "from": "Water Life Collector T1",
+            "to": "Water Life Collector"
+        },
+        {
+            "from": "Wind Turbine T1",
+            "to": "Wind Turbine"
+        },
+        {
+            "from": "Vegetable0 Seed",
+            "to": "Eggplant Seed"
+        },
+        {
+            "from": "Vegetable1 Seed",
+            "to": "Squash Seed"
+        },
+        {
+            "from": "Vegetable2 Seed",
+            "to": "Beans Seed"
+        },
+        {
+            "from": "Vegetable3 Seed",
+            "to": "Mushroom Seed"
+        },
+        {
+            "from": "Tree Spreader T0",
+            "to": "Tree Spreader"
+        },
+        {
+            "from": "Tree Spreader T1",
+            "to": "T2 Tree Spreader"
+        },
+        {
+            "from": "Tree Spreader T2",
+            "to": "T3 Tree Spreader"
+        },
+        {
+            "from": "Trade Platform T1",
+            "to": "Trade Platform"
+        },
+        {
+            "from": "Toxins Filter T1",
+            "to": "Toxins Filter"
+        },
+        {
+            "from": "Toxins Filter T2",
+            "to": "T2 Toxins Filter"
+        },
+        {
+            "from": "Toxins Filter T3",
+            "to": "T3 Toxins Filter"
+        },
+        {
+            "from": "Teleporter T1",
+            "to": "Teleporter"
+        },
+        {
+            "from": "Rocket Travel T1",
+            "to": "Interplanetary Travel Rocket"
+        },
+        {
+            "from": "Interplanetary Exchange Platform T1:",
+            "to": "Interplanetary Exchange Platform"
+        },
+        {
+            "from": "Rocket Toxic Informations T1",
+            "to": "Toxic Area Information Rocket"
         }
     ]
 }

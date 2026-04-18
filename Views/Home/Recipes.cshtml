@@ -376,11 +376,18 @@
 
     // ── Core render ──────────────────────────────────────────
     function renderItem(name, direction) {
-        const recipe = allRecipes.find(r => r.name === name);
-        if (!recipe) return;
+        const recipe = allRecipes.find(r => r.name === name) ?? {
+            name:            name,
+            category:        '',
+            description:     '',
+            ingredients:     [],
+            unlockCondition: { type: 'always' },
+            craftedIn:       null,
+            recyclerYields:  false
+        };
 
         const html = buildDetailHtml(recipe);
-        renderBreadcrumb(name);                    // ← pass current item name
+        renderBreadcrumb(name);
         openDetail(html, direction || 'forward');
     }
 

@@ -134,6 +134,12 @@ main {
     display: block;
 }
 
+/* ── Flyout nav icon alignment ───────────────────── */
+.flyout-links a img {
+    display: inline;
+    vertical-align: middle;
+}
+
 .nav-game-icon {
     width: 18px;
     height: 18px;
@@ -1237,10 +1243,136 @@ main {
 
 /* ── About page ──────────────────────────────────── */
 .about-page {
-    max-width: 720px;
+    max-width: 680px;
     margin: 0 auto;
-    padding: 32px 20px 60px;
+    padding: 24px 16px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: auto;
+    height: calc(100vh - 53px);
 }
+
+.about-hero {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #0f1520;
+    border: 1px solid #1e2e44;
+    border-radius: 12px;
+    padding: 20px 18px;
+}
+
+.about-hero-icon {
+    font-size: 2.4rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.about-hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-hero-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #d8e8f0;
+    margin-bottom: 3px;
+}
+
+.about-hero-sub {
+    font-size: 0.8rem;
+    color: #6a8aaa;
+}
+
+.about-version-badge {
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #4fc97e;
+    background: rgba(79, 201, 126, 0.1);
+    border: 1px solid rgba(79, 201, 126, 0.3);
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+
+.about-card {
+    background: #0f1520;
+    border: 1px solid #1e2e44;
+    border-radius: 12px;
+    padding: 18px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-card--warning {
+    border-color: rgba(232, 160, 32, 0.35);
+    background: linear-gradient(135deg, #0f1520 85%, rgba(232, 160, 32, 0.06) 100%);
+}
+
+.about-card-heading {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #d8e8f0;
+    letter-spacing: 0.3px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1e2e44;
+    margin-bottom: 2px;
+}
+
+.about-card p {
+    font-size: 0.82rem;
+    color: #a8c4d8;
+    line-height: 1.65;
+}
+
+.about-card strong {
+    color: #d8e8f0;
+    font-weight: 600;
+}
+
+.about-link {
+    color: #4fc97e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+    .about-link:hover {
+        text-decoration: underline;
+    }
+
+.about-steam-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+    padding: 8px 16px;
+    background: #1b2838;
+    border: 1px solid #2a475e;
+    border-radius: 8px;
+    color: #c7d5e0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+    align-self: flex-start;
+}
+
+    .about-steam-btn img {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+    }
+
+    .about-steam-btn:hover {
+        background: #2a3f52;
+        border-color: #4fc97e;
+        color: #fff;
+    }
 
 /* ── Mobile (≤ 600px) ────────────────────────────── */
 @media (max-width: 600px) {

@@ -11849,7 +11849,7 @@
     {
         "name": "Vegetable3 Growable",
         "category": "Consumable",
-        "description": "",
+        "description": "A fully grown Mushroom harvested from a Vegetable Grower. Cannot be crafted — it is produced by planting a Mushroom Seed and waiting for it to mature. Used as an ingredient in advanced filters and biological recipes.",
         "ingredients": [],
         "unlockCondition": null,
         "craftedIn": null,
