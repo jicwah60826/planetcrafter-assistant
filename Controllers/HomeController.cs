@@ -98,5 +98,11 @@ namespace PlanetCrafterAssistant.Controllers
             ViewData["ShowHomeIcon"] = true;
             return View(tips);
         }
+
+        public IActionResult Checklist()
+        {
+            ViewData["ShowHomeIcon"] = true;
+            return View();
+        }
     }
 }

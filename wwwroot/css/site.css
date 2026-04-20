@@ -448,7 +448,7 @@ main {
     }
 
 /* ── Filter tabs ─────────────────────────────────── */
-.filter-tabs {
+/*.filter-tabs {
     display: flex;
     gap: 8px;
     margin-bottom: 16px;
@@ -476,7 +476,7 @@ main {
         color: #0a0e14;
         border-color: #4fc97e;
         font-weight: 600;
-    }
+    }*/
 
 /* ── Item list ───────────────────────────────────── */
 .card-grid {
@@ -2974,3 +2974,96 @@ body.detail-active .search-wrapper {
     color: #e8a020;
     flex-shrink: 0;
 }
+
+/* ── Large-screen portrait framing (≥1600px) ─────── */
+@media (min-width: 1600px) {
+    :root {
+        --frame-width: 1100px;
+        --frame-offset: calc((100vw - var(--frame-width)) / 2);
+    }
+
+    body {
+        background: #070a10; /* darker letterbox surround */
+    }
+
+    /* Main content wrapper sits between the fixed top-bar and bottom-nav */
+    main {
+        max-width: var(--frame-width);
+        margin: 0 auto;
+    }
+
+    /* Top bar: span only the frame */
+    .top-bar {
+        left: var(--frame-offset);
+        right: var(--frame-offset);
+        /* Preserve GPU compositing hint */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    /* Flyout: slide in from the left edge of the frame */
+    .flyout-menu {
+        left: var(--frame-offset);
+    }
+
+    /* Flyout backdrop: keep it covering full viewport so outside click still works */
+    /* (no change needed for .flyout-backdrop) */
+
+    /* Cart overlay: constrain to frame */
+    .cart-root {
+        left: var(--frame-offset);
+        right: var(--frame-offset);
+    }
+
+    /* Bottom nav (if present) */
+    .bottom-nav {
+        left: var(--frame-offset);
+        right: var(--frame-offset);
+    }
+}
+
+/* ── Persistent sidebar on large screens (≥ 900px) ── */
+/*@media (min-width: 900px) {*/
+
+    /* Sidebar: always visible, anchored below the top bar */
+    /*.flyout-menu {
+        transform: translateX(0) !important;
+        top: 53px;
+        height: calc(100% - 53px);
+        z-index: 100;
+        border-top: none;
+    }*/
+
+    /* Hide toggle controls — sidebar is always open */
+    /*.hamburger-btn,
+    .flyout-close,
+    .flyout-backdrop {
+        display: none !important;
+    }*/
+
+    /* Remove the "Menu" header row since close button is hidden */
+    /*.flyout-header {
+        display: none;
+    }*/
+
+    /* Top bar: shift right so it doesn't overlap the sidebar */
+    /*.top-bar {
+        left: 260px;
+    }*/
+
+    /* Main content area: push right of the sidebar */
+    /*main {
+        margin-left: 260px;
+    }*/
+
+    /* Bottom nav: also shift right to match */
+    /*.bottom-nav {
+        left: 260px;
+        width: calc(100% - 260px);
+    }*/
+
+    /* Cart overlay: also shift right so it sits in the content area */
+    /*.cart-root {
+        left: 260px;
+    }
+}*/

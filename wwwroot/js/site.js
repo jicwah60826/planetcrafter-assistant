@@ -11,15 +11,10 @@ function applyFilters() {
     const input = searchBox.value.toLowerCase().trim();
     clearBtn.style.display = input.length > 0 ? "block" : "none";
 
-    const activeTab    = document.querySelector('.tab.active');
-    const activeFilter = activeTab ? activeTab.dataset.filter : 'all';
-
     document.querySelectorAll('.item-card, .card').forEach(card => {
-        // Use data-name for search — reliable regardless of visibility or layout
         const cardName     = (card.dataset.name || '').toLowerCase();
         const matchesSearch = input === '' || cardName.includes(input);
-        const matchesTab    = activeFilter === 'all' || card.dataset.category === activeFilter;
-        card.style.display  = matchesSearch && matchesTab ? '' : 'none';
+        card.style.display  = matchesSearch ? '' : 'none';
     });
 }
 
@@ -33,16 +28,3 @@ function clearSearch() {
     applyFilters();
     searchBox.focus();
 }
-
-document.addEventListener('click', function (e) {
-    const tab = e.target.closest('.tab');
-    if (!tab) return;
-
-    // Update active state on all sibling tabs
-    tab.closest('.filter-tabs')
-       .querySelectorAll('.tab')
-       .forEach(t => t.classList.remove('active'));
-
-    tab.classList.add('active');
-    applyFilters();
-});
