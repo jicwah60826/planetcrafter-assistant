@@ -66,6 +66,7 @@ main {
     gap: 10px;
     width: 100%;
 }
+
 .top-bar h1 {
     flex: 1;
     font-size: 1.1rem;
@@ -1040,22 +1041,22 @@ main {
     color: #c0d8e8;
 }
 
-.cart-item-row.clickable,
-.gather-row.clickable {
-    cursor: pointer;
-    transition: background 0.15s, border-color 0.15s;
-}
+    .cart-item-row.clickable,
+    .gather-row.clickable {
+        cursor: pointer;
+        transition: background 0.15s, border-color 0.15s;
+    }
 
-.cart-item-row.clickable:hover,
-.gather-row.clickable:hover {
-    background: #141e2e;
-    border-color: #4fc97e;
-}
+        .cart-item-row.clickable:hover,
+        .gather-row.clickable:hover {
+            background: #141e2e;
+            border-color: #4fc97e;
+        }
 
-.cart-item-row.clickable:hover .cart-item-name,
-.gather-row.clickable:hover .gather-row-name {
-    color: #4fc97e;
-}
+            .cart-item-row.clickable:hover .cart-item-name,
+            .gather-row.clickable:hover .gather-row-name {
+                color: #4fc97e;
+            }
 
 .cart-item-icon {
     width: 28px;
@@ -1612,22 +1613,22 @@ body.cart-active .search-wrapper {
     color: #c0d8e8;
 }
 
-.cart-item-row.clickable,
-.gather-row.clickable {
-    cursor: pointer;
-    transition: background 0.15s, border-color 0.15s;
-}
+    .cart-item-row.clickable,
+    .gather-row.clickable {
+        cursor: pointer;
+        transition: background 0.15s, border-color 0.15s;
+    }
 
-.cart-item-row.clickable:hover,
-.gather-row.clickable:hover {
-    background: #141e2e;
-    border-color: #4fc97e;
-}
+        .cart-item-row.clickable:hover,
+        .gather-row.clickable:hover {
+            background: #141e2e;
+            border-color: #4fc97e;
+        }
 
-.cart-item-row.clickable:hover .cart-item-name,
-.gather-row.clickable:hover .gather-row-name {
-    color: #4fc97e;
-}
+            .cart-item-row.clickable:hover .cart-item-name,
+            .gather-row.clickable:hover .gather-row-name {
+                color: #4fc97e;
+            }
 
 .cart-item-icon {
     width: 28px;
@@ -2058,22 +2059,22 @@ body.cart-active .search-wrapper {
     color: #c0d8e8;
 }
 
-.cart-item-row.clickable,
-.gather-row.clickable {
-    cursor: pointer;
-    transition: background 0.15s, border-color 0.15s;
-}
+    .cart-item-row.clickable,
+    .gather-row.clickable {
+        cursor: pointer;
+        transition: background 0.15s, border-color 0.15s;
+    }
 
-.cart-item-row.clickable:hover,
-.gather-row.clickable:hover {
-    background: #141e2e;
-    border-color: #4fc97e;
-}
+        .cart-item-row.clickable:hover,
+        .gather-row.clickable:hover {
+            background: #141e2e;
+            border-color: #4fc97e;
+        }
 
-.cart-item-row.clickable:hover .cart-item-name,
-.gather-row.clickable:hover .gather-row-name {
-    color: #4fc97e;
-}
+            .cart-item-row.clickable:hover .cart-item-name,
+            .gather-row.clickable:hover .gather-row-name {
+                color: #4fc97e;
+            }
 
 .cart-item-icon {
     width: 28px;
@@ -2504,22 +2505,22 @@ body.cart-active .search-wrapper {
     color: #c0d8e8;
 }
 
-.cart-item-row.clickable,
-.gather-row.clickable {
-    cursor: pointer;
-    transition: background 0.15s, border-color 0.15s;
-}
+    .cart-item-row.clickable,
+    .gather-row.clickable {
+        cursor: pointer;
+        transition: background 0.15s, border-color 0.15s;
+    }
 
-.cart-item-row.clickable:hover,
-.gather-row.clickable:hover {
-    background: #141e2e;
-    border-color: #4fc97e;
-}
+        .cart-item-row.clickable:hover,
+        .gather-row.clickable:hover {
+            background: #141e2e;
+            border-color: #4fc97e;
+        }
 
-.cart-item-row.clickable:hover .cart-item-name,
-.gather-row.clickable:hover .gather-row-name {
-    color: #4fc97e;
-}
+            .cart-item-row.clickable:hover .cart-item-name,
+            .gather-row.clickable:hover .gather-row-name {
+                color: #4fc97e;
+            }
 
 .cart-item-icon {
     width: 28px;
@@ -3025,8 +3026,8 @@ body.detail-active .search-wrapper {
 /* ── Persistent sidebar on large screens (≥ 900px) ── */
 /*@media (min-width: 900px) {*/
 
-    /* Sidebar: always visible, anchored below the top bar */
-    /*.flyout-menu {
+/* Sidebar: always visible, anchored below the top bar */
+/*.flyout-menu {
         transform: translateX(0) !important;
         top: 53px;
         height: calc(100% - 53px);
@@ -3034,36 +3035,65 @@ body.detail-active .search-wrapper {
         border-top: none;
     }*/
 
-    /* Hide toggle controls — sidebar is always open */
-    /*.hamburger-btn,
+/* Hide toggle controls — sidebar is always open */
+/*.hamburger-btn,
     .flyout-close,
     .flyout-backdrop {
         display: none !important;
     }*/
 
-    /* Remove the "Menu" header row since close button is hidden */
-    /*.flyout-header {
+/* Remove the "Menu" header row since close button is hidden */
+/*.flyout-header {
         display: none;
     }*/
 
-    /* Top bar: shift right so it doesn't overlap the sidebar */
-    /*.top-bar {
+/* Top bar: shift right so it doesn't overlap the sidebar */
+/*.top-bar {
         left: 260px;
     }*/
 
-    /* Main content area: push right of the sidebar */
-    /*main {
+/* Main content area: push right of the sidebar */
+/*main {
         margin-left: 260px;
     }*/
 
-    /* Bottom nav: also shift right to match */
-    /*.bottom-nav {
+/* Bottom nav: also shift right to match */
+/*.bottom-nav {
         left: 260px;
         width: calc(100% - 260px);
     }*/
 
-    /* Cart overlay: also shift right so it sits in the content area */
-    /*.cart-root {
+/* Cart overlay: also shift right so it sits in the content area */
+/*.cart-root {
         left: 260px;
     }
 }*/
+
+/* Append the following to the end of site.css (no inline CSS) */
+
+/* Gather-row checked / gathered styles */
+.gather-row.gathered .gather-row-name {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: #6a8aaa;
+}
+
+/* Checkbox styling that matches theme (uses accent-color) */
+.gather-checkbox {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-right: 6px;
+    cursor: pointer;
+    accent-color: #4fc97e;
+    background: transparent;
+    border-radius: 3px;
+    border: 1px solid #1e2e44;
+}
+
+/* Ensure checkbox doesn't shift row vertical alignment */
+.gather-row .gather-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

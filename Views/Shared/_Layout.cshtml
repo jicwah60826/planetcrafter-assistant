@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@* Full file with cart changes (checkbox + gathered state) *@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -248,93 +249,87 @@
         // Recursively build tree HTML for one item at a given depth/multiplier.
         // nodeId is a unique string path used to track collapse state.
         function buildTreeNodeHtml(name, qty, depth, nodeId) {
-            var slug = name.toLowerCase().replace(/ /g, '_');
-            var safeName = name.replace(/'/g, "\\'");
-            var craftable = isCraftable(name);
-            var collapsed = treeCollapsed[nodeId] || false;
-            var indent = depth * 20;
+            const slug = name.toLowerCase().replace(/ /g, '_');
+            const safeName = name.replace(/'/g, "\\'");
+            const craftable = isCraftable(name);
+            const collapsed = treeCollapsed[nodeId] || false;
+            const indent = depth * 20;
 
-            var chevron = '';
-            var childrenHtml = '';
+            let chevron = '';
+            let childrenHtml = '';
 
             if (craftable) {
-                chevron = '<button class="tree-toggle" onclick="event.stopPropagation();toggleTreeNode(\'' + nodeId.replace(/'/g, "\\'") + '\')" aria-label="Toggle">' +
-                    (collapsed ? '›' : '⌄') +
-                    '</button>';
-
+                chevron = `<button class="tree-toggle" onclick="event.stopPropagation();toggleTreeNode('${nodeId.replace(/'/g, "\\'")}')" aria-label="Toggle">${collapsed ? '›' : '⌄'}</button>`;
                 if (!collapsed) {
-                    var recipe = getRecipe(name);
-                    childrenHtml = recipe.ingredients.map(function (ing) {
-                        var childId = nodeId + '/' + ing.name;
+                    const recipe = getRecipe(name) || { ingredients: [] };
+                    childrenHtml = recipe.ingredients.map(ing => {
+                        const childId = nodeId + '/' + ing.name;
                         return buildTreeNodeHtml(ing.name, ing.quantity * qty, depth + 1, childId);
                     }).join('');
                 }
             } else {
-                // Raw material — leaf node spacer so names stay aligned
-                chevron = '<span class="tree-toggle-spacer"></span>';
+                chevron = `<span class="tree-toggle-spacer"></span>`;
             }
 
-            var rowClass = 'tree-node' + (craftable ? ' tree-node--craftable' : ' tree-node--raw');
-
-            var rowHtml =
-                '<div class="' + rowClass + '" style="padding-left:' + indent + 'px" onclick="navigateToItem(\'' + safeName + '\')">' +
-                chevron +
-                '<img class="tree-node-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\\'none\\'" />' +
-                '<span class="tree-node-name">' + name + '</span>' +
-                '<span class="tree-node-qty">x' + qty + '</span>' +
-                '</div>';
+            const rowClass = `tree-node${craftable ? ' tree-node--craftable' : ' tree-node--raw'}`;
+            const rowHtml = `<div class="${rowClass}" style="padding-left:${indent}px" onclick="navigateToItem('${safeName}')">
+                                ${chevron}
+                                <img class="tree-node-icon" src="/images/icons/${slug}.png" alt="" onerror="this.style.display='none'" />
+                                <span class="tree-node-name">${name}</span>
+                                <span class="tree-node-qty">x${qty}</span>
+                             </div>`;
 
             return rowHtml + childrenHtml;
         }
 
         // ── List view renderer ─────────────────────────────────
         function renderListView() {
-            var itemsHtml = cart.map(function (e) {
-                var slug = e.name.toLowerCase().replace(/ /g, '_');
-                var safeName = e.name.replace(/'/g, "\\'");
-                return '<div class="cart-item-row clickable" onclick="navigateToItem(\'' + safeName + '\')">' +
-                    '<img class="cart-item-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\\'none\\'" />' +
-                    '<span class="cart-item-name">' + e.name + '</span>' +
-                    '<div class="cart-qty-controls">' +
-                    '<button class="cart-qty-btn" onclick="event.stopPropagation();setCartQty(\'' + safeName + '\', ' + (e.qty - 1) + ')">−</button>' +
-                    '<span class="cart-qty-value">' + e.qty + '</span>' +
-                    '<button class="cart-qty-btn" onclick="event.stopPropagation();setCartQty(\'' + safeName + '\', ' + (e.qty + 1) + ')">+</button>' +
-                    '</div>' +
-                    '<button class="cart-item-remove" onclick="event.stopPropagation();removeFromCart(\'' + safeName + '\')" title="Remove">✕</button>' +
-                    '</div>';
+            const itemsHtml = cart.map(e => {
+                const slug = e.name.toLowerCase().replace(/ /g, '_');
+                const safeName = e.name.replace(/'/g, "\\'");
+                return `<div class="cart-item-row clickable" onclick="navigateToItem('${safeName}')">
+                            <img class="cart-item-icon" src="/images/icons/${slug}.png" alt="" onerror="this.style.display='none'" />
+                            <span class="cart-item-name">${e.name}</span>
+                            <div class="cart-qty-controls">
+                                <button class="cart-qty-btn" onclick="event.stopPropagation();setCartQty('${safeName}', ${e.qty - 1})">−</button>
+                                <span class="cart-qty-value">${e.qty}</span>
+                                <button class="cart-qty-btn" onclick="event.stopPropagation();setCartQty('${safeName}', ${e.qty + 1})">+</button>
+                            </div>
+                            <button class="cart-item-remove" onclick="event.stopPropagation();removeFromCart('${safeName}')" title="Remove">✕</button>
+                        </div>`;
             }).join('');
 
-            var gatherMap = {};
-            cart.forEach(function (e) {
-                var recipe = getRecipe(e.name);
+            const gatherMap = {};
+            cart.forEach(e => {
+                const recipe = getRecipe(e.name);
                 if (recipe && recipe.ingredients && recipe.ingredients.length > 0) {
-                    recipe.ingredients.forEach(function (ing) {
+                    recipe.ingredients.forEach(ing => {
                         gatherMap[ing.name] = (gatherMap[ing.name] || 0) + (ing.quantity * e.qty);
                     });
                 }
             });
 
-            var gatherEntries = Object.keys(gatherMap);
-            var gatherHtml = '';
+            const gatherEntries = Object.keys(gatherMap);
+            let gatherHtml = '';
             if (gatherEntries.length > 0) {
-                gatherHtml = '<div class="cart-section"><div class="cart-section-title cart-section-title--gather">Materials to Gather</div>' +
-                    gatherEntries.map(function (n) {
-                        var slug = n.toLowerCase().replace(/ /g, '_');
-                        var safeName = n.replace(/'/g, "\\'");
-                        var checked = isGathered(n) ? 'checked' : '';
-                        var gatheredClass = isGathered(n) ? ' gathered' : '';
-                        return '<div class="gather-row clickable' + gatheredClass + '" onclick="navigateToItem(\'' + safeName + '\')">' +
-                            '<input type="checkbox" class="gather-checkbox" onclick="event.stopPropagation();toggleGathered(\'' + safeName + '\')" ' + checked + ' aria-label="Mark gathered" />' +
-                            '<img class="gather-row-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\\'none\\'" />' +
-                            '<span class="gather-row-name">' + n + '</span>' +
-                            '<span class="gather-row-qty">x' + gatherMap[n] + '</span>' +
-                            '</div>';
+                gatherHtml = `<div class="cart-section"><div class="cart-section-title cart-section-title--gather">Materials to Gather</div>` +
+                    gatherEntries.map(n => {
+                        const slug = n.toLowerCase().replace(/ /g, '_');
+                        const safeName = n.replace(/'/g, "\\'");
+                        const checked = isGathered(n) ? 'checked' : '';
+                        const gatheredClass = isGathered(n) ? ' gathered' : '';
+                        return `<div class="gather-row clickable${gatheredClass}" onclick="navigateToItem('${safeName}')">
+                                    <input type="checkbox" class="gather-checkbox" onclick="event.stopPropagation();toggleGathered('${safeName}')" ${checked} aria-label="Mark gathered" />
+                                    <img class="gather-row-icon" src="/images/icons/${slug}.png" alt="" onerror="this.style.display='none'" />
+                                    <span class="gather-row-name">${n}</span>
+                                    <span class="gather-row-qty">x${gatherMap[n]}</span>
+                                </div>`;
                     }).join('') + '</div>';
             }
 
-            return '<div class="cart-section"><div class="cart-section-title">Items to Craft</div>' + itemsHtml + '</div>' +
+            return `<div class="cart-section"><div class="cart-section-title">Items to Craft</div>${itemsHtml}</div>` +
                 gatherHtml +
-                '<button class="cart-clear-btn" onclick="clearCart()">✕ Clear Cart</button>';
+                `<button class="cart-clear-btn" onclick="clearCart()">✕ Clear Cart</button>`;
         }
 
         // ── Tree view renderer ─────────────────────────────────
