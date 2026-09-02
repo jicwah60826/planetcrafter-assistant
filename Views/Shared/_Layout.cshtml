@@ -146,6 +146,9 @@
         // Tracks which tree nodes are collapsed: key = nodeId, value = true if collapsed
         var treeCollapsed = {};
 
+        // Tracks gathered items (materials the user already has)
+        var gatheredState = JSON.parse(localStorage.getItem('pc-gathered') || '{}');
+
         if (cart.length > 0 && typeof cart[0] === 'string') {
             cart = cart.map(function (n) { return { name: n, qty: 1 }; });
         }
@@ -217,7 +220,16 @@
             renderCartPanel();
         }
 
-        // ── Tree helpers ───────────────────────────────────────
+        // ── Gathered state helpers ───────────────────────────
+        function saveGathered() { localStorage.setItem('pc-gathered', JSON.stringify(gatheredState)); }
+        function isGathered(name) { return !!gatheredState[name]; }
+        function toggleGathered(name) {
+            gatheredState[name] = !gatheredState[name];
+            saveGathered();
+            renderCartPanel();
+        }
+
+        // ── Tree helpers ─────────────────────────────────────
         function getRecipe(name) {
             if (typeof allRecipes === 'undefined') return null;
             return allRecipes.find(function (r) { return r.name === name; }) || null;
@@ -267,7 +279,7 @@
             var rowHtml =
                 '<div class="' + rowClass + '" style="padding-left:' + indent + 'px" onclick="navigateToItem(\'' + safeName + '\')">' +
                 chevron +
-                '<img class="tree-node-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
+                '<img class="tree-node-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\\'none\\'" />' +
                 '<span class="tree-node-name">' + name + '</span>' +
                 '<span class="tree-node-qty">x' + qty + '</span>' +
                 '</div>';
@@ -281,7 +293,7 @@
                 var slug = e.name.toLowerCase().replace(/ /g, '_');
                 var safeName = e.name.replace(/'/g, "\\'");
                 return '<div class="cart-item-row clickable" onclick="navigateToItem(\'' + safeName + '\')">' +
-                    '<img class="cart-item-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
+                    '<img class="cart-item-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\\'none\\'" />' +
                     '<span class="cart-item-name">' + e.name + '</span>' +
                     '<div class="cart-qty-controls">' +
                     '<button class="cart-qty-btn" onclick="event.stopPropagation();setCartQty(\'' + safeName + '\', ' + (e.qty - 1) + ')">−</button>' +
@@ -309,8 +321,11 @@
                     gatherEntries.map(function (n) {
                         var slug = n.toLowerCase().replace(/ /g, '_');
                         var safeName = n.replace(/'/g, "\\'");
-                        return '<div class="gather-row clickable" onclick="navigateToItem(\'' + safeName + '\')">' +
-                            '<img class="gather-row-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\'none\'" />' +
+                        var checked = isGathered(n) ? 'checked' : '';
+                        var gatheredClass = isGathered(n) ? ' gathered' : '';
+                        return '<div class="gather-row clickable' + gatheredClass + '" onclick="navigateToItem(\'' + safeName + '\')">' +
+                            '<input type="checkbox" class="gather-checkbox" onclick="event.stopPropagation();toggleGathered(\'' + safeName + '\')" ' + checked + ' aria-label="Mark gathered" />' +
+                            '<img class="gather-row-icon" src="/images/icons/' + slug + '.png" alt="" onerror="this.style.display=\\'none\\'" />' +
                             '<span class="gather-row-name">' + n + '</span>' +
                             '<span class="gather-row-qty">x' + gatherMap[n] + '</span>' +
                             '</div>';
