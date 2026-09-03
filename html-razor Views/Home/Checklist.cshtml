@@ -109,31 +109,6 @@
             color: #e55;
         }
 
-    /* Move buttons container and buttons */
-    .checklist-actions {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        margin-left: 8px;
-        flex-shrink: 0;
-    }
-
-    .checklist-move-btn {
-        background: none;
-        border: none;
-        color: var(--text-muted, #888);
-        font-size: 0.95rem;
-        cursor: pointer;
-        padding: 4px 6px;
-        border-radius: 4px;
-        line-height: 1;
-    }
-
-        .checklist-move-btn[disabled] {
-            opacity: 0.35;
-            cursor: default;
-        }
-
     .checklist-empty {
         text-align: center;
         color: var(--text-muted, #888);
@@ -170,7 +145,7 @@
 
         empty.style.display = 'none';
 
-        todos.forEach(function (todo, index) {
+        todos.forEach(function (todo) {
             var li = document.createElement('li');
             li.className = 'checklist-item';
 
@@ -184,26 +159,6 @@
             span.className = 'checklist-item-text' + (todo.done ? ' done' : '');
             span.textContent = todo.text;
 
-            var actions = document.createElement('div');
-            actions.className = 'checklist-actions';
-
-            var upBtn = document.createElement('button');
-            upBtn.className = 'checklist-move-btn';
-            upBtn.innerHTML = '↑';
-            upBtn.setAttribute('aria-label', 'Move up');
-            upBtn.onclick = function () { moveUp(todo.id); };
-            if (index === 0) upBtn.disabled = true;
-
-            var downBtn = document.createElement('button');
-            downBtn.className = 'checklist-move-btn';
-            downBtn.innerHTML = '↓';
-            downBtn.setAttribute('aria-label', 'Move down');
-            downBtn.onclick = function () { moveDown(todo.id); };
-            if (index === todos.length - 1) downBtn.disabled = true;
-
-            actions.appendChild(upBtn);
-            actions.appendChild(downBtn);
-
             var del = document.createElement('button');
             del.className = 'checklist-delete-btn';
             del.textContent = '🗑';
@@ -212,7 +167,6 @@
 
             li.appendChild(cb);
             li.appendChild(span);
-            li.appendChild(actions);
             li.appendChild(del);
             list.appendChild(li);
         });
@@ -243,38 +197,6 @@
         var todos = loadTodos().filter(function (t) { return t.id !== id; });
         saveTodos(todos);
         renderTodos();
-    }
-
-    function moveUp(id) {
-        moveTodo(id, -1);
-    }
-
-    function moveDown(id) {
-        moveTodo(id, 1);
-    }
-
-    function moveTodo(id, delta) {
-        var todos = loadTodos();
-        var idx = todos.findIndex(function (t) { return t.id === id; });
-        if (idx < 0) return;
-        var newIdx = idx + delta;
-        if (newIdx < 0 || newIdx >= todos.length) return;
-
-        var tmp = todos[newIdx];
-        todos[newIdx] = todos[idx];
-        todos[idx] = tmp;
-
-        saveTodos(todos);
-        renderTodos();
-
-        // Move focus to the moved item for accessibility
-        // find the li at newIdx and focus its up button (if present)
-        var list = document.getElementById('todoList');
-        var li = list.children[newIdx];
-        if (li) {
-            var btn = li.querySelector('.checklist-move-btn');
-            if (btn) btn.focus();
-        }
     }
 
     function handleTodoKey(event) {
